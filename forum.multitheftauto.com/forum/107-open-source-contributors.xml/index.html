@@ -1,0 +1,804 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel><title>Open Source Contributors Latest Topics</title><link>https://forum.multitheftauto.com/forum/107-open-source-contributors/</link><description>Open Source Contributors Latest Topics</description><language>en</language><item><title>Bullet physics need your help with testing!</title><link>https://forum.multitheftauto.com/topic/135142-bullet-physics-need-your-help-with-testing/</link><description><![CDATA[<p>
+	<span style="font-size:20px;">I need your help!</span>
+</p>
+
+<p>
+	After long time, long discussion with other contributors what initial release should containi spent a lot of time polishing, fixing bullet physics feature people first would see almost 3 years ago.
+</p>
+
+<p>
+	Meanwhile API got limited to bere usable minimum to limit points of failure, all cool features i was showing got moved to different branch as a reference for future updates. Whole logic got moved to "shared" section to let you use all of it's feature both client and server side!
+</p>
+
+<p>
+	Core devs are busy, pull request is HUGE and nice to give them tested, cleaned up code they can review and because it is not a trivial task testing even limited amount of feature i need your help <span><img alt=":)" data-emoticon="" height="20" src="https://forum.multitheftauto.com/uploads/emoticons/smile.png" srcset="https://forum.multitheftauto.com/uploads/emoticons/smile@2x.png 2x" title=":)" width="20" /> </span>
+</p>
+
+<p>
+	If you have some free time, and minimum lua/<abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr></abbr> experience you can download latest build of <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr></abbr>, client and server and test it yourself, maybe you find an issue i was unable to spot?
+</p>
+
+<p>
+	Download newest custom build of <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr> with bullet physics at</abbr> <a href="https://github.com/multitheftauto/mtasa-blue/suites/6176759056/artifacts/216790429" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue/suites/6176759056/artifacts/216790429</a>
+</p>
+
+<p>
+	Download test resource ( if you want ), v1: <a href="https://github.com/multitheftauto/mtasa-blue/files/8459389/tests.v1.zip" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue/files/8459389/tests.v1.zip</a> it should yield a result the same as on  the video below.
+</p>
+
+<p>
+	<span style="font-size:20px;">Documentation:</span>
+</p>
+
+<p>
+	All availiable both client and server side except "physicsDrawDebug"<br />
+	Bullet physics functions:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">physics</span><span class="pun">-</span><span class="pln">shape</span><span class="pun">-</span><span class="pln">box physicsCreateBoxShape</span><span class="pun">(</span><span class="pln"> float xyzSize </span><span class="pun">)</span><span class="pln"> </span><span class="com">-- creates cube of given dimensions, 1 means 1x1x1.</span><span class="pln">
+physics</span><span class="pun">-</span><span class="pln">shape</span><span class="pun">-</span><span class="pln">box physicsCreateBoxShape</span><span class="pun">(</span><span class="pln"> float x</span><span class="pun">,</span><span class="pln"> float y</span><span class="pun">,</span><span class="pln"> float y </span><span class="pun">)</span><span class="pln"> </span><span class="com">-- creates box of given dimensions.</span><span class="pln">
+physics</span><span class="pun">-</span><span class="pln">rigid</span><span class="pun">-</span><span class="pln">body physicsCreateRigidBody</span><span class="pun">(</span><span class="pln">physics</span><span class="pun">-</span><span class="pln">shape</span><span class="pun">,</span><span class="pln"> float x</span><span class="pun">,</span><span class="pln"> float y</span><span class="pun">,</span><span class="pln"> float z </span><span class="pun">[,</span><span class="pln"> float rx</span><span class="pun">,</span><span class="pln"> float ry</span><span class="pun">,</span><span class="pln"> float rz </span><span class="pun">[,</span><span class="pln"> table options </span><span class="pun">]</span><span class="pln"> </span><span class="pun">]</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="com">-- spawns rigid body from given shape at given position and rotation with options:</span><span class="pln">
+</span><span class="com">-- "mass" - float between 1.0 to 1000000.0, default: 1.0</span><span class="pln">
+</span><span class="com">-- "localIntertia" - vector, default: 0,0,0</span><span class="pln">
+</span><span class="com">-- "centerOfMass" - vector, default: 0,0,0</span><span class="pln">
+physics</span><span class="pun">-</span><span class="pln">static</span><span class="pun">-</span><span class="pln">collision physicsCreateStaticCollision</span><span class="pun">(</span><span class="pln">physics</span><span class="pun">-</span><span class="pln">shape</span><span class="pun">,</span><span class="pln"> float x</span><span class="pun">,</span><span class="pln"> float y</span><span class="pun">,</span><span class="pln"> float z </span><span class="pun">[,</span><span class="pln"> float rx</span><span class="pun">,</span><span class="pln"> float ry</span><span class="pun">,</span><span class="pln"> float rz </span><span class="pun">])</span><span class="pln"> </span><span class="com">-- spawns static collision at given position and rotation.</span><span class="pln">
+table physicsGetDebugLines</span><span class="pun">(</span><span class="pln"> float x</span><span class="pun">,</span><span class="pln"> float y</span><span class="pun">,</span><span class="pln"> float z</span><span class="pun">,</span><span class="pln"> float radius </span><span class="pun">)</span><span class="pln"> </span><span class="com">-- returns table of lines in format { fromX, fromY, fromZ, toX, toY, toZ, color } of all collisions in given radius - mostly used to debug server side physics.</span><span class="pln">
+bool physicsDrawDebug</span><span class="pun">()</span><span class="pln"> </span><span class="com">-- draws debug collision in 500 meters radius, availiable only client side, use in onClientRender event.</span><span class="pln">
+bool isPhysicsElement</span><span class="pun">(</span><span class="pln"> physics</span><span class="pun">-</span><span class="pln">element physicsElement </span><span class="pun">)</span><span class="pln"> </span><span class="com">-- isElement equivalent for physics elements</span></pre>
+
+<p>
+	<br />
+	Extended functionality:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">setElementPosition</span><span class="pun">,</span><span class="pln"> setElementRotation</span><span class="pun">,</span><span class="pln"> getElementPosition</span><span class="pun">,</span><span class="pln"> getElementRotation </span><span class="com">-- accepting physics-world-element as first parameter</span><span class="pln">
+setElementVelocity</span><span class="pun">,</span><span class="pln"> setElementAngularVelocity</span><span class="pun">,</span><span class="pln"> getElementVelocity</span><span class="pun">,</span><span class="pln"> getElementAngularVelocity </span><span class="com">-- accepting physics-rigid-body as first parameter</span><span class="pln">
+destroyElement </span><span class="com">-- accepting physics-element</span></pre>
+
+<p>
+	Bullet physics introduces new user-data / element types ( they are not acctual elements like vehicle, player ). Used lighter version of elements to increate overall performance, simillar to how "setTimer" return timer handle, functions above return simillar handle.
+</p>
+
+<p>
+	New user-data/elements types and it's hierarchy:
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="57.58" style="height:auto;" width="660" data-src="https://cdn.discordapp.com/attachments/801400373285355530/962651835389341866/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />
+</p>
+
+<p>
+	Default, current physics settings:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">Gravity</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">-10.0</span><span class="pln">
+Simulation step</span><span class="pun">:</span><span class="pln"> fps independent</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pln"> substeps
+Fixed time step</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1.0</span><span class="pln"> </span><span class="pun">/</span><span class="pln"> </span><span class="lit">60.0</span></pre>
+
+<p>
+	Other useful informations:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="lit">1.</span><span class="pln"> One shape can </span><span class="pun">(</span><span class="pln"> should </span><span class="pun">)</span><span class="pln"> be used </span><span class="kwd">in</span><span class="pln"> many rigid bodies</span><span class="pun">,</span><span class="pln"> static collisions </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> future as a part of compound shape </span><span class="pun">)</span><span class="pln">
+</span><span class="lit">2.</span><span class="pln"> Spawning many rigid bodies at one position will lead to high memory usage</span><span class="pun">.</span><span class="pln">
+</span><span class="lit">3.</span><span class="pln"> If you destroy shape</span><span class="pun">,</span><span class="pln"> all referenced rigid bodies </span><span class="kwd">and</span><span class="pln"> static collision will be removed as well </span><span class="pun">-</span><span class="pln"> removing static collision </span><span class="kwd">or</span><span class="pln"> rigid body never removes shape
+</span><span class="lit">4.</span><span class="pln"> Physics is frame indendent </span><span class="kwd">and</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> perfectly deterministic</span><span class="pun">.</span><span class="pln">
+</span><span class="lit">5.</span><span class="pln"> Yellow</span><span class="pun">/</span><span class="pln">White wireframe indicate active rigid body</span><span class="pun">,</span><span class="pln"> blue are </span><span class="str">"about to sleep"</span><span class="pun">,</span><span class="pln"> green are sleeping</span><span class="pun">.</span><span class="pln"> Sleeping rigid body behave like static collision </span><span class="kwd">until</span><span class="pln"> get hit</span><span class="pun">,</span><span class="pln"> reactivated </span><span class="pun">(</span><span class="pln"> changing position</span><span class="pun">,</span><span class="pln"> applying forces activates body</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> future i have a plan to introduce </span><span class="kwd">function</span><span class="pln"> to wake up them on demand </span><span class="pun">)</span><span class="pln">
+</span><span class="lit">6.</span><span class="pln"> Physics elements created server </span><span class="kwd">or</span><span class="pln"> client side are </span><span class="kwd">not</span><span class="pln"> synced at all</span><span class="pun">.</span><span class="pln"> You have to </span><span class="kwd">do</span><span class="pln"> this manually but </span><span class="kwd">in</span><span class="pln"> plan is to add build </span><span class="kwd">in</span><span class="pln"> customizable synchronization</span><span class="pun">.</span></pre>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="113" src="https://www.youtube-nocookie.com/embed/0zcFjqGhvVg?feature=oembed" width="200"></iframe>
+	</div>
+</div>
+
+<p>
+	Pull request: <a href="https://github.com/multitheftauto/mtasa-blue/pull/1246" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue/pull/1246</a>
+</p>
+
+<p>
+	Read more about bullet physics: <a href="https://github.com/bulletphysics/bullet3" rel="external nofollow">https://github.com/bulletphysics/bullet3</a> <a href="https://pybullet.org/wordpress/" rel="external nofollow">https://pybullet.org/wordpress/</a>
+</p>
+
+<p>
+	More at <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr></abbr> dev discord: <a href="https://discord.gg/GNN6PRtTnu" rel="external nofollow">https://discord.gg/GNN6PRtTnu</a>
+</p>
+
+<p>
+	Do you have any idea of physics applications in <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr></abbr>? Let us know in the comment down below!
+</p>
+
+<p>
+	Thanks in advance for help!
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Patch 19.04.2022
+</p>
+
+<p>
+	- "getUserdataType" now returns exact shape type not only general shape type
+</p>
+
+<p>
+	- clientside draw debug no longer render debug when game minimalized.
+</p>
+
+<p>
+	Download newest custom build of <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr> with bullet physics at</abbr> <a href="https://github.com/multitheftauto/mtasa-blue/suites/6176759056/artifacts/216790429" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue/suites/6176759056/artifacts/216790429</a>
+</p>
+]]></description><guid isPermaLink="false">135142</guid><pubDate>Sun, 10 Apr 2022 18:15:20 +0000</pubDate></item><item><title>Our dedicated MTA development Discord server</title><link>https://forum.multitheftauto.com/topic/133917-our-dedicated-mta-development-discord-server/</link><description><![CDATA[<p>
+	<span style="font-size:16px;"><strong>Disclaimer: This is aimed at MTA open source contributors only.</strong></span>
+</p>
+
+<p>
+	Hi devs!
+</p>
+
+<p>
+	If you're looking for support regarding MTA C++/module/resource development, or you have some ideas or want to discuss about MTA development related matters, come and join our dedicated MTA development Discord server at <a href="https://discord.com/invite/GNN6PRtTnu" rel="external nofollow">https://discord.com/invite/GNN6PRtTnu</a> where we have dedicated channels for various topics. The server is <strong>English only</strong>. Non-development chatter is <strong>prohibited</strong>.
+</p>
+
+<p>
+	Please note that the MTA development server is only for development matters. If you need help with your MTA client/server or scripting, or you just want to chat and hang around, please use our official Discord server instead at <a href="https://discord.com/invite/mtasa" rel="external nofollow">https://discord.com/invite/mtasa</a>
+</p>
+]]></description><guid isPermaLink="false">133917</guid><pubDate>Sat, 15 Jan 2022 23:21:40 +0000</pubDate></item><item><title>Javascript as a secondary programming language</title><link>https://forum.multitheftauto.com/topic/129052-javascript-as-a-secondary-programming-language/</link><description><![CDATA[
+<p>
+	Few days ago i started discussion about javascript in mta, for more details checkout <a href="https://github.com/multitheftauto/mtasa-blue/discussions/2008" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue/discussions/2008</a>
+</p>
+
+<p>
+	I'm waiting for opinions, suggestions, and everything what can help, here, on at github
+</p>
+
+<p>
+	I already made working "hello world" example <span><img alt=":)" data-emoticon="" height="20" src="https://forum.multitheftauto.com/uploads/emoticons/smile.png" srcset="https://forum.multitheftauto.com/uploads/emoticons/smile@2x.png 2x" title=":)" width="20" /></span>
+</p>
+]]></description><guid isPermaLink="false">129052</guid><pubDate>Mon, 18 Jan 2021 13:08:06 +0000</pubDate></item><item><title>Compile mtasa-blue linux - ubuntu x64</title><link>https://forum.multitheftauto.com/topic/132124-compile-mtasa-blue-linux-ubuntu-x64/</link><description><![CDATA[<p>
+	Hello, how to compile mtasa-blue on linux, in general, installed the linux image, did everything as in the instructions, but still it is not clear, can you please help compile on linux?
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			<a href="https://github.com/multitheftauto/mtasa-blue" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue</a>
+		</p>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">132124</guid><pubDate>Fri, 13 Aug 2021 18:58:01 +0000</pubDate></item><item><title>Bullet physics in mta</title><link>https://forum.multitheftauto.com/topic/120422-bullet-physics-in-mta/</link><description><![CDATA[
+<p>
+	For long time i considered to do something with physics in mta. For now doing even simplest things such falling box, tree on flat area looks cartoonish. In my history of i saw few attempts of doing simple physics, mostly it was in closed area without bigger interactions with poor performance due you just can't calculate collision in other way than processLineOfSight, isLineOfSightClear or read directly .col file as Tederis did.
+</p>
+
+<p>
+	I started with something to render things, thats how FBX <a href="https://github.com/multitheftauto/mtasa-blue/pull/1093" rel="external nofollow">https://github.com/multitheftauto/mtasa-blue/pull/1093</a> to bypass default rendering to handle future i'll introduce in future.
+</p>
+
+<p>
+	That's how bullet physics project born, first idea how to use react physics, works simillar but is lighter and general smaller project but <strong><a href="https://github.com/0x416c69" rel="external nofollow" style="color:#586069;vertical-align:top;">0x416c69</a><span> </span></strong>suggested to use bullet. I'll use this topic also to prepare long list of features it contains for future copy paste to PR and wiki page
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	The main assumption is to allow for create multiple world with completly independed simulations, get and set detailed information about current step of simulation, fully control how everything is simulated, quality of collision tests, speed and a lot more.
+</p>
+
+<p>
+	i'm trying keep amount of functions low, because if that most stuff is packed into one function.<br />
+	Syntax and name of some function might change in future or along suggestions.<br />
+	Not all properties supports every physics element, some are only get, other set only, however most of them are set/get
+</p>
+
+<p>
+	<span style="font-size:20px;">Current stage:</span>
+</p>
+
+<p>
+	I already implemented function such a:
+</p>
+
+<ol>
+	<li>
+		physics physicsCreateWorld() - responsible for creating new world for simulations, return element which will use later.
+	</li>
+	<li>
+		physics-rigidbody physicsCreateRigidBody( shape-type, mixed arguments ) - creates rigid body which is use to simulation bahaviour of non-static shapes, collisions ( currently only few models in mta can do this in simple way ).
+	</li>
+	<li>
+		physics-rigidbody physicsCreateRigidBodyFromModel( model ) - used to create rigid body directly from collision data taken from gta model.
+	</li>
+	<li>
+		physics-static-collision physicsCreateStaticCollision( shape-type, mixed arguments ) - creates static collision which will not move at all ( it is still possible to move it by Lua script )
+	</li>
+	<li>
+		physics-shape physicsAddShape( shape-type, mixed arguments ) - if you create compound shape, this function let you add more shapes into static collision or rigid body
+	</li>
+	<li>
+		bool physicsSetProperties( any physics element, physics-property, mixed arguments ) - main function to control physics, rigid bodies, static collisions, shapes. Works in simillar way as handling functions.
+	</li>
+	<li>
+		mixed physicsGetProperties( any physics element,  physics-property ) - same as above, but getting properties
+	</li>
+	<li>
+		bool physicsDrawDebug( physics ) - use to visualization of world, must be used in render function
+	</li>
+	<li>
+		bool physicsSetDebugMode( physics-debug-mode, enabled ) - use to turn off/on debugging features
+	</li>
+	<li>
+		bool physicsBuildCollisionFromGTA( physics ) - used to create static collisions in specified world from original collisions, doesn't create whole world instantly, require to move player around world to load collision data.
+	</li>
+	<li>
+		physics-constraint physicsCreateConstraint( physics, physics-rigid-body, physics-rigid-body, constraint-type, mixed arguments ) - use to connecting two or more rigid bodies into one entity
+	</li>
+	<li>
+		bool physicsApplyForce( physics-rigid-body, vector from, vector to ) - pushing rigid body in particular point you choosed.
+	</li>
+	<li>
+		bool physicsApplyCentralForce( physics-rigid-body, vector direction ) - apply force from central position of rigid, it's more like "accelereate", should be used more than once at the some period of time
+	</li>
+	<li>
+		bool physicsApplyCentralImpulse( physics-rigid-body, vector direction ) - setting position from center of rigid
+	</li>
+	<li>
+		bool physicsApplyDamping( physics-rigid-body, float force ) - i'm not sure, but it should slow down velocity and rotation of model by specified amount of units
+	</li>
+	<li>
+		physicsApplyImpulse( physics-rigid-body, vector direction ) - i'm not sure how it works 
+	</li>
+	<li>
+		physicsApplyTorque( physics-rigid-body, vector rotation ) - same as physicsApplyCentralForce but for rotation
+	</li>
+	<li>
+		physicsApplyTorqueImpulse( physics-rigid-body, vector rotation ) - setting rotation speed
+	</li>
+</ol>
+
+<p>
+	<span style="font-size:18px;">physics-properties:</span><span style="font-size:14px;"> "mass", "position" ,"rotation", "sleepingthresholds", "restitution", "scale" "debugcolor", "filtermask", "filtergroup", "stiffness"</span>
+</p>
+
+<p>
+	`<span style="font-size:14px;">sleepingthresholds` means how slow rigid must move/rotate to sleep, it makes stops moving at all but still can be pushed by other rigids</span><br />
+	`<span style="font-size:14px;">restitution` bounciness, between 0-1 but accept any value above</span><br />
+	<br />
+	`<span style="font-size:14px;">stiffness` - for fixed constraint</span>
+</p>
+
+<p>
+	`<span style="font-size:14px;">filtermask` i still figuring out how it work</span>, but should let you use 32 bit mask to set which rigid with which should collide
+</p>
+
+<p>
+	Bullet documentation: <a href="https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf" rel="external nofollow">https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf</a><br />
+	page 13 contains useful information when which shape should be used
+</p>
+
+<p>
+	<span style="font-size:20px;">physics-constraints: </span><span style="font-size:14px;">"pointtopoint", "hidge", "fixed", "slider"</span>
+</p>
+
+<p>
+	<span style="font-size:20px;">Physics-shapes:</span> "box", "sphere", "capsule", "cone", "cylinder",  "heightfieldterrain", "compound", "trianglemesh", "convexhull"
+</p>
+
+<p>
+	`compound` is used for constructing rigid made of various shapes
+</p>
+
+<p>
+	<span style="font-size:20px;">Plans for future:</span>
+</p>
+
+<ol>
+	<li>
+		"heightfieldterrain" shape type accept black-white texture for faster creation
+	</li>
+	<li>
+		Support for cloths, soft bodies
+	</li>
+	<li>
+		 
+	</li>
+</ol>
+
+<p>
+	<span style="font-size:20px;">Media:</span><br />
+	<span style="font-size:14px;">Videos are availiable at my youtube channel</span><span style="font-size:20px;"> </span><a href="https://www.youtube.com/channel/UC95MpsQ1JppDNpMvl_7c1rg" rel="external nofollow">https://www.youtube.com/channel/UC95MpsQ1JppDNpMvl_7c1rg</a><br />
+	<span style="font-size:20px;">screenshots and gifs of current progress<span>:</span></span><br />
+	 
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			<img alt="unknown.png" class="ipsImage" data-ratio="41.34" height="413" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/630858910286479373/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" /> <span style="font-size:20px;">Ray casting</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="wonsz.gif" class="ipsImage" data-ratio="56.33" height="338" style="height:auto;" width="600" data-src="https://cdn.discordapp.com/attachments/479969831207174166/630416407141679115/wonsz.gif" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />fixed constaraint</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="snake.gif" class="ipsImage" data-ratio="56.40" height="282" style="height:auto;" width="500" data-src="https://cdn.discordapp.com/attachments/479969831207174166/630335510258384915/snake.gif" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />fixed constraint</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="36.83" height="368" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/630009799211220992/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />scaled heightmap</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="58.70" height="586" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/629388686965866497/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />capsule shape</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="73.47" height="659" style="height:auto;" width="897" data-src="https://cdn.discordapp.com/attachments/479969831207174166/629679272105213965/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />cone shape</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="72.93" height="671" style="height:auto;" width="920" data-src="https://cdn.discordapp.com/attachments/479969831207174166/629683045078663172/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />cylinder shape</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="47.57" height="475" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/629772711350239232/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />heightfield terrain filled with spheres</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="54.59" height="545" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/629771959038902293/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />single sphere in heightfield terrain</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="54.94" height="549" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/629785851949350976/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />heightfield terrain scale and filled with spheres</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="46.04" height="460" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/628639327668142122/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />example usage of physicsCreateRigidBodyFromModel</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="34.69" height="346" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/627913395810730004/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />example usage of physicsCreateRigidBodyFromModel</span>
+		</p>
+
+		<p>
+			<span style="font-size:20px;"><img alt="unknown.png" class="ipsImage" data-ratio="55.88" height="558" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/479969831207174166/627622521587499031/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />random spheres and boxes spreaded around world, green are sleeping one</span>
+		</p>
+
+		<p>
+			 
+		</p>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	Documentation i use: <a href="https://pybullet.org/Bullet/BulletFull" rel="external nofollow">https://pybullet.org/Bullet/BulletFull</a>
+</p>
+
+<p>
+	I'm waiting for your suggestions
+</p>
+
+<p>
+	Topic not finishedd
+</p>
+]]></description><guid isPermaLink="false">120422</guid><pubDate>Sun, 06 Oct 2019 20:38:20 +0000</pubDate></item><item><title>What are you hoping to do with fastman92's limit adjuster?</title><link>https://forum.multitheftauto.com/topic/91160-what-are-you-hoping-to-do-with-fastman92s-limit-adjuster/</link><description><![CDATA[<p>
+	Hi guys
+</p>
+
+<p>
+	<a contenteditable="false" data-ipshover="" data-ipshover-target="https://forum.multitheftauto.com/profile/33469-fastman92/?do=hovercard" data-mentionid="33469" href="https://forum.multitheftauto.com/profile/33469-fastman92/" rel="">@fastman92</a> has recently engaged with us in order to get his limit adjuster implemented into MTA.  Obviously, there are a number of complexities involved in implementing this, and we need to make some important design decisions to achieve this.
+</p>
+
+<p>
+	<strong>So, why do you want to use a Limit Adjuster tool?</strong>
+</p>
+
+<p>
+	Some things I'm hoping to learn:
+</p>
+
+<ul><li>
+		Are you trying to play MTA with a modified version of GTASA? Do you want the limit adjuster to play mods like GTA:Underground?
+	</li>
+	<li>
+		Are you trying to use Limit Adjusters with MTA's own Lua engine* functions? (e.g. engineLoadDFF)
+	</li>
+	<li>
+		Anything else?
+	</li>
+</ul><p>
+	Any feedback would be incredibly beneficial to the team going forward.
+</p>
+
+<p>
+	Cheers
+</p>
+
+<p>
+	Dan
+</p>
+]]></description><guid isPermaLink="false">91160</guid><pubDate>Tue, 29 Nov 2016 20:39:11 +0000</pubDate></item><item><title>Anti-cheat</title><link>https://forum.multitheftauto.com/topic/128421-anti-cheat/</link><description><![CDATA[
+<p>
+	how you can use the standard anti-cheat mta in a custom build.  it doesn't work for me for some reason
+</p>
+]]></description><guid isPermaLink="false">128421</guid><pubDate>Fri, 04 Dec 2020 21:55:55 +0000</pubDate></item><item><title>Compiling</title><link>https://forum.multitheftauto.com/topic/123793-compiling/</link><description><![CDATA[<p>
+	Hello, when I compile mta climbs an error discord.h
+</p>
+]]></description><guid isPermaLink="false">123793</guid><pubDate>Thu, 16 Apr 2020 06:44:28 +0000</pubDate></item><item><title>Remove 'The Latest News'</title><link>https://forum.multitheftauto.com/topic/121736-remove-the-latest-news/</link><description><![CDATA[<p>
+	Hi, how to remove 'The Latest News' in the source of the game? And is there any way to block the entrance to other servers by checking by IP?
+</p>
+]]></description><guid isPermaLink="false">121736</guid><pubDate>Sat, 04 Jan 2020 21:32:41 +0000</pubDate></item><item><title><![CDATA[Main menu background music & sound effects stuff]]></title><link>https://forum.multitheftauto.com/topic/116770-main-menu-background-music-sound-effects-stuff/</link><description><![CDATA[<p>
+	Hello there &gt;3 I have recetly tried to add to execute sounds in different ways:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="pln">PlaySoundA</span><span class="pun">(</span><span class="str">"C:\\sound\\test.mp3"</span><span class="pun">,</span><span class="pln"> NULL</span><span class="pun">,</span><span class="pln"> SND_FILENAME</span><span class="pun">);</span><span class="pln"> </span><span class="pun">//</span><span class="pln"> SND_FILENAME </span><span class="kwd">or</span><span class="pln"> SND_LOOP</span></pre>
+
+<p>
+	and
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="pln">mciSendString</span><span class="pun">(</span><span class="str">"open \"C:\\sound\\test.mp3\" type mpegvideo alias mp3"</span><span class="pun">,</span><span class="pln"> NULL</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> NULL</span><span class="pun">);</span></pre>
+
+<p>
+	and any other additional librarias but got nothing. I admit that i doesn't know much and test this stuff for first time
+</p>
+
+<p>
+	Anyway, how can i make looped music in main menu or make some audio effects on menu interaction?
+</p>
+
+<p>
+	Sry for my bad english =D
+</p>
+]]></description><guid isPermaLink="false">116770</guid><pubDate>Wed, 29 May 2019 15:59:39 +0000</pubDate></item><item><title>Project compilation error</title><link>https://forum.multitheftauto.com/topic/116632-project-compilation-error/</link><description><![CDATA[<p>
+	Help with problem please.<br>
+	 
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="pln">Msb8036 error</span><span class="pun">:</span><span class="pln">
+Windows SDK version </span><span class="lit">8.1</span><span class="pln"> could </span><span class="kwd">not</span><span class="pln"> be found</span><span class="pun">.</span><span class="pln">
+Install the correct version of the Windows SDK</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> change the SDK version on the project property pages</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> right</span><span class="pun">-</span><span class="pln">click the solution </span><span class="kwd">and</span><span class="pln"> select change solution target platform</span><span class="pun">.</span></pre>
+
+<p>
+	Thanks a lot.
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="lit">1</span><span class="pun">&gt;</span><span class="com">------ Build started: project: Client Launcher, Configuration: Debug Win32 ------</span><span class="pln">
+</span><span class="lit">1</span><span class="pun">&gt;</span><span class="pln">C</span><span class="pun">:\</span><span class="pln">Program Files </span><span class="pun">(</span><span class="pln">x86</span><span class="pun">)\</span><span class="pln">Microsoft Visual Studio</span><span class="pun">\</span><span class="lit">2019</span><span class="pun">\</span><span class="pln">Community</span><span class="pun">\</span><span class="pln">MSBuild</span><span class="pun">\</span><span class="pln">Microsoft</span><span class="pun">\</span><span class="pln">VC</span><span class="pun">\</span><span class="pln">v150</span><span class="pun">\</span><span class="pln">Microsoft</span><span class="pun">.</span><span class="pln">Cpp</span><span class="pun">.</span><span class="pln">Windows SDK</span><span class="pun">.</span><span class="pln">targets</span><span class="pun">(</span><span class="lit">46.5</span><span class="pun">):</span><span class="pln"> error MSB8036</span><span class="pun">:</span><span class="pln"> Windows SDK </span><span class="lit">8.1</span><span class="pln"> could </span><span class="kwd">not</span><span class="pln"> be found</span><span class="pun">.</span><span class="pln"> Install the correct version of the Windows SDK</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> change the SDK version on the project property pages</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> right</span><span class="pun">-</span><span class="pln">click the solution </span><span class="kwd">and</span><span class="pln"> select change solution target platform</span><span class="pun">.</span><span class="pln">
+
+</span><span class="lit">1</span><span class="pun">&gt;</span><span class="pln">Build project </span><span class="str">"Client Launcher.vcxproj"</span><span class="pln"> completed with an error</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">==========</span><span class="pln"> Build</span><span class="pun">:</span><span class="pln"> successful</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> with errors</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> unchanged</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> skipped</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">==========</span></pre>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">116632</guid><pubDate>Wed, 22 May 2019 16:41:30 +0000</pubDate></item><item><title>Client startup options</title><link>https://forum.multitheftauto.com/topic/116609-client-startup-options/</link><description><![CDATA[<p>
+	Hi. I am now writing a launcher with authorization, etc., there was a question about the launch of Mta, whether there are keys ( parameters ) launch MTA? Let's say nick change or automatic connection when launching the game?<br>
+	Thanks for the reply, sorry for my English, used translator<img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"><br><br>
+	 
+</p>
+
+<pre class="ipsCode prettyprint lang-javascript prettyprinted">
+<span class="kwd">function</span><span class="pln"> doUser_bottom_lClickLeft</span><span class="pun">(</span><span>UXMouseEvent</span><span class="pln"> $e </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">    
+    execute</span><span class="pun">(</span><span class="str">'D:\Games\mt\Multi Theft Auto.exe'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span></pre>
+
+<p>
+	P.S -&gt; Another question, where can I get the source code of mta? And what programs will be required for compilation?
+</p>
+]]></description><guid isPermaLink="false">116609</guid><pubDate>Tue, 21 May 2019 08:04:01 +0000</pubDate></item><item><title>[C++] Can i use MTA functions in modules?</title><link>https://forum.multitheftauto.com/topic/116497-c-can-i-use-mta-functions-in-modules/</link><description><![CDATA[<p>
+	Hello there! So the question is in the title - am i able to use MTA functions somehow inside module code? Maybe i can link it somehow with MTA source code to avoid errors during compiling
+</p>]]></description><guid isPermaLink="false">116497</guid><pubDate>Wed, 15 May 2019 19:13:03 +0000</pubDate></item><item><title>Custom client design c++</title><link>https://forum.multitheftauto.com/topic/115545-custom-client-design-c/</link><description><![CDATA[<p>
+	Hello everyone! I've recently tried to make custom client (i changed main menu elements, added c++ related functions) but i keep getting version errors. Is that even possible? Maybe i'm doing something wrong
+</p>]]></description><guid isPermaLink="false">115545</guid><pubDate>Sun, 24 Mar 2019 11:55:30 +0000</pubDate></item><item><title>Dark and chromeless vehicles on server</title><link>https://forum.multitheftauto.com/topic/115448-dark-and-chromeless-vehicles-on-server/</link><description><![CDATA[<p>
+	Hello. On my MTA server almost all passenger cars are replaced. In total 141 vehicles, including aircraft and trailers are at the moment replaced. In July-August, 2017 I began to observe darkenings of some parts of cars. Over time transport became a little more and something became absolutely dark, something partially. In the mtaserver.conf file there is a list of the resources started together with the server. Transport which is in the first 99 lines is normal. Further in the lines there are about three cars with partial loss of chrome, further about 30 cars without chrome and then everything dark what written down after these about 130 lines. Over time to some of these 30 cars chrome is returned, dark cars become light, but not always. Not replaced transport is always dark.<br>
+	 Is it some restriction of a game or not? How to fix it?<br>
+	On a screenshot are examples of the car without chrome, partially dark and completely dark cars (E-150 have no chrome).<br>
+	 
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			<img alt="b8fcc01ff942969f4474ad41a64b80ee.jpg" class="ipsImage" height="562" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" width="1000" data-src="https://www.myarena.ru/upload/ticket/b8fcc01ff942969f4474ad41a64b80ee.jpg"></p>
+	</div>
+</div>
+
+<p>
+	After restart of the server some chromeless cars become normal, some dark cars become light, but after Shutdown with the subsequent Start these vehicles became bad again.
+</p>
+]]></description><guid isPermaLink="false">115448</guid><pubDate>Mon, 18 Mar 2019 14:25:23 +0000</pubDate></item><item><title>Linux Server Compile error</title><link>https://forum.multitheftauto.com/topic/114610-linux-server-compile-error/</link><description><![CDATA[<p style="margin-left:40px;">
+	When I compile MTA server on Ubuntu_16.04_x86-64 I have this errors. How can I fix it?
+</p>
+
+<p style="margin-left:40px;">
+	<strong>make config=release_x64 all</strong><br>
+	==== Building breakpad (release_x64) ====<br>
+	==== Building Core (release_x64) ====<br>
+	==== Building Dbconmy (release_x64) ====<br>
+	==== Building Launcher (release_x64) ====<br>
+	==== Building Lua_Server (release_x64) ====<br>
+	==== Building sqlite (release_x64) ====<br>
+	==== Building ehs (release_x64) ====<br>
+	==== Building cryptopp (release_x64) ====<br>
+	==== Building pme (release_x64) ====<br>
+	==== Building pcre (release_x64) ====<br>
+	==== Building json-c (release_x64) ====<br>
+	==== Building zip (release_x64) ====<br>
+	==== Building zlib (release_x64) ====<br>
+	==== Building blowfish_bcrypt (release_x64) ====<br>
+	==== Building Deathmatch (release_x64) ====<br>
+	CServer.cpp<br><strong>cc1plus: error: one or more PCH files were found, but they were invalid<br>
+	cc1plus: error: use -Winvalid-pch for more information<br>
+	cc1plus: fatal error: obj/x64/Release/Deathmatch/StdInc.h: No such file or directory</strong><br>
+	compilation terminated.<br>
+	Deathmatch.make:536: recipe for target 'obj/x64/Release/Deathmatch/CServer.o' failed<br>
+	make[1]: *** [obj/x64/Release/Deathmatch/CServer.o] Error 1<br>
+	Makefile:190: recipe for target 'Deathmatch' failed<br>
+	make: *** [Deathmatch] Error 2
+</p>
+
+<p>
+	<strong>After putting StdInc.h To From /Server/mods/Deathmatch</strong>
+</p>
+
+<p style="margin-left:40px;">
+	root@demsasha4yt:~/mtasa-blue/Build/obj/x64/Release/Deathmat<br>
+	ch# ls<br>
+	StdInc.h  StdInc.h.gch
+</p>
+
+<p>
+	<strong>Have this errors:</strong>
+</p>
+
+<p style="margin-left:40px;">
+	<br>
+	==== Building Deathmatch (release_x64) ====<br>
+	CServer.cpp<br>
+	In file included from ../vendor/json-c/json_object.h:43:0,<br>
+	                 from ../vendor/json-c/linkhash.h:22,<br>
+	                 from ../vendor/json-c/json.h:25,<br>
+	                 from ../Server/mods/deathmatch/logic/packets/../CCommon.h:761,<br>
+	                 from ../Server/mods/deathmatch/logic/packets/CCameraSyncPacket.h:14,<br>
+	                 from ./obj/x64/Release/Deathmatch/StdInc.h:51,<br>
+	                 from &lt;command-line&gt;:0:<br>
+	../vendor/json-c/json_inttypes.h:18:0: warning: "PRId64" redefined<br>
+	 #define PRId64 "I64d"<br>
+	 ^<br>
+	In file included from ../Shared/sdk/SharedUtil.h:70:0,<br>
+	                 from ./obj/x64/Release/Deathmatch/StdInc.h:32,<br>
+	                 from &lt;command-line&gt;:0:<br>
+	../Shared/sdk/SharedUtil.Legacy.h:30:0: note: this is the location of the previous definition<br>
+	 #define PRId64  "lld"<br>
+	 ^<br>
+	In file included from ./obj/x64/Release/Deathmatch/StdInc.h:306:0,<br>
+	                 from &lt;command-line&gt;:0:<br>
+	../Server/mods/deathmatch/../../version.h:107:75: note: #pragma message:<br>
+	----------------------------------------------------------------------<br>
+	MTASA_VERSION_TYPE is not set to VERSION_TYPE_RELEASE<br>
+	Server will not work with release clients<br>
+	-------------------------------------------------------------------------<br>
+	If you want the server to work with release clients<br>
+	set MTASA_VERSION_TYPE to VERSION_TYPE_RELEASE in MTA10_Server/version.h<br>
+	-------------------------------------------------------------------------<br>
+	 -------------------------------------------------------------------------")<br>
+	                                                                           ^<br>
+	In file included from ../Shared/sdk/SharedUtil.hpp:17:0,<br>
+	                 from ../Server/mods/deathmatch/CServer.cpp:14:<br>
+	../Shared/sdk/SharedUtil.File.hpp: In function 'SString SharedUtil::GetSystemCurrentDirectory()':<br>
+	../Shared/sdk/SharedUtil.File.hpp:297:35: warning: ignoring return value of 'char* getcwd(char*, size_t)', declared with attribute warn_unused_result [-Wunused-result]<br>
+	     getcwd(szBuffer, MAX_PATH - 1);<br>
+	                                   ^<br><strong>g++: internal compiler error: Killed (program cc1plus)</strong><br>
+	Please submit a full bug report,<br>
+	with preprocessed source if appropriate.<br>
+	See &lt;file:///usr/share/doc/gcc-5/README.Bugs&gt; for instructions.<br>
+	Deathmatch.make:536: recipe for target 'obj/x64/Release/Deathmatch/CServer.o' failed<br>
+	make[1]: *** [obj/x64/Release/Deathmatch/CServer.o] Error 4<br>
+	Makefile:190: recipe for target 'Deathmatch' failed<br>
+	make: *** [Deathmatch] Error 2
+</p>
+
+<p style="margin-left:40px;">
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">114610</guid><pubDate>Tue, 05 Feb 2019 19:06:26 +0000</pubDate></item><item><title>More IDs for vehicles. More IDs for objects.</title><link>https://forum.multitheftauto.com/topic/114123-more-ids-for-vehicles-more-ids-for-objects/</link><description><![CDATA[<p>
+	If you do not understand me then please ask again.
+</p>
+
+<p>
+	1] More IDs for vehicles.
+</p>
+
+<p>
+	I have a question. Is it possible to add(adapt) a free ID for the car. For example, I have a free ID 612 and I want to add a new car to it(since the developers of UGMP made them more than 500 cars from GTA Vice city and not only )
+</p>
+
+<p>
+	As far as I understand, it is possible. Because the developers of "UGMP" implemented it .....
+</p>
+
+<p>
+	I did some digging into the MTA wiki and found that they have "Vehicles IDs"(<span style="color:#000000;">vehicleIds </span><span style="color:#66cc66;">=</span><span style="color:#000000;"> </span><span style="color:#66cc66;">{</span><span style="color:#cc66cc;">400</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">401</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">402</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">403</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">404</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">405</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">406</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">407</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">408</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">409</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">410</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">411</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">412</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">413</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">414</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">415</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">416</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">417</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">418</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">419</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">420</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">421</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">422</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">423</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">424</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">425</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">426</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">427</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">428</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">429</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">430</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">431</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">432</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">433</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">434</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">435</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">436</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">437</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">438</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">439</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">440</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">441</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">442</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">443</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">444</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">445</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">446</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">447</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">448</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">449</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">450</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">451</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">452</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">453</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">454</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">455</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">456</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">457</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">458</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">459</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">460</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">461</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">462</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">463</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">464</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">465</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">466</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">467</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">468</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">469</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">470</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">471</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">472</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">473</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">474</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">475</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">476</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">477</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">478</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">479</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">480</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">481</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">482</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">483</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">484</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">485</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">486</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">487</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">488</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">489</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">490</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">491</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">492</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">493</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">494</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">495</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">496</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">497</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">498</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">499</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">500</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">501</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">502</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">503</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">504</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">505</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">506</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">507</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">508</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">509</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">510</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">511</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">512</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">513</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">514</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">515</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">516</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">517</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">518</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">519</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">520</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">521</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">522</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">523</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">524</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">525</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">526</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">527</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">528</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">529</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">530</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">531</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">532</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">533</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">534</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">535</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">536</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">537</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">538</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">539</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">540</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">541</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">542</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">543</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">544</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">545</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">546</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">547</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">548</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">549</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">550</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">551</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">552</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">553</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">554</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">555</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">556</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">557</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">558</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">559</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">560</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">561</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">562</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">563</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">564</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">565</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">566</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">567</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">568</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">569</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">570</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">571</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">572</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">573</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">574</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">575</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">576</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">577</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">578</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">579</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">580</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">581</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">582</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">583</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">584</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">585</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">586</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">587</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">588</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">589</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">590</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">591</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">592</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">593</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">594</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">595</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">596</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">597</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">598</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">599</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">600</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">601</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">602</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">603</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">604</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">605</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">606</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">607</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">608</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">609</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">610</span><span style="color:#66cc66;">,</span><span style="color:#000000;"> </span><span style="color:#cc66cc;">611</span><span style="color:#000000;"> </span><span style="color:#66cc66;">}</span>)
+</p>
+
+<p>
+	And in the source code of the MTA, I found the ability to change the number of seats in the car and the ability to change the color (something like carcolors)
+</p>
+
+<p>
+	2]More IDs for objects.
+</p>
+
+<p>
+	I am wondering if it is possible to increase the number of free IDS?(For example, 20,000 to 50,000)    As far as I know in the source code there is a file that contains a list of valid IDS . Can it be expanded? (<a href="https://github.com/multitheftauto/mtasa-blue/blob/1.0/MTA10/utils/gentable/gentable_objmodels.cpp" rel="external nofollow" style="background-color:#ffffff;color:#3d6594;font-size:14px;">https://github.com/multitheftauto/mtasa-blue/blob/1.0/MTA10/utils/gentable/gentable_objmodels.cpp</a>)
+</p>
+
+<p>
+	I would very much like you to understand me.
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">114123</guid><pubDate>Sat, 19 Jan 2019 10:19:14 +0000</pubDate></item><item><title>Pull Request Testing</title><link>https://forum.multitheftauto.com/topic/103179-pull-request-testing/</link><description><![CDATA[<p>
+	Some pull requests are over a year old, there's 23 pending, and a lot of them have this tag: "pr:needs-testing" I would be happy to test these if there was a way to test them without having to go to all the effort of compiling my own build.
+</p>
+
+<p>
+	Correct me if I'm wrong but 'master' is 1.6 and therefore basically all pull requests could be merged to master right now (or make a branch where all pull requests are merged to) and then we'd be able to test it all with the 1.6 nightly and then the whole community would have the ability to test all pull requests, then we can confirm whether or not the pull requests work. 1.6 is a long way off so there'd be plenty of time for any bugs to get discovered and if we're given a few weeks notice before a 1.6 release we can do general testing to see if any random bugs have popped up.
+</p>
+
+<p>
+	A lot more pull requests might actually get made if they got merged, back when I made some source pathces, it was demotivating to see my patches get ignored, then I just lost interest. The people with pending pull requests from months ago are probably feeling the same thing.
+</p>
+
+<p>
+	To be honest, all the pull requests combined could actually be good enough for a new release especially when there's "Added dynamic ped ID allocating" and if there was dynamic object ID allocating I'd be begging for 1.6 to get released. All you guys gotta do is check their code to make sure it looks legit, then I can do all the ingame testing.
+</p>
+]]></description><guid isPermaLink="false">103179</guid><pubDate>Sun, 25 Feb 2018 23:00:55 +0000</pubDate></item><item><title>What is the counterpart of MTA functions in single player GTA San Andreas?</title><link>https://forum.multitheftauto.com/topic/105598-what-is-the-counterpart-of-mta-functions-in-single-player-gta-san-andreas/</link><description><![CDATA[<p>
+	What is the counterpart of MTA functions in single player GTA San Andreas?<br><br>
+	My English is bad, if you don't understand what i'm asking, there is a more simple question:<br><br>
+	MTA functions = What(in single player)?
+</p>]]></description><guid isPermaLink="false">105598</guid><pubDate>Wed, 13 Jun 2018 01:42:50 +0000</pubDate></item><item><title>[Help] Compiling MTASA</title><link>https://forum.multitheftauto.com/topic/111250-help-compiling-mtasa/</link><description><![CDATA[<p>
+	Please help me how to compiling mtasa with <span style="background-color:#ffffff;color:#111111;font-size:14px;">other gtasa? ex: gta gostown<br>
+	And thank you</span>
+</p>]]></description><guid isPermaLink="false">111250</guid><pubDate>Mon, 10 Sep 2018 12:23:00 +0000</pubDate></item><item><title>[QUESTION] GTA:SA to OpenGL</title><link>https://forum.multitheftauto.com/topic/110116-question-gtasa-to-opengl/</link><description><![CDATA[<p>
+	Hello Everyone!
+</p>
+
+<p>
+	I'd like to know if it's possible from MTA's Development Team,due to their experience with GTA SA and RenderWare Engine, how much it would take to create a full conversion of GTA SA to openGL.
+</p>
+
+<p>
+	I know this question seems a little bit crazy, but since all kind of modifications are possible with the enough knownledge.
+</p>
+
+<p>
+	Thank you very much,
+</p>
+
+<p>
+	Simple01.
+</p>
+]]></description><guid isPermaLink="false">110116</guid><pubDate>Mon, 30 Jul 2018 23:11:24 +0000</pubDate></item><item><title>Error when trying to run MTA[netc_d.dll]</title><link>https://forum.multitheftauto.com/topic/105312-error-when-trying-to-run-mtanetc_ddll/</link><description><![CDATA[<p style="text-align:center;">
+	So, after i built the project using the Build -&gt; Build Solution i tried to run MTA, but a msgbox appeared saying that it cannot find netc_d.dll.<br>
+	Could someone help me?
+</p>
+
+<p style="text-align:center;">
+	 
+</p>
+
+<p>
+	Thanks in advance.
+</p>
+]]></description><guid isPermaLink="false">105312</guid><pubDate>Sun, 03 Jun 2018 10:23:43 +0000</pubDate></item><item><title>Question about MTA Build 1.5.4</title><link>https://forum.multitheftauto.com/topic/103747-question-about-mta-build-154/</link><description><![CDATA[<div style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<p>
+		<span style="background-color:#ffffff;color:#212121;font-size:16px;text-align:left;">Hi, help me solve the problem about the assembly of MTA 1.5.4, how do I even compile and run them?</span>
+	</p>
+
+	<p>
+		<span style="background-color:#ffffff;color:#212121;font-size:16px;text-align:left;">I tried to do this, but I'm getting an error when running MTA on a copied MTA</span>
+	</p>
+
+	<p>
+		<img alt="L4v210L.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" style="border-style:none;vertical-align:middle;" data-src="https://i.imgur.com/L4v210L.png"></p>
+</div>
+
+<div style="background-color:#ffffff;border-top:1px solid rgba(0,0,0,.075);color:#353c41;font-size:13px;">
+	<ul style="padding:0px;"><li style="vertical-align:middle;">
+			
+		</li>
+	</ul></div>
+]]></description><guid isPermaLink="false">103747</guid><pubDate>Sat, 24 Mar 2018 17:18:14 +0000</pubDate></item><item><title>very strange POST requests</title><link>https://forum.multitheftauto.com/topic/104302-very-strange-post-requests/</link><description><![CDATA[<p>
+	when I run mta sa, the client sends encrypted data to the server, what is it? neither in sources nor in a config found nothing similar to these addresses. below in spoiler are request headers
+</p>
+
+<p>
+	 
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			</p>
+<pre class="ipsCode">				
+			POST /sa/db/up52b/ HTTP/1.1
+		Host: updatesa.multitheftauto.com
+		User-Agent: MTA:SA
+		Accept: */*
+		Accept-Encoding: deflate, gzip
+		Content-type: application/octet-stream
+		Content-Length: 459
+		 				
+			POST /sa/db/up30b/ HTTP/1.1
+		Host: updatesa.multitheftauto.com
+		User-Agent: MTA:SA
+		Accept: */*
+		Accept-Encoding: deflate, gzip
+		Content-type: application/octet-stream
+		Content-Length: 402
+		 				
+			</pre>
+<p>
+		</p>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">104302</guid><pubDate>Thu, 19 Apr 2018 15:42:59 +0000</pubDate></item><item><title>MTA C++ Addon</title><link>https://forum.multitheftauto.com/topic/104029-mta-c-addon/</link><description><![CDATA[<p>
+	Addons for MTA supported only serverside? Or is it possible for the client? Or shared? 
+</p>
+
+<p>
+	Lua very slowly for my functions. I want use C++ on clientside.
+</p>
+]]></description><guid isPermaLink="false">104029</guid><pubDate>Thu, 05 Apr 2018 23:30:53 +0000</pubDate></item></channel></rss>

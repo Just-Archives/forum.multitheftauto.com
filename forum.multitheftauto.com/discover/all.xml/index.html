@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel><title>All Activity</title><link>https://forum.multitheftauto.com/discover/</link><description>Multi Theft Auto: Forums - All Activity</description><language>en</language><item><title>trainer</title><link><![CDATA[https://forum.multitheftauto.com/topic/137030-trainer/?do=findComment&comment=1013358]]></link><description>I am writing to you here again, hello! Please help me, I really want to play, I am ready to help you eliminate hackers, I have been banned for more than a year! help please. I really miss this game. 
+	serial: 79040591DAC8F871B790F8CDF59F37E2</description><pubDate>Sat, 30 Jul 2022 00:47:28 +0000</pubDate></item><item><title>Question: ElementData</title><link><![CDATA[https://forum.multitheftauto.com/topic/137028-question-elementdata/?do=findComment&comment=1013357]]></link><description>Hello @zezim
+ 
+
+
+	I'm moving this to the Scripting section as it's more suitable so you can get better assistance.</description><pubDate>Sat, 30 Jul 2022 00:23:47 +0000</pubDate></item><item><title>Question: ElementData</title><link><![CDATA[https://forum.multitheftauto.com/topic/137028-question-elementdata/?do=findComment&comment=1013356]]></link><description><![CDATA[Hey guys,
+ 
+
+
+	Who can help me? I need to export a function to another code but I can't.
+ 
+
+
+	I need export it: 
+ 
+
+setElementData(player, "Suspiro.Algemado", false)
+
+I need to send it here:
+
+
+addEvent('Pedro.onPlayerPreso', true)
+addEventHandler('Pedro.onPlayerPreso', root, 
+    function(player, tempo, id, motivo)
+        if tonumber(tempo) and tonumber(id) and motivo then 
+            if tonumber(tempo) &lt;= config.TempoMax then 
+                local receiver = getPlayerFromID(id)
+                if isElement(receiver) then 
+                    local posP = {getElementPosition(player)}
+                    local posR = {getElementPosition(receiver)}
+                    if getDistanceBetweenPoints3D(posP[1], posP[2], posP[3], posR[1], posR[2], posR[3]) &lt;= 3 then 
+                        triggerClientEvent(player, 'Pedro.printPrisao', player)
+                        message(player, 'Player was arrested.', 'info')
+						getElementData(receiver, "Suspiro.Algemado", false)
+
+Please see the last line of the code and tell me if it's right.]]></description><pubDate>Fri, 29 Jul 2022 23:46:02 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013355]]></link><description><![CDATA[function isMouseInPosition ( x, y, width, height )
+    if ( not isCursorShowing( ) ) then
+        return false
+    end
+    local sx, sy = guiGetScreenSize ( )
+    local cx, cy = getCursorPosition ( )
+    local cx, cy = ( cx * sx ), ( cy * sy )
+    
+    return ( ( cx &gt;= x and cx &lt;= x + width ) and ( cy &gt;= y and cy &lt;= y + height ) )
+end
+------------
+color = tocolor(0, 0, 0, 180) --Here is the color of the button I made
+------------
+dxDrawRectangle(sx*.40, sy*.47, sx*.06, sy*.05, color1 or color, false) --gombl
+
+------------
+if isMouseInPosition(sx*.40, sy*.47, sx*.06, sy*.05) then
+    color1 = tocolor(88, 0, 0, 50) --And here you put any color when the mouse touches the button, a color appears
+    else
+        color1 = color
+end
+
+
+	 
+ 
+
+	try this]]></description><pubDate>Fri, 29 Jul 2022 22:00:11 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013353]]></link><description>Well i see there is too 'gombl' dx draw in your screen shot
+ 
+
+
+	Btw if u mean the first 'gombl' use  
+	 
+ 
+
+sy,sy = guiGetScreenSize()
+if isInBox(sx*.40,sy*.47,sx*.06,sx*.05) then 
+
+
+	 
+	If u mean the second 'gombl' use  
+	 
+ 
+
+sx,sy = guiGetScreenSize()
+if IsInBox(sx*.55,sy*.47,sx*.06,sy*.05) then
+
+
+	That what i got after trying to understand</description><pubDate>Fri, 29 Jul 2022 19:22:28 +0000</pubDate></item><item><title>Error Loading Fonts</title><link><![CDATA[https://forum.multitheftauto.com/topic/137018-error-loading-fonts/?do=findComment&comment=1013352]]></link><description>If you're getting "Nonstandard GTA file" warnings on your MTA diagnostic result, it means the file was either modified by you, another device user, or the game is not an original copy (i.e. it is a pirated copy of the game). To fix this buy an original retail copy of the game such as a Steam key from G2A. It's best to do your own research and on resellers though.</description><pubDate>Fri, 29 Jul 2022 19:03:41 +0000</pubDate></item><item><title>Error Loading Fonts</title><link><![CDATA[https://forum.multitheftauto.com/topic/137018-error-loading-fonts/?do=findComment&comment=1013351]]></link><description>https://pastebin.mtasa.com/1000004827</description><pubDate>Fri, 29 Jul 2022 18:50:18 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013350]]></link><description>Worthless Cynomys
+				
+			
+			4 nappal ezel&#x151;tt
+		
+	
+
+	
+		
+			X2 and Y2 are the x of panel + panel size and y of panel + panel size
+		
+	
+
+	
+		
+			 
+			 
+		
+		
+
+		
+			 
+			 
+		
+	
+
+
+	X2 and Y2 are the x of panel + panel size and y of panel + panel size
+ 
+I don't understand what with what.</description><pubDate>Fri, 29 Jul 2022 18:36:51 +0000</pubDate></item><item><title>MTA:DayZ gamemode package [Sell]</title><link><![CDATA[https://forum.multitheftauto.com/topic/137019-mtadayz-gamemode-package-sell/?do=findComment&comment=1013349]]></link><description>Closing this on request.</description><pubDate>Fri, 29 Jul 2022 18:32:16 +0000</pubDate></item><item><title>Allowed to use cheats on own server if making anti-cheat?</title><link><![CDATA[https://forum.multitheftauto.com/topic/136952-allowed-to-use-cheats-on-own-server-if-making-anti-cheat/?do=findComment&comment=1013348]]></link><description>Thank you for the response. I'll be trying my best to make the anti-cheat without using cheats myself.</description><pubDate>Fri, 29 Jul 2022 18:31:46 +0000</pubDate></item><item><title>SAAW: San Andreas At War - World War II | v1.2 | 24/7 |</title><link><![CDATA[https://forum.multitheftauto.com/topic/85193-saaw-san-andreas-at-war-world-war-ii-v12-247/?do=findComment&comment=1013347]]></link><description>hi! I haven't written here for a long time.
+ 
+
+
+	Hey, you can add a bullet tracer? I played daze mta there are such cool bullet tracers, I would like something similar in saaw</description><pubDate>Fri, 29 Jul 2022 17:31:30 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013346]]></link><description>The event name you used is incorrect you used onClientCorsurMove 
+	You should use onClientCursorMove</description><pubDate>Fri, 29 Jul 2022 13:46:54 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013345]]></link><description>Is OnCursorMove not good?
+
+
+
+	
+ 
+
+
+
+	
+		
+			
+				 
+			
+		
+	
+
+	
+		 
+	
+
+
+	OnClientCursorMove*
+ 
+
+	Doesn't working</description><pubDate>Fri, 29 Jul 2022 13:22:54 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013344]]></link><description>This might be what are you looking for IsMouseInPosition</description><pubDate>Fri, 29 Jul 2022 13:19:50 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013343]]></link><description>There is a function from there, I would like to do it so that if you move the mouse to that coordinate, the button will light up, but I don't know how to calculate the coordinate so that it is "gomb1"
+
+
+
+	
+ 
+
+
+
+	
+		
+			
+				 
+			
+		
+	
+
+	
+		 
+	
+
+
+	The function I use to calculate the coordinates is IsInBox</description><pubDate>Fri, 29 Jul 2022 13:16:06 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013342]]></link><description><![CDATA[Tell me where is the problem , and next time you better copy &amp; paste instead of screenshot]]></description><pubDate>Fri, 29 Jul 2022 13:14:24 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013341]]></link><description/><pubDate>Fri, 29 Jul 2022 13:13:15 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013340]]></link><description>That's it , but if you suffer any other problems we are here to help</description><pubDate>Fri, 29 Jul 2022 13:12:43 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013339]]></link><description>Thanks, but is there anything else you can help me with?</description><pubDate>Fri, 29 Jul 2022 13:10:41 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013338]]></link><description>function alert ()
+local skin = getElementModel(localPlayer)
+if skin == 1 then 
+local name = getPlayerName(localPlayer)
+local sound = playSound("alert.mp3") -- Play wasted.mp3 from the sounds folder
+    setSoundVolume(sound, 1) -- Set the sound volume to 50%
+outputChatBox("HLR felhiv&#xE1;s "..name.." megnyitotta v&#xE1;r&#xF3;j&#xE1;t! Lehet j&#xF6;nni ha b&#xE1;rmi seg&#xED;ts&#xE9;g kell!")
+else
+outputChatBox("Nincs enged&#xE9;lyed hozz&#xE1;") 
+end
+end
+addCommandHandler("alert", alert, false, false) 
+
+function duty () 
+setElementModel(localPlayer, 266) 
+end
+addCommandHandler("aduty", duty, false, false) 
+
+
+	I did the if statement for the skin , to your "alert" command 
+	And i corrected the aduty command fuction because you was using thePalyer and it does not mean anything 
+	you should use localPlayer because you are using client side</description><pubDate>Fri, 29 Jul 2022 13:08:47 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013337]]></link><description>Thanks, but is there anything else you can help me with?</description><pubDate>Fri, 29 Jul 2022 13:05:41 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013336]]></link><description>Try this  
+	 
+ 
+
+function GetMyPosition()
+local skin = getElementModel(localPlayer)
+if skin == 1 then 
+local  x,y,z = getElementPosition(localPlayer)
+local int = getElementInterior(localPlayer)
+local dim = getElementDimension(localPlayer)
+setClipboard(x..", "..y..", "..z.." "..int..", "..dim)
+outputChatBox("Kordin&#xE1;t&#xE1;d sikeressen kim&#xE1;solva a v&#xE1;g&#xF3;lapra ")
+else
+outputChatBox("Nincs enged&#xE9;lyed hozz&#xE1;")
+end
+end
+addCommandHandler("GetMyPos", GetMyPosition, false, false)</description><pubDate>Fri, 29 Jul 2022 12:57:20 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013335]]></link><description>function GetMyPosition() 
+	local  x,y,z = getElementPosition(localPlayer) 
+	local int = getElementInterior(localPlayer) 
+	local dim = getElementDimension(localPlayer) 
+	local skin = getElementModel(localPlayer) 
+	  if not skin or not skin == 1 then outputChatBox("Nincs enged&#xE9;lyed hozz&#xE1;") return end 
+	setClipboard(x..", "..y..", "..z.." "..int..", "..dim) 
+	outputChatBox("Kordin&#xE1;t&#xE1;d sikeressen kim&#xE1;solva a v&#xE1;g&#xF3;lapra ") 
+	end
+ 
+
+
+	addCommandHandler("GetMyPos", GetMyPosition, false, false)
+ 
+
+
+	function alert () 
+	local name = getPlayerName(localPlayer) 
+	local sound = playSound("alert.mp3") -- Play wasted.mp3 from the sounds folder 
+	    setSoundVolume(sound, 1) -- Set the sound volume to 50% 
+	 if not skin or not skin == 1 then outputChatBox("Nincs enged&#xE9;lyed hozz&#xE1;") return end 
+	outputChatBox("HLR felhiv&#xE1;s "..name.." megnyitotta v&#xE1;r&#xF3;j&#xE1;t! Lehet j&#xF6;nni ha b&#xE1;rmi seg&#xED;ts&#xE9;g kell!") 
+	end 
+	addCommandHandler("alert", alert, false, false) 
+ 
+
+
+	function duty ()  
+	setElementModel(thePalyer, 266)  
+	end 
+	addCommandHandler("aduty", duty, false, false)</description><pubDate>Fri, 29 Jul 2022 12:54:18 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013334]]></link><description><![CDATA[Copy &amp; Paste your code after editing]]></description><pubDate>Fri, 29 Jul 2022 12:52:52 +0000</pubDate></item><item><title>[HELP]</title><link><![CDATA[https://forum.multitheftauto.com/topic/136946-help/?do=findComment&comment=1013333]]></link><description>Doesn't working.</description><pubDate>Fri, 29 Jul 2022 12:45:14 +0000</pubDate></item></channel></rss>

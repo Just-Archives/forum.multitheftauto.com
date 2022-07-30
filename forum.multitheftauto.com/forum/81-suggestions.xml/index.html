@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel><title>Suggestions Latest Topics</title><link>https://forum.multitheftauto.com/forum/81-suggestions/</link><description>Suggestions Latest Topics</description><language>en</language><item><title>Next RP</title><link>https://forum.multitheftauto.com/topic/136161-next-rp/</link><description><![CDATA[<p>
+	For some reason I can't log in to copies of next rp please help me here's a screenshot)<a href="https://imgur.com/a/1v8ecfC" rel="external nofollow">https://imgur.com/a/1v8ecfC</a>
+</p>
+<p>
+	<a contenteditable="false" data-ipshover="" data-ipshover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" data-mentionid="61779" href="https://forum.multitheftauto.com/profile/61779-tut/" rel="">@Tut</a>
+</p>
+
+<p>
+	Help!
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">136161</guid><pubDate>Tue, 07 Jun 2022 15:36:50 +0000</pubDate></item><item><title>what versions of Lua does MTA:SA support ?</title><link>https://forum.multitheftauto.com/topic/136069-what-versions-of-lua-does-mtasa-support/</link><description><![CDATA[<p>
+	 
+</p>
+
+<p>
+	<span>Hello friends</span>
+</p>
+
+<pre dir="ltr"><span lang="en" xml:lang="en">I am currently using version 5.3.6 of Lua on MTA successfully... i wanna know what other versions of Lua does MTA support? and where can i see them if there is any list or information.</span>
+</pre>
+
+<p dir="ltr">
+	<span lang="en" xml:lang="en">i searched in wiki but didn't find anything about it </span>
+</p>
+
+<p dir="ltr">
+	<span lang="en" xml:lang="en">thank you <img src="https://twemoji.maxcdn.com/2/72x72/2764.png" class="ipsEmoji" alt="❤️"></span>
+</p>
+
+<p dir="ltr">
+	 
+</p>
+]]></description><guid isPermaLink="false">136069</guid><pubDate>Thu, 02 Jun 2022 09:17:05 +0000</pubDate></item><item><title>Intervention of codes from external file</title><link>https://forum.multitheftauto.com/topic/135491-intervention-of-codes-from-external-file/</link><description><![CDATA[<p>
+	Hello, I don't know if this topic has been created in this forum before, but I have a few problems, I write my own script and offer it for sale, these scripts of course check a database to see if that server is there and run it, but all functions can be changed from the side file. you know, this causes the product I sell to be shared for free, I thought of many ways, but we have no way because the function is interfered with from the side file, we can avoid this problem if the authorities allow us to create our own _G table, <a href="https://luac.multitheftauto.com" rel="external nofollow">https://luac.multitheftauto.com</a> It would be great if there is an option on the site where we can create the _G (<a href="https://www.lua.org/pil/14.html" rel="external nofollow">https://www.lua.org/pil/14.html</a>) table ourselves, please respect our efforts.
+</p>
+
+<p>
+	We can see the data sent to many functions such as fetchRemote, dbQuery and we can interfere with them easily, I just showed you how I intervened in a function where we can get the player name, I hope you find a solution to this problem.
+</p>
+
+<p>
+	s.lua - side file
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">_getPlayerName </span><span class="pun">=</span><span class="pln"> getPlayerName
+
+</span><span class="kwd">function</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span><span class="pln">
+	iprint</span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span><span class="pln">
+  	</span><span class="kwd">return</span><span class="pln"> </span><span class="str">"lalala"</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+
+<p>
+	server.luac - main file
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">local</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">player</span><span class="pun">)</span><span class="pln">
+</span><span class="com">--Output &gt; "lalala"</span></pre>
+
+<p>
+	<br />
+	 
+</p>
+]]></description><guid isPermaLink="false">135491</guid><pubDate>Fri, 22 Apr 2022 19:28:08 +0000</pubDate></item><item><title>Definitive edition support</title><link>https://forum.multitheftauto.com/topic/133369-definitive-edition-support/</link><description><![CDATA[<p>
+	I was wondering if it is possible to make mta support new definitive edition, are developers explored the idea?  And what do you think about it. 
+</p>
+
+<p>
+	I know it has problems as a game but the framerate and the graphics are way better, and I think it will boost the players count again. 
+</p>
+]]></description><guid isPermaLink="false">133369</guid><pubDate>Tue, 30 Nov 2021 16:27:54 +0000</pubDate></item><item><title>What's up with the Toplist system?</title><link>https://forum.multitheftauto.com/topic/133614-whats-up-with-the-toplist-system/</link><description><![CDATA[<p>
+	Hi everyone,
+</p>
+
+<p>
+	I'm really trying to figure out what's happening with the toplist system, I've used this many times before around 2017-2019 and this was a great feature that helped servers increase their visibility while being quite affordable. Usually you added your server to the list and maybe 70-100 servers were in front of you, but you know, people ended up not paying or overlooking this so the queue was much faster, maybe 15 days.
+</p>
+
+<p>
+	I believe it's been 160-180 days (so &gt;160 servers) since I added my server to this system, still over 100 servers are in front of us, then I seem to see the same servers time and time again in the front page. I heard something about hosters abusing this system and adding the host to the toplist then selling a package with a higher price for the advantage.
+</p>
+
+<p>
+	6 months and god knows how much time is left, maybe an additional 6 months... it's too much time to look forward to, even more not knowing how much time there is left, at that point it's not really worth the hassle.
+</p>
+
+<p>
+	I don't know, I understand it's being successful, this is a lot of demand it seems, though I see you don't want this to happen as you tried to prevent this kind of abuse by hiding the server queue. This is also affecting the ones that don't abuse it, because personally I don't have hope I'll see a day when my server enters the toplist, or I'll just forget about it and miss the e-mail, it's always &gt;100 servers, you might as well hide it completely at this point.
+</p>
+
+<p>
+	I'm a software engineer, I worked with PayPal and similar paygates, I know their APIs provide the tools necessary to at least authorize the payment then do it when the time comes, this could definitely help filter out filler servers and removing the need to be constantly attentive for the toplist e-mail (because after 6 months I'm pretty much checking the list every week or two), then maybe: increasing the price, expanding to 25-30 servers, blacklisting certain abusers (You're probably doing it but just in case), I'm sure you've talked about this and got more ideas, but the problem persists.
+</p>
+
+<p>
+	Personally I'm not that frustrated, the toplist alone is not nearly enough to make a server succeed, but luckily I had an old playerbase to start with, I can't imagine being a completely new 0-player server.
+</p>
+
+<p>
+	Thanks for reading this unnecessarily long essay &gt;:),
+</p>
+
+<p>
+	DRW
+</p>
+]]></description><guid isPermaLink="false">133614</guid><pubDate>Thu, 23 Dec 2021 11:40:14 +0000</pubDate></item><item><title>NICKNAME</title><link>https://forum.multitheftauto.com/topic/128285-nickname/</link><description><![CDATA[
+<p>
+	I have a suggestion, the MTA could allow the use of unicode symbols in the name, it would be much more diversified, not just letters and numbers.
+</p>
+
+<p>
+	See, I have an example of the discord which in this case allows the use of symbols:
+</p>
+
+<p>
+	<img alt="spacer.png" class="ipsImage" data-ratio="17.37" height="37" style="height:auto;" width="213" data-src="https://cdn.discordapp.com/attachments/680146824547401800/781849443707781150/unknown.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />
+</p>
+]]></description><guid isPermaLink="false">128285</guid><pubDate>Fri, 27 Nov 2020 11:50:50 +0000</pubDate></item><item><title>Curiousity: Windows XP support</title><link>https://forum.multitheftauto.com/topic/132501-curiousity-windows-xp-support/</link><description><![CDATA[<p>
+	Hello forums!<br />
+	As you probably know, 1.5.8 and up do not work with XP. Is this just because of the security concerns of including old CEF? If yes, wouldn't it be possible to just build newer versions without CEF at all? A lot of servers don't actually need it.
+</p>
+]]></description><guid isPermaLink="false">132501</guid><pubDate>Tue, 14 Sep 2021 01:42:32 +0000</pubDate></item><item><title>setServerName</title><link>https://forum.multitheftauto.com/topic/132189-setservername/</link><description><![CDATA[<p>
+	Add the setServerName function. If I'm not mistaken, it was there before, but why was it removed?
+</p>
+]]></description><guid isPermaLink="false">132189</guid><pubDate>Thu, 19 Aug 2021 16:21:46 +0000</pubDate></item><item><title>Particles in the Map editor</title><link>https://forum.multitheftauto.com/topic/132056-particles-in-the-map-editor/</link><description><![CDATA[<p>
+	Hello, I come to suggest that it would be good to put the particles inside the mta map editor, I know that there are already functions to create particles but it would be nice and flexible that these can be added from the editor to avoid the user having to add them outside of it itself, this would save players time 
+</p>
+]]></description><guid isPermaLink="false">132056</guid><pubDate>Mon, 09 Aug 2021 03:16:37 +0000</pubDate></item><item><title>Toplist System</title><link>https://forum.multitheftauto.com/topic/125181-toplist-system/</link><description><![CDATA[<p>
+	toplist system should be changed to "pay first serve second". people are adding their servers to the list and when their time comes, they are not paying. its just cluttering up the system and preventing people to actually buy it ...
+</p>
+]]></description><guid isPermaLink="false">125181</guid><pubDate>Sun, 31 May 2020 00:56:24 +0000</pubDate></item><item><title>Report community resources here!</title><link>https://forum.multitheftauto.com/topic/97313-report-community-resources-here/</link><description><![CDATA[<p>
+	<a href="https://community.multitheftauto.com/" rel="external nofollow"><strong>https://community.multitheftauto.com/</strong></a>
+</p>
+
+<p>
+	<em>This is a globalized thread so it will show in EVERY forum.</em>
+</p>
+
+<p>
+	<span style="font-size:24px;">Please reply to this thread with a link to the resource(s) you wish to report.</span>
+</p>
+
+<p>
+	Some reasons to report a community resource:
+</p>
+
+<ul><li>
+		Skin, weapon, or vehicle modifications (note that mods added to resources as assets rather than it's main purpose are allowed). Also model packs (like mass weapon or wheels/rims replacements) are allowed.
+	</li>
+	<li>
+		Resources that were stolen or leaked/copied or which partially consists of such violating code
+	</li>
+	<li>
+		Resources with none or poor descriptions
+	</li>
+	<li>
+		Resources with "please delete" and such in their description
+	</li>
+</ul><p>
+	These are just a few reasons in general, also if you see any resource in violation of the broader community guidelines (located at <a href="https://forum.multitheftauto.com/topic/98514-community-regulations-guidelines/" rel="">https://forum.multitheftauto.com/topic/98514-community-regulations-guidelines/</a>) you can report it, referring to the regulation that resource violates.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	It's okay if none of these reasons apply to the resource you wish to report; post it anyway with a reason why you think it should be removed and we'll make a decision.
+</p>
+
+<p>
+	To hopefully curb improper resources existing on the community, this topic has been made a global announcement across the forum. We'll do our best to keep on top of your reports.
+</p>
+
+<p>
+	We will edit your post to indicate the issue has been dealt with.
+</p>
+
+<p>
+	Also, note that we are <strong>not</strong> seeking any additional community moderators at this time.
+</p>
+]]></description><guid isPermaLink="false">97313</guid><pubDate>Wed, 25 Jul 2012 01:41:25 +0000</pubDate></item><item><title>Time Bans Appeals</title><link>https://forum.multitheftauto.com/topic/130016-time-bans-appeals/</link><description><![CDATA[<p>
+	We should allow Time-Bans appeal if they are longer than 2 days.<br />
+	Currently got banned for 10 days, completely by accident(i have few things on mind, why could it be that but thats not a case)<br />
+	10 days for people actively working in MTA is a lot of time and no way to appeal from them is pain in the ass.<br />
+	<br />
+	Also, AC should be updated to give time-bans depending on few factors:<br />
+	-Time since last time-ban
+</p>
+
+<p>
+	-Was last time-ban a huge deal?
+</p>
+
+<p>
+	-Was ever Global-Banned(permament ban that was removed)
+</p>
+
+<p>
+	Current system isnt very fair, also - things as Process Hacker should show up a warning first, as some people(like me) are using it as a task manager(it even have option when installing to replace task manager with Process Hacker), and than can cause ban(TRAINER reason) if they have it opened in background(as in my case i guess, but cant be sure).
+</p>
+]]></description><guid isPermaLink="false">130016</guid><pubDate>Sat, 27 Mar 2021 21:16:07 +0000</pubDate></item><item><title>Connect from Welcome Screen and other connection ideas</title><link>https://forum.multitheftauto.com/topic/129578-connect-from-welcome-screen-and-other-connection-ideas/</link><description><![CDATA[
+<p>
+	Please make connect and reconnect easier.
+</p>
+
+<p>
+	Request 1
+</p>
+
+<p>
+	On the MTA start screen, if a server ip exists in memory, offer a Connect button that goes straight to it without selecting Quick Connect or Server Browser.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Request 2 
+</p>
+
+<p>
+	On selecting Quick Connect or Server Browser for the first time don't have a native drop down from the ip.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Request 3
+</p>
+
+<p>
+	On accidental disconnect from server a notice appears that says you have disconnected from server, with an okay button. make a click anywhere on screen close this notice, or better yet put a reconnect button next to it to allow instant reconnect to the server you just disconnected from.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Request 4
+</p>
+
+<p>
+	Dare I suggest, an auto rejoin on mta client start option in the user settings, that on mta start would without any other button pressed join the one and only server i have ever joined on mta in 5 years... I am that predictable.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Request 5
+</p>
+
+<p>
+	And the greatest of all features not seen since IV:MP is? Auto reconnect on accidental disconnect, that will relentlessly try to reconnect to the same ip for days on end, and connect the instant that server, or a new server instance on that ip posts its presence to master. Mmm that's good serving.
+</p>
+]]></description><guid isPermaLink="false">129578</guid><pubDate>Wed, 24 Feb 2021 08:53:27 +0000</pubDate></item><item><title>Chat length (max allowed symbols)</title><link>https://forum.multitheftauto.com/topic/58855-chat-length-max-allowed-symbols/</link><description><![CDATA[<p>Greetings, everyone!</p>
+<p>I would like to suggest one feature, which would be really, really useful for RolePlay servers. Is there any chance to make the chat length string longer? For example, the current length for the chat is somewhat like this (example below). My example below shows the current and perhaps what we could have as an improvement (basically by making it 2x longer then it is currently).</p>
+<p>(if the link is not working for you, please let me know.)</p>
+<p><img src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" alt="09gf7uveo1xnlwmdr0nw.jpg" data-src="http://www.bildites.lv/images/09gf7uveo1xnlwmdr0nw.jpg"></p>
+<p>Having the text as long as that in two lines would be so awesome. In my honest opinion, it would improve RolePlayer experience a lot more than ever before! </p>
+<p>I apologize if it's actually possible to do something like this, mainly because I wasn't able to find anything through the search function. If it's possible, could you please share some information on how to do it? That would be really, really awesome!</p>
+<p><em>Best regards,</em></p>
+<p><em>MousemanLV.</em></p>
+]]></description><guid isPermaLink="false">58855</guid><pubDate>Fri, 10 Jan 2014 16:32:04 +0000</pubDate></item><item><title>no limit</title><link>https://forum.multitheftauto.com/topic/119706-no-limit/</link><description><![CDATA[<p>
+	It would be good if you could add your skins/machines/objects without replacement. For example, by adding new objects, you simply assign them a passed id.
+</p>]]></description><guid isPermaLink="false">119706</guid><pubDate>Wed, 28 Aug 2019 18:03:26 +0000</pubDate></item><item><title>Steps I have taken to make the MTA's forum better</title><link>https://forum.multitheftauto.com/topic/129463-steps-i-have-taken-to-make-the-mtas-forum-better/</link><description><![CDATA[
+<p>
+	Today's  my  suggestion is very simple and is for the forum. I think we need to do this to make the forum better.
+</p>
+
+<p>
+	<a href="https://i.imgur.com/yzpXITH.jpg" rel="external nofollow">https://i.imgur.com/yzpXITH.jpg</a>
+</p>
+
+<p>
+	As you can see, I registered in the forum of the server where I play in 2020, and I have one star there. That star will increase every year and next year there will be 2 of them automatically. And there Registered: 02/01/2020 shows the date, I would like it to be in the form of MTA. I hope you like this suggestion.
+</p>
+]]></description><guid isPermaLink="false">129463</guid><pubDate>Mon, 15 Feb 2021 14:00:13 +0000</pubDate></item><item><title>onClientLocalizationChange</title><link>https://forum.multitheftauto.com/topic/129068-onclientlocalizationchange/</link><description><![CDATA[
+<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="kwd">function</span><span class="pln"> b</span><span class="pun">()</span><span class="pln">
+  outputChatBox</span><span class="pun">(</span><span class="str">"Your language changed succesfully"</span><span class="pun">)</span><span class="pln">
+  </span><span class="kwd">end</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onClientLocalizationChange"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> b</span><span class="pun">)</span></pre>
+
+<p>
+	I'm not sure if this event helps anything because you have to disconnect from the server to change the language. But I will still leave this suggestion here
+</p>
+]]></description><guid isPermaLink="false">129068</guid><pubDate>Tue, 19 Jan 2021 15:05:43 +0000</pubDate></item><item><title>Mta on Android phone</title><link>https://forum.multitheftauto.com/topic/125616-mta-on-android-phone/</link><description><![CDATA[<p>
+	Hello! Does anyone know if you can play MTA san andreas on Android? That would be super cool. An application through which we can connect to MTA servers.
+</p>
+]]></description><guid isPermaLink="false">125616</guid><pubDate>Sat, 20 Jun 2020 11:18:07 +0000</pubDate></item><item><title>VICE CITY</title><link>https://forum.multitheftauto.com/topic/125245-vice-city/</link><description><![CDATA[<p>
+	Ok we need to get the vice city servers back up and running my god them days where fun god only knows if any of the old players are still on here but give me a shout out if you are 
+</p>
+]]></description><guid isPermaLink="false">125245</guid><pubDate>Wed, 03 Jun 2020 00:23:27 +0000</pubDate></item><item><title>Update chat in mta</title><link>https://forum.multitheftauto.com/topic/120608-update-chat-in-mta/</link><description><![CDATA[<p>
+	 
+</p>
+
+<p>
+	I hope from the programmers mta added in f8 translation of the conversation for each country in order to be able to play any person in any server without learning or trying to understand their language and will make communication easy between us
+</p>
+]]></description><guid isPermaLink="false">120608</guid><pubDate>Fri, 18 Oct 2019 12:43:31 +0000</pubDate></item><item><title>How i can get stats from mta server using tcp connection?</title><link>https://forum.multitheftauto.com/topic/122009-how-i-can-get-stats-from-mta-server-using-tcp-connection/</link><description><![CDATA[<p>
+	Hi everyone,Im writing mta-launcher on java.
+</p>
+
+<p>
+	<span style="background-color:#f8f9fa;color:#222222;font-size:28px;text-align:left;">How can I get server statistics about online and other information using tcp or udp connections? </span>
+</p>
+
+<pre dir="ltr" style="background-color:#f8f9fa;border:none;color:#222222;font-size:28px;padding:2px .14em 2px 0px;text-align:left;">
+<span lang="en" xml:lang="en">what data should I send to the server in
+ order to get what I need? Maybe someone has links to the headers
+ that mta-server uses. I will be very grateful for any answers</span></pre>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">122009</guid><pubDate>Sun, 19 Jan 2020 12:00:44 +0000</pubDate></item><item><title>TokVOIP</title><link>https://forum.multitheftauto.com/topic/124137-tokvoip/</link><description><![CDATA[<p>
+	On Fivem you know that there is Tokvoıp. Can we apply this to MTA?
+</p>
+]]></description><guid isPermaLink="false">124137</guid><pubDate>Sun, 26 Apr 2020 04:48:25 +0000</pubDate></item><item><title>Suggestion</title><link>https://forum.multitheftauto.com/topic/122548-suggestion/</link><description><![CDATA[<p>
+	I'm a new member here, so I'd like to know when version 1.5.8 should be released by the MTA team?
+</p>
+
+<p>
+	People who know, please answer.<br>
+	 
+</p>
+]]></description><guid isPermaLink="false">122548</guid><pubDate>Thu, 20 Feb 2020 15:50:34 +0000</pubDate></item><item><title>Widescreen Fix for MTA</title><link>https://forum.multitheftauto.com/topic/103042-widescreen-fix-for-mta/</link><description><![CDATA[<p>
+	Hi, MTA does not allow using modifications such as cleo mods, asi mods and others. It has advantages like preventing potential cheaters, but it has also disadvantages such as prohibition of using helpful modifications that players used on singleplayer mode or SAMP for years. One of them is the widescreen fix made by thirteenag, it decreases the hud in-game, so it doesn't take a half of your screen. Often people playing on laptops with resolutions like 1366x768 aim this problem, but also desktop users. Unfortunately it isn't possible to use this modification on MTA, so it would be very nice if developers would try to code this option and implement it. The opportunity of switching to widescreen mode would be just available in MTA's video settings.
+</p>
+
+<p>
+	Here are some screenshots showing the difference, both were made on the same resolution:
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		 
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			<img alt="9wNjlII.jpg" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://i.imgur.com/9wNjlII.jpg"></p>
+
+		<p>
+			<img alt="qmdvium.jpg" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://i.imgur.com/qmdvium.jpg"></p>
+
+		<p>
+			 
+		</p>
+	</div>
+</div>
+]]></description><guid isPermaLink="false">103042</guid><pubDate>Mon, 19 Feb 2018 16:44:16 +0000</pubDate></item><item><title>[Suggestion]Horizontal Sensitivity Support</title><link>https://forum.multitheftauto.com/topic/110619-suggestionhorizontal-sensitivity-support/</link><description><![CDATA[<div style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<p>
+		Hello , i want to suggest to implement that you can change the horizontal sensitivity from the coreconfig file, cause you can only change the vertical sensitivity, and i wanna know if it is possible. Sorry for my bad english i'm from Argentina
+	</p>
+</div>
+
+<div style="background-color:#ffffff;border-top:1px solid rgba(0,0,0,.075);color:#353c41;font-size:13px;">
+	</div>
+]]></description><guid isPermaLink="false">110619</guid><pubDate>Fri, 17 Aug 2018 11:50:15 +0000</pubDate></item></channel></rss>

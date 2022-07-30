@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel><title>General Multi Language discussion Latest Topics</title><link>https://forum.multitheftauto.com/forum/108-general-multi-language-discussion/</link><description>General Multi Language discussion Latest Topics</description><language>en</language><item><title>Help me pls, Random ID!</title><link>https://forum.multitheftauto.com/topic/135894-help-me-pls-random-id/</link><description><![CDATA[<p>
+	Hey guys, whats up!
+</p>
+
+<pre dir="ltr"><span lang="en" xml:lang="en">Can you help me with this id system? </span><span>What is wrong in my code? I tried anyway to modify it but I couldn't.</span>
+</pre>
+
+<p dir="ltr">
+	 
+</p>
+
+<p dir="ltr">
+	<span>When I type the command /id to see the player's id, I can't see it.</span>
+</p>
+
+<p dir="ltr">
+	 
+</p>
+
+<p dir="ltr">
+	<span>When I format the code to standard and put the low id system, I get it.</span>
+</p>
+
+<p dir="ltr">
+	 
+</p>
+
+<pre dir="ltr"><span lang="en" xml:lang="en">If you can help me, I would really appreciate it!</span></pre>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> genRandomID</span><span class="pun">()</span><span class="pln">
+	</span><span class="kwd">local</span><span class="pln"> rnumber </span><span class="pun">=</span><span class="pln"> </span><span class="str">""</span><span class="pln">
+	</span><span class="kwd">local</span><span class="pln"> chars </span><span class="pun">=</span><span class="pln"> </span><span class="str">"1234567890"</span><span class="pln"> 
+	</span><span class="kwd">for</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pln"> </span><span class="kwd">do</span><span class="pln"> </span><span class="com">-- Aqui você define a quantidade de digitos, aqui vai ser gerado um numero com 5 digitos</span><span class="pln">
+		</span><span class="kwd">local</span><span class="pln"> rand </span><span class="pun">=</span><span class="pln"> math</span><span class="pun">.</span><span class="pln">random</span><span class="pun">(#</span><span class="pln">chars</span><span class="pun">)</span><span class="pln">
+		rnumber </span><span class="pun">=</span><span class="pln"> rnumber </span><span class="pun">..</span><span class="pln"> chars</span><span class="pun">:</span><span class="pln">sub</span><span class="pun">(</span><span class="pln">rand</span><span class="pun">,</span><span class="pln"> rand</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> rnumber
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> randomID </span><span class="pun">=</span><span class="pln"> genRandomID</span><span class="pun">()</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> Start_Id </span><span class="pun">(</span><span class="pln"> _</span><span class="pun">,</span><span class="pln"> acc </span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">if</span><span class="pln"> eventName </span><span class="pun">==</span><span class="pln"> </span><span class="str">"onPlayerLogin"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+		setElementData</span><span class="pun">(</span><span class="pln">source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"ID"</span><span class="pun">,</span><span class="pln"> randomID </span><span class="kwd">or</span><span class="pln"> </span><span class="str">"N/A"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> 
+		outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"#838B83➲ #ff0000LOGIN #838B83➲ Nick: #ff0000 ( "</span><span class="pun">..</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln"> </span><span class="pun">..</span><span class="str">" #ff0000) ID: ( "</span><span class="pun">..(</span><span class="pln">getAccountID</span><span class="pun">(</span><span class="pln">acc</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="str">"N/A"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">..</span><span class="str">" )"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">elseif</span><span class="pln"> eventName </span><span class="pun">==</span><span class="pln"> </span><span class="str">"onPlayerLogout"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+		removeElementData</span><span class="pun">(</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"ID"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+		outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"#838B83➲ #ff0000LOGIN #838B83➲ Nick: #ff0000 ( "</span><span class="pun">..</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln"> </span><span class="pun">..</span><span class="str">" #ff0000) Deslogou."</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">elseif</span><span class="pln"> eventName </span><span class="pun">==</span><span class="pln"> </span><span class="str">"onResourceStart"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+		</span><span class="kwd">for</span><span class="pln"> _</span><span class="pun">,</span><span class="pln"> player </span><span class="kwd">in</span><span class="pln"> pairs</span><span class="pun">(</span><span class="pln">getElementsByType</span><span class="pun">(</span><span class="str">"player"</span><span class="pun">))</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+			</span><span class="kwd">local</span><span class="pln"> acc </span><span class="pun">=</span><span class="pln"> getPlayerAccount</span><span class="pun">(</span><span class="pln">player</span><span class="pun">)</span><span class="pln"> 
+			</span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> isGuestAccount</span><span class="pun">(</span><span class="pln">acc</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> 
+				setElementData</span><span class="pun">(</span><span class="pln">source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"ID"</span><span class="pun">,</span><span class="pln"> randomID </span><span class="kwd">or</span><span class="pln"> </span><span class="str">"N/A"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> 
+			</span><span class="kwd">end</span><span class="pln">
+		</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onResourceStart"</span><span class="pun">,</span><span class="pln"> resourceRoot</span><span class="pun">,</span><span class="pln"> Start_Id</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerLogout"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> Start_Id</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerLogin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> Start_Id</span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> getPlayerID</span><span class="pun">(</span><span class="pln">id</span><span class="pun">)</span><span class="pln">
+	v </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+	</span><span class="kwd">for</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> player </span><span class="kwd">in</span><span class="pln"> ipairs </span><span class="pun">(</span><span class="pln">getElementsByType</span><span class="pun">(</span><span class="str">"player"</span><span class="pun">))</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+		</span><span class="kwd">if</span><span class="pln"> getElementData</span><span class="pun">(</span><span class="pln">player</span><span class="pun">,</span><span class="pln"> </span><span class="str">"ID"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> id </span><span class="kwd">then</span><span class="pln">
+			v </span><span class="pun">=</span><span class="pln"> player
+			</span><span class="kwd">break</span><span class="pln">
+		</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> v
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="com">--============================================================================================================================--</span><span class="pln">
+                                   </span><span class="com">--=============================--</span><span class="pln">
+                                   </span><span class="com">----------- ID PLAYER ------------</span><span class="pln">
+                                   </span><span class="com">--=============================--</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> getnick</span><span class="pun">(</span><span class="pln">player</span><span class="pun">,</span><span class="pln"> command</span><span class="pun">,</span><span class="pln"> id</span><span class="pun">,</span><span class="pln"> </span><span class="pun">...)</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">id</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+        </span><span class="kwd">local</span><span class="pln"> playerID </span><span class="pun">=</span><span class="pln"> tonumber</span><span class="pun">(</span><span class="pln">id</span><span class="pun">)</span><span class="pln">
+		</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">playerID</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+			</span><span class="kwd">local</span><span class="pln"> Player2 </span><span class="pun">=</span><span class="pln"> getPlayerID</span><span class="pun">(</span><span class="pln">playerID</span><span class="pun">)</span><span class="pln">
+			</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">Player2</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">	
+				outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"#838B83➲ #ff0000INFO #ff0000 ➲ #ff0000 Nome do Jogador #ff0000"</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">Player2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">..</span><span class="str">""</span><span class="pun">,</span><span class="pln"> player</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+			</span><span class="kwd">else</span><span class="pln">
+				outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"#838B83➲ #ff0000ERRO #ff0000 ➲ #ff0000 O Jogador(a) de ID: #ff0000( "</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> id </span><span class="pun">..</span><span class="pln"> </span><span class="str">" ) #ff0000Não Foi Encontrado!"</span><span class="pun">,</span><span class="pln"> player</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+			</span><span class="kwd">end</span><span class="pln"> 
+		</span><span class="kwd">else</span><span class="pln">
+			outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"#838B83➲ #ff0000ERRO #ff0000 ➲ #ff0000 ID: #ff0000( "</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> id </span><span class="pun">..</span><span class="pln"> </span><span class="str">" ) #ff0000Inválido!"</span><span class="pun">,</span><span class="pln"> player</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+		</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">else</span><span class="pln">
+		outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"#838B83➲ #ff0000 Use /id #ff0000[#ffffffID#00ff00]"</span><span class="pun">,</span><span class="pln"> player</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="lit">255</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+addCommandHandler</span><span class="pun">(</span><span class="str">"id"</span><span class="pun">,</span><span class="pln"> getnick</span><span class="pun">)</span></pre>
+
+<p dir="ltr">
+	 
+</p>
+<p>
+	who can help pls i beg <span><span><span><img alt=":(" data-emoticon="" height="20" src="https://forum.multitheftauto.com/uploads/emoticons/sad.png" srcset="https://forum.multitheftauto.com/uploads/emoticons/sad@2x.png 2x" title=":(" width="20" /></span></span></span>
+</p>
+]]></description><guid isPermaLink="false">135894</guid><pubDate>Fri, 20 May 2022 18:42:56 +0000</pubDate></item><item><title>[Persian / &#x641;&#x627;&#x631;&#x633;&#x6CC;] Request for Persian section. / &#x62F;&#x631;&#x62E;&#x648;&#x627;&#x633;&#x62A; &#x628;&#x62E;&#x634; &#x641;&#x627;&#x631;&#x633;&#x6CC;</title><link>https://forum.multitheftauto.com/topic/116026-persian-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-request-for-persian-section-%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D8%A8%D8%AE%D8%B4-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/</link><description><![CDATA[<p>
+	Hello,<br>
+	I would like to request for Persian / فارسی section for Iranian players.<br>
+	Also i ask Iranian players to help out translating mta to persian. (I've already made lot of progress) -&gt; <a href="https://translate.mtasa.com/fa/" rel="external nofollow">https://translate.mtasa.com/fa/</a>
+</p>
+
+<p>
+	With regards.<br>
+	Deihim007<br>
+	 
+</p>
+
+<div>
+	<hr></div>
+
+<p>
+	با سلام,
+</p>
+
+<p>
+	اینجانب تمایل به درخواست بخش فارسی برای پلیر های ایرانی رو دارم.<br>
+	همچنین از پلیر های ایرانی میخوام برای ترجمه ام تی ای به فارسی کمک کنند (که در حال حاضر پیشرفت زیادی داشته) -&gt; <a href="https://translate.mtasa.com/fa/" rel="external nofollow">https://translate.mtasa.com/fa/</a>
+</p>
+
+<p>
+	با سپاس<br>
+	دیهیم 007
+</p>
+]]></description><guid isPermaLink="false">116026</guid><pubDate>Sat, 20 Apr 2019 12:24:03 +0000</pubDate></item><item><title>MTA Community</title><link>https://forum.multitheftauto.com/topic/95592-mta-community/</link><description><![CDATA[<p>
+	Somebody can enter to the web to download resource?
+</p>]]></description><guid isPermaLink="false">95592</guid><pubDate>Sun, 14 May 2017 13:43:56 +0000</pubDate></item><item><title>sale of a game mode ended in scam</title><link>https://forum.multitheftauto.com/topic/130767-sale-of-a-game-mode-ended-in-scam/</link><description><![CDATA[<pre dir="ltr" style="background-color:rgb(248,249,250);border:none;color:rgb(32,33,36);font-size:28px;padding:2px .14em 2px 0px;text-align:center;">
+<span lang="en" xml:lang="en">First of all I use a translator</span>
+</pre>
+
+<p dir="ltr">
+	<br />
+	<span lang="en" xml:lang="en">First of all, I am ClawSuit, scripter and developer of different gm's roleplay, including a public Life Steal, others that have not been brought to light and the most recent a multi-license gm acts to start creating your RP project with a well-structured base free of lag or common bug's, in short ...</span>
+</p>
+
+<p dir="ltr">
+	About 2 months ago the user! 39ᴀᴀʀᴍ # 1965 together with the user Jʛker Ḷıƒe # 1236 &lt;= usually uses many names ... currently that of discord. They propose to create a gm and such for their new version of Vendetta, in this case I had a 60% development of my gm; I proceed to finish it faster and sell to them, everything was well specified correctly, after 2 months, or a few days ago I started having problems with PayPal due to disputes or claims, obviously I gave all the information I could but hey it is not the first time who sees that paypal agrees with the scammer ... i'm losing roughly over $ 120 + considering the commissions x claims the money comes out of my pocket ... maybe it's an ital game, but schedule the time and hours for me is still a job.
+</p>
+
+<p dir="ltr">
+	I have evidence and even witnesses that the deal was successful.
+</p>
+
+<p dir="ltr">
+	<br />
+	Maybe they can do something, I do not know, however I leave you as an alert for those people who also sell scripts.
+</p>
+]]></description><guid isPermaLink="false">130767</guid><pubDate>Fri, 07 May 2021 05:41:40 +0000</pubDate></item><item><title>Bad argument @'getElementData'</title><link>https://forum.multitheftauto.com/topic/130599-bad-argument-getelementdata/</link><description><![CDATA[<p>
+	Please help, my code:
+</p>
+
+<pre class="ipsCode prettyprint lang-c prettyprinted">
+<span class="pln">setTimer</span><span class="pun">(</span><span class="pln">function</span><span class="pun">()</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> getElementData</span><span class="pun">(</span><span class="pln">getPedOccupiedVehicle </span><span class="pun">(</span><span class="pln"> localPlayer </span><span class="pun">),</span><span class="pln"> </span><span class="str">"leftflash"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> then
+		</span><span class="kwd">if</span><span class="pln"> veh then
+            </span><span class="kwd">else</span><span class="pln">
+                playSound</span><span class="pun">(</span><span class="str">"files/povorot.mp3"</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+            end
+		end
+        </span><span class="kwd">if</span><span class="pln"> getElementData</span><span class="pun">(</span><span class="pln">getPedOccupiedVehicle </span><span class="pun">(</span><span class="pln"> localPlayer </span><span class="pun">),</span><span class="pln"> </span><span class="str">"rightflash"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> then
+		</span><span class="kwd">if</span><span class="pln"> veh then
+            </span><span class="kwd">else</span><span class="pln">
+                playSound</span><span class="pun">(</span><span class="str">"files/povorot.mp3"</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+            end
+		end
+        </span><span class="kwd">if</span><span class="pln"> getElementData</span><span class="pun">(</span><span class="pln">getPedOccupiedVehicle </span><span class="pun">(</span><span class="pln"> localPlayer </span><span class="pun">),</span><span class="pln"> </span><span class="str">"allflash"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> then
+		</span><span class="kwd">if</span><span class="pln"> veh then
+            </span><span class="kwd">else</span><span class="pln">
+                playSound</span><span class="pun">(</span><span class="str">"files/povorot.mp3"</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+            end
+		end
+end</span><span class="pun">,</span><span class="pln"> interval </span><span class="pun">*</span><span class="pln"> </span><span class="lit">1000</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">130599</guid><pubDate>Mon, 26 Apr 2021 09:34:01 +0000</pubDate></item><item><title>Requesting a language</title><link>https://forum.multitheftauto.com/topic/25726-requesting-a-language/</link><description><![CDATA[<p>If you want to have a language added, open a request topic and search for support. When we notice that enough active people support a language it will be added.</p>]]></description><guid isPermaLink="false">25726</guid><pubDate>Thu, 23 Dec 2010 09:12:05 +0000</pubDate></item><item><title>Need help / &#x41F;&#x43E;&#x43C;&#x43E;&#x433;&#x438;&#x442;&#x435; / Socorro</title><link>https://forum.multitheftauto.com/topic/128356-need-help-%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5-socorro/</link><description><![CDATA[
+<p>
+	<img alt="spacer.png" class="ipsImage" data-ratio="100.00" height="1" style="height:auto;" width="1" data-src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />After updating the MTA, I got this information window, how can I remove it? I play on the same server - МТА PUBG // <br />
+	После обновления МТА у меня появилась это окно информации, как её убрать? Играю на одном сервере — МТА ПАБГ // <br />
+	Após atualizar o MTA, obtive esta janela de informações, como posso removê-lo? Eu jogo no mesmo servidor - MTA PABG //<br />
+	<br />
+	<img alt="spacer.png" class="ipsImage" data-ratio="116.50" height="713" style="height:auto;" width="612" data-src="https://c.radikal.ru/c09/2011/ee/b7e8166577db.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />
+</p>
+]]></description><guid isPermaLink="false">128356</guid><pubDate>Tue, 01 Dec 2020 13:51:43 +0000</pubDate></item><item><title>im looking for MTA SA Developer</title><link>https://forum.multitheftauto.com/topic/128085-im-looking-for-mta-sa-developer/</link><description><![CDATA[
+<p>
+	 
+</p>
+
+<p>
+	Hi! I would need a user who would do me the little favor of creating a database for me on my server. My server is based on bonsai 11 multigamemode. Everything is running normally on it, but we don't have a database where the server would save top time, kills.etc. 
+</p>
+
+<p>
+	<span style="background-color:#f8f9fa;color:#202124;font-size:28px;text-align:left;">If you could help me I would thank you!</span>
+</p>
+
+<p>
+	 
+</p>
+
+<div style="background-color:#292b2f;border:;font-size:14px;padding:0px;vertical-align:baseline;">
+	<div style="border:;font-size:14px;padding:0px;vertical-align:baseline;">
+		Discord <span>: </span>data_luv#3967
+	</div>
+</div>
+]]></description><guid isPermaLink="false">128085</guid><pubDate>Fri, 13 Nov 2020 14:26:28 +0000</pubDate></item><item><title><![CDATA[About Algerian & Tunisian Board]]></title><link>https://forum.multitheftauto.com/topic/120301-about-algerian-tunisian-board/</link><description><![CDATA[<p>
+	Hi, Can any admin change board name of <strong>Algerian &amp; Tunisian</strong><strong> </strong>to <strong>Maghrebi Arabic </strong>or <strong>Darija / <span style="background-color:#ffffff;color:#222222;font-size:15.2px;">الدارجة </span></strong><span style="background-color:#ffffff;color:#222222;font-size:15.2px;">for information what i mean please read here: </span><a href="https://en.wikipedia.org/wiki/Maghrebi_Arabic" rel="external nofollow">https://en.wikipedia.org/wiki/Maghrebi_Arabic</a>
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">120301</guid><pubDate>Mon, 30 Sep 2019 00:57:57 +0000</pubDate></item><item><title>I Need Help For This Probleme</title><link>https://forum.multitheftauto.com/topic/114822-i-need-help-for-this-probleme/</link><description><![CDATA[<p>
+	Some One Can Help Me How I Can Fix This 
+</p>
+
+<p>
+	https://ibb.co/dfNTSQy
+</p>
+]]></description><guid isPermaLink="false">114822</guid><pubDate>Thu, 14 Feb 2019 21:47:14 +0000</pubDate></item><item><title>About Vietnamese language</title><link>https://forum.multitheftauto.com/topic/112837-about-vietnamese-language/</link><description><![CDATA[<p>
+	Well.. i'm here to ask about what should i do when everything at the translate.mtasa.com Vietnamese translation has been completed. How it can be add to MTA:SA ?
+</p>
+
+<p>
+	 
+</p>
+
+<div style="background-color:#ffffff;color:#212121;font-size:0px;text-align:left;">
+	<pre dir="ltr" style="background-color:transparent;border:none;color:#212121;font-size:16px;padding:0px .14em 0px 0px;text-align:left;">
+ </pre>
+
+	<p dir="ltr">
+		 
+	</p>
+
+	<pre lang="en" style="background-color:transparent;border:none;color:#212121;font-size:16px;padding:0px .14em 0px 0px;" xml:lang="en">
+
+ </pre>
+</div>
+]]></description><guid isPermaLink="false">112837</guid><pubDate>Mon, 19 Nov 2018 13:04:14 +0000</pubDate></item><item><title>help me about Vietnamese</title><link>https://forum.multitheftauto.com/topic/112615-help-me-about-vietnamese/</link><description><![CDATA[<p>
+	I've suggested so many translations on translate.mtasa.com and these still don't  get added and how it works? I can't wait to play MTASA in Vietnamese so I hope you guys will help me out.
+</p>]]></description><guid isPermaLink="false">112615</guid><pubDate>Mon, 05 Nov 2018 17:04:56 +0000</pubDate></item><item><title>MEGA HOST for MTA Servers 1$ !!!</title><link>https://forum.multitheftauto.com/topic/110196-mega-host-for-mta-servers-1/</link><description><![CDATA[<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<img alt="rt.jpg" class="ipsImage" height="145" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" width="503" data-src="https://image.ibb.co/hWJe6K/rt.jpg"></p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:36px;"><span style="color:#c0392b;"><strong>MTA Servers ?</strong></span></span>
+</p>
+
+<p style="background-color:rgb(255,255,255);">
+	<font color="#2980b9"><span style="font-size:24px;"><b>First offer</b></span></font>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:20px;"><strong>? ♥</strong></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">Players - &gt; 500  ?‍?‍?‍??‍?‍?‍?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">RAM - &gt; 2 GB ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">Size - &gt; 2 GB ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">SUPPORT - &gt; 24 / 24 ??</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">lagg - &gt; 0 % ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">✲ ? Ddos attack prottect ? .</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">- &gt; Open Game Panel ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">- &gt; PhpMyAdmin ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><font color="#ffffff"><span style="background-color:rgb(0,0,0);"><b>1$ Dollar</b></span></font></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:22px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;"> - &gt; 1 month ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<strong><span style="font-size:22px;">-----------------------------------------------</span></strong>
+</p>
+
+<p style="background-color:rgb(255,255,255);">
+	<span style="font-size:26px;"><font color="#2980b9"><b>Offer 2</b></font></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">Players - &gt; 1024 ✂</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">✲ ? Ddos attack prottect ? </span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">.</span></strong></span><strong style="color:rgb(255,255,255);"><span style="background-color:#000000;">size - &gt; 3 GB ?</span></strong></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">RAM - &gt; 3 GB ♥</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">Support - &gt; 24 / 24 ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">Lagg - &gt; 0 % ??</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">- &gt; Open Game Panel ?</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:26px;"><span style="color:#ffffff;"><strong><span style="background-color:#000000;">2$ Dollar</span></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<strong><span style="font-size:26px;"><span style="color:#ffffff;"><span style="background-color:#000000;">- &gt; 1 Month ?</span></span><br>
+	--------</span><br><span style="font-size:24px;"><span style="color:#e74c3c;">( Payments )</span></span><br><span style="font-size:22px;"><span style="color:#2ecc71;"><span style="background-color:#000000;">Vodafone cards _ Cash</span></span></span></strong><br><strong><span style="font-size:24px;"><span style="color:#2ecc71;"><span style="background-color:#000000;">PayPal</span></span></span></strong>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<br><span style="color:#c0392b;"><strong><span style="font-size:24px;"> Panel : <a href="https://www.mega-host.site/" rel="external nofollow" style="background-color:transparent;color:#3d6594;">https://www.mega-host.site</a><a href="http://www.mega-host.site/panel" rel="external nofollow" style="background-color:transparent;color:#3d6594;">/panel</a></span></strong></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:24px;"><span style="color:#c0392b;"><strong>---------<br>
+	website : <a href="https://www.mega-host.site/" rel="external nofollow" style="background-color:transparent;color:#3d6594;">https://www.mega-host.site</a></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<span style="font-size:24px;"><span style="color:#c0392b;"><strong>---------<br>
+	Support<br><a href="https://www.mega-host.site/" rel="external nofollow" style="background-color:transparent;color:#3d6594;">https://www.mega-host.site</a><a href="http://www.mega-host.site/contact.php" rel="external nofollow" style="background-color:transparent;color:#3d6594;">/contact.php</a></strong></span></span>
+</p>
+
+<p style="background-color:#ffffff;color:#353c41;font-size:14px;">
+	<img alt="maxresde33fault_1.jpg" class="ipsImage" height="493" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" width="1000" data-src="https://image.ibb.co/bWG13z/maxresde33fault_1.jpg"></p>
+]]></description><guid isPermaLink="false">110196</guid><pubDate>Fri, 03 Aug 2018 10:15:23 +0000</pubDate></item><item><title>Requesting for a language: Vietnamese!</title><link>https://forum.multitheftauto.com/topic/86909-requesting-for-a-language-vietnamese/</link><description><![CDATA[<p>hi, i want have Vietnamese language.</p>
+<p>great if it is added  <img src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" alt=":D" srcset="https://forum.multitheftauto.com/uploads/emoticons/biggrin@2x.png 2x" width="20" height="20" data-src="https://forum.multitheftauto.com/uploads/emoticons/biggrin.png"></p>
+]]></description><guid isPermaLink="false">86909</guid><pubDate>Mon, 04 Jul 2016 02:33:05 +0000</pubDate></item><item><title>I'm looking for a hard DayZ server. :)</title><link>https://forum.multitheftauto.com/topic/75820-im-looking-for-a-hard-dayz-server/</link><description><![CDATA[<p>Hello.</p>
+<p>Im searching for a hard DayZ server. Without shop's, zombotech, cars everywhere (I dont like when i can find everywhere a car, I like to find it). I want to find items, cars etc. It would have been nice if there are playing 15+(I don't mean age) people <img src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" alt=":)" srcset="https://forum.multitheftauto.com/uploads/emoticons/smile@2x.png 2x" width="20" height="20" data-src="https://forum.multitheftauto.com/uploads/emoticons/smile.png"></p>
+]]></description><guid isPermaLink="false">75820</guid><pubDate>Thu, 04 Jun 2015 10:57:31 +0000</pubDate></item><item><title>Adding Filipino Language</title><link>https://forum.multitheftauto.com/topic/102702-adding-filipino-language/</link><description><![CDATA[<p>
+	I'd like to request to add Filipino language. I'll be the one who'll handle this and will translate everything. I hope this will be added.
+</p>]]></description><guid isPermaLink="false">102702</guid><pubDate>Sun, 04 Feb 2018 17:59:36 +0000</pubDate></item><item><title>Romanian Section Mod</title><link>https://forum.multitheftauto.com/topic/84832-romanian-section-mod/</link><description><![CDATA[<p>Hey guys, I'm making this post because the Romanian Section needs an urgent moderator because it starts to have leak of activity and respect. I offer myself to moderate an underrated language section. (I'm Romanian). Thanks.</p>]]></description><guid isPermaLink="false">84832</guid><pubDate>Sat, 16 Apr 2016 12:25:43 +0000</pubDate></item><item><title>Host</title><link>https://forum.multitheftauto.com/topic/97753-host/</link><description><![CDATA[<p>
+	<span lang="en" xml:lang="en"><span>Hello BlastHosting is starting in the branch of MTA server hosting,</span><br><br><span>We would like your suggestion, what you would like a lodging to provide, besides a good quality of service,</span><br><br><span>Stable hosting?</span><br><br><span>Currently hiring a MTA hosting we provide a free Team Speak server with 128 slots!</span><br><br><span>Thanks for your suggestion!</span><br><br><span>Our site: <a href="https://www.blasthosting.com.br/hospagens/mta" rel="external nofollow">https://www.blasthosting.com.br/hospagens/mta</a></span><br><br><span>Obs: I do not know if I can put the link of our site, maybe it is considered as disclosure and removed, Please if you can not put the link let me know that I will edit the post!</span><br><br><span>Regards, BlastHosting.</span></span>
+</p>]]></description><guid isPermaLink="false">97753</guid><pubDate>Wed, 19 Jul 2017 16:45:42 +0000</pubDate></item><item><title>Moroccans-Tunisia-Algeria</title><link>https://forum.multitheftauto.com/topic/94846-moroccans-tunisia-algeria/</link><description><![CDATA[<p>
+	<strong>Hi All</strong>
+</p>
+
+<p>
+	<strong>We want to add Moroccans<br>
+	In the same section of Algeria and Tunisia<br>
+	Because we have almost the same The dialect<br>
+	The same words and I think we will be understanding</strong>
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">94846</guid><pubDate>Sat, 15 Apr 2017 11:32:18 +0000</pubDate></item><item><title>Latvian!</title><link>https://forum.multitheftauto.com/topic/28000-latvian/</link><description><![CDATA[<p>sign here, if you want Latvian section!</p>
+<p>that'd be fair, cuz Lithuanian is already here.</p>
+]]></description><guid isPermaLink="false">28000</guid><pubDate>Tue, 31 May 2011 10:51:22 +0000</pubDate></item><item><title>MTA Forum Team</title><link>https://forum.multitheftauto.com/topic/91378-mta-forum-team/</link><description><![CDATA[<p>
+	Is there any application or interview to become section moderator? 
+</p>
+
+<p>
+	Well, I want to join MTA forum team by any way such as moderator/section moderator. As there is no Turkish Section moderator, I can handle this duty but where to apply? So is there any guide about it?
+</p>
+]]></description><guid isPermaLink="false">91378</guid><pubDate>Thu, 08 Dec 2016 17:07:00 +0000</pubDate></item><item><title>Request: Bulgarian // &#x411;&#x44A;&#x43B;&#x433;&#x430;&#x440;&#x441;&#x43A;&#x438;!</title><link>https://forum.multitheftauto.com/topic/91686-request-bulgarian-%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8/</link><description><![CDATA[<p>
+	<strong>Hello!</strong>
+</p>
+
+<p>
+	<strong>I want to request the Bulgarian language here! <img alt=":)" data-emoticon="" height="20" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" srcset="https://forum.multitheftauto.com/uploads/emoticons/smile@2x.png 2x" title=":)" width="20" data-src="https://forum.multitheftauto.com/uploads/emoticons/smile.png"></strong>
+</p>
+
+<p>
+	<strong><em>Info:</em></strong>
+</p>
+
+<p>
+	<strong><em>Name: Български</em></strong>
+</p>
+
+<p>
+	<strong><em>If you want reply to the topic!</em></strong>
+</p>
+]]></description><guid isPermaLink="false">91686</guid><pubDate>Mon, 19 Dec 2016 11:47:08 +0000</pubDate></item><item><title>Moderator Of Algeria / Tunisia ?</title><link>https://forum.multitheftauto.com/topic/90022-moderator-of-algeria-tunisia/</link><description><![CDATA[<div style="table-layout:fixed;width:787px;line-height:1.6;color:rgb(39,42,52);font-size:14px;margin-bottom:20px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);">
+	<div style="table-layout:fixed;width:787px;line-height:1.6;color:rgb(39,42,52);font-size:14px;margin-bottom:20px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);">
+		<p style="margin-top:0px;">
+			Hello<br>
+			I want to be Moderator of the Department of Algeria / Tunisia<br>
+			Because he does not have any Moderator there and I want to interact in Section
+		</p>
+	</div>
+</div>]]></description><guid isPermaLink="false">90022</guid><pubDate>Fri, 21 Oct 2016 22:32:12 +0000</pubDate></item><item><title>[Deleted]</title><link>https://forum.multitheftauto.com/topic/78063-deleted/</link><description><![CDATA[<p>[Deleted]</p>]]></description><guid isPermaLink="false">78063</guid><pubDate>Mon, 03 Aug 2015 17:54:42 +0000</pubDate></item><item><title>About Balkan section description</title><link>https://forum.multitheftauto.com/topic/79845-about-balkan-section-description/</link><description><![CDATA[<p>Okay, let's fuck around a little. :V</p>
+<p>So, I've noticed a few "errors" in the description of the Balkan section subforum which looks like</p>
+<blockquote data-ipsquote="" class="ipsQuote" data-ipsquote-contentapp="forums" data-ipsquote-contenttype="forums" data-ipsquote-contentid="79845" data-ipsquote-contentclass="forums_Topic"><div>Bosnian / Bosanski , Bulgarian / Bălgarski , Croatian / Hrvatski , Macedonian / Makedonski , Montenegrin/Crnogorski , Serbian / Srpski , Slovenian / Slovenski</div></blockquote>
+<p>while it should look like:</p>
+<blockquote data-ipsquote="" class="ipsQuote" data-ipsquote-contentapp="forums" data-ipsquote-contenttype="forums" data-ipsquote-contentid="79845" data-ipsquote-contentclass="forums_Topic"><div>Bulgarian / Български, Croatian / Hrvatski, Macedonian / Mакедонски, Serbian / Српски, Slovenian / Slovenščina</div></blockquote>
+<p>Now, why did I remove Bosnian and Montenegrin?</p>
+<p>The answer is simple: They don't exist. They're just dialects of the Serbocroatian language with a couple of words added and edited.</p>
+<p>Examples (added/edited words are quoted ("")):</p>
+<p>Bosnian: đe si "bona" šta ima? (Hey "dude" what's up?)</p>
+<p>Montenegrin: Slatka si ti meni "đevojka". (While on Serbocroatian it's either DEVOJKA or DJEVOJKA) (You're a sweet "girl" to me.)</p>
+<p>If you're watching it like that, then you should add the Old Church Slavic (Словѣньскъ) language which was used in X century and put it here. Now, a lot of you now think I'm bullshitting a lot, but I'm just being realistic.</p>
+<p>And I know that someone will come and spit on me because of this. But I don't care. I'm done.</p>
+]]></description><guid isPermaLink="false">79845</guid><pubDate>Tue, 22 Sep 2015 20:02:29 +0000</pubDate></item></channel></rss>
