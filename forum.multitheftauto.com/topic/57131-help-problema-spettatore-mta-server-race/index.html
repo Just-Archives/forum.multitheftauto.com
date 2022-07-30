@@ -1,0 +1,4867 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+        
+		<title>[HELP] Problema spettatore Mta server race - Italian / Italiano - Multi Theft Auto: Forums</title>
+		
+		
+		
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	
+	
+
+
+	<meta name="twitter:card" content="summary" />
+
+
+	
+		<meta name="twitter:site" content="@mtaqa" />
+	
+
+
+	
+		
+			
+				<meta property="og:title" content="[HELP] Problema spettatore Mta server race">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:type" content="website">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:url" content="index.html">
+			
+		
+	
+
+	
+		
+			
+				<meta name="description" content="Ciao ragazzi, Ho un problema con il server di mta (race) tutto funziona alla perfezione, tranne una cosa la modalità &quot;Spettatore&quot;. di solito per esempio se siamo in 3 in un server, quando uno dei 3 muore automaticamente guarda l&#039;altro come guida, invece nel mio server una volta morto rimane la ca...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:description" content="Ciao ragazzi, Ho un problema con il server di mta (race) tutto funziona alla perfezione, tranne una cosa la modalità &quot;Spettatore&quot;. di solito per esempio se siamo in 3 in un server, quando uno dei 3 muore automaticamente guarda l&#039;altro come guida, invece nel mio server una volta morto rimane la ca...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:updated_time" content="2014-10-19T04:56:52Z">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:site_name" content="Multi Theft Auto: Forums">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:locale" content="en_GB">
+			
+		
+	
+
+
+	
+		<link rel="canonical" href="index.html" />
+	
+
+
+
+
+<link rel="manifest" href="../../manifest.webmanifest/index.html">
+<meta name="msapplication-config" content="../../browserconfig.xml/index.html">
+<meta name="msapplication-starturl" content="/">
+<meta name="application-name" content="Multi Theft Auto: Forums">
+<meta name="apple-mobile-web-app-title" content="Multi Theft Auto: Forums">
+
+	<meta name="theme-color" content="#121319">
+
+
+
+
+
+
+	
+
+	
+		
+			<link rel="icon" sizes="36x36" href="../../uploads/monthly_2021_10/android-chrome-36x36.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="48x48" href="../../uploads/monthly_2021_10/android-chrome-48x48.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="72x72" href="../../uploads/monthly_2021_10/android-chrome-72x72.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="96x96" href="../../uploads/monthly_2021_10/android-chrome-96x96.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="144x144" href="../../uploads/monthly_2021_10/android-chrome-144x144.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="192x192" href="../../uploads/monthly_2021_10/android-chrome-192x192.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="256x256" href="../../uploads/monthly_2021_10/android-chrome-256x256.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="384x384" href="../../uploads/monthly_2021_10/android-chrome-384x384.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="512x512" href="../../uploads/monthly_2021_10/android-chrome-512x512.png">
+		
+	
+
+	
+		
+			<meta name="msapplication-square70x70logo" content="../../uploads/monthly_2021_10/msapplication-square70x70logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-TileImage" content="../../uploads/monthly_2021_10/msapplication-TileImage.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square150x150logo" content="../../uploads/monthly_2021_10/msapplication-square150x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-wide310x150logo" content="../../uploads/monthly_2021_10/msapplication-wide310x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square310x310logo" content="../../uploads/monthly_2021_10/msapplication-square310x310logo.png"/>
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" href="../../uploads/monthly_2021_10/apple-touch-icon-57x57.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="60x60" href="../../uploads/monthly_2021_10/apple-touch-icon-60x60.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="72x72" href="../../uploads/monthly_2021_10/apple-touch-icon-72x72.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="76x76" href="../../uploads/monthly_2021_10/apple-touch-icon-76x76.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="114x114" href="../../uploads/monthly_2021_10/apple-touch-icon-114x114.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="120x120" href="../../uploads/monthly_2021_10/apple-touch-icon-120x120.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="144x144" href="../../uploads/monthly_2021_10/apple-touch-icon-144x144.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="152x152" href="../../uploads/monthly_2021_10/apple-touch-icon-152x152.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="180x180" href="../../uploads/monthly_2021_10/apple-touch-icon-180x180.png">
+			
+		
+	
+
+
+
+
+
+<link rel="preload" href="../../applications/core/interface/font/fontawesome-webfont3e6e.woff2?v=4.7.0" as="font" crossorigin="anonymous">
+		
+
+
+	
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,700,700i" rel="stylesheet" referrerpolicy="origin">
+	
+
+
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/341e4a57816af3ba440d891ca87450ff_frameworka9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/05e81b71abe4f22d6eb8d1a929494829_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/20446cf2d164adcc029377cb04d43d17_flagsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/90eb5adf50a8c640f633d47fd7eb1778_corea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/5a0da001ccc2200dc5625c3f3934497d_core_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/62e269ced0fdab7e30e026f1d30ae516_forumsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/76e62c573090645fb99a15a363d8620e_forums_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/ebdea0c6a7dab6d37900b9190d3ac77b_topicsa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+
+<link rel='stylesheet' href='../../uploads/css_built_22/258adbb6e4f3e83cd3b355f84e3fa002_customa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+		
+		
+
+	
+	<link rel='shortcut icon' href='../../uploads/monthly_2016_09/favicon.ico.496d8d1cc696295f808f9f1153f0a1e0.ico' type="image/x-icon">
+
+	</head>
+	<body class='ipsApp ipsApp_front ipsJS_none ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='forums' data-pageLocation='front' data-pageModule='forums' data-pageController='topic' data-pageID='57131'  >
+		
+        
+
+        
+
+		  <a href='#ipsLayout_mainArea' class='ipsHide' title='Go to main content on this page' accesskey='m'>Jump to content</a>
+		<div id='ipsLayout_header' class='ipsClearfix'>
+			
+
+
+
+
+
+			<header>
+				
+<div id="mta_globalTopNavigation">
+  <div id="mta_globalTopNavigationLinks" class="ipsLayout_container">
+    <a href="https://multitheftauto.com/">Home</a>
+    <a href="https://discord.com/invite/mtasa" rel="noopener" target="_blank">Discord</a>
+    <a href="https://community.multitheftauto.com/">Community</a>
+    <a href="../../index.html">Forum</a>
+    <a href="https://wiki.multitheftauto.com/wiki/Main_Page">Wiki</a>
+    <a href="https://github.com/multitheftauto/mtasa-blue/issues" rel="noopener" target="_blank">Bugs</a>
+    <a href="https://multitheftauto.com/donate/">Heroes</a>
+    <a href="https://multitheftauto.com/hosters/">Hosting</a>
+    <a href="https://community.multitheftauto.com/index.php?p=servers">Servers</a>
+    <a href="https://multitheftauto.myspreadshop.net/all">Merch</a>
+    <span id="mta_onlinePlayers"></span>
+  </div>
+  <script>
+    (function () {
+      var onlinePlayersEl = document.getElementById('mta_onlinePlayers');
+
+      function updateOnlinePlayers() {
+        if (!onlinePlayersEl) return;
+
+        fetch('https://multitheftauto.com/count/')
+          .then(function (r) {
+            if (!r.ok) throw new Error();
+            return r.text();
+          })
+          .then(function (r) {
+            if (!onlinePlayersEl) return;
+            if (!r) throw new Error();
+
+            var info = r.split(',', 2);
+            if (!info || !info[0] || !info[1]) throw new Error();
+
+            function updateStats() {
+              onlinePlayersEl.innerText = new Intl.NumberFormat('en-US').format(info[0]) + ' players online on ' + new Intl.NumberFormat('en-US').format(info[1]) + ' public servers';
+              $(onlinePlayersEl).stop(true).fadeIn(500);
+            }
+
+            if (!onlinePlayersEl.innerText) {
+              $(onlinePlayersEl).hide();
+              updateStats();
+              return;
+            }
+
+            $(onlinePlayersEl).stop(true).fadeOut(500);
+            setTimeout(updateStats, 500);
+          })
+          .catch(function () {
+            setTimeout(updateOnlinePlayers, 10000);
+          });
+      }
+
+      window.addEventListener('load', updateOnlinePlayers);
+      setInterval(updateOnlinePlayers, 300000);
+    })();
+  </script>
+</div>
+
+				<div class='ipsLayout_container'>
+					
+
+
+<a href='../../index.html' id='elLogo' accesskey='1'><img src="../../uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png" alt='Multi Theft Auto: Forums'></a>
+
+					
+						
+
+	<ul id="elUserNav" class="ipsList_inline cSignedOut ipsResponsive_showDesktop">
+		
+		<li id="elSignInLink">
+			<a href="../../login/index.html" data-ipsmenu-closeonclick="false" data-ipsmenu id="elUserSignIn">
+				Existing user? Sign In  <i class="fa fa-caret-down"></i>
+			</a>
+			
+<div id='elUserSignIn_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+	<form accept-charset='utf-8' method='post' action='https://forum.multitheftauto.com/login/'>
+		<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366">
+		<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvNTcxMzEtaGVscC1wcm9ibGVtYS1zcGV0dGF0b3JlLW10YS1zZXJ2ZXItcmFjZS8=">
+		<div data-role="loginForm">
+			
+			
+			
+				
+<div class="ipsPad ipsForm ipsForm_vertical">
+	<h4 class="ipsType_sectionHead">Sign In</h4>
+	<br><br>
+	<ul class='ipsList_reset'>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			
+			
+				<input type="text" placeholder="Display Name or Email Address" name="auth" autocomplete="email">
+			
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			<input type="password" placeholder="Password" name="password" autocomplete="current-password">
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_checkbox ipsClearfix">
+			<span class="ipsCustomInput">
+				<input type="checkbox" name="remember_me" id="remember_me_checkbox" value="1" checked aria-checked="true">
+				<span></span>
+			</span>
+			<div class="ipsFieldRow_content">
+				<label class="ipsFieldRow_label" for="remember_me_checkbox">Remember me</label>
+				<span class="ipsFieldRow_desc">Not recommended on shared computers</span>
+			</div>
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_fullWidth">
+			<button type="submit" name="_processLogin" value="usernamepassword" class="ipsButton ipsButton_primary ipsButton_small" id="elSignIn_submit">Sign In</button>
+			
+				<p class="ipsType_right ipsType_small">
+					
+						<a href='../../lostpassword/index.html' data-ipsDialog data-ipsDialog-title='Forgot your password?'>
+					
+					Forgot your password?</a>
+				</p>
+			
+		</li>
+	</ul>
+</div>
+			
+		</div>
+	</form>
+</div>
+		</li>
+		
+			<li>
+				
+					<a href="../../register/index.html" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-title="Sign Up"  id="elRegisterButton" class="ipsButton ipsButton_normal ipsButton_primary">Sign Up</a>
+				
+			</li>
+		
+	</ul>
+
+						
+<ul class='ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop'>
+	<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileDrawer'>
+		<a href='#'>
+			
+			
+				
+			
+			
+			
+			<i class='fa fa-navicon'></i>
+		</a>
+	</li>
+</ul>
+					
+				</div>
+			</header>
+			
+
+	<nav data-controller='core.front.core.navBar' class=' ipsResponsive_showDesktop'>
+		<div class='ipsNavBar_primary ipsLayout_container '>
+			<ul data-role="primaryNavBar" class='ipsClearfix'>
+				
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_1' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../index.html"  data-navItem-id="1" data-navDefault>
+					Browse<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_8' data-role="navBarItem" data-navApp="forums" data-navExt="Forums">
+			
+			
+				<a href="../../index.html"  data-navItem-id="8" data-navDefault>
+					Forums<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_12' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../12275-forum-rules/index.html"  data-navItem-id="12" >
+					Forum Rules<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_10' data-role="navBarItem" data-navApp="core" data-navExt="StaffDirectory">
+			
+			
+				<a href="../../staff/index.html"  data-navItem-id="10" >
+					Staff<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_11' data-role="navBarItem" data-navApp="core" data-navExt="OnlineUsers">
+			
+			
+				<a href="../../online/index.html"  data-navItem-id="11" >
+					Online Users<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_24' data-role="navBarItem" data-navApp="core" data-navExt="Leaderboard">
+			
+			
+				<a href="../../leaderboard/index.html"  data-navItem-id="24" >
+					Leaderboard<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_1' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_1' id='elNavigationMore_1_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_1_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_2' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="2" >
+					Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_3' data-role="navBarItem" data-navApp="core" data-navExt="AllActivity">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="3" >
+					All Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_7' data-role="navBarItem" data-navApp="core" data-navExt="Search">
+			
+			
+				<a href="../../search/index.html"  data-navItem-id="7" >
+					Search<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_2' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_2' id='elNavigationMore_2_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_2_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_37' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_37" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_37' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="37" >
+					MTA Network <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_37_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_46' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="46" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_48' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://community.mtasa.com/" target='_blank' rel="noopener" data-navItem-id="48" >
+					Community<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_49' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://wiki.multitheftauto.com/wiki/Main_Page" target='_blank' rel="noopener" data-navItem-id="49" >
+					Wiki<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_50' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto/mtasa-blue/issues" target='_blank' rel="noopener" data-navItem-id="50" >
+					Bugs<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_51' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/donate/" target='_blank' rel="noopener" data-navItem-id="51" >
+					Heroes<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_52' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/hosters/" target='_blank' rel="noopener" data-navItem-id="52" >
+					Hosting<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_45' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.myspreadshop.net/all" target='_blank' rel="noopener" data-navItem-id="45" >
+					Merch Store<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_37' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_37' id='elNavigationMore_37_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_37_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_28' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_28" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_28' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="28" >
+					Social Media <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_28_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_36' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="36" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_35' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.twitch.tv/mtaqa" target='_blank' rel="noopener" data-navItem-id="35" >
+					Twitch<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_30' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://twitter.com/mtaqa" target='_blank' rel="noopener" data-navItem-id="30" >
+					Twitter<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_32' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.youtube.com/user/MTAQA" target='_blank' rel="noopener" data-navItem-id="32" >
+					YouTube<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_31' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="31" >
+					GitHub<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_29' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.facebook.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="29" >
+					Facebook<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_34' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.reddit.com/r/MultiTheftAuto/" target='_blank' rel="noopener" data-navItem-id="34" >
+					Reddit<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_33' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.linkedin.com/company/multitheftauto" target='_blank' rel="noopener" data-navItem-id="33" >
+					LinkedIn<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_28' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_28' id='elNavigationMore_28_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_28_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+				<li class='ipsHide' id='elNavigationMore' data-role='navMore'>
+					<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore' id='elNavigationMore_dropdown'>More</a>
+					<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+						<li class='ipsHide' id='elNavigationMore_more' data-role='navMore'>
+							<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_more' id='elNavigationMore_more_dropdown'>More <i class='fa fa-caret-down'></i></a>
+							<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_more_dropdown_menu' data-role='moreDropdown'></ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+
+	<div id="elSearchWrapper">
+		<div id='elSearch' class='' data-controller='core.front.core.quickSearch'>
+			<form accept-charset='utf-8' action='http://forum.multitheftauto.com/search/?do=quicksearch' method='post'>
+				<input type='search' id='elSearchField' placeholder='Search...' name='q' autocomplete='off' aria-label='Search'>
+				<button class='cSearchSubmit' type="submit" aria-label='Search'><i class="fa fa-search"></i></button>
+				<div id="elSearchExpanded">
+					<div class="ipsMenu_title">
+						Search In
+					</div>
+					<ul class="ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-role="searchContexts">
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="type" value="all" checked id="elQuickSearchRadio_type_all">
+								<label for='elQuickSearchRadio_type_all' id='elQuickSearchRadio_type_all_label'>Everywhere</label>
+							</span>
+						</li>
+						
+						
+							<li>
+								<span class='ipsSideMenu_item' data-ipsMenuValue='forums_topic'>
+									<input type="radio" name="type" value="forums_topic" id="elQuickSearchRadio_type_forums_topic">
+									<label for='elQuickSearchRadio_type_forums_topic' id='elQuickSearchRadio_type_forums_topic_label'>Topics</label>
+								</span>
+							</li>
+						
+						
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:111}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:111}' id='elQuickSearchRadio_type_contextual_c1ea4be98e1fb9fabf5190527a4580a8'>
+										<label for='elQuickSearchRadio_type_contextual_c1ea4be98e1fb9fabf5190527a4580a8' id='elQuickSearchRadio_type_contextual_c1ea4be98e1fb9fabf5190527a4580a8_label'>This Forum</label>
+									</span>
+								</li>
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:57131}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:57131}' id='elQuickSearchRadio_type_contextual_5390b4051f32e1f628b508b5348942e9'>
+										<label for='elQuickSearchRadio_type_contextual_5390b4051f32e1f628b508b5348942e9' id='elQuickSearchRadio_type_contextual_5390b4051f32e1f628b508b5348942e9_label'>This Topic</label>
+									</span>
+								</li>
+							
+						
+						<li data-role="showMoreSearchContexts">
+							<span class='ipsSideMenu_item' data-action="showMoreSearchContexts" data-exclude="forums_topic">
+								More options...
+							</span>
+						</li>
+					</ul>
+					<div class="ipsMenu_title">
+						Find results that contain...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='andOr'>
+						
+							<li>
+								<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='or'>
+									<input type="radio" name="search_and_or" value="or" checked id="elRadio_andOr_or">
+									<label for='elRadio_andOr_or' id='elField_andOr_label_or'><em>Any</em> of my search term words</label>
+								</span>
+							</li>
+						
+							<li>
+								<span class='ipsSideMenu_item ' data-ipsMenuValue='and'>
+									<input type="radio" name="search_and_or" value="and"  id="elRadio_andOr_and">
+									<label for='elRadio_andOr_and' id='elField_andOr_label_and'><em>All</em> of my search term words</label>
+								</span>
+							</li>
+						
+					</ul>
+					<div class="ipsMenu_title">
+						Find results in...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='searchIn'>
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="search_in" value="all" checked id="elRadio_searchIn_and">
+								<label for='elRadio_searchIn_and' id='elField_searchIn_label_all'>Content titles and body</label>
+							</span>
+						</li>
+						<li>
+							<span class='ipsSideMenu_item' data-ipsMenuValue='titles'>
+								<input type="radio" name="search_in" value="titles" id="elRadio_searchIn_titles">
+								<label for='elRadio_searchIn_titles' id='elField_searchIn_label_titles'>Content titles only</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		</div>
+	</nav>
+
+			
+<ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
+	
+		
+			
+			
+				
+				
+			
+				
+				
+			
+				
+					<li id='elMobileBreadcrumb'>
+						<a href='../../forum/111-italian-italiano/index.html'>
+							<span>Italian / Italiano</span>
+						</a>
+					</li>
+				
+				
+			
+				
+				
+			
+		
+	
+	
+	
+	<li >
+		<a data-action="defaultStream" href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+	</li>
+
+	
+
+	
+		<li class='ipsJS_show'>
+			<a href='../../search/index.html'><i class='fa fa-search'></i></a>
+		</li>
+	
+</ul>
+		</div>
+		<main id='ipsLayout_body' class='ipsLayout_container'>
+			<div id='ipsLayout_contentArea'>
+				<div id='ipsLayout_contentWrapper'>
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/50-general-mta/index.html'>
+						<span>General MTA <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/94-other-languages/index.html'>
+						<span>Other languages <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/111-italian-italiano/index.html'>
+						<span>Italian / Italiano <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					[HELP] Problema spettatore Mta server race
+				
+			</li>
+		
+	</ul>
+</nav>
+					
+					<div id='ipsLayout_mainArea'>
+						
+						
+						
+						
+
+	
+
+
+
+
+						
+
+
+
+<div class='ipsPageHeader ipsResponsive_pull ipsBox ipsPadding sm:ipsPadding:half ipsMargin_bottom'>
+		
+	
+	<div class='ipsFlex ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:4'>
+		<div class='ipsFlex-flex:11'>
+			<h1 class='ipsType_pageTitle ipsContained_container'>
+				
+
+				
+				
+					<span class='ipsType_break ipsContained'>
+						<span>[HELP] Problema spettatore Mta server race</span>
+					</span>
+				
+			</h1>
+			
+			
+		</div>
+		
+			<div class='ipsFlex-flex:00 ipsType_light'>
+				
+				
+<div  class='ipsClearfix ipsRating  ipsRating_veryLarge'>
+	
+	<ul class='ipsRating_collective'>
+		
+			
+				<li class='ipsRating_off'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_off'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_off'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_off'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_off'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+	</ul>
+</div>
+			</div>
+		
+	</div>
+	<hr class='ipsHr'>
+	<div class='ipsPageHeader__meta ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:3'>
+		<div class='ipsFlex-flex:11'>
+			<div class='ipsPhotoPanel ipsPhotoPanel_mini ipsPhotoPanel_notPhone ipsClearfix'>
+				
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+				<div>
+					<p class='ipsType_reset ipsType_blendLinks'>
+						<span class='ipsType_normal'>
+						
+							<strong>By 
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a>, </strong><br />
+							<span class='ipsType_light'><time datetime='2013-11-17T07:11:50Z' title='17/11/13 07:11 ' data-short='8 yr'>November 17, 2013</time> in <a href="../../forum/111-italian-italiano/index.html">Italian / Italiano</a></span>
+						
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class='ipsFlex-flex:01 ipsResponsive_hidePhone'>
+				<div class='ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsGap_row:0'>
+					
+						
+
+
+					
+					
+
+
+
+					
+
+<div data-followApp='forums' data-followArea='topic' data-followID='57131' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall ipsButton_disabled" data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>0</span>
+	</a>
+
+</div>
+				</div>
+			</div>
+					
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+<div class='ipsClearfix'>
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+		
+		
+		
+	</ul>
+</div>
+
+<div id='comments' data-controller='core.front.core.commentFeed,forums.front.topic.view, core.front.core.ignoredComments' data-autoPoll data-baseURL='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/' data-lastPage data-feedID='topic-57131' class='cTopic ipsClear ipsSpacer_top'>
+	
+			
+	
+
+	
+
+<div data-controller='core.front.core.recommendedComments' data-url='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?recommended=comments' class='ipsRecommendedComments ipsHide'>
+	<div data-role="recommendedComments">
+		<h2 class='ipsType_sectionHead ipsType_large ipsType_bold ipsMargin_bottom'>Recommended Posts</h2>
+		
+	</div>
+</div>
+	
+	<div id="elPostFeed" data-role='commentFeed' data-controller='core.front.core.moderation' >
+		<form action="https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?csrfKey=714bb4c8fac35f8286ae64e012ef2366&amp;do=multimodComment" method="post" data-ipsPageAction data-role='moderationTools'>
+			
+			
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545788'></a>
+<article  id='elComment_545788' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/35284-andres98/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index6c10.html?do=findComment&amp;comment=545788' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T07:11:50Z' title='17/11/13 07:11 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_neutral'>
+	
+			<i class='fa fa-circle'></i> 0
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/35284-andres98/content/index.html" rel="nofollow" title="4 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 4
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545788_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545788" data-quotedata="{&quot;userid&quot;:35284,&quot;username&quot;:&quot;andres98&quot;,&quot;timestamp&quot;:1384672310,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545788}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545788_menu" class="ipsComment_ellipsis" id="elControls_545788" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545788_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545788_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index.html" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545788_menu" data-ipsdialog-title="Share this post" id="elSharePost_545788" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index6c10.html?do=findComment&amp;comment=545788" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T07:11:50Z' title='17/11/13 07:11 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>Ciao ragazzi,</p>
+<p>Ho un problema con il server di mta (race) tutto funziona alla perfezione, tranne una cosa la modalità "Spettatore".</p>
+<p>di solito per esempio se siamo in 3 in un server, quando uno dei 3 muore automaticamente guarda l'altro come guida, invece nel mio server una volta morto rimane la camera fissa senza muoversi fino al cambio della mappa? come mai? non so se avete capito  <img src="../../applications/core/interface/js/spacer.png" alt=":D" srcset="https://forum.multitheftauto.com/uploads/emoticons/biggrin@2x.png 2x" width="20" height="20" data-src="https://forum.multitheftauto.com/uploads/emoticons/biggrin.png"></p>
+<p>in poche parole non specta...</p>
+<p>Grazie in anticipo <img src="../../applications/core/interface/js/spacer.png" alt=":)" srcset="https://forum.multitheftauto.com/uploads/emoticons/smile@2x.png 2x" width="20" height="20" data-src="https://forum.multitheftauto.com/uploads/emoticons/smile.png"></p>
+
+
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545788_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545793'></a>
+<article  id='elComment_545793' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/21478-hunt/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break"><span style='color:#66cc00'>HunT</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexcb31.html?do=findComment&amp;comment=545793' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T09:28:48Z' title='17/11/13 09:28 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break">HunT</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Retired Staff</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#66cc00'>Retired Staff</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 32
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/21478-hunt/content/index.html" rel="nofollow" title="1,383 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 1.4k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545793_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545793" data-quotedata="{&quot;userid&quot;:21478,&quot;username&quot;:&quot;HunT&quot;,&quot;timestamp&quot;:1384680528,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545793}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545793_menu" class="ipsComment_ellipsis" id="elControls_545793" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545793_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545793_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="indexcb31.html?do=findComment&amp;comment=545793" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545793_menu" data-ipsdialog-title="Share this post" id="elSharePost_545793" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexcb31.html?do=findComment&amp;comment=545793" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T09:28:48Z' title='17/11/13 09:28 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>Molto probabilmente hai scaricato una race buggata.</p>
+
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545793_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=545793' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545794'></a>
+<article  id='elComment_545794' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/35284-andres98/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index7542.html?do=findComment&amp;comment=545794' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T09:46:01Z' title='17/11/13 09:46 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_neutral'>
+	
+			<i class='fa fa-circle'></i> 0
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/35284-andres98/content/index.html" rel="nofollow" title="4 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 4
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545794_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545794" data-quotedata="{&quot;userid&quot;:35284,&quot;username&quot;:&quot;andres98&quot;,&quot;timestamp&quot;:1384681561,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545794}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsComment_authorBadge">Author</strong></li>
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545794_menu" class="ipsComment_ellipsis" id="elControls_545794" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545794_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545794_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index7542.html?do=findComment&amp;comment=545794" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545794_menu" data-ipsdialog-title="Share this post" id="elSharePost_545794" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index7542.html?do=findComment&amp;comment=545794" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T09:46:01Z' title='17/11/13 09:46 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>Intendi la mappa? No, lo fa con tutte le mappe...</p>
+
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545794_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=545794' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545798'></a>
+<article  id='elComment_545798' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/21478-hunt/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break"><span style='color:#66cc00'>HunT</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index9f0b.html?do=findComment&amp;comment=545798' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T10:25:12Z' title='17/11/13 10:25 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break">HunT</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Retired Staff</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#66cc00'>Retired Staff</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 32
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/21478-hunt/content/index.html" rel="nofollow" title="1,383 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 1.4k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545798_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545798" data-quotedata="{&quot;userid&quot;:21478,&quot;username&quot;:&quot;HunT&quot;,&quot;timestamp&quot;:1384683912,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545798}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545798_menu" class="ipsComment_ellipsis" id="elControls_545798" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545798_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545798_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index9f0b.html?do=findComment&amp;comment=545798" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545798_menu" data-ipsdialog-title="Share this post" id="elSharePost_545798" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index9f0b.html?do=findComment&amp;comment=545798" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T10:25:12Z' title='17/11/13 10:25 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>Intendo la gamemode race.</p>
+
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545798_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=545798' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545812'></a>
+<article  id='elComment_545812' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/35284-andres98/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index1a52.html?do=findComment&amp;comment=545812' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T11:04:44Z' title='17/11/13 11:04 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_neutral'>
+	
+			<i class='fa fa-circle'></i> 0
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/35284-andres98/content/index.html" rel="nofollow" title="4 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 4
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545812_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545812" data-quotedata="{&quot;userid&quot;:35284,&quot;username&quot;:&quot;andres98&quot;,&quot;timestamp&quot;:1384686284,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545812}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsComment_authorBadge">Author</strong></li>
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545812_menu" class="ipsComment_ellipsis" id="elControls_545812" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545812_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545812_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index1a52.html?do=findComment&amp;comment=545812" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545812_menu" data-ipsdialog-title="Share this post" id="elSharePost_545812" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index1a52.html?do=findComment&amp;comment=545812" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T11:04:44Z' title='17/11/13 11:04 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>Ah ok, ho reinstallato mta diverse volte, e problema continua a presentarsi...intendi la resource race.zip?</p>
+
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545812_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=545812' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545829'></a>
+<article  id='elComment_545829' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/21478-hunt/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break"><span style='color:#66cc00'>HunT</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index5d6b.html?do=findComment&amp;comment=545829' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T11:53:37Z' title='17/11/13 11:53 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break">HunT</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Retired Staff</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#66cc00'>Retired Staff</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 32
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/21478-hunt/content/index.html" rel="nofollow" title="1,383 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 1.4k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545829_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545829" data-quotedata="{&quot;userid&quot;:21478,&quot;username&quot;:&quot;HunT&quot;,&quot;timestamp&quot;:1384689217,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545829}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545829_menu" class="ipsComment_ellipsis" id="elControls_545829" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545829_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545829_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index5d6b.html?do=findComment&amp;comment=545829" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545829_menu" data-ipsdialog-title="Share this post" id="elSharePost_545829" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index5d6b.html?do=findComment&amp;comment=545829" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T11:53:37Z' title='17/11/13 11:53 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>Stai usando qualche user panel scaricato da internet? Probabilmente è quello il problema.</p>
+
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545829_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=545829' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-545849'></a>
+<article  id='elComment_545849' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/35284-andres98/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexb0e1.html?do=findComment&amp;comment=545849' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2013-11-17T13:22:40Z' title='17/11/13 13:22 ' data-short='8 yr'>November 17, 2013</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/35284-andres98/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to andres98's profile" class="ipsType_break">andres98</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/35284-andres98/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/35284-andres98/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to andres98's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4af%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EA%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='andres98' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Vic" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Vic (3/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_neutral'>
+	
+			<i class='fa fa-circle'></i> 0
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/35284-andres98/content/index.html" rel="nofollow" title="4 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 4
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-545849_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="545849" data-quotedata="{&quot;userid&quot;:35284,&quot;username&quot;:&quot;andres98&quot;,&quot;timestamp&quot;:1384694560,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:545849}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsComment_authorBadge">Author</strong></li>
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_545849_menu" class="ipsComment_ellipsis" id="elControls_545849" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-545849_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_545849_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="indexb0e1.html?do=findComment&amp;comment=545849" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_545849_menu" data-ipsdialog-title="Share this post" id="elSharePost_545849" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexb0e1.html?do=findComment&amp;comment=545849" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2013-11-17T13:22:40Z' title='17/11/13 13:22 ' data-short='8 yr'>November 17, 2013</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>no, anche se su mta non metto nessuna resource lo fa lo stesso...</p>
+
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_545849_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=545849' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+						<ul class='ipsTopicMeta'>
+							
+							
+								<li class="ipsTopicMeta__item ipsTopicMeta__item--time">
+									4 months later...
+								</li>
+							
+						</ul>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-588358'></a>
+<article  id='elComment_588358' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/42587-m-hero/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to $@!m HeRO's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4a2%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3E%24%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='$@!m HeRO' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/42587-m-hero/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Snitch" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Snitch (10/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/42587-m-hero/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to $@!m HeRO's profile" class="ipsType_break"><span class="__cf_email__" data-cfemail="ae8aee">[email&#160;protected]</span>!m HeRO</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexe77f.html?do=findComment&amp;comment=588358' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2014-03-31T03:33:46Z' title='31/03/14 03:33 ' data-short='8 yr'>March 31, 2014</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/42587-m-hero/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to $@!m HeRO's profile" class="ipsType_break"><span class="__cf_email__" data-cfemail="eecaae">[email&#160;protected]</span>!m HeRO</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/42587-m-hero/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to $@!m HeRO's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4a2%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3E%24%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='$@!m HeRO' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Snitch" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Snitch (10/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_neutral'>
+	
+			<i class='fa fa-circle'></i> 0
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/42587-m-hero/content/index.html" rel="nofollow" title="69 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 69
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-588358_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="588358" data-quotedata="{&quot;userid&quot;:42587,&quot;username&quot;:&quot;$@!m HeRO&quot;,&quot;timestamp&quot;:1396236826,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:588358}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_588358_menu" class="ipsComment_ellipsis" id="elControls_588358" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-588358_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_588358_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="indexe77f.html?do=findComment&amp;comment=588358" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_588358_menu" data-ipsdialog-title="Share this post" id="elSharePost_588358" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexe77f.html?do=findComment&amp;comment=588358" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2014-03-31T03:33:46Z' title='31/03/14 03:33 ' data-short='8 yr'>March 31, 2014</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>forse l'ho capito la tua problema , aggiungimi su skype poi ti spiego cosa devi fare .</p>
+<p>skype : saim.zia26</p>
+
+
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_588358_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=588358' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-588613'></a>
+<article  id='elComment_588613' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/21478-hunt/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break"><span style='color:#66cc00'>HunT</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexe8e5.html?do=findComment&amp;comment=588613' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2014-03-31T18:15:00Z' title='31/03/14 18:15 ' data-short='8 yr'>March 31, 2014</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/21478-hunt/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to HunT's profile" class="ipsType_break">HunT</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Retired Staff</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/21478-hunt/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/21478-hunt/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to HunT's profile">
+		<img src='../../uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png' alt='HunT' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Lil&#039; G" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Lil&#039; G (37/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#66cc00'>Retired Staff</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 32
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/21478-hunt/content/index.html" rel="nofollow" title="1,383 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 1.4k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-588613_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="588613" data-quotedata="{&quot;userid&quot;:21478,&quot;username&quot;:&quot;HunT&quot;,&quot;timestamp&quot;:1396289700,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:588613}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_588613_menu" class="ipsComment_ellipsis" id="elControls_588613" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-588613_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_588613_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="indexe8e5.html?do=findComment&amp;comment=588613" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_588613_menu" data-ipsdialog-title="Share this post" id="elSharePost_588613" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexe8e5.html?do=findComment&amp;comment=588613" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2014-03-31T18:15:00Z' title='31/03/14 18:15 ' data-short='8 yr'>March 31, 2014</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<blockquote data-ipsquote="" class="ipsQuote" data-ipsquote-username="saimrock26" data-cite="saimrock26" data-ipsquote-contentapp="forums" data-ipsquote-contenttype="forums" data-ipsquote-contentid="57131" data-ipsquote-contentclass="forums_Topic"><div>forse l'ho capito la tua problema , aggiungimi su skype poi ti spiego cosa devi fare .<p>skype : saim.zia26</p>
+</div></blockquote>
+<p>il post è del novembre scorso,non credo che da allora ancora deve risolvere <img src="../../applications/core/interface/js/spacer.png" alt=":mrgreen:" data-src="../../uploads/emoticons/icon_mrgreen.gif.1c331c9fabeff64f83204c49473d5aee.gif"></p>
+<p>Cmq evita di resuscitare vecchi post per nulla.Se vuoi che la sezione di mtasa sia più attiva invita qualcuno.</p>
+
+
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_588613_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=588613' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+						<ul class='ipsTopicMeta'>
+							
+							
+								<li class="ipsTopicMeta__item ipsTopicMeta__item--time">
+									6 months later...
+								</li>
+							
+						</ul>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-647303'></a>
+<article  id='elComment_647303' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/42587-m-hero/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to $@!m HeRO's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4a2%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3E%24%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='$@!m HeRO' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/42587-m-hero/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Snitch" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Snitch (10/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/42587-m-hero/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to $@!m HeRO's profile" class="ipsType_break"><span class="__cf_email__" data-cfemail="163256">[email&#160;protected]</span>!m HeRO</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexdb18.html?do=findComment&amp;comment=647303' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2014-10-19T04:56:52Z' title='19/10/14 04:56 ' data-short='7 yr'>October 19, 2014</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/42587-m-hero/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F57131-help-problema-spettatore-mta-server-race%252F' title="Go to $@!m HeRO's profile" class="ipsType_break"><span class="__cf_email__" data-cfemail="765236">[email&#160;protected]</span>!m HeRO</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/42587-m-hero/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/42587-m-hero/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to $@!m HeRO's profile">
+		<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2362c4a2%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3E%24%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='$@!m HeRO' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Snitch" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Snitch (10/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_neutral'>
+	
+			<i class='fa fa-circle'></i> 0
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/42587-m-hero/content/index.html" rel="nofollow" title="69 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 69
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-647303_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="647303" data-quotedata="{&quot;userid&quot;:42587,&quot;username&quot;:&quot;$@!m HeRO&quot;,&quot;timestamp&quot;:1413694612,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:57131,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:647303}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_647303_menu" class="ipsComment_ellipsis" id="elControls_647303" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-647303_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_647303_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="indexdb18.html?do=findComment&amp;comment=647303" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_647303_menu" data-ipsdialog-title="Share this post" id="elSharePost_647303" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexdb18.html?do=findComment&amp;comment=647303" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2014-10-19T04:56:52Z' title='19/10/14 04:56 ' data-short='7 yr'>October 19, 2014</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<blockquote data-ipsquote="" class="ipsQuote" data-ipsquote-username="HunT" data-cite="HunT" data-ipsquote-contentapp="forums" data-ipsquote-contenttype="forums" data-ipsquote-contentid="57131" data-ipsquote-contentclass="forums_Topic"><div>
+<blockquote data-ipsquote="" class="ipsQuote" data-ipsquote-username="saimrock26" data-cite="saimrock26" data-ipsquote-contentapp="forums" data-ipsquote-contenttype="forums" data-ipsquote-contentid="57131" data-ipsquote-contentclass="forums_Topic"><div>forse l'ho capito la tua problema , aggiungimi su skype poi ti spiego cosa devi fare .<p>skype : saim.zia26</p>
+</div></blockquote>
+<p>il post è del novembre scorso,non credo che da allora ancora deve risolvere <img src="../../applications/core/interface/js/spacer.png" alt=":mrgreen:" data-src="../../uploads/emoticons/icon_mrgreen.gif.1c331c9fabeff64f83204c49473d5aee.gif"></p>
+<p>Cmq evita di resuscitare vecchi post per nulla.Se vuoi che la sezione di mtasa sia più attiva invita qualcuno.</p>
+</div></blockquote>
+<p><span style="color:#FF0000;"><span style="font-size:24px;">LOOOOOOOOOOOOOOOOL ! ! ! </span></span></p>
+
+
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_647303_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/?do=findComment&amp;comment=647303' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+			
+			
+<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366" />
+
+
+		</form>
+	</div>
+
+	
+	
+	
+	
+	
+		<a id='replyForm'></a>
+	<div data-role='replyArea' class='cTopicPostArea ipsBox ipsResponsive_pull ipsPadding cTopicPostArea_noSize ipsSpacer_top' data-controller='cloud.front.realtime.forumsReplyArea,cloud.front.realtime.whosTyping'>
+			
+				
+				
+
+<div>
+	<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366">
+	
+		<div class='ipsType_center ipsPad cGuestTeaser'>
+			
+				<h2 class='ipsType_pageTitle'>Create an account or sign in to comment</h2>
+				<p class='ipsType_light ipsType_normal ipsType_reset ipsSpacer_top ipsSpacer_half'>You need to be a member in order to leave a comment</p>
+			
+	
+			<div class='ipsBox ipsPad ipsSpacer_top'>
+				<div class='ipsGrid ipsGrid_collapsePhone'>
+					<div class='ipsGrid_span6 cGuestTeaser_left'>
+						<h2 class='ipsType_sectionHead'>Create an account</h2>
+						<p class='ipsType_normal ipsType_reset ipsType_light ipsSpacer_bottom'>Sign up for a new account in our community. It's easy!</p>
+						
+							<a href='../../register/index.html' class='ipsButton ipsButton_primary ipsButton_small' data-ipsDialog data-ipsDialog-size='narrow' data-ipsDialog-title='Sign Up'>
+						
+						Register a new account</a>
+					</div>
+					<div class='ipsGrid_span6 cGuestTeaser_right'>
+						<h2 class='ipsType_sectionHead'>Sign in</h2>
+						<p class='ipsType_normal ipsType_reset ipsType_light ipsSpacer_bottom'>Already have an account? Sign in here.</p>
+						<a href='../../login/indexfca3.html?ref=aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvNTcxMzEtaGVscC1wcm9ibGVtYS1zcGV0dGF0b3JlLW10YS1zZXJ2ZXItcmFjZS8jcmVwbHlGb3Jt' data-ipsDialog data-ipsDialog-size='medium' data-ipsDialog-remoteVerify="false" data-ipsDialog-title="Sign In Now" class='ipsButton ipsButton_primary ipsButton_small'>Sign In Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+		        
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function () {
+    var cke_add_mousedown_set = false;
+    function cke_add_mousedown () {
+      if (cke_add_mousedown_set) {
+        return;
+      }
+      setTimeout(function () {
+        for (var k in CKEDITOR.instances) {
+          cke_add_mousedown_set = true;
+          CKEDITOR.instances[k].on('paste', function (e) {
+            if (!e || !e.data || !e.data.dataValue) {
+              return;
+            }
+            e.data.dataValue = e.data.dataValue
+              .replaceAll(/(;|"|'|\s)(?:background-color|background|border-color|color|border|outline|opacity|filter):.+?(?:;|)("|')/ig, '$1$2')
+              .replaceAll(/("|'|)(?:\s|)[\w-]+?=(?:""|'')/g, '$1')
+              .replaceAll(/\s>/g, '>');
+          });
+        }
+      }, 500);
+    }
+    window.addEventListener('load', cke_add_mousedown);
+    window.addEventListener('touchend', cke_add_mousedown, { passive: true });
+    window.addEventListener('mousedown', cke_add_mousedown);
+  })();
+</script>
+
+			
+		</div>
+	
+
+	
+		<div class='ipsBox ipsPadding ipsResponsive_pull ipsResponsive_showPhone ipsMargin_top'>
+			
+				<div class='ipsResponsive_noFloat ipsResponsive_block ipsMargin_bottom:half'>
+					
+
+
+				</div>
+			
+			<div class='ipsResponsive_noFloat ipsResponsive_block'>
+				
+
+<div data-followApp='forums' data-followArea='topic' data-followID='57131' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall ipsButton_disabled" data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>0</span>
+	</a>
+
+</div>
+			</div>
+			
+		</div>
+	
+</div>
+
+
+
+<div class='ipsPager ipsSpacer_top'>
+	<div class="ipsPager_prev">
+		
+			<a href="../../forum/111-italian-italiano/index.html" title="Go to Italian / Italiano" rel="parent">
+				<span class="ipsPager_type">Go to topic listing</span>
+			</a>
+		
+	</div>
+	
+</div>
+
+
+						
+
+
+	<div class='cWidgetContainer '  data-role='widgetReceiver' data-orientation='horizontal' data-widgetArea='footer'>
+		<ul class='ipsList_reset'>
+			
+				
+					
+					<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='app_core_activeUsers_6o9n9w8dl' data-blockConfig="true" data-blockTitle="Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page."  data-controller='core.front.widgets.block'>
+<div data-controller='core.front.core.onlineUsersWidget'>
+    <h3 class='ipsType_reset ipsWidget_title'>
+        
+            Recently Browsing
+        
+        
+        &nbsp;&nbsp;<span class='ipsType_light ipsType_unbold ipsType_medium' data-memberCount="0">0 members</span>
+        
+    </h3>
+    <div class='ipsWidget_inner ipsPad'>
+        <ul class='ipsList_inline ipsList_csv ipsList_noSpacing ipsType_normal'>
+            
+                <li class='ipsType_reset ipsType_medium ipsType_light' data-noneOnline>No registered users viewing this page.</li>
+            
+        </ul>
+        
+    </div>
+</div></li>
+				
+			
+		</ul>
+	</div>
+
+					</div>
+					
+
+
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
+	
+		
+
+
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/50-general-mta/index.html'>
+						<span>General MTA <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/94-other-languages/index.html'>
+						<span>Other languages <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/111-italian-italiano/index.html'>
+						<span>Italian / Italiano <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					[HELP] Problema spettatore Mta server race
+				
+			</li>
+		
+	</ul>
+</nav>
+				</div>
+			</div>
+			
+		</main>
+		<footer id='ipsLayout_footer' class='ipsClearfix'>
+			<div class='ipsLayout_container'>
+				
+				
+
+<div id="mta_betaMark">Beta. Subject to change.</div>
+
+
+
+<ul id='elFooterSocialLinks' class='ipsList_inline ipsType_center ipsSpacer_top'>
+	
+
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.facebook.com/multitheftauto' target='_blank' class='cShareLink cShareLink_facebook' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://twitter.com/mtaqa' target='_blank' class='cShareLink cShareLink_twitter' rel='noopener noreferrer'><i class='fa fa-twitter'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://github.com/multitheftauto' target='_blank' class='cShareLink cShareLink_github' rel='noopener noreferrer'><i class='fa fa-github'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.youtube.com/user/MTAQA' target='_blank' class='cShareLink cShareLink_youtube' rel='noopener noreferrer'><i class='fa fa-youtube'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.linkedin.com/company/multitheftauto/' target='_blank' class='cShareLink cShareLink_linkedin' rel='noopener noreferrer'><i class='fa fa-linkedin'></i></a>
+		</li>
+	
+
+	
+<li class="cUserNav_icon">
+  <a href="https://www.reddit.com/r/MultiTheftAuto/" target="_blank" class="cShareLink cShareLink_reddit" rel="noopener noreferrer">
+    <i class="fa fa-reddit"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://www.twitch.tv/mtaqa" target="_blank" class="cShareLink cShareLink_twitch" rel="noopener noreferrer">
+    <i class="fa fa-twitch"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://discord.gg/mtasa" target="_blank" class="cShareLink cShareLink_discord" rel="noopener">
+    <img src="../../uploads/set_resources_22/fcd8efae86176d70eedf4d57dcc4f985_icon-discord_287702449.png" alt="Discord" width="28" height="28">
+  </a>
+</li>
+
+</ul>
+
+
+<ul class='ipsList_inline ipsType_center ipsSpacer_top' id="elFooterLinks">
+	
+	
+	
+	
+		<li>
+			<a href='#elNavTheme_menu' id='elNavTheme' data-ipsMenu data-ipsMenu-above>Theme <i class='fa fa-caret-down'></i></a>
+			<ul id='elNavTheme_menu' class='ipsMenu ipsMenu_selectable ipsHide'>
+			
+				<li class='ipsMenu_item ipsMenu_itemChecked'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvNTcxMzEtaGVscC1wcm9ibGVtYS1zcGV0dGF0b3JlLW10YS1zZXJ2ZXItcmFjZS8=">
+					<button type='submit' name='id' value='22' class='ipsButton ipsButton_link ipsButton_link_secondary'>Beta (Default)</button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvNTcxMzEtaGVscC1wcm9ibGVtYS1zcGV0dGF0b3JlLW10YS1zZXJ2ZXItcmFjZS8=">
+					<button type='submit' name='id' value='20' class='ipsButton ipsButton_link ipsButton_link_secondary'>Dark </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvNTcxMzEtaGVscC1wcm9ibGVtYS1zcGV0dGF0b3JlLW10YS1zZXJ2ZXItcmFjZS8=">
+					<button type='submit' name='id' value='19' class='ipsButton ipsButton_link ipsButton_link_secondary'>Light </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvNTcxMzEtaGVscC1wcm9ibGVtYS1zcGV0dGF0b3JlLW10YS1zZXJ2ZXItcmFjZS8=">
+					<button type='submit' name='id' value='25' class='ipsButton ipsButton_link ipsButton_link_secondary'>Night </button>
+					</form>
+				</li>
+			
+			</ul>
+		</li>
+	
+	
+	
+		<li><a rel="nofollow" href='../../contact/index.html' >Contact Us</a></li>
+	
+</ul>	
+
+
+<p id='elCopyright'>
+	<span id='elCopyright_userLine'></span>
+	<a rel='nofollow' title='Invision Community' href='https://www.invisioncommunity.com/'>Powered by Invision Community</a>
+</p>
+			</div>
+		</footer>
+		
+<div id='elMobileDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsFlex ipsFlex-fd:column'>
+			
+				<div class='ipsPadding ipsBorder_bottom'>
+					<ul class='ipsToolList ipsToolList_vertical'>
+						<li>
+							<a href='../../login/index.html' id='elSigninButton_mobile' class='ipsButton ipsButton_light ipsButton_small ipsButton_fullWidth'>Existing user? Sign In</a>
+						</li>
+						
+							<li>
+								
+									<a href='../../register/index.html' data-ipsDialog data-ipsDialog-size='narrow' data-ipsDialog-title='Sign Up' data-ipsDialog-fixed='true' id='elRegisterButton_mobile' class='ipsButton ipsButton_small ipsButton_fullWidth ipsButton_important'>Sign Up</a>
+								
+							</li>
+						
+					</ul>
+				</div>
+			
+
+			
+
+			<ul class='ipsDrawer_list ipsFlex-flex:11'>
+				
+
+				
+				
+				
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Browse</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../index.html' >
+					Forums
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../12275-forum-rules/index.html' >
+					Forum Rules
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../staff/index.html' >
+					Staff
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../online/index.html' >
+					Online Users
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../leaderboard/index.html' >
+					Leaderboard
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Activity</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../discover/index.html' >
+					All Activity
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+
+	
+
+	
+		
+			<li>
+				<a href='../../search/index.html' >
+					Search
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>MTA Network</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>MTA Network</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Social Media</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>Social Media</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+				
+			</ul>
+
+			
+		</div>
+	</div>
+</div>
+
+<div id='elMobileCreateMenuDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsSpacer_bottom ipsPad'>
+			<ul class='ipsDrawer_list'>
+				<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+		
+		
+
+	
+	<script type='text/javascript'>
+		var ipsDebug = false;		
+	
+		var CKEDITOR_BASEPATH = '../../applications/core/interface/ckeditor/ckeditor/index.html';
+	
+		var ipsSettings = {
+			
+			
+			cookie_path: "/",
+			
+			cookie_prefix: "__Host-",
+			
+			
+			cookie_ssl: true,
+			
+			upload_imgURL: "",
+			message_imgURL: "",
+			notification_imgURL: "",
+			baseURL: "//forum.multitheftauto.com/",
+			jsURL: "//forum.multitheftauto.com/applications/core/interface/js/js.php",
+			csrfKey: "714bb4c8fac35f8286ae64e012ef2366",
+			antiCache: "977ee345841657049756",
+			jsAntiCache: "977ee345841658990715",
+			disableNotificationSounds: true,
+			useCompiledFiles: true,
+			links_external: true,
+			memberID: 0,
+			lazyLoadEnabled: true,
+			blankImg: "//forum.multitheftauto.com/applications/core/interface/js/spacer.png",
+			googleAnalyticsEnabled: false,
+			matomoEnabled: false,
+			viewProfiles: true,
+			mapProvider: 'none',
+			mapApiKey: '',
+			pushPublicKey: "BF0jugJbt4XMR7oOEkdDzhxlfUA_S_sdGhSwmgdA4QIkQLHVO4dNMUseahcsyX_G97J81ncc6GqHARuEBoLyWGI",
+			relativeDates: true
+		};
+		
+		
+		
+		
+			ipsSettings['maxImageDimensions'] = {
+				width: 1000,
+				height: 750
+			};
+		
+		
+	</script>
+
+
+
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_libraryef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_js_lang_1ef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frameworkef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/global_global_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frontef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/front_front_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_forums/front_front_topicef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_mapef65.js?v=977ee345841658990715' data-ips></script>
+
+
+
+	<script type='text/javascript'>
+		
+			ips.setSetting( 'date_format', jQuery.parseJSON('"dd\/mm\/yy"') );
+		
+			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
+		
+			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+		
+			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
+		
+			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1626352838') );
+		
+			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+		
+			ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
+		
+			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+		
+		
+	</script>
+
+
+
+<script type='application/ld+json'>
+{
+    "name": "[HELP] Problema spettatore Mta server race",
+    "headline": "[HELP] Problema spettatore Mta server race",
+    "text": "Ciao ragazzi, \nHo un problema con il server di mta (race) tutto funziona alla perfezione, tranne una cosa la modalit\u00e0 \"Spettatore\". \ndi solito per esempio se siamo in 3 in un server, quando uno dei 3 muore automaticamente guarda l\u0027altro come guida, invece nel mio server una volta morto rimane la camera fissa senza muoversi fino al cambio della mappa? come mai? non so se avete capito   \nin poche parole non specta... \nGrazie in anticipo  \n",
+    "dateCreated": "2013-11-17T07:11:50+0000",
+    "datePublished": "2013-11-17T07:11:50+0000",
+    "dateModified": "2014-10-19T04:56:52+0000",
+    "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+    "author": {
+        "@type": "Person",
+        "name": "andres98",
+        "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+        "url": "https://forum.multitheftauto.com/profile/35284-andres98/"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/ViewAction",
+            "userInteractionCount": 2944
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 9
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/FollowAction",
+            "userInteractionCount": 0
+        }
+    ],
+    "@context": "http://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/",
+    "isPartOf": {
+        "@id": "https://forum.multitheftauto.com/#website"
+    },
+    "publisher": {
+        "@id": "https://forum.multitheftauto.com/#organization",
+        "member": {
+            "@type": "Person",
+            "name": "andres98",
+            "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+            "url": "https://forum.multitheftauto.com/profile/35284-andres98/"
+        }
+    },
+    "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/",
+    "discussionUrl": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/"
+    },
+    "pageStart": 1,
+    "pageEnd": 1,
+    "comment": [
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545793",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545793",
+            "author": {
+                "@type": "Person",
+                "name": "HunT",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png",
+                "url": "https://forum.multitheftauto.com/profile/21478-hunt/"
+            },
+            "dateCreated": "2013-11-17T09:28:48+0000",
+            "text": "Molto probabilmente hai scaricato una race buggata. ",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545794",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545794",
+            "author": {
+                "@type": "Person",
+                "name": "andres98",
+                "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+                "url": "https://forum.multitheftauto.com/profile/35284-andres98/"
+            },
+            "dateCreated": "2013-11-17T09:46:01+0000",
+            "text": "Intendi la mappa? No, lo fa con tutte le mappe... ",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545798",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545798",
+            "author": {
+                "@type": "Person",
+                "name": "HunT",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png",
+                "url": "https://forum.multitheftauto.com/profile/21478-hunt/"
+            },
+            "dateCreated": "2013-11-17T10:25:12+0000",
+            "text": "Intendo la gamemode race. ",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545812",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545812",
+            "author": {
+                "@type": "Person",
+                "name": "andres98",
+                "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+                "url": "https://forum.multitheftauto.com/profile/35284-andres98/"
+            },
+            "dateCreated": "2013-11-17T11:04:44+0000",
+            "text": "Ah ok, ho reinstallato mta diverse volte, e problema continua a presentarsi...intendi la resource race.zip? ",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545829",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545829",
+            "author": {
+                "@type": "Person",
+                "name": "HunT",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png",
+                "url": "https://forum.multitheftauto.com/profile/21478-hunt/"
+            },
+            "dateCreated": "2013-11-17T11:53:37+0000",
+            "text": "Stai usando qualche user panel scaricato da internet? Probabilmente \u00e8 quello il problema. ",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545849",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-545849",
+            "author": {
+                "@type": "Person",
+                "name": "andres98",
+                "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+                "url": "https://forum.multitheftauto.com/profile/35284-andres98/"
+            },
+            "dateCreated": "2013-11-17T13:22:40+0000",
+            "text": "no, anche se su mta non metto nessuna resource lo fa lo stesso... ",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-588358",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-588358",
+            "author": {
+                "@type": "Person",
+                "name": "$@!m HeRO",
+                "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+                "url": "https://forum.multitheftauto.com/profile/42587-m-hero/"
+            },
+            "dateCreated": "2014-03-31T03:33:46+0000",
+            "text": "forse l\u0027ho capito la tua problema , aggiungimi su skype poi ti spiego cosa devi fare . \nskype : saim.zia26 \n",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-588613",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-588613",
+            "author": {
+                "@type": "Person",
+                "name": "HunT",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2019_09/HunT.thumb.png.d6ee6f4fe532b821fb6b71ed7952eb32.png",
+                "url": "https://forum.multitheftauto.com/profile/21478-hunt/"
+            },
+            "dateCreated": "2014-03-31T18:15:00+0000",
+            "text": "il post \u00e8 del novembre scorso,non credo che da allora ancora deve risolvere  \nCmq evita di resuscitare vecchi post per nulla.Se vuoi che la sezione di mtasa sia pi\u00f9 attiva invita qualcuno. \n",
+            "upvoteCount": 0
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-647303",
+            "url": "https://forum.multitheftauto.com/topic/57131-help-problema-spettatore-mta-server-race/#comment-647303",
+            "author": {
+                "@type": "Person",
+                "name": "$@!m HeRO",
+                "image": "https://forum.multitheftauto.com/applications/core/interface/email/default_photo.png",
+                "url": "https://forum.multitheftauto.com/profile/42587-m-hero/"
+            },
+            "dateCreated": "2014-10-19T04:56:52+0000",
+            "text": "LOOOOOOOOOOOOOOOOL ! ! !  \n",
+            "upvoteCount": 0
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://forum.multitheftauto.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://forum.multitheftauto.com/#website",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://forum.multitheftauto.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (UK)",
+            "alternateName": "en-GB"
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://forum.multitheftauto.com/#organization",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "logo": {
+        "@type": "ImageObject",
+        "@id": "https://forum.multitheftauto.com/#logo",
+        "url": "https://forum.multitheftauto.com/uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png"
+    },
+    "sameAs": [
+        "https://www.facebook.com/multitheftauto",
+        "https://twitter.com/mtaqa",
+        "https://github.com/multitheftauto",
+        "https://www.youtube.com/user/MTAQA",
+        "https://www.linkedin.com/company/multitheftauto/"
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/50-general-mta/",
+                "name": "General MTA"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/94-other-languages/",
+                "name": "Other languages"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/111-italian-italiano/",
+                "name": "Italian / Italiano"
+            }
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "ContactPage",
+    "url": "https://forum.multitheftauto.com/contact/"
+}	
+</script>
+
+
+		
+		
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		
+		
+		
+        
+	</body>
+</html>

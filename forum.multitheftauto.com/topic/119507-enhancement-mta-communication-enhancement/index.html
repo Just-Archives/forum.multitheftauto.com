@@ -1,0 +1,5035 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+        
+		<title>[enhancement] MTA-Communication-Enhancement - Tutorials - Multi Theft Auto: Forums</title>
+		
+		
+		
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	
+	
+
+
+	<meta name="twitter:card" content="summary" />
+
+
+	
+		<meta name="twitter:site" content="@mtaqa" />
+	
+
+
+	
+		
+			
+				<meta property="og:title" content="[enhancement] MTA-Communication-Enhancement">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:type" content="website">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:url" content="index.html">
+			
+		
+	
+
+	
+		
+			
+				<meta name="description" content="MTA-Communication-Enhancement This is an enhancement that allows you to communicate between clientside and serverside a bit easier. If you know how to work with events, then you probably do not need this, but it has some nice features which allows you to sit back and write less code + achieve som...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:description" content="MTA-Communication-Enhancement This is an enhancement that allows you to communicate between clientside and serverside a bit easier. If you know how to work with events, then you probably do not need this, but it has some nice features which allows you to sit back and write less code + achieve som...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:updated_time" content="2021-02-09T19:17:21Z">
+			
+		
+	
+
+	
+		
+			
+				<meta name="keywords" content="serverside, await, communication, clientside, callbacks, function, events, callback, functions, arguments, event, argument">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:site_name" content="Multi Theft Auto: Forums">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:locale" content="en_GB">
+			
+		
+	
+
+
+	
+		<link rel="canonical" href="index.html" />
+	
+
+
+
+
+<link rel="manifest" href="../../manifest.webmanifest/index.html">
+<meta name="msapplication-config" content="../../browserconfig.xml/index.html">
+<meta name="msapplication-starturl" content="/">
+<meta name="application-name" content="Multi Theft Auto: Forums">
+<meta name="apple-mobile-web-app-title" content="Multi Theft Auto: Forums">
+
+	<meta name="theme-color" content="#121319">
+
+
+
+
+
+
+	
+
+	
+		
+			<link rel="icon" sizes="36x36" href="../../uploads/monthly_2021_10/android-chrome-36x36.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="48x48" href="../../uploads/monthly_2021_10/android-chrome-48x48.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="72x72" href="../../uploads/monthly_2021_10/android-chrome-72x72.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="96x96" href="../../uploads/monthly_2021_10/android-chrome-96x96.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="144x144" href="../../uploads/monthly_2021_10/android-chrome-144x144.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="192x192" href="../../uploads/monthly_2021_10/android-chrome-192x192.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="256x256" href="../../uploads/monthly_2021_10/android-chrome-256x256.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="384x384" href="../../uploads/monthly_2021_10/android-chrome-384x384.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="512x512" href="../../uploads/monthly_2021_10/android-chrome-512x512.png">
+		
+	
+
+	
+		
+			<meta name="msapplication-square70x70logo" content="../../uploads/monthly_2021_10/msapplication-square70x70logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-TileImage" content="../../uploads/monthly_2021_10/msapplication-TileImage.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square150x150logo" content="../../uploads/monthly_2021_10/msapplication-square150x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-wide310x150logo" content="../../uploads/monthly_2021_10/msapplication-wide310x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square310x310logo" content="../../uploads/monthly_2021_10/msapplication-square310x310logo.png"/>
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" href="../../uploads/monthly_2021_10/apple-touch-icon-57x57.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="60x60" href="../../uploads/monthly_2021_10/apple-touch-icon-60x60.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="72x72" href="../../uploads/monthly_2021_10/apple-touch-icon-72x72.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="76x76" href="../../uploads/monthly_2021_10/apple-touch-icon-76x76.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="114x114" href="../../uploads/monthly_2021_10/apple-touch-icon-114x114.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="120x120" href="../../uploads/monthly_2021_10/apple-touch-icon-120x120.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="144x144" href="../../uploads/monthly_2021_10/apple-touch-icon-144x144.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="152x152" href="../../uploads/monthly_2021_10/apple-touch-icon-152x152.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="180x180" href="../../uploads/monthly_2021_10/apple-touch-icon-180x180.png">
+			
+		
+	
+
+
+
+
+
+<link rel="preload" href="../../applications/core/interface/font/fontawesome-webfont3e6e.woff2?v=4.7.0" as="font" crossorigin="anonymous">
+		
+
+
+	
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,700,700i" rel="stylesheet" referrerpolicy="origin">
+	
+
+
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/341e4a57816af3ba440d891ca87450ff_frameworka9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/05e81b71abe4f22d6eb8d1a929494829_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/20446cf2d164adcc029377cb04d43d17_flagsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/90eb5adf50a8c640f633d47fd7eb1778_corea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/5a0da001ccc2200dc5625c3f3934497d_core_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/62e269ced0fdab7e30e026f1d30ae516_forumsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/76e62c573090645fb99a15a363d8620e_forums_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/ebdea0c6a7dab6d37900b9190d3ac77b_topicsa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+
+<link rel='stylesheet' href='../../uploads/css_built_22/258adbb6e4f3e83cd3b355f84e3fa002_customa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+		
+		
+
+	
+	<link rel='shortcut icon' href='../../uploads/monthly_2016_09/favicon.ico.496d8d1cc696295f808f9f1153f0a1e0.ico' type="image/x-icon">
+
+	</head>
+	<body class='ipsApp ipsApp_front ipsJS_none ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='forums' data-pageLocation='front' data-pageModule='forums' data-pageController='topic' data-pageID='119507'  >
+		
+        
+
+        
+
+		  <a href='#ipsLayout_mainArea' class='ipsHide' title='Go to main content on this page' accesskey='m'>Jump to content</a>
+		<div id='ipsLayout_header' class='ipsClearfix'>
+			
+
+
+
+
+
+			<header>
+				
+<div id="mta_globalTopNavigation">
+  <div id="mta_globalTopNavigationLinks" class="ipsLayout_container">
+    <a href="https://multitheftauto.com/">Home</a>
+    <a href="https://discord.com/invite/mtasa" rel="noopener" target="_blank">Discord</a>
+    <a href="https://community.multitheftauto.com/">Community</a>
+    <a href="../../index.html">Forum</a>
+    <a href="https://wiki.multitheftauto.com/wiki/Main_Page">Wiki</a>
+    <a href="https://github.com/multitheftauto/mtasa-blue/issues" rel="noopener" target="_blank">Bugs</a>
+    <a href="https://multitheftauto.com/donate/">Heroes</a>
+    <a href="https://multitheftauto.com/hosters/">Hosting</a>
+    <a href="https://community.multitheftauto.com/index.php?p=servers">Servers</a>
+    <a href="https://multitheftauto.myspreadshop.net/all">Merch</a>
+    <span id="mta_onlinePlayers"></span>
+  </div>
+  <script>
+    (function () {
+      var onlinePlayersEl = document.getElementById('mta_onlinePlayers');
+
+      function updateOnlinePlayers() {
+        if (!onlinePlayersEl) return;
+
+        fetch('https://multitheftauto.com/count/')
+          .then(function (r) {
+            if (!r.ok) throw new Error();
+            return r.text();
+          })
+          .then(function (r) {
+            if (!onlinePlayersEl) return;
+            if (!r) throw new Error();
+
+            var info = r.split(',', 2);
+            if (!info || !info[0] || !info[1]) throw new Error();
+
+            function updateStats() {
+              onlinePlayersEl.innerText = new Intl.NumberFormat('en-US').format(info[0]) + ' players online on ' + new Intl.NumberFormat('en-US').format(info[1]) + ' public servers';
+              $(onlinePlayersEl).stop(true).fadeIn(500);
+            }
+
+            if (!onlinePlayersEl.innerText) {
+              $(onlinePlayersEl).hide();
+              updateStats();
+              return;
+            }
+
+            $(onlinePlayersEl).stop(true).fadeOut(500);
+            setTimeout(updateStats, 500);
+          })
+          .catch(function () {
+            setTimeout(updateOnlinePlayers, 10000);
+          });
+      }
+
+      window.addEventListener('load', updateOnlinePlayers);
+      setInterval(updateOnlinePlayers, 300000);
+    })();
+  </script>
+</div>
+
+				<div class='ipsLayout_container'>
+					
+
+
+<a href='../../index.html' id='elLogo' accesskey='1'><img src="../../uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png" alt='Multi Theft Auto: Forums'></a>
+
+					
+						
+
+	<ul id="elUserNav" class="ipsList_inline cSignedOut ipsResponsive_showDesktop">
+		
+		<li id="elSignInLink">
+			<a href="../../login/index.html" data-ipsmenu-closeonclick="false" data-ipsmenu id="elUserSignIn">
+				Existing user? Sign In  <i class="fa fa-caret-down"></i>
+			</a>
+			
+<div id='elUserSignIn_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+	<form accept-charset='utf-8' method='post' action='https://forum.multitheftauto.com/login/'>
+		<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366">
+		<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTE5NTA3LWVuaGFuY2VtZW50LW10YS1jb21tdW5pY2F0aW9uLWVuaGFuY2VtZW50Lw==">
+		<div data-role="loginForm">
+			
+			
+			
+				
+<div class="ipsPad ipsForm ipsForm_vertical">
+	<h4 class="ipsType_sectionHead">Sign In</h4>
+	<br><br>
+	<ul class='ipsList_reset'>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			
+			
+				<input type="text" placeholder="Display Name or Email Address" name="auth" autocomplete="email">
+			
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			<input type="password" placeholder="Password" name="password" autocomplete="current-password">
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_checkbox ipsClearfix">
+			<span class="ipsCustomInput">
+				<input type="checkbox" name="remember_me" id="remember_me_checkbox" value="1" checked aria-checked="true">
+				<span></span>
+			</span>
+			<div class="ipsFieldRow_content">
+				<label class="ipsFieldRow_label" for="remember_me_checkbox">Remember me</label>
+				<span class="ipsFieldRow_desc">Not recommended on shared computers</span>
+			</div>
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_fullWidth">
+			<button type="submit" name="_processLogin" value="usernamepassword" class="ipsButton ipsButton_primary ipsButton_small" id="elSignIn_submit">Sign In</button>
+			
+				<p class="ipsType_right ipsType_small">
+					
+						<a href='../../lostpassword/index.html' data-ipsDialog data-ipsDialog-title='Forgot your password?'>
+					
+					Forgot your password?</a>
+				</p>
+			
+		</li>
+	</ul>
+</div>
+			
+		</div>
+	</form>
+</div>
+		</li>
+		
+			<li>
+				
+					<a href="../../register/index.html" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-title="Sign Up"  id="elRegisterButton" class="ipsButton ipsButton_normal ipsButton_primary">Sign Up</a>
+				
+			</li>
+		
+	</ul>
+
+						
+<ul class='ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop'>
+	<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileDrawer'>
+		<a href='#'>
+			
+			
+				
+			
+			
+			
+			<i class='fa fa-navicon'></i>
+		</a>
+	</li>
+</ul>
+					
+				</div>
+			</header>
+			
+
+	<nav data-controller='core.front.core.navBar' class=' ipsResponsive_showDesktop'>
+		<div class='ipsNavBar_primary ipsLayout_container '>
+			<ul data-role="primaryNavBar" class='ipsClearfix'>
+				
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_1' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../index.html"  data-navItem-id="1" data-navDefault>
+					Browse<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_8' data-role="navBarItem" data-navApp="forums" data-navExt="Forums">
+			
+			
+				<a href="../../index.html"  data-navItem-id="8" data-navDefault>
+					Forums<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_12' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../12275-forum-rules/index.html"  data-navItem-id="12" >
+					Forum Rules<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_10' data-role="navBarItem" data-navApp="core" data-navExt="StaffDirectory">
+			
+			
+				<a href="../../staff/index.html"  data-navItem-id="10" >
+					Staff<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_11' data-role="navBarItem" data-navApp="core" data-navExt="OnlineUsers">
+			
+			
+				<a href="../../online/index.html"  data-navItem-id="11" >
+					Online Users<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_24' data-role="navBarItem" data-navApp="core" data-navExt="Leaderboard">
+			
+			
+				<a href="../../leaderboard/index.html"  data-navItem-id="24" >
+					Leaderboard<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_1' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_1' id='elNavigationMore_1_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_1_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_2' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="2" >
+					Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_3' data-role="navBarItem" data-navApp="core" data-navExt="AllActivity">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="3" >
+					All Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_7' data-role="navBarItem" data-navApp="core" data-navExt="Search">
+			
+			
+				<a href="../../search/index.html"  data-navItem-id="7" >
+					Search<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_2' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_2' id='elNavigationMore_2_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_2_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_37' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_37" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_37' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="37" >
+					MTA Network <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_37_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_46' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="46" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_48' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://community.mtasa.com/" target='_blank' rel="noopener" data-navItem-id="48" >
+					Community<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_49' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://wiki.multitheftauto.com/wiki/Main_Page" target='_blank' rel="noopener" data-navItem-id="49" >
+					Wiki<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_50' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto/mtasa-blue/issues" target='_blank' rel="noopener" data-navItem-id="50" >
+					Bugs<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_51' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/donate/" target='_blank' rel="noopener" data-navItem-id="51" >
+					Heroes<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_52' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/hosters/" target='_blank' rel="noopener" data-navItem-id="52" >
+					Hosting<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_45' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.myspreadshop.net/all" target='_blank' rel="noopener" data-navItem-id="45" >
+					Merch Store<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_37' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_37' id='elNavigationMore_37_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_37_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_28' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_28" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_28' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="28" >
+					Social Media <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_28_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_36' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="36" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_35' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.twitch.tv/mtaqa" target='_blank' rel="noopener" data-navItem-id="35" >
+					Twitch<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_30' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://twitter.com/mtaqa" target='_blank' rel="noopener" data-navItem-id="30" >
+					Twitter<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_32' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.youtube.com/user/MTAQA" target='_blank' rel="noopener" data-navItem-id="32" >
+					YouTube<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_31' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="31" >
+					GitHub<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_29' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.facebook.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="29" >
+					Facebook<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_34' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.reddit.com/r/MultiTheftAuto/" target='_blank' rel="noopener" data-navItem-id="34" >
+					Reddit<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_33' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.linkedin.com/company/multitheftauto" target='_blank' rel="noopener" data-navItem-id="33" >
+					LinkedIn<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_28' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_28' id='elNavigationMore_28_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_28_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+				<li class='ipsHide' id='elNavigationMore' data-role='navMore'>
+					<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore' id='elNavigationMore_dropdown'>More</a>
+					<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+						<li class='ipsHide' id='elNavigationMore_more' data-role='navMore'>
+							<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_more' id='elNavigationMore_more_dropdown'>More <i class='fa fa-caret-down'></i></a>
+							<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_more_dropdown_menu' data-role='moreDropdown'></ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+
+	<div id="elSearchWrapper">
+		<div id='elSearch' class='' data-controller='core.front.core.quickSearch'>
+			<form accept-charset='utf-8' action='http://forum.multitheftauto.com/search/?do=quicksearch' method='post'>
+				<input type='search' id='elSearchField' placeholder='Search...' name='q' autocomplete='off' aria-label='Search'>
+				<button class='cSearchSubmit' type="submit" aria-label='Search'><i class="fa fa-search"></i></button>
+				<div id="elSearchExpanded">
+					<div class="ipsMenu_title">
+						Search In
+					</div>
+					<ul class="ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-role="searchContexts">
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="type" value="all" checked id="elQuickSearchRadio_type_all">
+								<label for='elQuickSearchRadio_type_all' id='elQuickSearchRadio_type_all_label'>Everywhere</label>
+							</span>
+						</li>
+						
+						
+							<li>
+								<span class='ipsSideMenu_item' data-ipsMenuValue='forums_topic'>
+									<input type="radio" name="type" value="forums_topic" id="elQuickSearchRadio_type_forums_topic">
+									<label for='elQuickSearchRadio_type_forums_topic' id='elQuickSearchRadio_type_forums_topic_label'>Topics</label>
+								</span>
+							</li>
+						
+						
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:123}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:123}' id='elQuickSearchRadio_type_contextual_838a63ae987ccff12e9d57d90ead7643'>
+										<label for='elQuickSearchRadio_type_contextual_838a63ae987ccff12e9d57d90ead7643' id='elQuickSearchRadio_type_contextual_838a63ae987ccff12e9d57d90ead7643_label'>This Forum</label>
+									</span>
+								</li>
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:119507}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:119507}' id='elQuickSearchRadio_type_contextual_737627cff53f2e5ffc50f50b78db8d90'>
+										<label for='elQuickSearchRadio_type_contextual_737627cff53f2e5ffc50f50b78db8d90' id='elQuickSearchRadio_type_contextual_737627cff53f2e5ffc50f50b78db8d90_label'>This Topic</label>
+									</span>
+								</li>
+							
+						
+						<li data-role="showMoreSearchContexts">
+							<span class='ipsSideMenu_item' data-action="showMoreSearchContexts" data-exclude="forums_topic">
+								More options...
+							</span>
+						</li>
+					</ul>
+					<div class="ipsMenu_title">
+						Find results that contain...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='andOr'>
+						
+							<li>
+								<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='or'>
+									<input type="radio" name="search_and_or" value="or" checked id="elRadio_andOr_or">
+									<label for='elRadio_andOr_or' id='elField_andOr_label_or'><em>Any</em> of my search term words</label>
+								</span>
+							</li>
+						
+							<li>
+								<span class='ipsSideMenu_item ' data-ipsMenuValue='and'>
+									<input type="radio" name="search_and_or" value="and"  id="elRadio_andOr_and">
+									<label for='elRadio_andOr_and' id='elField_andOr_label_and'><em>All</em> of my search term words</label>
+								</span>
+							</li>
+						
+					</ul>
+					<div class="ipsMenu_title">
+						Find results in...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='searchIn'>
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="search_in" value="all" checked id="elRadio_searchIn_and">
+								<label for='elRadio_searchIn_and' id='elField_searchIn_label_all'>Content titles and body</label>
+							</span>
+						</li>
+						<li>
+							<span class='ipsSideMenu_item' data-ipsMenuValue='titles'>
+								<input type="radio" name="search_in" value="titles" id="elRadio_searchIn_titles">
+								<label for='elRadio_searchIn_titles' id='elField_searchIn_label_titles'>Content titles only</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		</div>
+	</nav>
+
+			
+<ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
+	
+		
+			
+			
+				
+				
+			
+				
+				
+			
+				
+					<li id='elMobileBreadcrumb'>
+						<a href='../../forum/123-tutorials/index.html'>
+							<span>Tutorials</span>
+						</a>
+					</li>
+				
+				
+			
+				
+				
+			
+		
+	
+	
+	
+	<li >
+		<a data-action="defaultStream" href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+	</li>
+
+	
+
+	
+		<li class='ipsJS_show'>
+			<a href='../../search/index.html'><i class='fa fa-search'></i></a>
+		</li>
+	
+</ul>
+		</div>
+		<main id='ipsLayout_body' class='ipsLayout_container'>
+			<div id='ipsLayout_contentArea'>
+				<div id='ipsLayout_contentWrapper'>
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/86-mta-community/index.html'>
+						<span>MTA Community <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/71-scripting/index.html'>
+						<span>Scripting <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/123-tutorials/index.html'>
+						<span>Tutorials <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					[enhancement] MTA-Communication-Enhancement
+				
+			</li>
+		
+	</ul>
+</nav>
+					
+					<div id='ipsLayout_mainArea'>
+						
+						
+						
+						
+
+	
+
+
+
+
+						
+
+
+
+<div class='ipsPageHeader ipsResponsive_pull ipsBox ipsPadding sm:ipsPadding:half ipsMargin_bottom'>
+		
+	
+	<div class='ipsFlex ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:4'>
+		<div class='ipsFlex-flex:11'>
+			<h1 class='ipsType_pageTitle ipsContained_container'>
+				
+
+				
+				
+					<span class='ipsType_break ipsContained'>
+						<span>[enhancement] MTA-Communication-Enhancement</span>
+					</span>
+				
+			</h1>
+			
+			
+				
+
+
+	
+		<ul class='ipsTags ipsList_inline ' >
+			
+				
+					
+
+<li >
+	
+	<a href="../../tags/serverside/index.html" class='ipsTag' title="Find other content tagged with 'serverside'" rel="tag"><span>serverside</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/await/index.html" class='ipsTag' title="Find other content tagged with 'await'" rel="tag"><span>await</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/communication/index.html" class='ipsTag' title="Find other content tagged with 'communication'" rel="tag"><span>communication</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/clientside/index.html" class='ipsTag' title="Find other content tagged with 'clientside'" rel="tag"><span>clientside</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/callbacks/index.html" class='ipsTag' title="Find other content tagged with 'callbacks'" rel="tag"><span>callbacks</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/function/index.html" class='ipsTag' title="Find other content tagged with 'function'" rel="tag"><span>function</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/events/index.html" class='ipsTag' title="Find other content tagged with 'events'" rel="tag"><span>events</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/callback/index.html" class='ipsTag' title="Find other content tagged with 'callback'" rel="tag"><span>callback</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/functions/index.html" class='ipsTag' title="Find other content tagged with 'functions'" rel="tag"><span>functions</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/arguments/index.html" class='ipsTag' title="Find other content tagged with 'arguments'" rel="tag"><span>arguments</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/event/index.html" class='ipsTag' title="Find other content tagged with 'event'" rel="tag"><span>event</span></a>
+	
+</li>
+				
+					
+
+<li >
+	
+	<a href="../../tags/argument/index.html" class='ipsTag' title="Find other content tagged with 'argument'" rel="tag"><span>argument</span></a>
+	
+</li>
+				
+			
+			
+		</ul>
+		
+	
+
+			
+		</div>
+		
+			<div class='ipsFlex-flex:00 ipsType_light'>
+				
+				
+<div  class='ipsClearfix ipsRating  ipsRating_veryLarge'>
+	
+	<ul class='ipsRating_collective'>
+		
+			
+				<li class='ipsRating_on'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_on'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_on'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_on'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+			
+				<li class='ipsRating_on'>
+					<i class='fa fa-star'></i>
+				</li>
+			
+		
+	</ul>
+</div>
+			</div>
+		
+	</div>
+	<hr class='ipsHr'>
+	<div class='ipsPageHeader__meta ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:3'>
+		<div class='ipsFlex-flex:11'>
+			<div class='ipsPhotoPanel ipsPhotoPanel_mini ipsPhotoPanel_notPhone ipsClearfix'>
+				
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+				<div>
+					<p class='ipsType_reset ipsType_blendLinks'>
+						<span class='ipsType_normal'>
+						
+							<strong>By 
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break"><span style='color:#0055ff; font-weight: bold'>IIYAMA</span></a>, </strong><br />
+							<span class='ipsType_light'><time datetime='2019-08-18T18:46:07Z' title='18/08/19 18:46 ' data-short='2 yr'>August 18, 2019</time> in <a href="../../forum/123-tutorials/index.html">Tutorials</a></span>
+						
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class='ipsFlex-flex:01 ipsResponsive_hidePhone'>
+				<div class='ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsGap_row:0'>
+					
+						
+
+
+					
+					
+
+
+
+					
+
+<div data-followApp='forums' data-followArea='topic' data-followID='119507' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall " data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>2</span>
+	</a>
+
+</div>
+				</div>
+			</div>
+					
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+<div class='ipsClearfix'>
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+		
+		
+		
+	</ul>
+</div>
+
+<div id='comments' data-controller='core.front.core.commentFeed,forums.front.topic.view, core.front.core.ignoredComments' data-autoPoll data-baseURL='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/' data-lastPage data-feedID='topic-119507' class='cTopic ipsClear ipsSpacer_top'>
+	
+			
+	
+
+	
+
+<div data-controller='core.front.core.recommendedComments' data-url='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/?recommended=comments' class='ipsRecommendedComments ipsHide'>
+	<div data-role="recommendedComments">
+		<h2 class='ipsType_sectionHead ipsType_large ipsType_bold ipsMargin_bottom'>Recommended Posts</h2>
+		
+	</div>
+</div>
+	
+	<div id="elPostFeed" data-role='commentFeed' data-controller='core.front.core.moderation' >
+		<form action="https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/?csrfKey=714bb4c8fac35f8286ae64e012ef2366&amp;do=multimodComment" method="post" data-ipsPageAction data-role='moderationTools'>
+			
+			
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-962757'></a>
+<article data-memberGroup="6"  id='elComment_962757' class='cPost ipsBox ipsResponsive_pull  ipsComment ipsComment_popular ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone ipsComment_highlighted   '>
+	
+
+	
+		<div class='ipsResponsive_showPhone ipsComment_badges'>
+			<ul class='ipsList_reset ipsFlex ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1'>
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_highlightedGroup'>Moderators</strong></li>
+				
+				
+				
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_popular'>Popular Post</strong></li>
+				
+			</ul>
+		</div>
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+				
+                    
+                		<span class="cAuthorPane_badge cAuthorPane_badge--moderator" data-ipsTooltip title="IIYAMA is a moderator"></span>
+              		
+				
+				
+					<a href="../../profile/27939-iiyama/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Gangsta" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Gangsta (45/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break"><span style='color:#0055ff; font-weight: bold'>IIYAMA</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexf5fe.html?do=findComment&amp;comment=962757' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2019-08-18T18:46:07Z' title='18/08/19 18:46 ' data-short='2 yr'>August 18, 2019</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break">IIYAMA</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Global Moderator</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+					
+                        
+                        	<span class="cAuthorPane_badge cAuthorPane_badge--moderator" data-ipsTooltip title="IIYAMA is a moderator"></span>
+                        
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Gangsta" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Gangsta (45/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#0055ff; font-weight: bold'>Moderators</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 1,386
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/27939-iiyama/content/index.html" rel="nofollow" title="5,854 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 5.9k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-962757_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="962757" data-quotedata="{&quot;userid&quot;:27939,&quot;username&quot;:&quot;IIYAMA&quot;,&quot;timestamp&quot;:1566153967,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:119507,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:962757}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_highlightedGroup">Moderators</strong></li>
+					
+					
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_popular">Popular Post</strong></li>
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_962757_menu" class="ipsComment_ellipsis" id="elControls_962757" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-962757_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_962757_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index.html" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_962757_menu" data-ipsdialog-title="Share this post" id="elSharePost_962757" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexf5fe.html?do=findComment&amp;comment=962757" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2019-08-18T18:46:07Z' title='18/08/19 18:46 ' data-short='2 yr'>August 18, 2019</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+					(edited)
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			
+<h1>
+	<span style="font-size:36px;">MTA-Communication-</span>Enhancement
+</h1>
+
+<p>
+	This is an <em>enhancement</em> that allows you to communicate between clientside and serverside a bit easier. If you know how to work with events, then you probably do not need this, but it has some nice features which allows you to sit back and write less code + achieve some nice results.
+</p>
+
+<p>
+	<em>Note: It is important to keep in mind that this is an enhancement. Which means it is just an layer on top of the basic functionalities of MTA. And most enhancements come with a cost, in this case that is bit of performance.</em>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	I will keep the information of topic to the minimal, as I have written most of the information already on the repository.
+</p>
+
+<p>
+	<strong>You can find the repository </strong><a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment" rel="external nofollow">here</a>.
+</p>
+
+<ul>
+	<li>
+		<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/blob/master/documentation/examples/readme.md" rel="external nofollow">Examples</a>
+	</li>
+	<li>
+		<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax" rel="external nofollow">Syntax</a>
+	</li>
+	<li>
+		<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/set-up" rel="external nofollow">Installation</a>
+	</li>
+</ul>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:28px;"><strong>What can you do with it?</strong></span>
+</p>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong><span style="font-size:20px;">Calling from clientside to serverside</span></strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Client</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">callServer</span><span class="pun">(</span><span class="str">"hello"</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Server</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> hello </span><span class="pun">()</span><span class="pln">
+	<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="str">"Hello <span><a href="https://wiki.multitheftauto.com/wiki/client" rel="external nofollow">client</a></span>!"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong><span style="font-size:20px;">Calling from serverside to clientside</span></strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Server</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/addCommandHandler" rel="external nofollow">addCommandHandler</a></span></span><span class="pun">(</span><span class="str">"callclient"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">)</span><span class="pln"> 
+	
+	</span><span class="com">-- An addCommandHandler is needed, because the client hasn't loaded it's scripts yet.</span><span class="pln">
+	callClient</span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">,</span><span class="pln"> </span><span class="str">"hello"</span><span class="pun">)</span><span class="pln">
+	
+</span><span class="kwd">end</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Client</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> hello </span><span class="pun">()</span><span class="pln">
+	<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="str">"Hello server!"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	Ok, ok, that was boring. The next one this is a bit nicer!
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<em><span style="font-size:20px;">Hello are you there? Just Call-me-back... <u>I miss(ed)</u> you too</span></em><br />
+	<strong><span style="font-size:20px;">Callback</span></strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Client</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">callServer</span><span class="pun">(</span><span class="pln">
+	</span><span class="str">"callbackMe"</span><span class="pun">,</span><span class="pln"> 
+	</span><span class="str">"argument"</span><span class="pun">,</span><span class="pln"> 
+	</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">argument</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- &lt; This is the callback function</span><span class="pln">
+		<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="pln">argument</span><span class="pun">)</span><span class="pln"> 
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Server</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> callbackMe </span><span class="pun">(</span><span class="pln">argument</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> argument </span><span class="pun">..</span><span class="pln"> </span><span class="str">" &lt; I looked at it :)"</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong><span style="font-size:20px;">Callback + internal arguments</span></strong>
+</p>
+
+<p>
+	Sometimes you have arguments that you simply can't send over. &gt; <strong>functions</strong><br />
+	Or arguments that shouldn't be send over. &gt;<strong> LARGE quantities of database data</strong>
+</p>
+
+<p>
+	Internal arguments can be used to pass information to a callback without exposing it to the other side(client/server).
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Client</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">callServer</span><span class="pun">(</span><span class="pln">
+	</span><span class="str">"callbackMe"</span><span class="pun">,</span><span class="pln"> 
+	
+	</span><span class="com">--------------------------------</span><span class="pln">
+	</span><span class="com">-- arguments that are send over</span><span class="pln">
+	
+	</span><span class="str">"argument"</span><span class="pun">,</span><span class="pln"> 
+	
+	</span><span class="com">--</span><span class="pln">
+	</span><span class="com">--------------------------------</span><span class="pln">
+	
+	</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">internalArgument</span><span class="pun">,</span><span class="pln"> argument</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- &lt; This is the callback function.</span><span class="pln">
+	
+		<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="pln">internalArgument</span><span class="pun">)</span><span class="pln">
+		<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="pln">argument</span><span class="pun">)</span><span class="pln"> 
+		
+	</span><span class="kwd">end</span><span class="pun">,</span><span class="pln">
+	
+	</span><span class="com">--------------------------------</span><span class="pln">
+	</span><span class="com">-- arguments that are not send over</span><span class="pln">
+	
+	</span><span class="str">"internalArgument"</span><span class="pln"> </span><span class="com">-- &lt; internal argument</span><span class="pln">
+	
+	</span><span class="com">--</span><span class="pln">
+	</span><span class="com">--------------------------------</span><span class="pln">
+</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Server</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> callbackMe </span><span class="pun">(</span><span class="pln">argument</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> argument </span><span class="pun">..</span><span class="pln"> </span><span class="str">" &lt; I looked at it :D"</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;"><strong>Ha! Serverside what is that? No need for complicated things!</strong></span>
+</p>
+
+<p>
+	Communicate between clients without writing a single line of serverside. Magic!
+</p>
+
+<p>
+	<em>Note: There is serverside used behind the scenes, you just don't have to write it.</em>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Client</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> smile </span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">)</span><span class="pln">
+	
+	<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">((</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/isElement" rel="external nofollow">isElement</a></span></span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/getPlayerName" rel="external nofollow">getPlayerName</a></span></span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">)</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="str">"[unknown]"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> </span><span class="str">" has send you a: :)"</span><span class="pun">)</span><span class="pln">
+	
+	</span><span class="kwd"><span><a href="https://wiki.multitheftauto.com/wiki/local" rel="external nofollow">local</a></span></span><span class="pln"> x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">,</span><span class="pln"> z </span><span class="pun">=</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/getElementPosition" rel="external nofollow">getElementPosition</a></span></span><span class="pun">(</span><span class="pln">localPlayer</span><span class="pun">)</span><span class="pln">
+	<span><a href="https://wiki.multitheftauto.com/wiki/setElementPosition" rel="external nofollow">setElementPosition</a></span></span><span class="pun">(</span><span class="pln">localPlayer</span><span class="pun">,</span><span class="pln"> x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">,</span><span class="pln"> z </span><span class="pun">+</span><span class="pln"> </span><span class="lit">100</span><span class="pun">)</span><span class="pln">
+	
+</span><span class="kwd">end</span><span class="pln">
+addRemoteClientAccessPoint</span><span class="pun">(</span><span class="pln">smile</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- &lt; This function allows other clients to call this function.</span><span class="pln">
+
+
+</span><span class="com">---------------------------------------</span><span class="pln">
+</span><span class="com">--                                   --</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> getPlayerFromPartialName</span><span class="pun">(</span><span class="pln">name</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd"><span><a href="https://wiki.multitheftauto.com/wiki/local" rel="external nofollow">local</a></span></span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> name </span><span class="kwd">and</span><span class="pln"> name</span><span class="pun">:</span><span class="pln">gsub</span><span class="pun">(</span><span class="str">"#%x%x%x%x%x%x"</span><span class="pun">,</span><span class="pln"> </span><span class="str">""</span><span class="pun">):</span><span class="pln">lower</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> </span><span class="kwd"><span><a href="https://wiki.multitheftauto.com/wiki/nil" rel="external nofollow">nil</a></span></span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> name </span><span class="kwd">then</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> _</span><span class="pun">,</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span> </span><span class="kwd">in</span><span class="pln"> <span><a href="http://www.lua.org/manual/5.1/manual.html#pdf-ipairs" rel="external nofollow">ipairs</a></span></span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/getElementsByType" rel="external nofollow">getElementsByType</a></span></span><span class="pun">(</span><span class="str">"<span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span>"</span><span class="pun">))</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+            </span><span class="kwd"><span><a href="https://wiki.multitheftauto.com/wiki/local" rel="external nofollow">local</a></span></span><span class="pln"> name_ </span><span class="pun">=</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/getPlayerName" rel="external nofollow">getPlayerName</a></span></span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">):</span><span class="pln">gsub</span><span class="pun">(</span><span class="str">"#%x%x%x%x%x%x"</span><span class="pun">,</span><span class="pln"> </span><span class="str">""</span><span class="pun">):</span><span class="pln">lower</span><span class="pun">()</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pln"> name_</span><span class="pun">:</span><span class="pln">find</span><span class="pun">(</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span>
+            </span><span class="kwd">end</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="com">-- Author: TAPL</span><span class="pln">
+</span><span class="com">-- https://wiki.multitheftauto.com/wiki/GetPlayerFromPartialName</span><span class="pln">
+</span><span class="com">--                                   --</span><span class="pln">
+</span><span class="com">---------------------------------------</span><span class="pln">
+
+
+<span><a href="https://wiki.multitheftauto.com/wiki/addCommandHandler" rel="external nofollow">addCommandHandler</a></span></span><span class="pun">(</span><span class="str">"smile"</span><span class="pun">,</span><span class="pln"> 
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">cmd</span><span class="pun">,</span><span class="pln"> playerName</span><span class="pun">)</span><span class="pln"> 
+	</span><span class="kwd"><span><a href="https://wiki.multitheftauto.com/wiki/local" rel="external nofollow">local</a></span></span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span> </span><span class="pun">=</span><span class="pln"> getPlayerFromPartialName</span><span class="pun">(</span><span class="pln">playerName</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">if</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span> </span><span class="kwd">then</span><span class="pln">
+		<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="str">"Sending smile!"</span><span class="pun">)</span><span class="pln">
+		callRemoteClient</span><span class="pun">(</span><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">,</span><span class="pln"> </span><span class="str">"smile"</span><span class="pun">,</span><span class="pln"> <span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span></span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">else</span><span class="pln">
+		<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="str">"Can't find <span><a href="https://wiki.multitheftauto.com/wiki/player" rel="external nofollow">player</a></span>!"</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	Turtle, I will wait for you to catch up. So don't worry, you are still cute.
+</p>
+
+<p>
+	<strong><span style="font-size:20px;">Await functions</span></strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	When a player has joined the server, he or she doesn't have <strong>download + loaded</strong> his <strong>scripts </strong>yet. This means that you can't deliver your love letter yet and all your work will be for nothing. But what if you don't have to worry about that? <img alt=":propellerhead:" data-emoticon="" data-src="https://forum.multitheftauto.com/uploads/emoticons/5propeller.gif.a51224a6b24b2faf9bee8a02900d515c.gif" height="20" src="../../applications/core/interface/js/spacer.png" style="height:auto;" title=":propellerhead:" width="15" /><em>You can just wait now!</em>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Server</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln"><span><a href="https://wiki.multitheftauto.com/wiki/addEventHandler" rel="external nofollow">addEventHandler</a></span></span><span class="pun">(</span><span class="str">"<span><a href="https://wiki.multitheftauto.com/wiki/onPlayerJoin" rel="external nofollow">onPlayerJoin</a></span>"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> 
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+	
+	callClientAwait</span><span class="pun">(</span><span class="pln">source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"testCallClientAwait"</span><span class="pun">)</span><span class="pln">
+	
+</span><span class="kwd">end</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Client</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pln"> testCallClientAwait </span><span class="pun">()</span><span class="pln">
+	<span><a href="https://wiki.multitheftauto.com/wiki/outputChatBox" rel="external nofollow">outputChatBox</a></span></span><span class="pun">(</span><span class="str">"Yes this works!"</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong><span style="font-size:20px;">Security</span></strong>
+</p>
+
+<p>
+	Worried about security issues?
+</p>
+
+<ul>
+	<li>
+		Remote calls for C++/MTA functions have been blocked.
+	</li>
+	<li>
+		There is a whitelist feature included, <strong>if enabled</strong> your code can only remote-call whitelisted functions. <strong>(this is disabled by default)</strong><br />
+		<em>Read the docs for that.</em><strong> <a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#shared-variables" rel="external nofollow">Here</a> </strong>and <strong><a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#syntax-9" rel="external nofollow">here</a></strong>
+	</li>
+</ul>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+
+			
+				
+
+<span class='ipsType_reset ipsType_medium ipsType_light' data-excludequote>
+	<strong>Edited <time datetime='2020-12-02T13:10:42Z' title='02/12/20 13:10 ' data-short='1 yr'>December 2, 2020</time> by IIYAMA</strong>
+	
+	
+</span>
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Like">
+					
+							<span>
+								<img src='../../uploads/reactions/react_like.png' alt="Like" loading="lazy">
+							</span>
+							<span>
+								9
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_962757_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+						<ul class='ipsTopicMeta'>
+							
+								
+									<li class="ipsTopicMeta__item ipsTopicMeta__item--moderation">
+										<span class='ipsTopicMeta__time ipsType_light'><time datetime='2020-12-02T13:09:41Z' title='02/12/20 13:09 ' data-short='1 yr'>1 yr</time></span>
+										<span class='ipsTopicMeta__action'>
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break"><span style='color:#0055ff; font-weight: bold'>IIYAMA</span></a> changed the title to <em>[enhancement] MTA-Communication-Enhancement</em></span>
+									</li>
+								
+							
+							
+								<li class="ipsTopicMeta__item ipsTopicMeta__item--time">
+									2 months later...
+								</li>
+							
+						</ul>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-992602'></a>
+<article  id='elComment_992602' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/58944-enesbayrktar/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to enesbayrktar's profile">
+		<img src='../../uploads/monthly_2021_02/0c286c48da2a35ab58efe86d307c67c8.thumb.jpg.96658560703c3cd60204fdd105855abd.jpg' alt='enesbayrktar' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/58944-enesbayrktar/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Newbie" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Newbie (4/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/58944-enesbayrktar/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to enesbayrktar's profile" class="ipsType_break">enesbayrktar</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index24bd.html?do=findComment&amp;comment=992602' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2021-02-06T00:29:54Z' title='06/02/21 00:29 ' data-short='1 yr'>February 6, 2021</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/58944-enesbayrktar/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to enesbayrktar's profile" class="ipsType_break">enesbayrktar</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/58944-enesbayrktar/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to enesbayrktar's profile">
+		<img src='../../uploads/monthly_2021_02/0c286c48da2a35ab58efe86d307c67c8.thumb.jpg.96658560703c3cd60204fdd105855abd.jpg' alt='enesbayrktar' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Newbie" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Newbie (4/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 6
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/58944-enesbayrktar/content/index.html" rel="nofollow" title="9 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 9
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-992602_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="992602" data-quotedata="{&quot;userid&quot;:58944,&quot;username&quot;:&quot;enesbayrktar&quot;,&quot;timestamp&quot;:1612571394,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:119507,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:992602}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_992602_menu" class="ipsComment_ellipsis" id="elControls_992602" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-992602_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_992602_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index24bd.html?do=findComment&amp;comment=992602" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_992602_menu" data-ipsdialog-title="Share this post" id="elSharePost_992602" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index24bd.html?do=findComment&amp;comment=992602" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2021-02-06T00:29:54Z' title='06/02/21 00:29 ' data-short='1 yr'>February 6, 2021</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			
+<p>
+	İts amazingly usefull!
+</p>
+
+<p>
+	I use this on my script but i have one question about multiple argument sending to server-side. Can you give a example for this?
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln">	</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln">
+	</span><span class="kwd">if</span><span class="pln"> state </span><span class="kwd">then</span><span class="pln">
+		guiSetText</span><span class="pun">(</span><span class="pln">usernameEdt</span><span class="pun">,</span><span class="pln"> </span><span class="str">''</span><span class="pun">)</span><span class="pln">
+			</span><span class="kwd">return</span><span class="pln"> notifications</span><span class="pun">:</span><span class="pln">error</span><span class="pun">(</span><span class="pln">string</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="str">'%s zaten kullanımda. Lütfen farklı bir ad seç.'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">))</span><span class="pln">
+		</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+</span><span class="com">-- i wanna use multiple args when sending, for example.</span><span class="pln">
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> caseVariable</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln">
+ 		</span><span class="com">-- TO DO</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Like">
+					
+							<span>
+								<img src='../../uploads/reactions/react_like.png' alt="Like" loading="lazy">
+							</span>
+							<span>
+								1
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_992602_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/?do=findComment&amp;comment=992602' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-992894'></a>
+<article data-memberGroup="6"  id='elComment_992894' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone ipsComment_highlighted   '>
+	
+
+	
+		<div class='ipsResponsive_showPhone ipsComment_badges'>
+			<ul class='ipsList_reset ipsFlex ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1'>
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_highlightedGroup'>Moderators</strong></li>
+				
+				
+				
+				
+			</ul>
+		</div>
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+				
+                    
+                		<span class="cAuthorPane_badge cAuthorPane_badge--moderator" data-ipsTooltip title="IIYAMA is a moderator"></span>
+              		
+				
+				
+					<a href="../../profile/27939-iiyama/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Gangsta" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Gangsta (45/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break"><span style='color:#0055ff; font-weight: bold'>IIYAMA</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexa2ca.html?do=findComment&amp;comment=992894' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2021-02-09T18:28:41Z' title='09/02/21 18:28 ' data-short='1 yr'>February 9, 2021</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break">IIYAMA</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Global Moderator</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+					
+                        
+                        	<span class="cAuthorPane_badge cAuthorPane_badge--moderator" data-ipsTooltip title="IIYAMA is a moderator"></span>
+                        
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Gangsta" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Gangsta (45/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#0055ff; font-weight: bold'>Moderators</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 1,386
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/27939-iiyama/content/index.html" rel="nofollow" title="5,854 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 5.9k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-992894_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="992894" data-quotedata="{&quot;userid&quot;:27939,&quot;username&quot;:&quot;IIYAMA&quot;,&quot;timestamp&quot;:1612895321,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:119507,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:992894}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsComment_authorBadge">Author</strong></li>
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_highlightedGroup">Moderators</strong></li>
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_992894_menu" class="ipsComment_ellipsis" id="elControls_992894" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-992894_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_992894_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="indexa2ca.html?do=findComment&amp;comment=992894" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_992894_menu" data-ipsdialog-title="Share this post" id="elSharePost_992894" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexa2ca.html?do=findComment&amp;comment=992894" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2021-02-09T18:28:41Z' title='09/02/21 18:28 ' data-short='1 yr'>February 9, 2021</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+					(edited)
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="992602" data-ipsquote-contentid="119507" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612571394" data-ipsquote-userid="58944" data-ipsquote-username="enesbayrktar">
+	<div class="ipsQuote_citation">
+		On 06/02/2021 at 01:29, enesbayrktar said:
+	</div>
+
+	<div class="ipsQuote_contents">
+		<p>
+			İts amazingly usefull!
+		</p>
+	</div>
+</blockquote>
+
+<p>
+	thx!
+</p>
+
+<p>
+	Sorry for my late reply, I didn't notice the notification.
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>The syntax for that function:</strong>
+</p>
+
+<div style="background-color:#fff;border:solid #000000;margin:10px 10px;padding-left:5px;padding-right:5px;">
+	<p>
+		<code><span style="color:#000000;"><span>bool callServer (callFunctionName string <strong>[, argument1, argument2, ... ]</strong> [, callbackFunction function [, argument1 (internal), argument2 (internal), ...]] )</span></span> </code>
+	</p>
+</div>
+
+<p>
+	<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#syntax-1" rel="external nofollow">https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#syntax-1</a>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Multiple values can be send over by just adding them between the <strong>functionName </strong>and the <strong>callBackFunction</strong>.
+</p>
+
+<p>
+	functionName:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="str">'isAccountRegistered'</span></pre>
+
+<p>
+	callBackFunction:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span></pre>
+
+<p>
+	 
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- 1</span><span class="pln">
+
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- 2</span><span class="pln">
+
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> caseVariable</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- 3</span></pre>
+
+<p>
+	It goes through all arguments and detects if there is a function, then that one will be the callBack function.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<div style="border:solid #000000;margin:10px 10px;padding-left:5px;padding-right:5px;">
+	<p>
+		<strong>See here where that happens in the source code:</strong>
+	</p>
+
+	<p>
+		<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_c.lua#L77" rel="external nofollow">https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_c.lua#L77</a>
+	</p>
+
+	<p>
+		<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_shared.lua#L250" rel="external nofollow">https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_shared.lua#L250</a>
+	</p>
+</div>
+
+<p>
+	 
+</p>
+
+<div>
+	<hr />
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	So you want to do that, what you already can do and doing it already?  <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+
+			
+				
+
+<span class='ipsType_reset ipsType_medium ipsType_light' data-excludequote>
+	<strong>Edited <time datetime='2021-02-09T18:35:09Z' title='09/02/21 18:35 ' data-short='1 yr'>February 9, 2021</time> by IIYAMA</strong>
+	
+	
+</span>
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Thanks">
+					
+							<span>
+								<img src='../../uploads/reactions/react_thanks.png' alt="Thanks" loading="lazy">
+							</span>
+							<span>
+								1
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_992894_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/?do=findComment&amp;comment=992894' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-992895'></a>
+<article  id='elComment_992895' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/58944-enesbayrktar/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to enesbayrktar's profile">
+		<img src='../../uploads/monthly_2021_02/0c286c48da2a35ab58efe86d307c67c8.thumb.jpg.96658560703c3cd60204fdd105855abd.jpg' alt='enesbayrktar' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/58944-enesbayrktar/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Newbie" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Newbie (4/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/58944-enesbayrktar/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to enesbayrktar's profile" class="ipsType_break">enesbayrktar</a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index56e1.html?do=findComment&amp;comment=992895' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2021-02-09T18:56:11Z' title='09/02/21 18:56 ' data-short='1 yr'>February 9, 2021</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/58944-enesbayrktar/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to enesbayrktar's profile" class="ipsType_break">enesbayrktar</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/58944-enesbayrktar/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/58944-enesbayrktar/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to enesbayrktar's profile">
+		<img src='../../uploads/monthly_2021_02/0c286c48da2a35ab58efe86d307c67c8.thumb.jpg.96658560703c3cd60204fdd105855abd.jpg' alt='enesbayrktar' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Newbie" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Newbie (4/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'>Members</li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 6
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/58944-enesbayrktar/content/index.html" rel="nofollow" title="9 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 9
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-992895_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="992895" data-quotedata="{&quot;userid&quot;:58944,&quot;username&quot;:&quot;enesbayrktar&quot;,&quot;timestamp&quot;:1612896971,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:119507,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:992895}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_992895_menu" class="ipsComment_ellipsis" id="elControls_992895" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-992895_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_992895_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index56e1.html?do=findComment&amp;comment=992895" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_992895_menu" data-ipsdialog-title="Share this post" id="elSharePost_992895" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index56e1.html?do=findComment&amp;comment=992895" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2021-02-09T18:56:11Z' title='09/02/21 18:56 ' data-short='1 yr'>February 9, 2021</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="992894" data-ipsquote-contentid="119507" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612895321" data-ipsquote-userid="27939" data-ipsquote-username="IIYAMA">
+	<div class="ipsQuote_citation">
+		26 minutes ago, IIYAMA said:
+	</div>
+
+	<div class="ipsQuote_contents">
+		<p>
+			thx!
+		</p>
+
+		<p>
+			Sorry for my late reply, I didn't notice the notification.
+		</p>
+
+		<div>
+			<hr />
+		</div>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<strong>The syntax for that function:</strong>
+		</p>
+
+		<div style="background-color:#fff;border:solid #000000;margin:10px 10px;padding-left:5px;padding-right:5px;">
+			<p>
+				<code><span style="color:#000000;"><span>bool callServer (callFunctionName string <strong>[, argument1, argument2, ... ]</strong> [, callbackFunction function [, argument1 (internal), argument2 (internal), ...]] )</span></span> </code>
+			</p>
+		</div>
+
+		<p>
+			<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#syntax-1" rel="external nofollow">https://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#syntax-1</a>
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			Multiple values can be send over by just adding them between the <strong>functionName </strong>and the <strong>callBackFunction</strong>.
+		</p>
+
+		<p>
+			functionName:
+		</p>
+
+		<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="str">'isAccountRegistered'</span></pre>
+
+		<p>
+			callBackFunction:
+		</p>
+
+		<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span></pre>
+
+		<p>
+			 
+		</p>
+
+		<pre class="ipsCode prettyprint lang-lua prettyprinted">
+<span class="pln">callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- 1</span><span class="pln">
+
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- 2</span><span class="pln">
+
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> caseVariable</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- 3</span></pre>
+
+		<p>
+			It goes through all arguments and detects if there is a function, then that one will be the callBack function.
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<div style="border:solid #000000;margin:10px 10px;padding-left:5px;padding-right:5px;">
+			<p>
+				<strong>See here where that happens in the source code:</strong>
+			</p>
+
+			<p>
+				<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_c.lua#L77" rel="external nofollow">https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_c.lua#L77</a>
+			</p>
+
+			<p>
+				<a href="https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_shared.lua#L250" rel="external nofollow">https://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_shared.lua#L250</a>
+			</p>
+		</div>
+
+		<p>
+			 
+		</p>
+
+		<div>
+			<hr />
+		</div>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			So you want to do that, what you already can do and doing it already?  <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+	</div>
+</blockquote>
+
+<p>
+	İ tested and its worked, but i dont know its true usage or not of multiple args for this reason i wanna a example code from you.
+</p>
+
+<p>
+	Thanks <span><span><a contenteditable="false" data-ipshover="" data-ipshover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" data-mentionid="27939" href="../../profile/27939-iiyama/index.html" rel="">@IIYAMA</a></span></span>
+</p>
+
+
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Like">
+					
+							<span>
+								<img src='../../uploads/reactions/react_like.png' alt="Like" loading="lazy">
+							</span>
+							<span>
+								1
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_992895_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/?do=findComment&amp;comment=992895' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-992898'></a>
+<article data-memberGroup="6"  id='elComment_992898' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone ipsComment_highlighted   '>
+	
+
+	
+		<div class='ipsResponsive_showPhone ipsComment_badges'>
+			<ul class='ipsList_reset ipsFlex ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1'>
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_highlightedGroup'>Moderators</strong></li>
+				
+				
+				
+				
+			</ul>
+		</div>
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+				
+                    
+                		<span class="cAuthorPane_badge cAuthorPane_badge--moderator" data-ipsTooltip title="IIYAMA is a moderator"></span>
+              		
+				
+				
+					<a href="../../profile/27939-iiyama/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Gangsta" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Gangsta (45/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break"><span style='color:#0055ff; font-weight: bold'>IIYAMA</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='index4329.html?do=findComment&amp;comment=992898' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2021-02-09T19:17:21Z' title='09/02/21 19:17 ' data-short='1 yr'>February 9, 2021</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/27939-iiyama/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F119507-enhancement-mta-communication-enhancement%252F' title="Go to IIYAMA's profile" class="ipsType_break">IIYAMA</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Global Moderator</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/27939-iiyama/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to IIYAMA's profile">
+		<img src='../../uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif' alt='IIYAMA' loading="lazy">
+	</a>
+
+					
+                        
+                        	<span class="cAuthorPane_badge cAuthorPane_badge--moderator" data-ipsTooltip title="IIYAMA is a moderator"></span>
+                        
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Gangsta" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Gangsta (45/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#0055ff; font-weight: bold'>Moderators</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 1,386
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/27939-iiyama/content/index.html" rel="nofollow" title="5,854 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 5.9k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-992898_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="992898" data-quotedata="{&quot;userid&quot;:27939,&quot;username&quot;:&quot;IIYAMA&quot;,&quot;timestamp&quot;:1612898241,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:119507,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:992898}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsComment_authorBadge">Author</strong></li>
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_highlightedGroup">Moderators</strong></li>
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_992898_menu" class="ipsComment_ellipsis" id="elControls_992898" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-992898_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_992898_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index4329.html?do=findComment&amp;comment=992898" rel="nofollow" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_992898_menu" data-ipsdialog-title="Share this post" id="elSharePost_992898" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="index4329.html?do=findComment&amp;comment=992898" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2021-02-09T19:17:21Z' title='09/02/21 19:17 ' data-short='1 yr'>February 9, 2021</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+					(edited)
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="992895" data-ipsquote-contentid="119507" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612896971" data-ipsquote-userid="58944" data-ipsquote-username="enesbayrktar">
+	<div class="ipsQuote_citation">
+		21 minutes ago, enesbayrktar said:
+	</div>
+
+	<div class="ipsQuote_contents">
+		<p>
+			İ tested and its worked, but i dont know its true usage or not of multiple args for this reason i wanna a example code from you.
+		</p>
+
+		<p>
+			Thanks <span><span><a contenteditable="false" data-ipshover="" data-ipshover-target="https://forum.multitheftauto.com/profile/27939-iiyama/?do=hovercard" data-mentionid="27939" href="../../profile/27939-iiyama/index.html" rel="">@IIYAMA</a></span></span>
+		</p>
+	</div>
+</blockquote>
+
+<p>
+	There is only 1 thing you need to know about <strong>internal </strong>arguments. Those ones that are after the callBack function.
+</p>
+
+<p>
+	If you mix <strong>internal </strong>arguments with arguments(from serverside), you have to make sure that the last <strong>internal </strong>argument is not a nil value.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Because when all arguments are converted to parameters, both lists will be merged and the first list(<strong>internal </strong>arguments) will collapse on nil values at the end of the table.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Problem:</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">internal2 </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">nil</span><span class="pln">
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> caseVariable</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">internal1</span><span class="pun">,</span><span class="pln"> internal2</span><span class="pun">,</span><span class="pln"> state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">,</span><span class="pln"> </span><span class="str">"internal1"</span><span class="pun">,</span><span class="pln"> internal2</span><span class="pun">)</span><span class="pln"> 
+</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Is OK:</strong>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">internal2 </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+callServer</span><span class="pun">(</span><span class="str">'isAccountRegistered'</span><span class="pun">,</span><span class="pln"> username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">,</span><span class="pln"> caseVariable</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">internal1</span><span class="pun">,</span><span class="pln"> internal2</span><span class="pun">,</span><span class="pln"> state</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">,</span><span class="pln"> </span><span class="str">"internal1"</span><span class="pun">,</span><span class="pln"> internal2</span><span class="pun">)</span><span class="pln"> </span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	As you can see here:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">list1 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">}</span><span class="pln"> </span><span class="com">-- internal arguments</span><span class="pln">
+list2 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="lit">6</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7</span><span class="pun">,</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">for</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">#</span><span class="pln">list2 </span><span class="kwd">do</span><span class="pln">
+  list1</span><span class="pun">[#</span><span class="pln">list1 </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> list2 </span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+
+print</span><span class="pun">(</span><span class="pln">unpack</span><span class="pun">(</span><span class="pln">list1</span><span class="pun">))</span><span class="pln">
+
+</span><span class="com">-- 1,	2,	nil,	4,	6,	7,	8,	9,	10,</span><span class="pln">
+</span><span class="com">-- The nil value at index 5 is missing.</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+
+			
+				
+
+<span class='ipsType_reset ipsType_medium ipsType_light' data-excludequote>
+	<strong>Edited <time datetime='2021-02-09T19:18:18Z' title='09/02/21 19:18 ' data-short='1 yr'>February 9, 2021</time> by IIYAMA</strong>
+	
+	
+</span>
+			
+		</div>
+
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_992898_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/?do=findComment&amp;comment=992898' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+			
+			
+<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366" />
+
+
+		</form>
+	</div>
+
+	
+	
+	
+	
+	
+
+	
+		<div class='ipsBox ipsPadding ipsResponsive_pull ipsResponsive_showPhone ipsMargin_top'>
+			
+				<div class='ipsResponsive_noFloat ipsResponsive_block ipsMargin_bottom:half'>
+					
+
+
+				</div>
+			
+			<div class='ipsResponsive_noFloat ipsResponsive_block'>
+				
+
+<div data-followApp='forums' data-followArea='topic' data-followID='119507' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall " data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>2</span>
+	</a>
+
+</div>
+			</div>
+			
+		</div>
+	
+</div>
+
+
+
+<div class='ipsPager ipsSpacer_top'>
+	<div class="ipsPager_prev">
+		
+			<a href="../../forum/123-tutorials/index.html" title="Go to Tutorials" rel="parent">
+				<span class="ipsPager_type">Go to topic listing</span>
+			</a>
+		
+	</div>
+	
+</div>
+
+
+						
+
+
+	<div class='cWidgetContainer '  data-role='widgetReceiver' data-orientation='horizontal' data-widgetArea='footer'>
+		<ul class='ipsList_reset'>
+			
+				
+					
+					<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='app_core_activeUsers_6o9n9w8dl' data-blockConfig="true" data-blockTitle="Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page."  data-controller='core.front.widgets.block'>
+<div data-controller='core.front.core.onlineUsersWidget'>
+    <h3 class='ipsType_reset ipsWidget_title'>
+        
+            Recently Browsing
+        
+        
+        &nbsp;&nbsp;<span class='ipsType_light ipsType_unbold ipsType_medium' data-memberCount="0">0 members</span>
+        
+    </h3>
+    <div class='ipsWidget_inner ipsPad'>
+        <ul class='ipsList_inline ipsList_csv ipsList_noSpacing ipsType_normal'>
+            
+                <li class='ipsType_reset ipsType_medium ipsType_light' data-noneOnline>No registered users viewing this page.</li>
+            
+        </ul>
+        
+    </div>
+</div></li>
+				
+			
+		</ul>
+	</div>
+
+					</div>
+					
+
+
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
+	
+		
+
+
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/86-mta-community/index.html'>
+						<span>MTA Community <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/71-scripting/index.html'>
+						<span>Scripting <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/123-tutorials/index.html'>
+						<span>Tutorials <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					[enhancement] MTA-Communication-Enhancement
+				
+			</li>
+		
+	</ul>
+</nav>
+				</div>
+			</div>
+			
+		</main>
+		<footer id='ipsLayout_footer' class='ipsClearfix'>
+			<div class='ipsLayout_container'>
+				
+				
+
+<div id="mta_betaMark">Beta. Subject to change.</div>
+
+
+
+<ul id='elFooterSocialLinks' class='ipsList_inline ipsType_center ipsSpacer_top'>
+	
+
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.facebook.com/multitheftauto' target='_blank' class='cShareLink cShareLink_facebook' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://twitter.com/mtaqa' target='_blank' class='cShareLink cShareLink_twitter' rel='noopener noreferrer'><i class='fa fa-twitter'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://github.com/multitheftauto' target='_blank' class='cShareLink cShareLink_github' rel='noopener noreferrer'><i class='fa fa-github'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.youtube.com/user/MTAQA' target='_blank' class='cShareLink cShareLink_youtube' rel='noopener noreferrer'><i class='fa fa-youtube'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.linkedin.com/company/multitheftauto/' target='_blank' class='cShareLink cShareLink_linkedin' rel='noopener noreferrer'><i class='fa fa-linkedin'></i></a>
+		</li>
+	
+
+	
+<li class="cUserNav_icon">
+  <a href="https://www.reddit.com/r/MultiTheftAuto/" target="_blank" class="cShareLink cShareLink_reddit" rel="noopener noreferrer">
+    <i class="fa fa-reddit"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://www.twitch.tv/mtaqa" target="_blank" class="cShareLink cShareLink_twitch" rel="noopener noreferrer">
+    <i class="fa fa-twitch"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://discord.gg/mtasa" target="_blank" class="cShareLink cShareLink_discord" rel="noopener">
+    <img src="../../uploads/set_resources_22/fcd8efae86176d70eedf4d57dcc4f985_icon-discord_287702449.png" alt="Discord" width="28" height="28">
+  </a>
+</li>
+
+</ul>
+
+
+<ul class='ipsList_inline ipsType_center ipsSpacer_top' id="elFooterLinks">
+	
+	
+	
+	
+		<li>
+			<a href='#elNavTheme_menu' id='elNavTheme' data-ipsMenu data-ipsMenu-above>Theme <i class='fa fa-caret-down'></i></a>
+			<ul id='elNavTheme_menu' class='ipsMenu ipsMenu_selectable ipsHide'>
+			
+				<li class='ipsMenu_item ipsMenu_itemChecked'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTE5NTA3LWVuaGFuY2VtZW50LW10YS1jb21tdW5pY2F0aW9uLWVuaGFuY2VtZW50Lw==">
+					<button type='submit' name='id' value='22' class='ipsButton ipsButton_link ipsButton_link_secondary'>Beta (Default)</button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTE5NTA3LWVuaGFuY2VtZW50LW10YS1jb21tdW5pY2F0aW9uLWVuaGFuY2VtZW50Lw==">
+					<button type='submit' name='id' value='20' class='ipsButton ipsButton_link ipsButton_link_secondary'>Dark </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTE5NTA3LWVuaGFuY2VtZW50LW10YS1jb21tdW5pY2F0aW9uLWVuaGFuY2VtZW50Lw==">
+					<button type='submit' name='id' value='19' class='ipsButton ipsButton_link ipsButton_link_secondary'>Light </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTE5NTA3LWVuaGFuY2VtZW50LW10YS1jb21tdW5pY2F0aW9uLWVuaGFuY2VtZW50Lw==">
+					<button type='submit' name='id' value='25' class='ipsButton ipsButton_link ipsButton_link_secondary'>Night </button>
+					</form>
+				</li>
+			
+			</ul>
+		</li>
+	
+	
+	
+		<li><a rel="nofollow" href='../../contact/index.html' >Contact Us</a></li>
+	
+</ul>	
+
+
+<p id='elCopyright'>
+	<span id='elCopyright_userLine'></span>
+	<a rel='nofollow' title='Invision Community' href='https://www.invisioncommunity.com/'>Powered by Invision Community</a>
+</p>
+			</div>
+		</footer>
+		
+<div id='elMobileDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsFlex ipsFlex-fd:column'>
+			
+				<div class='ipsPadding ipsBorder_bottom'>
+					<ul class='ipsToolList ipsToolList_vertical'>
+						<li>
+							<a href='../../login/index.html' id='elSigninButton_mobile' class='ipsButton ipsButton_light ipsButton_small ipsButton_fullWidth'>Existing user? Sign In</a>
+						</li>
+						
+							<li>
+								
+									<a href='../../register/index.html' data-ipsDialog data-ipsDialog-size='narrow' data-ipsDialog-title='Sign Up' data-ipsDialog-fixed='true' id='elRegisterButton_mobile' class='ipsButton ipsButton_small ipsButton_fullWidth ipsButton_important'>Sign Up</a>
+								
+							</li>
+						
+					</ul>
+				</div>
+			
+
+			
+
+			<ul class='ipsDrawer_list ipsFlex-flex:11'>
+				
+
+				
+				
+				
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Browse</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../index.html' >
+					Forums
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../12275-forum-rules/index.html' >
+					Forum Rules
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../staff/index.html' >
+					Staff
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../online/index.html' >
+					Online Users
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../leaderboard/index.html' >
+					Leaderboard
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Activity</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../discover/index.html' >
+					All Activity
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+
+	
+
+	
+		
+			<li>
+				<a href='../../search/index.html' >
+					Search
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>MTA Network</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>MTA Network</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Social Media</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>Social Media</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+				
+			</ul>
+
+			
+		</div>
+	</div>
+</div>
+
+<div id='elMobileCreateMenuDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsSpacer_bottom ipsPad'>
+			<ul class='ipsDrawer_list'>
+				<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+		
+		
+
+	
+	<script type='text/javascript'>
+		var ipsDebug = false;		
+	
+		var CKEDITOR_BASEPATH = '../../applications/core/interface/ckeditor/ckeditor/index.html';
+	
+		var ipsSettings = {
+			
+			
+			cookie_path: "/",
+			
+			cookie_prefix: "__Host-",
+			
+			
+			cookie_ssl: true,
+			
+			upload_imgURL: "",
+			message_imgURL: "",
+			notification_imgURL: "",
+			baseURL: "//forum.multitheftauto.com/",
+			jsURL: "//forum.multitheftauto.com/applications/core/interface/js/js.php",
+			csrfKey: "714bb4c8fac35f8286ae64e012ef2366",
+			antiCache: "977ee345841657049756",
+			jsAntiCache: "977ee345841658990715",
+			disableNotificationSounds: true,
+			useCompiledFiles: true,
+			links_external: true,
+			memberID: 0,
+			lazyLoadEnabled: true,
+			blankImg: "//forum.multitheftauto.com/applications/core/interface/js/spacer.png",
+			googleAnalyticsEnabled: false,
+			matomoEnabled: false,
+			viewProfiles: true,
+			mapProvider: 'none',
+			mapApiKey: '',
+			pushPublicKey: "BF0jugJbt4XMR7oOEkdDzhxlfUA_S_sdGhSwmgdA4QIkQLHVO4dNMUseahcsyX_G97J81ncc6GqHARuEBoLyWGI",
+			relativeDates: true
+		};
+		
+		
+		
+		
+			ipsSettings['maxImageDimensions'] = {
+				width: 1000,
+				height: 750
+			};
+		
+		
+	</script>
+
+
+
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_libraryef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_js_lang_1ef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frameworkef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/global_global_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frontef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/front_front_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_forums/front_front_topicef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_mapef65.js?v=977ee345841658990715' data-ips></script>
+
+
+
+	<script type='text/javascript'>
+		
+			ips.setSetting( 'date_format', jQuery.parseJSON('"dd\/mm\/yy"') );
+		
+			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
+		
+			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+		
+			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
+		
+			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1626352838') );
+		
+			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+		
+			ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
+		
+			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+		
+		
+	</script>
+
+
+
+<script type='application/ld+json'>
+{
+    "name": "[enhancement] MTA-Communication-Enhancement",
+    "headline": "[enhancement] MTA-Communication-Enhancement",
+    "text": "MTA-Communication-Enhancement\n \n\n\n\tThis is an enhancement that allows you to communicate between clientside and serverside a bit easier. If you know how to work with events, then you probably do not need this, but it has some nice features which allows you to sit back and write less code + achieve some nice results.\n \n\n\n\tNote: It is important to keep in mind that this is an enhancement. Which means it is just an layer on top of the basic functionalities of MTA. And most enhancements come with a cost, in this case that is bit of performance.\n \n\n\n\t\u00a0\n \n\n\n\tI will keep the information of topic to the minimal, as I have written most of the information already on the repository.\n \n\n\n\tYou can find the repository here.\n \n\n\n\t\n\t\tExamples\n\t \n\t\n\t\tSyntax\n\t \n\t\n\t\tInstallation\n\t \n\n\n\n\t\u00a0\n \n\n\n\tWhat can you do with it?\n \n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tCalling from clientside to serverside\n \n\n\n\t\u00a0\n \n\n\n\tClient\n \n\n\ncallServer(\"hello\")\n\n\n\t\u00a0\n \n\n\n\tServer\n \n\n\nfunction hello ()\n\toutputChatBox(\"Hello client!\")\nend\n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tCalling from serverside to clientside\n \n\n\n\t\u00a0\n \n\n\n\tServer\n \n\n\naddCommandHandler(\"callclient\", function (player) \n\t\n\t-- An addCommandHandler is needed, because the client hasn\u0027t loaded it\u0027s scripts yet.\n\tcallClient(player, \"hello\")\n\t\nend, false, false)\n\n\n\t\u00a0\n \n\n\n\tClient\n \n\n\nfunction hello ()\n\toutputChatBox(\"Hello server!\")\nend\n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tOk, ok, that was boring. The next one this is a bit nicer!\n \n\n\n\t\u00a0\n \n\n\n\tHello are you there? Just Call-me-back... I miss(ed) you too \n\tCallback\n \n\n\n\t\u00a0\n \n\n\n\tClient\n \n\n\ncallServer(\n\t\"callbackMe\", \n\t\"argument\", \n\tfunction (argument) -- \u0026lt; This is the callback function\n\t\toutputChatBox(argument) \n\tend\n)\n\n\n\t\u00a0\n \n\n\n\tServer\n \n\n\nfunction callbackMe (argument)\n\treturn argument .. \" \u0026lt; I looked at it :)\"\nend\n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tCallback + internal arguments\n \n\n\n\tSometimes you have arguments that you simply can\u0027t send over. \u0026gt; functions \n\tOr arguments that shouldn\u0027t be send over. \u0026gt; LARGE quantities of database data\n \n\n\n\tInternal arguments can be used to pass information to a callback without exposing it to the other side(client/server).\n \n\n\n\t\u00a0\n \n\n\n\tClient\n \n\n\ncallServer(\n\t\"callbackMe\", \n\t\n\t--------------------------------\n\t-- arguments that are send over\n\t\n\t\"argument\", \n\t\n\t--\n\t--------------------------------\n\t\n\tfunction (internalArgument, argument) -- \u0026lt; This is the callback function.\n\t\n\t\toutputChatBox(internalArgument)\n\t\toutputChatBox(argument) \n\t\t\n\tend,\n\t\n\t--------------------------------\n\t-- arguments that are not send over\n\t\n\t\"internalArgument\" -- \u0026lt; internal argument\n\t\n\t--\n\t--------------------------------\n)\n\n\n\t\u00a0\n \n\n\n\tServer\n \n\n\nfunction callbackMe (argument)\n\treturn argument .. \" \u0026lt; I looked at it :D\"\nend\n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tHa! Serverside what is that? No need for complicated things!\n \n\n\n\tCommunicate between clients without writing a single line of serverside. Magic!\n \n\n\n\tNote: There is serverside used behind the scenes, you just don\u0027t have to write it.\n \n\n\n\t\u00a0\n \n\n\n\tClient\n \n\n\nfunction smile (player)\n\t\n\toutputChatBox((isElement(player) and getPlayerName(player) or \"[unknown]\") .. \" has send you a: :)\")\n\t\n\tlocal x, y, z = getElementPosition(localPlayer)\n\tsetElementPosition(localPlayer, x, y, z + 100)\n\t\nend\naddRemoteClientAccessPoint(smile) -- \u0026lt; This function allows other clients to call this function.\n\n\n---------------------------------------\n--                                   --\nfunction getPlayerFromPartialName(name)\n    local name = name and name:gsub(\"#%x%x%x%x%x%x\", \"\"):lower() or nil\n    if name then\n        for _, player in ipairs(getElementsByType(\"player\")) do\n            local name_ = getPlayerName(player):gsub(\"#%x%x%x%x%x%x\", \"\"):lower()\n            if name_:find(name, 1, true) then\n                return player\n            end\n        end\n    end\nend\n-- Author: TAPL\n-- https://wiki.multitheftauto.com/wiki/GetPlayerFromPartialName\n--                                   --\n---------------------------------------\n\n\naddCommandHandler(\"smile\", \nfunction (cmd, playerName) \n\tlocal player = getPlayerFromPartialName(playerName)\n\tif player then\n\t\toutputChatBox(\"Sending smile!\")\n\t\tcallRemoteClient(player, \"smile\", player)\n\telse\n\t\toutputChatBox(\"Can\u0027t find player!\")\n\tend\nend)\n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tTurtle, I will wait for you to catch up. So don\u0027t worry, you are still cute.\n \n\n\n\tAwait functions\n \n\n\n\t\u00a0\n \n\n\n\tWhen a player has joined the server, he or she doesn\u0027t have download + loaded his scripts yet. This means that you can\u0027t deliver your love letter yet and all your work will be for nothing. But what if you don\u0027t have to worry about that? You can just wait now!\n \n\n\n\t\u00a0\n \n\n\n\tServer\n \n\n\naddEventHandler(\"onPlayerJoin\", root, \nfunction ()\n\t\n\tcallClientAwait(source, \"testCallClientAwait\")\n\t\nend)\n\n\n\t\u00a0\n \n\n\n\tClient\n \n\n\nfunction testCallClientAwait ()\n\toutputChatBox(\"Yes this works!\")\nend\n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tSecurity\n \n\n\n\tWorried about security issues?\n \n\n\n\t\n\t\tRemote calls for C++/MTA functions have been blocked.\n\t \n\t\n\t\tThere is a whitelist feature included, if enabled your code can only remote-call whitelisted functions. (this is disabled by default) \n\t\tRead the docs for that. Here and here\n\t \n\n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n",
+    "dateCreated": "2019-08-18T18:46:07+0000",
+    "datePublished": "2019-08-18T18:46:07+0000",
+    "dateModified": "2021-02-09T19:17:21+0000",
+    "image": "https://forum.multitheftauto.com/uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif",
+    "author": {
+        "@type": "Person",
+        "name": "IIYAMA",
+        "image": "https://forum.multitheftauto.com/uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif",
+        "url": "https://forum.multitheftauto.com/profile/27939-iiyama/"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/ViewAction",
+            "userInteractionCount": 1761
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 4
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/FollowAction",
+            "userInteractionCount": 2
+        }
+    ],
+    "@context": "http://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/",
+    "isPartOf": {
+        "@id": "https://forum.multitheftauto.com/#website"
+    },
+    "publisher": {
+        "@id": "https://forum.multitheftauto.com/#organization",
+        "member": {
+            "@type": "Person",
+            "name": "IIYAMA",
+            "image": "https://forum.multitheftauto.com/uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif",
+            "url": "https://forum.multitheftauto.com/profile/27939-iiyama/"
+        }
+    },
+    "url": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/",
+    "discussionUrl": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/"
+    },
+    "pageStart": 1,
+    "pageEnd": 1,
+    "comment": [
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992602",
+            "url": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992602",
+            "author": {
+                "@type": "Person",
+                "name": "enesbayrktar",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2021_02/0c286c48da2a35ab58efe86d307c67c8.thumb.jpg.96658560703c3cd60204fdd105855abd.jpg",
+                "url": "https://forum.multitheftauto.com/profile/58944-enesbayrktar/"
+            },
+            "dateCreated": "2021-02-06T00:29:54+0000",
+            "text": "\u0130ts amazingly usefull!\n \n\n\n\tI use this on my script but i have one question about multiple argument sending to server-side. Can you give a example for this?\n \n\n\ncallServer(\u0027isAccountRegistered\u0027, username,\tfunction(state)\n\tif state then\n\t\tguiSetText(usernameEdt, \u0027\u0027)\n\t\t\treturn notifications:error(string.format(\u0027%s zaten kullan\u0131mda. L\u00fctfen farkl\u0131 bir ad se\u00e7.\u0027, username))\n\t\tend\n\tend\n)\n\n-- i wanna use multiple args when sending, for example.\ncallServer(\u0027isAccountRegistered\u0027, username, password, caseVariable, function(state)\n \t\t-- TO DO\n    end\n)\n\n\n\t\u00a0\n \n",
+            "upvoteCount": 1
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992894",
+            "url": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992894",
+            "author": {
+                "@type": "Person",
+                "name": "IIYAMA",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif",
+                "url": "https://forum.multitheftauto.com/profile/27939-iiyama/"
+            },
+            "dateCreated": "2021-02-09T18:28:41+0000",
+            "text": "thx!\n \n\n\n\tSorry for my late reply, I didn\u0027t notice the notification.\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tThe syntax for that function:\n \n\n\n\t\n\t\tbool callServer (callFunctionName string [, argument1, argument2, ... ] [, callbackFunction function [, argument1 (internal), argument2 (internal), ...]] ) \n\t \n\n\n\n\thttps://gitlab.com/IIYAMA12/mta-communication-enchantment/tree/master/documentation/syntax#syntax-1\n \n\n\n\t\u00a0\n \n\n\n\tMultiple values can be send over by just adding them between the functionName and the callBackFunction.\n \n\n\n\tfunctionName:\n \n\n\n\u0027isAccountRegistered\u0027\n\n\n\tcallBackFunction:\n \n\n\nfunction(state) end\n\n\n\t\u00a0\n \n\n\ncallServer(\u0027isAccountRegistered\u0027, username, function(state) end) -- 1\n\ncallServer(\u0027isAccountRegistered\u0027, username, password, function(state) end) -- 2\n\ncallServer(\u0027isAccountRegistered\u0027, username, password, caseVariable, function(state) end) -- 3\n\n\n\tIt goes through all arguments and detects if there is a function, then that one will be the callBack function.\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\n\t\tSee here where that happens in the source code:\n\t \n\n\t\n\t\thttps://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_c.lua#L77\n\t \n\n\t\n\t\thttps://gitlab.com/IIYAMA12/mta-communication-enchantment/-/blob/master/sync/sync_shared.lua#L250\n\t \n\n\n\n\t\u00a0\n \n\n\n\t\n\n\n\n\t\u00a0\n \n\n\n\tSo you want to do that, what you already can do and doing it already?\u00a0 ?\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n",
+            "upvoteCount": 1
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992895",
+            "url": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992895",
+            "author": {
+                "@type": "Person",
+                "name": "enesbayrktar",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2021_02/0c286c48da2a35ab58efe86d307c67c8.thumb.jpg.96658560703c3cd60204fdd105855abd.jpg",
+                "url": "https://forum.multitheftauto.com/profile/58944-enesbayrktar/"
+            },
+            "dateCreated": "2021-02-09T18:56:11+0000",
+            "text": "\u0130 tested and its worked, but i dont know its true usage or not of\u00a0multiple args for this reason i wanna a example code from you.\n \n\n\n\tThanks @IIYAMA\n \n",
+            "upvoteCount": 1
+        },
+        {
+            "@type": "Comment",
+            "@id": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992898",
+            "url": "https://forum.multitheftauto.com/topic/119507-enhancement-mta-communication-enhancement/#comment-992898",
+            "author": {
+                "@type": "Person",
+                "name": "IIYAMA",
+                "image": "https://forum.multitheftauto.com/uploads/monthly_2016_09/984afa88a4a9add7eb29755bebc2f8a7_59137.thumb.gif.c8c54ccb5f30b1a8f87b7637a75105b5.gif",
+                "url": "https://forum.multitheftauto.com/profile/27939-iiyama/"
+            },
+            "dateCreated": "2021-02-09T19:17:21+0000",
+            "text": "There is only 1 thing you need to know about internal arguments. Those ones that are after the callBack function.\n \n\n\n\tIf you mix internal arguments with arguments(from serverside), you have to make sure that the last internal argument is not a nil value.\n \n\n\n\t\u00a0\n \n\n\n\tBecause when all arguments are converted to parameters, both lists will be merged and the first list(internal arguments) will collapse on nil values at the end of the table.\n \n\n\n\t\u00a0\n \n\n\n\tProblem:\n \n\n\ninternal2 = nil\ncallServer(\u0027isAccountRegistered\u0027, username, password, caseVariable, function(internal1, internal2, state) end, \"internal1\", internal2) \n\n\n\n\t\u00a0\n \n\n\n\tIs OK:\n \n\n\ninternal2 = false\ncallServer(\u0027isAccountRegistered\u0027, username, password, caseVariable, function(internal1, internal2, state) end, \"internal1\", internal2) \n\n\n\t\u00a0\n \n\n\n\tAs you can see here:\n \n\n\nlist1 = {1, 2, nil, 4, nil} -- internal arguments\nlist2 = {6, 7, 8, 9, 10}\n\nfor i=1, #list2 do\n  list1[#list1 + 1] = list2 [i]\nend\n\nprint(unpack(list1))\n\n-- 1,\t2,\tnil,\t4,\t6,\t7,\t8,\t9,\t10,\n-- The nil value at index 5 is missing.\n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n",
+            "upvoteCount": 0
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://forum.multitheftauto.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://forum.multitheftauto.com/#website",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://forum.multitheftauto.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (UK)",
+            "alternateName": "en-GB"
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://forum.multitheftauto.com/#organization",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "logo": {
+        "@type": "ImageObject",
+        "@id": "https://forum.multitheftauto.com/#logo",
+        "url": "https://forum.multitheftauto.com/uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png"
+    },
+    "sameAs": [
+        "https://www.facebook.com/multitheftauto",
+        "https://twitter.com/mtaqa",
+        "https://github.com/multitheftauto",
+        "https://www.youtube.com/user/MTAQA",
+        "https://www.linkedin.com/company/multitheftauto/"
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/86-mta-community/",
+                "name": "MTA Community"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/71-scripting/",
+                "name": "Scripting"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/123-tutorials/",
+                "name": "Tutorials"
+            }
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "ContactPage",
+    "url": "https://forum.multitheftauto.com/contact/"
+}	
+</script>
+
+
+		
+		
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		
+		
+		
+        
+	</body>
+</html>
