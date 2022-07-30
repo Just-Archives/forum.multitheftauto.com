@@ -1,0 +1,1400 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel><title>&#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x629; Latest Topics</title><link>https://forum.multitheftauto.com/forum/134-%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9/</link><description>&#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x629; Latest Topics</description><language>en</language><item><title>x[ &#x645;&#x634;&#x643;&#x644;&#x629; ]x &#x641;&#x64A; &#x644;&#x648;&#x62D;&#x629; &#x627;&#x644;&#x631;&#x633;&#x627;&#x626;&#x644; &#x644;&#x643;&#x644; &#x627;&#x644;&#x644;&#x627;&#x639;&#x628;&#x64A;&#x646; &#x642;&#x627;&#x639;&#x62F;&#x629; &#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A;</title><link>https://forum.multitheftauto.com/topic/136589-x-%D9%85%D8%B4%D9%83%D9%84%D8%A9-x-%D9%81%D9%8A-%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D8%A6%D9%84-%D9%84%D9%83%D9%84-%D8%A7%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA/</link><description><![CDATA[<p style="text-align:center;">
+	<span style="font-size:26px;">السلام عليكم ورحمة الله وبركاته ..</span>
+</p>
+
+<p style="text-align:right;">
+	<span style="font-size:26px;">شباب انا كنت ابغى اسوي مود يرسل رسائل لكل اللاعبين .. والرسالة المفروض تظهر لكل اللاعبين وتنحفظ بقاعدة بيانات بحيث لو رسترت السيرفر او المود الرسايل تفضل موجودة.</span>
+</p>
+
+<p style="text-align:right;">
+	<span style="font-size:26px;">الحمدلله عرفت اسوي الفكرة هذه بس واجهتني مشكلة وهي ان لو انا وخويي بنفس السيرفر , وارسلت رسالة باللوحة الرسالة بتظهر لي وله وبتنحفظ بقاعدة البيانات ومابتختفي نهائياً . بس لو انا كنت لحالي بالسيرفر وارسلت رسالة , </span>
+</p>
+
+<p style="text-align:right;">
+	<span style="font-size:26px;">بتنحفظ عندي تمام بس مابتظهر لأي لاعب بيدخل السيرفر بعدين.</span>
+</p>
+
+<p style="text-align:right;">
+	<span style="font-size:26px;">وهذه صورة للوحة</span>
+</p>
+
+<p style="text-align:right;">
+	 
+</p>
+
+<p style="text-align:right;">
+	<img alt="spacer.png" class="ipsImage" data-ratio="75.08" height="640" style="height:auto;" width="1000" data-src="https://i.top4top.io/p_23767z0pe1.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />
+</p>
+
+<p style="text-align:right;">
+	 
+</p>
+
+<p style="text-align:right;">
+	client side
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="com">--client side</span><span class="pln">
+
+
+</span><span class="kwd">local</span><span class="pln"> screenW</span><span class="pun">,</span><span class="pln"> screenH </span><span class="pun">=</span><span class="pln"> guiGetScreenSize</span><span class="pun">()</span><span class="pln">
+wnd </span><span class="pun">=</span><span class="pln"> guiCreateWindow</span><span class="pun">((</span><span class="pln">screenW </span><span class="pun">-</span><span class="pln"> </span><span class="lit">557</span><span class="pun">)</span><span class="pln"> </span><span class="pun">/</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">screenH </span><span class="pun">-</span><span class="pln"> </span><span class="lit">340</span><span class="pun">)</span><span class="pln"> </span><span class="pun">/</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">557</span><span class="pun">,</span><span class="pln"> </span><span class="lit">340</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Test window"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">)</span><span class="com">-- window </span><span class="pln">
+guiWindowSetSizable</span><span class="pun">(</span><span class="pln">wnd</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+guiSetVisible</span><span class="pun">(</span><span class="pln">wnd</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+grd </span><span class="pun">=</span><span class="pln"> guiCreateGridList</span><span class="pun">(</span><span class="lit">9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">28</span><span class="pun">,</span><span class="pln"> </span><span class="lit">538</span><span class="pun">,</span><span class="pln"> </span><span class="lit">170</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> wnd</span><span class="pun">)</span><span class="pln">
+colmn1 </span><span class="pun">=</span><span class="pln"> guiGridListAddColumn</span><span class="pun">(</span><span class="pln">grd</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Message"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">)</span><span class="com">-- colmn for messages</span><span class="pln">
+colmn2 </span><span class="pun">=</span><span class="pln"> guiGridListAddColumn</span><span class="pun">(</span><span class="pln">grd</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Playername"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">)</span><span class="com">-- colmn for player name</span><span class="pln">
+editb </span><span class="pun">=</span><span class="pln"> guiCreateEdit</span><span class="pun">(</span><span class="lit">31</span><span class="pun">,</span><span class="pln"> </span><span class="lit">208</span><span class="pun">,</span><span class="pln"> </span><span class="lit">491</span><span class="pun">,</span><span class="pln"> </span><span class="lit">42</span><span class="pun">,</span><span class="pln"> </span><span class="str">""</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> wnd</span><span class="pun">)</span><span class="com">-- editbox</span><span class="pln">
+inbtn </span><span class="pun">=</span><span class="pln"> guiCreateButton</span><span class="pun">(</span><span class="lit">143</span><span class="pun">,</span><span class="pln"> </span><span class="lit">270</span><span class="pun">,</span><span class="pln"> </span><span class="lit">271</span><span class="pun">,</span><span class="pln"> </span><span class="lit">60</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Insert"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> wnd</span><span class="pun">)</span><span class="com">-- insert button</span><span class="pln">
+guiSetProperty</span><span class="pun">(</span><span class="pln">inbtn</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NormalTextColour"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"FF00FF0C"</span><span class="pun">)</span><span class="pln">
+
+
+
+bindKey</span><span class="pun">(</span><span class="str">"F6"</span><span class="pun">,</span><span class="str">"down"</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> guiGetVisible</span><span class="pun">(</span><span class="pln">wnd</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+guiSetVisible</span><span class="pun">(</span><span class="pln">wnd</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+showCursor</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">else</span><span class="pln">
+guiSetVisible</span><span class="pun">(</span><span class="pln">wnd</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+showCursor</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pun">)</span><span class="pln">
+
+
+
+
+addEventHandler</span><span class="pun">(</span><span class="str">"onClientGUIClick"</span><span class="pun">,</span><span class="pln">inbtn</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> TextInEditBox </span><span class="pun">=</span><span class="pln"> guiGetText</span><span class="pun">(</span><span class="pln">editb</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> guiEditGetCaretIndex</span><span class="pun">(</span><span class="pln"> editb </span><span class="pun">)</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">36</span><span class="pln"> </span><span class="pun">)</span><span class="pln">  </span><span class="kwd">then</span><span class="pln"> 
+outputChatBox</span><span class="pun">(</span><span class="pln"> </span><span class="str">"#FF0000* #FF8000Testo System #FF0000: #FFFFFF It's a very long name.. what do you think"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> TextInEditBox </span><span class="pun">==</span><span class="pln"> </span><span class="str">''</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+outputChatBox</span><span class="pun">(</span><span class="pln"> </span><span class="str">"#FF0000* #FF8000Testo System #FF0000: #FFFFFF Huh?"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> guiEditGetCaretIndex</span><span class="pun">(</span><span class="pln"> editb </span><span class="pun">)</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">7</span><span class="pln"> </span><span class="pun">)</span><span class="pln">  </span><span class="kwd">then</span><span class="pln"> 
+outputChatBox</span><span class="pun">(</span><span class="pln"> </span><span class="str">"#FF0000* #FF8000Testo System #FF0000: #FFFFFF Are you sure that's a song name?"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">end</span><span class="pln">
+triggerServerEvent</span><span class="pun">(</span><span class="str">"TheTextWrittenInEditBox"</span><span class="pun">,</span><span class="pln">localPlayer</span><span class="pun">,</span><span class="pln"> TextInEditBox </span><span class="pun">)</span><span class="com">-- send the message to server side</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+
+addEvent</span><span class="pun">(</span><span class="str">"AddToTheGridForAllPlayers"</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"AddToTheGridForAllPlayers"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> TextInEditBox</span><span class="pun">,</span><span class="pln"> playerName </span><span class="pun">)</span><span class="pln">
+row </span><span class="pun">=</span><span class="pln"> guiGridListAddRow </span><span class="pun">(</span><span class="pln"> grd </span><span class="pun">)</span><span class="pln">
+guiGridListSetItemText </span><span class="pun">(</span><span class="pln"> grd</span><span class="pun">,</span><span class="pln"> row</span><span class="pun">,</span><span class="pln"> colmn1</span><span class="pun">,</span><span class="pln"> TextInEditBox </span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+guiGridListSetItemText </span><span class="pun">(</span><span class="pln"> grd</span><span class="pun">,</span><span class="pln"> row</span><span class="pun">,</span><span class="pln"> colmn2</span><span class="pun">,</span><span class="pln"> playerName </span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+triggerServerEvent</span><span class="pun">(</span><span class="str">"InsertIntoDataBase"</span><span class="pun">,</span><span class="pln">localPlayer</span><span class="pun">,</span><span class="pln"> TextInEditBox</span><span class="pun">,</span><span class="pln"> playerName </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+addEvent</span><span class="pun">(</span><span class="str">"ReturnDataFromBaseToWindow"</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"ReturnDataFromBaseToWindow"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> SavedText</span><span class="pun">,</span><span class="pln"> SavedPlayerName </span><span class="pun">)</span><span class="pln">
+row </span><span class="pun">=</span><span class="pln"> guiGridListAddRow </span><span class="pun">(</span><span class="pln"> grd </span><span class="pun">)</span><span class="pln">
+guiGridListSetItemText </span><span class="pun">(</span><span class="pln"> grd</span><span class="pun">,</span><span class="pln"> row</span><span class="pun">,</span><span class="pln"> colmn1</span><span class="pun">,</span><span class="pln"> SavedText </span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+guiGridListSetItemText </span><span class="pun">(</span><span class="pln"> grd</span><span class="pun">,</span><span class="pln"> row</span><span class="pun">,</span><span class="pln"> colmn2</span><span class="pun">,</span><span class="pln"> SavedPlayerName </span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+
+
+triggerServerEvent</span><span class="pun">(</span><span class="str">"GetTheDataFromBase"</span><span class="pun">,</span><span class="pln">localPlayer </span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	server side
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="com">-- server side</span><span class="pln">
+
+</span><span class="kwd">local</span><span class="pln"> database </span><span class="pun">=</span><span class="pln"> executeSQLQuery</span><span class="pun">(</span><span class="str">"CREATE TABLE IF NOT EXISTS MessageSaver3 (serial, text, playername)"</span><span class="pun">)</span><span class="pln">
+
+
+
+addEvent</span><span class="pun">(</span><span class="str">"TheTextWrittenInEditBox"</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"TheTextWrittenInEditBox"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> TextInEditBox </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> playerName </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+triggerClientEvent</span><span class="pun">(</span><span class="pln">root</span><span class="pun">,</span><span class="str">"AddToTheGridForAllPlayers"</span><span class="pun">,</span><span class="pln">source</span><span class="pun">,</span><span class="pln"> TextInEditBox</span><span class="pun">,</span><span class="pln"> playerName </span><span class="pun">)</span><span class="com">-- send it back with the same message and player name</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+
+
+
+addEvent</span><span class="pun">(</span><span class="str">"InsertIntoDataBase"</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"InsertIntoDataBase"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> TextInEditBox</span><span class="pun">,</span><span class="pln"> playerName </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(#</span><span class="pln">database </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+executeSQLQuery</span><span class="pun">(</span><span class="str">"INSERT INTO MessageSaver3(serial, text, playername) VALUES(?, ?, ?)"</span><span class="pun">,</span><span class="pln"> getPlayerSerial</span><span class="pun">(</span><span class="pln">source</span><span class="pun">),</span><span class="pln"> TextInEditBox</span><span class="pun">,</span><span class="pln"> playerName </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+
+
+
+addEvent</span><span class="pun">(</span><span class="str">"GetTheDataFromBase"</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"GetTheDataFromBase"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">  </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> selectt </span><span class="pun">=</span><span class="pln"> executeSQLQuery</span><span class="pun">(</span><span class="str">"SELECT * FROM MessageSaver3 WHERE serial=?"</span><span class="pun">,</span><span class="pln"> getPlayerSerial</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(#</span><span class="pln">selectt </span><span class="pun">~=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> _</span><span class="pun">,</span><span class="pln">v </span><span class="kwd">in</span><span class="pln"> ipairs </span><span class="pun">(</span><span class="pln">selectt</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> SavedText </span><span class="pun">=</span><span class="pln"> v</span><span class="pun">.</span><span class="pln">text
+</span><span class="kwd">local</span><span class="pln"> SavedPlayerName </span><span class="pun">=</span><span class="pln"> v</span><span class="pun">.</span><span class="pln">playername
+triggerClientEvent</span><span class="pun">(</span><span class="pln">source</span><span class="pun">,</span><span class="str">"ReturnDataFromBaseToWindow"</span><span class="pun">,</span><span class="pln">source</span><span class="pun">,</span><span class="pln"> SavedText</span><span class="pun">,</span><span class="pln"> SavedPlayerName </span><span class="pun">)</span><span class="com">-- send the data to gridlist</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+
+
+</span></pre>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">136589</guid><pubDate>Mon, 04 Jul 2022 05:19:50 +0000</pubDate></item><item><title>&#x645;&#x633;&#x627;&#x639;&#x62F;&#x629; &#x641;&#x64A; &#x643;&#x648;&#x62F; ..</title><link>https://forum.multitheftauto.com/topic/136090-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9-%D9%81%D9%8A-%D9%83%D9%88%D8%AF/</link><description><![CDATA[<p>
+	سلام عليكم , كنت عايز كود يخلي في فترة بين كل ضغطة زر...
+</p>
+
+<p>
+	يعني ماينفع يسوي سبام  على زر معين ويطلعله رسالة بالشات انه لازم ينتظر 3 ثواني مثلا
+</p>
+
+<p>
+	شكرا
+</p>
+]]></description><guid isPermaLink="false">136090</guid><pubDate>Fri, 03 Jun 2022 09:28:17 +0000</pubDate></item><item><title>&#x625;&#x633;&#x62A;&#x641;&#x633;&#x627;&#x631;</title><link>https://forum.multitheftauto.com/topic/135472-%D8%A5%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1/</link><description><![CDATA[<p style="text-align:center;">
+	<strong>السلام عليكم ورحمة الله تعالى وبركاته</strong>
+</p>
+
+<p style="text-align:center;">
+	<b>كيفكم عساكم بخير </b>
+</p>
+
+<p style="text-align:center;">
+	<b>عندي إستفسار بخصوص ال</b>
+</p>
+
+<p style="text-align:center;">
+	<b>( HTML , CSS , JS ) إلخ ..</b>
+</p>
+
+<p style="text-align:center;">
+	<b>وفكرتي ابغى اتعلم شلون أصمم مثل الفيديو ذا <span>:</span></b>
+</p>
+
+<p style="text-align:center;">
+	 
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="113" src="https://www.youtube-nocookie.com/embed/aEAO1Bp2M2U?feature=oembed" width="200"></iframe>
+	</div>
+</div>
+
+<p style="text-align:center;">
+	<strong>وشلون أربطها باللعبة وياليت لو في شرح من اليوتيوب عن كل الي ذكرته</strong>
+</p>
+
+<p style="text-align:center;">
+	<strong>شكراً .</strong>
+</p>
+]]></description><guid isPermaLink="false">135472</guid><pubDate>Thu, 21 Apr 2022 01:35:41 +0000</pubDate></item><item><title>&#x645;&#x634;&#x643;&#x644;&#x629; &#x641;&#x64A; &#x643;&#x648;&#x62F; &#x627;&#x644;&#x644;&#x64A; &#x64A;&#x635;&#x643;&#x646;&#x64A; &#x628;&#x627;&#x646;&#x62F; &#x64A;&#x646;&#x635;&#x643; &#x628;&#x627;&#x646;&#x62F;</title><link>https://forum.multitheftauto.com/topic/134815-%D9%85%D8%B4%D9%83%D9%84%D8%A9-%D9%81%D9%8A-%D9%83%D9%88%D8%AF-%D8%A7%D9%84%D9%84%D9%8A-%D9%8A%D8%B5%D9%83%D9%86%D9%8A-%D8%A8%D8%A7%D9%86%D8%AF-%D9%8A%D9%86%D8%B5%D9%83-%D8%A8%D8%A7%D9%86%D8%AF/</link><description><![CDATA[<p>
+	السلام عليكم
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	هذا هو الكود
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="com">-- *بسم الله الرحمن الرحيم </span><span class="pln">
+</span><span class="com">-- حبيت اقدم ذا المود البسيط مود حمايه للسيرفر كامله</span><span class="pln">
+</span><span class="com">-- حمايه للصاحب + حمايه اف8 + حمايه من المخربين</span><span class="pln">
+</span><span class="com">---------------------------------------</span><span class="pln">
+</span><span class="com">--حماية باند IP/ حماية الاي بي هذي حماية الصاحب من الباند الاي بي اذا احد صكه ينصك وينفك باند الصاحب/</span><span class="pln">
+</span><span class="com">---------------------------------------/</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onBan"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+    </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">Deban</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">getBanIP</span><span class="pun">(</span><span class="pln">Deban</span><span class="pun">)==</span><span class="str">"xx.xxx.xxx.xxx"</span><span class="pun">)</span><span class="kwd">then</span><span class="pln"> </span><span class="com">-- الاي بي حقك/</span><span class="pln">
+            removeBan</span><span class="pun">(</span><span class="pln">Deban</span><span class="pun">)</span><span class="pln">
+			banPlayer</span><span class="pun">(</span><span class="pln">source</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">nil</span><span class="pun">,</span><span class="str">"*صك الصاحب باند ip"</span><span class="pun">,</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="com">---------------------------------------</span><span class="pln">
+</span><span class="com">--حماية باند سيريال / هنا نفس الحمايه الي قبلها بس للسريال</span><span class="pln">
+</span><span class="com">---------------------------------------/</span><span class="pln">
+
+</span><span class="kwd">local</span><span class="pln"> serials </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">[</span><span class="str">"0114976581090535A486708C965EDAE3"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">--سريالك </span><span class="pln">
+</span><span class="pun">[</span><span class="str">"000000"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">--سريال خويك</span><span class="pln">
+
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> autounban</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> i</span><span class="pun">,</span><span class="pln">p </span><span class="kwd">in</span><span class="pln"> ipairs</span><span class="pun">(</span><span class="pln">getElementsByType</span><span class="pun">(</span><span class="str">"player"</span><span class="pun">))</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> Ser </span><span class="pun">=</span><span class="pln"> getPlayerSerial</span><span class="pun">(</span><span class="pln">p</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> serials</span><span class="pun">[</span><span class="pln">Ser</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+thisIP </span><span class="pun">=</span><span class="pln"> getPlayerIP</span><span class="pun">(</span><span class="pln">p</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> index</span><span class="pun">,</span><span class="pln"> ban </span><span class="kwd">in</span><span class="pln"> pairs</span><span class="pun">(</span><span class="pln">getBans</span><span class="pun">())</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getBanSerial</span><span class="pun">(</span><span class="pln">ban</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> ip </span><span class="pun">=</span><span class="pln"> getBanIP</span><span class="pun">(</span><span class="pln">ban</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> serials</span><span class="pun">[</span><span class="pln">serial</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> ip </span><span class="pun">==</span><span class="pln"> thisIP </span><span class="kwd">then</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> bannedPlayer </span><span class="pun">=</span><span class="pln"> getPlayerFromName</span><span class="pun">(</span><span class="pln">getBanAdmin</span><span class="pun">(</span><span class="pln">ban</span><span class="pun">))</span><span class="pln">
+removeBan</span><span class="pun">(</span><span class="pln">ban</span><span class="pun">,</span><span class="pln">root</span><span class="pun">)</span><span class="pln">
+banPlayer </span><span class="pun">(</span><span class="pln">bannedPlayer</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">,</span><span class="kwd">false</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">root</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+setTimer</span><span class="pun">(</span><span class="pln">autounban</span><span class="pun">,</span><span class="lit">1000</span><span class="pun">,</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="com">-----------------------------------------------</span><span class="pln">
+</span><span class="com">--حماية من الكيك /هنا حمايه من الكيك اذا احد صكك ينصك هو باند</span><span class="pln">
+</span><span class="com">-----------------------------------------------</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerQuit"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+    </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">quit</span><span class="pun">,</span><span class="pln">reason</span><span class="pun">,</span><span class="pln">responsible</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">getPlayerSerial</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)==</span><span class="str">"0114976581090535A486708C965EDAE3"</span><span class="pun">)</span><span class="kwd">then</span><span class="pln"> </span><span class="com">--حط سريالك</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">quit</span><span class="pun">==</span><span class="str">"Kicked"</span><span class="pun">)</span><span class="kwd">then</span><span class="pln">
+                banPlayer</span><span class="pun">(</span><span class="pln">responsible</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">nil</span><span class="pun">,</span><span class="str">"*صك الصاحب كيك"</span><span class="pun">,</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+            </span><span class="kwd">end</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerQuit"</span><span class="pun">,</span><span class="pln">root</span><span class="pun">,</span><span class="pln">
+    </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">quit</span><span class="pun">,</span><span class="pln">reason</span><span class="pun">,</span><span class="pln">responsible</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">getPlayerSerial</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)==</span><span class="str">"00000000"</span><span class="pun">)</span><span class="kwd">then</span><span class="pln"> </span><span class="com">--سريال خويك</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">quit</span><span class="pun">==</span><span class="str">"Kicked"</span><span class="pun">)</span><span class="kwd">then</span><span class="pln">
+                banPlayer</span><span class="pun">(</span><span class="pln">responsible</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">true</span><span class="pun">,</span><span class="kwd">nil</span><span class="pun">,</span><span class="str">"*صك الصاحب كيك"</span><span class="pun">,</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+            </span><span class="kwd">end</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="com">-------------------------------------------------------------</span><span class="pln">
+</span><span class="com">------حماية من الميوت /ذي حممايه من الميوت حط سريالك وسريال خويك بس/</span><span class="pln">
+</span><span class="com">-------------------------------------------------------------</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> PlayerSerial </span><span class="pun">=</span><span class="pln"> </span><span class="str">"0114976581090535A486708C965EDAE3"</span><span class="pln"> </span><span class="com">--حط سريالك</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> SAAD </span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> PlayerSerial </span><span class="kwd">then</span><span class="pln">
+   cancelEvent </span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerMute"</span><span class="pun">,</span><span class="pln">getRootElement</span><span class="pun">(),</span><span class="pln">SAAD</span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="com">----------------------------------------------------------------</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> PlayerSerial </span><span class="pun">=</span><span class="pln"> </span><span class="str">"000000"</span><span class="pln"> </span><span class="com">--سريال خويك</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> SAAD </span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> PlayerSerial </span><span class="kwd">then</span><span class="pln">
+   cancelEvent </span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerMute"</span><span class="pun">,</span><span class="pln">getRootElement</span><span class="pun">(),</span><span class="pln">SAAD</span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="com">---------------------------------------------------------------------</span><span class="pln">
+</span><span class="com">----------------حماية ما تقدر تصك اكثر من 5 لاعبين باند</span><span class="pln">
+</span><span class="com">---------------------------------------------------------------------</span><span class="pln">
+</span><span class="com">--addEventHandler("onPlayerBan",getRootElement(),</span><span class="pln">
+</span><span class="com">--function ( _, admin )</span><span class="pln">
+  </span><span class="com">--      local banTime =  getAccountData(getPlayerAccount(admin),"banTime") or 0  </span><span class="pln">
+  </span><span class="com">--      setAccountData(getPlayerAccount(admin),"banTime",banTime+1)</span><span class="pln">
+  </span><span class="com">--      if not Timer then </span><span class="pln">
+  </span><span class="com">--      setTimer(Timer,30000,0,banTime,getPlayerAccount(admin))</span><span class="pln">
+  </span><span class="com">--      end</span><span class="pln">
+  </span><span class="com">--      outputChatBox(banTime.." تخذير يمكنك صك [ 5 ] لاعبين فقط في اليوم  ",admin)</span><span class="pln">
+  </span><span class="com">--      if banTime == 4 then</span><span class="pln">
+   </span><span class="com">--             cancelEvent()</span><span class="pln">
+  </span><span class="com">--      banPlayer (admin, false, false, true, getRootElement ( ), "لا يمكنك صك اكثر من 5 لاعبين باليوم" )</span><span class="pln">
+ </span><span class="com">--       end</span><span class="pln">
+</span><span class="com">--end)</span><span class="pln">
+
+</span><span class="com">--function Timer(banTime,acc)</span><span class="pln">
+</span><span class="com">--setAccountData(acc,"banTime",0)</span><span class="pln">
+</span><span class="com">--end</span><span class="pln">
+
+
+
+
+</span><span class="com">--------------------------------------------------------------------------------------------</span><span class="pln">
+</span><span class="com">-------------------------حماية ما تقدر تكرر الكيك اكثر من 3 مرات  / هذي واظحه/</span><span class="pln">
+</span><span class="com">--------------------------------------------------------------------------------------------</span><span class="pln">
+
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerQuit"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">guittype</span><span class="pun">,</span><span class="pln"> _</span><span class="pun">,</span><span class="pln"> kickPlayer</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> guittype </span><span class="pun">==</span><span class="pln"> </span><span class="str">"Kicked"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> getElementData</span><span class="pun">(</span><span class="pln">kickPlayer</span><span class="pun">,</span><span class="str">"spamkicked"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">4</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+        cancelEvent</span><span class="pun">()</span><span class="pln">
+        banPlayer </span><span class="pun">(</span><span class="pln">kickPlayer</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> </span><span class="str">'محاولة تكرار الكيك فاشلة !'</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">else</span><span class="pln">
+        setElementData</span><span class="pun">(</span><span class="pln">kickPlayer</span><span class="pun">,</span><span class="str">"spamkicked"</span><span class="pun">,</span><span class="pln">getElementData</span><span class="pun">(</span><span class="pln">kickPlayer</span><span class="pun">,</span><span class="str">"spamkicked"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+        mytimer</span><span class="pun">[</span><span class="pln">kickPlayer</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> setTimer</span><span class="pun">(</span><span class="pln">setElementData</span><span class="pun">,</span><span class="lit">60000</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="pln">kickPlayer</span><span class="pun">,</span><span class="str">"spamkicked"</span><span class="pun">,</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pun">)</span><span class="pln">
+
+addEventHandler</span><span class="pun">(</span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+setElementData</span><span class="pun">(</span><span class="pln">source</span><span class="pun">,</span><span class="str">"spamkicked"</span><span class="pun">,</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pun">)</span><span class="pln">
+
+
+
+</span><span class="com">---------------------------------------------------</span><span class="pln">
+</span><span class="com">--------- استعادة ادمنية / وهذي حمايه اذا احدد سحب رتبت الكونسل عليك تقدر ترجعها </span><span class="pln">
+</span><span class="com">-- عشن ترجعها تكتب في اف 8 استعادة//الي عليك تعدل السريال وتحط حسابك</span><span class="pln">
+</span><span class="com">---------------------------------------------------</span><span class="pln">
+
+addCommandHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"استعادة"</span><span class="pun">,</span><span class="pln">	
+	</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">player</span><span class="pun">)</span><span class="pln"> 
+		</span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> player </span><span class="pun">)</span><span class="pln">
+		</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"0114976581090535A486708C965EDAE3"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> </span><span class="com">--حط سريالك</span><span class="pln">
+			aclGroupAddObject </span><span class="pun">(</span><span class="pln">aclGetGroup</span><span class="pun">(</span><span class="str">"Console"</span><span class="pun">),</span><span class="str">"user.basemode"</span><span class="pun">);</span><span class="pln">
+		</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span><span class="pln">			
+			
+
+
+</span><span class="com">--------------------------------------------------------------------------------------------</span><span class="pln">
+</span><span class="com">----------------------------------حماية اف8---------------/هذي واظحه/</span><span class="pln">
+</span><span class="com">--------------------------------------------------------------------------------------------</span><span class="pln">
+
+
+Command </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'addaccount'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'hacker'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'hack'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'wepadmin'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'voteadmin'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'VoteManager'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'ajax'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'copyResource'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'function.copyResource'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'function.redirectPlayer'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'redirectPlayer'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'function.removeResourceFile'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'removeResourceFile'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'deleteResource'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setMapName'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setGameType'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setResourceInfo'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'renameResource'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'lord'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'givetime'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+</span><span class="com">--------------------------------</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'aexec'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'delaccount'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'chgpass'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'shutdown'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'stopall'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'stopmode'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'stopmap'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'loadmodule'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'crun'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'run'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'srun'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'execute'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'install'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'speed'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'cv'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'report'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'giveweapon'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'give'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'wp'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'ap'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'grav'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'votekick'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'voteban'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'votekill'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'votemode'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'votemap'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'start'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'msg'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'freeze'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'shout'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setmoney'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setskin'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">[</span><span class="str">'restart'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'sethealth'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setarmour'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'warp'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'givevehicle'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setinterior'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setdimension'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setpassword'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setgamespeed'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setgravity'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+</span><span class="com">--	['ikhgjjiuuggjjhhi888']  	= true;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'delete'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'destroyteam'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'createteam'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setweather'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setgame'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'chgmypass'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'giveadmin'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'runcode'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'giveconsole'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'webadmin'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'set'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setTimer'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setGameType'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setgroup'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'stop'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'deleteall'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'ss'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'wt'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'warpto'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'sp'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'setpos'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'st'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+	</span><span class="pun">[</span><span class="str">'sw'</span><span class="pun">]</span><span class="pln">  	</span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">'onPlayerCommand'</span><span class="pun">,</span><span class="pln">getRootElement </span><span class="pun">(</span><span class="pln"> </span><span class="pun">),</span><span class="pln">
+	</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> cmd </span><span class="pun">)</span><span class="pln">
+		</span><span class="kwd">if</span><span class="pln"> Command </span><span class="pun">[</span><span class="pln"> cmd </span><span class="pun">]</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln"> </span><span class="pun">~=</span><span class="pln"> </span><span class="str">"0114976581090535A486708C965EDAE3"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> </span><span class="com">--سريالك /هنا تحط سريالك عشن تقدر تنفذ الاوامر الممنوعه في اف8/</span><span class="pln">
+				</span><span class="kwd">if</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln"> </span><span class="pun">~=</span><span class="pln"> </span><span class="str">"000000"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> </span><span class="com">-- سريال خويك</span><span class="pln">
+					cancelEvent </span><span class="pun">(</span><span class="pln">	</span><span class="pun">);</span><span class="pln">
+					kickPlayer </span><span class="pun">(</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"No Command "</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+				</span><span class="kwd">end</span><span class="pln">
+			</span><span class="kwd">end</span><span class="pln">
+		</span><span class="kwd">end</span><span class="pln">
+	</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">);</span><span class="pln">
+</span><span class="com">--------------------------------------------------------------------------</span><span class="pln">
+</span><span class="com">----------------حماية من المخربين (سيريالات المخربين  / هنا حمايه من المخربين سريالات مخربين مجمعه تقدر تبدل اي سريال براحتك/</span><span class="pln">
+</span><span class="com">--------------------------------------------------------------------------</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"FA20C5F4F69F4D030325F0F512EAF344"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"برا يبن الكلب لاتخرب"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"1981027B98BE92952764855347628743"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"برا ياكلب لاتخرب"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"DEF65AA8D0DCCCA4F3AAD36A66091984"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"مسوي تخرب السيرفر برا للابد"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"B5069E8DFDAE01C49240D5BAF0993DB4"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"برا ياكلب يابن الكلب"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"43C3FF210C04C0B8CEED440F3522A5E3"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">" برا"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"A121C0A6E14642877B684F66AD4385A2"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"برا"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"26918E02CAE8DA3AE376C679B7448754"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"مسوي هكر برا "</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"6AD52706276EBFD354DA501FD68A0334"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"انت تشغل هاك برا للابد"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"33E157F07BA51773E97AA47AFCE4EE43"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"سعودي ام | برا"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"D8D04A52F670C8B32D6DF50D16D19C44"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"  برا "</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"7F76C407B30C42CE4D7345571D157C54"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"  برا ياكلب "</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"39721F3E191F8E4E567D818CA2D5C971"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"  برا ياكلب "</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"7AA5D9FE74A632394523A209EC3BBCB3"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي تبنيد المبزره من السيرفر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"  برا ياكلب "</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"EE5EE897A6189937654836D7D18A2D04"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+                 outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"AmOOry برا ياكلب"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+       
+            
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"  ياحلو غير مسموح لك الدخول"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"6A532C7FCB763BA3C8331F7FA79065F2"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+ </span><span class="kwd">local</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+        outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي : #ff0000[#ffffff"</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> name </span><span class="pun">..</span><span class="pln"> </span><span class="str">"#ff0000]#00ff00 =====&gt; هذا اكبر هكر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">" برا"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"FC0C6698B4289CA6EC32436208E2D3F4"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+ </span><span class="kwd">local</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+        outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي : #ff0000[#ffffff"</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> name </span><span class="pun">..</span><span class="pln"> </span><span class="str">"#ff0000]#00ff00 =====&gt; هذا اكبر هكر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">" برا"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"5BD43EB07EDB830382A174B1EF506671"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+ </span><span class="kwd">local</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+        outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي : #ff0000[#ffffff"</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> name </span><span class="pun">..</span><span class="pln"> </span><span class="str">"#ff0000]#00ff00 =====&gt; هذا اكبر هكر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">" برا يادودي ياهكر ^_^"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"E8FFF886C8DB15E0E592B2C43C787803"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+ </span><span class="kwd">local</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+        outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي : #ff0000[#ffffff"</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> name </span><span class="pun">..</span><span class="pln"> </span><span class="str">"#ff0000]#00ff00 =====&gt; هذا اكبر هكر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">" برا  ^_^"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+</span><span class="kwd">function</span><span class="pln"> loginPlayer </span><span class="pun">(</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial </span><span class="pun">(</span><span class="pln"> source </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> serial </span><span class="pun">==</span><span class="pln"> </span><span class="str">"1A71BAD25AAEB3D91AA0AA662CDEC7E2"</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+ </span><span class="kwd">local</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> getPlayerName</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+        outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"سكربت تلقائي : #ff0000[#ffffff"</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> name </span><span class="pun">..</span><span class="pln"> </span><span class="str">"#ff0000]#00ff00 =====&gt; هذا اكبر هكر"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+            addBan </span><span class="pun">(</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">nil</span><span class="pun">,</span><span class="pln"> serial</span><span class="pun">,</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">" برا ^_^"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+        </span><span class="kwd">end</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerJoin"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> loginPlayer </span><span class="pun">)</span><span class="pln">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span><span class="com">--في الاخير احب اقول المود مو من برمجتي المود اكثر من مود مجمعها في مود واحد </span><span class="pln">
+</span><span class="com">-- الكود الوحيد الي انا مسويه حق استعادة الادمنيه</span><span class="pln">
+</span><span class="com">--والسلام/*</span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	الكود شغال اللي يكتب كلمات في اف 8
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	ينصك كيك
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	وينكتب No Command
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	ذا شغال والحمد لله
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	لكن اللي يصكني كيك ماينصك باند واللي يصكني باند ماينصك باند
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	ماني عارف ليش
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	علماً بأن المود مضاف الى قروب الادمن
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	resource.*
+</p>
+
+<p>
+	فهمتوني
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	اللي يكتب كلمات في اف 8
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	مثلا اللي يكتب بأف 8
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	report
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	ينصك كيك
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	ذا مجربه وشغال والحمد لله
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	لكن اللي يصكني كيك ماينصك باند واللي يصكني باند ماينصك باند
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	ماني عارف ليش
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	صلحوا الكود بالله
+</p>
+]]></description><guid isPermaLink="false">134815</guid><pubDate>Sat, 19 Mar 2022 09:01:02 +0000</pubDate></item><item><title>es-system help codes</title><link>https://forum.multitheftauto.com/topic/134896-es-system-help-codes/</link><description><![CDATA[<p>
+	i have problem in es-system roleplay mod , the mod should wait 30 sec to respawn , i want to know how to delete the button until the time end , what codes should i use?
+</p>
+]]></description><guid isPermaLink="false">134896</guid><pubDate>Thu, 24 Mar 2022 15:22:33 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; : &#x643;&#x648;&#x62F; &#x64A;&#x62E;&#x644;&#x64A; &#x627;&#x644;&#x648;&#x642;&#x62A; &#x627;&#x644;&#x633;&#x627;&#x639;&#x629; 12 &#x627;&#x644;&#x638;&#x647;&#x631; &#x62F;&#x627;&#x626;&#x645;&#x627;&#x64B;</title><link>https://forum.multitheftauto.com/topic/134674-%D8%B7%D9%84%D8%A8-%D9%83%D9%88%D8%AF-%D9%8A%D8%AE%D9%84%D9%8A-%D8%A7%D9%84%D9%88%D9%82%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9-12-%D8%A7%D9%84%D8%B8%D9%87%D8%B1-%D8%AF%D8%A7%D8%A6%D9%85%D8%A7%D9%8B/</link><description><![CDATA[<p>
+	طلب : كود يخلي الوقت الساعة 12 الظهر دائماً
+</p>
+]]></description><guid isPermaLink="false">134674</guid><pubDate>Tue, 08 Mar 2022 11:14:27 +0000</pubDate></item><item><title>&#x648;&#x634; &#x627;&#x644;&#x62E;&#x637;&#x627; &#x641;&#x64A; &#x647;&#x630;&#x627; &#x627;&#x644;&#x643;&#x648;&#x62F;</title><link>https://forum.multitheftauto.com/topic/134644-%D9%88%D8%B4-%D8%A7%D9%84%D8%AE%D8%B7%D8%A7-%D9%81%D9%8A-%D9%87%D8%B0%D8%A7-%D8%A7%D9%84%D9%83%D9%88%D8%AF/</link><description><![CDATA[<p>
+	وش الخطا في هذا الكود
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	المود هو
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	anti cheat
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	فتحت debugscript 3
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	وجدت هذا الخطا
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<img alt="spacer.png" class="ipsImage" data-ratio="30.80" height="178" style="height:auto;" width="578" data-src="https://a.top4top.io/p_22567t9af1.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	الكود هو
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">setServerConfigSetting</span><span class="pun">(</span><span class="pln"> </span><span class="str">"enablesd"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"12,14,15,16,22,23,28,31,32,33,34,35,36,37,38,39,40"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+
+setServerConfigSetting</span><span class="pun">(</span><span class="pln"> </span><span class="str">"minclientversion_auto_update"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+
+setServerConfigSetting</span><span class="pun">(</span><span class="pln"> </span><span class="str">"keysync_mouse_sync_interval"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"50"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+
+setServerConfigSetting</span><span class="pun">(</span><span class="pln"> </span><span class="str">"player_sync_interval"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"50"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+
+
+
+
+allowVM </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">[</span><span class="str">"None"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+</span><span class="pun">[</span><span class="str">"None"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+</span><span class="pun">[</span><span class="str">"None"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> handleOnPlayerACInfo</span><span class="pun">(</span><span class="pln"> detectedACList</span><span class="pun">,</span><span class="pln"> d3d9Size</span><span class="pun">,</span><span class="pln"> d3d9MD5</span><span class="pun">,</span><span class="pln"> d3d9SHA256 </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> _</span><span class="pun">,</span><span class="pln">acCode </span><span class="kwd">in</span><span class="pln"> ipairs</span><span class="pun">(</span><span class="pln"> detectedACList </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> acCode </span><span class="pun">==</span><span class="pln"> </span><span class="lit">31</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> acCode </span><span class="pun">==</span><span class="pln"> </span><span class="lit">32</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+</span><span class="kwd">local</span><span class="pln"> serial </span><span class="pun">=</span><span class="pln"> getPlayerSerial</span><span class="pun">(</span><span class="pln">source</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> allowVM</span><span class="pun">[</span><span class="pln">serial</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+kickPlayer</span><span class="pun">(</span><span class="pln"> source</span><span class="pun">,</span><span class="pln"> </span><span class="str">"AutoHotkey hacker"</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="pln"> </span><span class="str">"onPlayerACInfo"</span><span class="pun">,</span><span class="pln"> root</span><span class="pun">,</span><span class="pln"> handleOnPlayerACInfo </span><span class="pun">)</span><span class="pln">
+
+</span><span class="com">-- Ensure no one gets missed when the resource is (re)started</span><span class="pln">
+addEventHandler</span><span class="pun">(</span><span class="pln"> </span><span class="str">"onResourceStart"</span><span class="pun">,</span><span class="pln"> resourceRoot</span><span class="pun">,</span><span class="pln">
+</span><span class="kwd">function</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> _</span><span class="pun">,</span><span class="pln">plr </span><span class="kwd">in</span><span class="pln"> ipairs</span><span class="pun">(</span><span class="pln"> getElementsByType</span><span class="pun">(</span><span class="str">"player"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+resendPlayerACInfo</span><span class="pun">(</span><span class="pln"> plr </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="pun">)</span></pre>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">134644</guid><pubDate>Sun, 06 Mar 2022 13:12:04 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; : &#x643;&#x648;&#x62F; &#x64A;&#x62E;&#x644;&#x64A; &#x627;&#x644;&#x62F;&#x645; &#x637;&#x648;&#x64A;&#x644; &#x644;&#x643;&#x644; &#x644;&#x627;&#x639;&#x628;&#x64A;&#x646; &#x627;&#x644;&#x633;&#x64A;&#x631;&#x641;&#x631;</title><link>https://forum.multitheftauto.com/topic/134611-%D8%B7%D9%84%D8%A8-%D9%83%D9%88%D8%AF-%D9%8A%D8%AE%D9%84%D9%8A-%D8%A7%D9%84%D8%AF%D9%85-%D8%B7%D9%88%D9%8A%D9%84-%D9%84%D9%83%D9%84-%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D8%B3%D9%8A%D8%B1%D9%81%D8%B1/</link><description><![CDATA[<p>
+	طلب : كود يخلي الدم طويل لكل لاعبين السيرفر
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	وقولولي كلنت ولا سيرفر
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	القيم مود تكتيك
+</p>
+]]></description><guid isPermaLink="false">134611</guid><pubDate>Thu, 03 Mar 2022 09:40:34 +0000</pubDate></item><item><title>[ &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647; ] - &#x623;&#x62E;&#x62F; &#x627;&#x644;&#x645;&#x627;&#x644; &#x645;&#x631;&#x627; &#x648;&#x62D;&#x62F;&#x647;</title><link>https://forum.multitheftauto.com/topic/134323-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87-%D8%A3%D8%AE%D8%AF-%D8%A7%D9%84%D9%85%D8%A7%D9%84-%D9%85%D8%B1%D8%A7-%D9%88%D8%AD%D8%AF%D9%87/</link><description><![CDATA[<p>
+	مسوي مود مسابقة كتابية وقت يكتب الاجابه ياخد فلوس ، بس المشكل انه يتكرر كل مرا يكتب ياخد فلوس كيف اخلي اني اقدر كل مرا اسوي فيها مسابقة اخد الفلوس بس مرا وحده ومايتكرر اني اقدر اخد الفلوس ولو هتقول لي 
+</p>
+
+<p>
+	setElementData فا اعطيني من فضلك مثال لاني جربت وفشلت وتجربتي هيا كالتالي كانت بتنفع معي بالمرا الاولة بس كنت انشئ سؤال مرا تانيه ماكنت اقدر اخد فلوس مرا تانيه
+</p>
+
+<p>
+	تجربتي بالـ setElementData
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">setElementData </span><span class="pun">(</span><span class="pln">thePlayer</span><span class="pun">,</span><span class="pln"> </span><span class="str">"themoney"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- كنت احطه تحت اعطاء المال </span><span class="pln">
+getElementData </span><span class="pun">(</span><span class="pln">thePlayer</span><span class="pun">,</span><span class="pln"> </span><span class="str">"the money"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">)</span><span class="pln"> </span><span class="com">-- وهاد كنت واضعه مع كل مرا اضغط فيها علي زر انشاء السؤال بمعني اني كل مرا اضع السؤال تنغلق وكل مرا اجيب علي السؤال يكون بس مفتوح مرا وحده هاد الي فهمته</span></pre>
+
+<p>
+	ولو في طريقة تانيه اني اقدر اخلي الشي مرا وحده وفيك تقلي عنه
+</p>
+]]></description><guid isPermaLink="false">134323</guid><pubDate>Thu, 10 Feb 2022 07:08:04 +0000</pubDate></item><item><title>[ &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647; &#x628;&#x634;&#x631;&#x62D; ] - string.gsub</title><link>https://forum.multitheftauto.com/topic/134258-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87-%D8%A8%D8%B4%D8%B1%D8%AD-stringgsub/</link><description><![CDATA[<p>
+	<strong>شباب وش تسوي </strong>
+</p>
+
+<pre style="border-bottom-width:1px;"><u><strong><span>string.gsub</span></strong></u></pre>
+
+<p>
+	<strong><span>وكمان ابي افهم شي مثلا شفت دا بكود</span></strong>
+</p>
+
+<pre style="border-bottom-width:1px;"><strong><span>string.</span><span>gsub</span><span>(</span><span>num</span><span>,</span><span>'<u>[^%d]</u>'</span><span>,'</span></strong></pre>
+
+<p>
+	<strong><span>وهاد كان يخلي الاديت بوكس مايكتب الا بس ارقام ودا</span></strong>
+</p>
+
+<p>
+	<strong><span> ( num ) - متغير</span></strong>
+</p>
+
+<p>
+	<strong><span>، فا حبيت اعرف ايش هادي ا</span></strong><strong>لرموز</strong>
+</p>
+
+<p>
+	<strong>(^%d) وكيف مثلا اعرف افهمها</strong>
+</p>
+
+<p>
+	<strong><span> او استخدمها في كود مثل دا</span></strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">134258</guid><pubDate>Mon, 07 Feb 2022 04:09:40 +0000</pubDate></item><item><title>[ &#x644;&#x627;&#x639;&#x628; &#x627;&#x62E;&#x631; ] &#x2022; &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647; &#x628;&#x643;&#x648;&#x62F;&#x627;&#x62A;</title><link>https://forum.multitheftauto.com/topic/134176-%D9%84%D8%A7%D8%B9%D8%A8-%D8%A7%D8%AE%D8%B1-%E2%80%A2-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87-%D8%A8%D9%83%D9%88%D8%AF%D8%A7%D8%AA/</link><description><![CDATA[<p>
+	ابي مثلا اذا كان اللاعب قريب مني وكتبت امر يخلي اللاعب ويخليني اسوي حركه والاعب الي واقف معي يسويها كمان يعني تخلي يسوي الحركه معك بكتابة الامر بدون مايدخل هوا بكتابة شي 
+</p>
+]]></description><guid isPermaLink="false">134176</guid><pubDate>Tue, 01 Feb 2022 21:19:47 +0000</pubDate></item><item><title>= [ Ped ] =  |  &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647; &#x628;&#x627;&#x644;&#x628;&#x64A;&#x62F;</title><link>https://forum.multitheftauto.com/topic/134040-ped-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87-%D8%A8%D8%A7%D9%84%D8%A8%D9%8A%D8%AF/</link><description><![CDATA[<p>
+	<strong>مسوي بيد بملف السيرفر سويتله تريغر بجانب الكلينت وسويت بالكلينت </strong>
+</p>
+
+<p>
+	<strong>S</strong><strong>etPedControlState </strong>
+</p>
+
+<p>
+	<strong>انه يتبعني ويقتلني اذا دخلت بالماركر وانتقلت للماب يبداء يقتلني وهوا يعتبر حارس للماب وقت ادخل الماركر يوجه سلاحه علي يتبعني ويقتلني بس مانفعت معي ممكن مساعده شباب</strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">134040</guid><pubDate>Mon, 24 Jan 2022 23:49:56 +0000</pubDate></item><item><title>&#x627;&#x62D;&#x62A;&#x627;&#x62C; &#x645;&#x633;&#x627;&#x639;&#x62F;&#x629;</title><link>https://forum.multitheftauto.com/topic/134031-%D8%A7%D8%AD%D8%AA%D8%A7%D8%AC-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9/</link><description><![CDATA[<p>
+	شباب في احد يعرف حل المشكله دي 
+</p>
+
+<p>
+	<br />
+	start: Resource 'SYRgetcmd' start was requested (Not starting resource SYRgetcmd as server has come back from the future)
+</p>
+
+<p>
+	ملاحظة : انا اشتغل على سيرفر محلي
+</p>
+]]></description><guid isPermaLink="false">134031</guid><pubDate>Mon, 24 Jan 2022 16:59:38 +0000</pubDate></item><item><title>x[ &#x62A;&#x62D;&#x631;&#x64A;&#x643; &#x628;&#x627;&#x628; ]x &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647;</title><link>https://forum.multitheftauto.com/topic/134023-x-%D8%AA%D8%AD%D8%B1%D9%8A%D9%83-%D8%A8%D8%A7%D8%A8-x-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87/</link><description><![CDATA[<p>
+	<strong>كيف احرك باب الخزانة الي هوا باب بنك اسمه safe door ايدي 2004</strong>
+</p>
+
+<p>
+	<strong>سويته بالماب وسويت ماركر ابي وقت ادخل فيها ينفتح الباب وبنقفل بعد فتره مرا تانية</strong>
+</p>
+]]></description><guid isPermaLink="false">134023</guid><pubDate>Sun, 23 Jan 2022 19:38:26 +0000</pubDate></item><item><title>x[ &#x627;&#x633;&#x62A;&#x641;&#x633;&#x627;&#x631; ]x  createColRectangle &#x645;&#x634;&#x643;&#x644;&#x629; &#x628;&#x633;&#x64A;&#x637;&#x629;</title><link>https://forum.multitheftauto.com/topic/133968-x-%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1-x-createcolrectangle-%D9%85%D8%B4%D9%83%D9%84%D8%A9-%D8%A8%D8%B3%D9%8A%D8%B7%D8%A9/</link><description><![CDATA[<p>
+	انا ابي اذا اللاعب لمس  ال Rectangle يموت
+</p>
+
+<p>
+	وانا مسوي اكثر من Rectangle
+</p>
+
+<p>
+	ابيه اذا لمس اي واحده منهم يموت استخدمت ذا الكود 
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="kwd">local</span><span class="pln"> hillArea </span><span class="pun">=</span><span class="pln">  createColRectangle</span><span class="pun">(</span><span class="lit">1252.5432128906</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1211.8337402344</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">456.9</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1661.3341064453</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1167.2008056641</span><span class="pun">,</span><span class="pln"> </span><span class="lit">6.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1256.3558349609</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1199.0007324219</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3.5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1637.7678222656</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1314.6097412109</span><span class="pun">,</span><span class="pln"> </span><span class="lit">77.4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5.5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1714.9532470703</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1283.1953125</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">424.5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1309.1072998047</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1669.1701660156</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">134.2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1331.5991210938</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1803.1833496094</span><span class="pun">,</span><span class="pln"> </span><span class="lit">6</span><span class="pun">,</span><span class="pln"> </span><span class="lit">60</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1452.1392822266</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1143.9161376953</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">59.4</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1557.4001464844</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1703.8187255859</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">159.8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1457.5891113281</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1138.0628662109</span><span class="pun">,</span><span class="pln"> </span><span class="lit">187</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1639.8438720703</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1143.6033935547</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">175.7</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1313.4692382812</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1803.3243408203</span><span class="pun">,</span><span class="pln"> </span><span class="lit">23.9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2.5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1251.8483886719</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1674.6879882812</span><span class="pun">,</span><span class="pln"> </span><span class="lit">55.2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1558.4365234375</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1703.4904785156</span><span class="pun">,</span><span class="pln"> </span><span class="lit">149.2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createColRectangle</span><span class="pun">(</span><span class="lit">1337.5737304688</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1862.9287109375</span><span class="pun">,</span><span class="pln"> </span><span class="lit">220.3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">local</span><span class="pln"> radars </span><span class="pun">=</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="pln"> </span><span class="lit">1252.5432128906</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1211.8337402344</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">456.9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1661.3341064453</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1167.2008056641</span><span class="pun">,</span><span class="pln"> </span><span class="lit">6.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1256.3558349609</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1199.0007324219</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1637.7678222656</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1314.6097412109</span><span class="pun">,</span><span class="pln"> </span><span class="lit">77.4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1714.9532470703</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1283.1953125</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">424.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1309.1072998047</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1669.1701660156</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">134.2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1331.5991210938</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1803.1833496094</span><span class="pun">,</span><span class="pln"> </span><span class="lit">6</span><span class="pun">,</span><span class="pln"> </span><span class="lit">60</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1452.1392822266</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1143.9161376953</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">59.4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1557.4001464844</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1703.8187255859</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">159.8</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1457.5891113281</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1138.0628662109</span><span class="pun">,</span><span class="pln"> </span><span class="lit">187</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1639.8438720703</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1143.6033935547</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">175.7</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1313.4692382812</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1803.3243408203</span><span class="pun">,</span><span class="pln"> </span><span class="lit">23.9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1251.8483886719</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1674.6879882812</span><span class="pun">,</span><span class="pln"> </span><span class="lit">55.2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1558.4365234375</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1703.4904785156</span><span class="pun">,</span><span class="pln"> </span><span class="lit">149.2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> createRadarArea </span><span class="pun">(</span><span class="lit">1337.5737304688</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1862.9287109375</span><span class="pun">,</span><span class="pln"> </span><span class="lit">220.3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> hill_Enter </span><span class="pun">(</span><span class="pln"> thePlayer</span><span class="pun">,</span><span class="pln"> matchingDimension </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> getElementType </span><span class="pun">(</span><span class="pln"> thePlayer </span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">"player"</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> 
+
+                killPlayer </span><span class="pun">(</span><span class="pln"> thePlayer </span><span class="pun">)</span><span class="pln">
+
+	        outputChatBox </span><span class="pun">(</span><span class="pln"> </span><span class="str">"Lift zone"</span><span class="pun">,</span><span class="pln"> getRootElement</span><span class="pun">(),</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">109</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+addEventHandler </span><span class="pun">(</span><span class="pln"> </span><span class="str">"onColShapeHit"</span><span class="pun">,</span><span class="pln"> hillArea</span><span class="pun">,</span><span class="pln"> hill_Enter </span><span class="pun">)</span><span class="pln">
+</span></pre>
+
+<p>
+	بس لما شغلته واحده بس تقتل اللاعب اذا لمسه الباقي مايشتغل مادري وش السبب
+</p>
+
+<p>
+	اتمني احد يساعدني ابيه كلهم يقتلو اللاعب اذا لمسهم
+</p>
+]]></description><guid isPermaLink="false">133968</guid><pubDate>Wed, 19 Jan 2022 02:19:58 +0000</pubDate></item><item><title>x[ &#x63A;&#x644;&#x642; &#x627;&#x644;&#x632;&#x631; ]x &#x645;&#x633;&#x627;&#x639;&#x640;&#x640;&#x62F;&#x647;.</title><link>https://forum.multitheftauto.com/topic/133932-x-%D8%BA%D9%84%D9%82-%D8%A7%D9%84%D8%B2%D8%B1-x-%D9%85%D8%B3%D8%A7%D8%B9%D9%80%D9%80%D8%AF%D9%87/</link><description><![CDATA[<p>
+	<strong>ابي وقت ادخل بماركر مثلا اف واحد و ٢ و ٣ واضيف الازرار الي مابي اغلقها وقت اكون بماركر مشان مايغشو اللاعبين ،</strong>
+</p>
+
+<p>
+	<strong>ولما اخرج منه ترجعلي الازرار واعرف افتحهم عادي</strong>
+</p>
+]]></description><guid isPermaLink="false">133932</guid><pubDate>Sun, 16 Jan 2022 22:41:01 +0000</pubDate></item><item><title>x[ &#x627;&#x633;&#x62A;&#x641;&#x633;&#x627;&#x631; ]x  &#x627;&#x62D;&#x62F;&#x627;&#x62B;&#x64A;&#x627;&#x62A; &#x645;&#x643;&#x627;&#x646; createColCuboid</title><link>https://forum.multitheftauto.com/topic/133939-x-%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1-x-%D8%A7%D8%AD%D8%AF%D8%A7%D8%AB%D9%8A%D8%A7%D8%AA-%D9%85%D9%83%D8%A7%D9%86-createcolcuboid/</link><description><![CDATA[<p>
+	كيف اجيب احداثيات المكان المربع ذا الي بالصورة <span>: </span>
+</p>
+
+<p>
+	<span><img alt="p_2207t544r2.png" class="ipsImage" data-ratio="75.08" height="562" style="height:auto;" width="1000" data-src="https://e.top4top.io/p_2207t544r2.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" /></span>
+</p>
+
+<p>
+	<span><img alt="p_220784e6k1.png" class="ipsImage" data-ratio="75.08" height="562" style="height:auto;" width="1000" data-src="https://d.top4top.io/p_220784e6k1.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" /></span>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span>  عشان استخدم الاحداثيات في  اني اسوي green zone</span>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="pln">createColCuboid </span><span class="pun">(</span><span class="pln"> float fX</span><span class="pun">,</span><span class="pln"> float fY</span><span class="pun">,</span><span class="pln"> float fZ</span><span class="pun">,</span><span class="pln"> float fWidth</span><span class="pun">,</span><span class="pln"> float fDepth</span><span class="pun">,</span><span class="pln"> float fHeight </span><span class="pun">)</span><span class="pln">
+
+createRadarArea </span><span class="pun">(</span><span class="pln"> float startPosX</span><span class="pun">,</span><span class="pln"> float startPosY</span><span class="pun">,</span><span class="pln"> float sizeX</span><span class="pun">,</span><span class="pln"> float sizeY</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> int r </span><span class="pun">=</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> int g </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> int b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> int a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> element visibleTo </span><span class="pun">=</span><span class="pln"> root </span><span class="pun">]</span><span class="pln"> </span><span class="pun">)</span><span class="pln">   </span></pre>
+
+<p>
+	   اتمني احد يساعدني ,لاني حاولت كثير وماعرفت 
+</p>
+]]></description><guid isPermaLink="false">133939</guid><pubDate>Mon, 17 Jan 2022 02:26:15 +0000</pubDate></item><item><title>x[ &#x645;&#x627;&#x631;&#x643;&#x631; ]x &#x637;&#x644;&#x628; &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647;</title><link>https://forum.multitheftauto.com/topic/133887-x-%D9%85%D8%A7%D8%B1%D9%83%D8%B1-x-%D8%B7%D9%84%D8%A8-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87/</link><description><![CDATA[<p>
+	<strong>ابي وقت اخرج من الماركر لو معي سلاح شايلة </strong>
+</p>
+
+<p>
+	<strong>(Fist)يتغير لـ أيدي (0) او بمعني اصح لليد او </strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>بحثت بالويكي بس مالقيت شي </strong>
+</p>
+]]></description><guid isPermaLink="false">133887</guid><pubDate>Thu, 13 Jan 2022 18:40:37 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647;</title><link>https://forum.multitheftauto.com/topic/133882-%D8%B7%D9%84%D8%A8-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87/</link><description><![CDATA[<p>
+	<strong>شباب مسوي مود لما ادخل بماركر اقدر اغير الاسلاحة من عجلة الفأرة ولما اخرج منه ماقدر اغيره،،  ابي وقت ادخل الماركر واغير السلاح بشكل طبيعي مايجيلي شي بالشات و وقت وقت اخرج يقلي بالشات شي وقت احرك عجلة الفارة مثلا ماتقدر تخرج سلاح جربت onClientKey </strong>
+</p>
+
+<p>
+	<strong>طلعلي شات اي بس للاسف طلعو بالماركر وخارجه</strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">133882</guid><pubDate>Thu, 13 Jan 2022 00:41:15 +0000</pubDate></item><item><title>&#x645;&#x633;&#x627;&#x639;&#x62F;&#x647; &#x628;&#x627;&#x644;&#x645;&#x627;&#x631;&#x643;&#x631;</title><link>https://forum.multitheftauto.com/topic/133874-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87-%D8%A8%D8%A7%D9%84%D9%85%D8%A7%D8%B1%D9%83%D8%B1/</link><description><![CDATA[<p>
+	<strong>شباب ليش وقت اضيف ماركر بيكون مو قريب من الارض يعني بحط الاحدثيات واشغلة بتفاجأ بأن الماركر اي موجود بس مرفوع من الأرض شوي</strong>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>اسف شباب</strong>
+</p>
+
+<p>
+	<strong>Z </strong><strong>خلاص  حليت المشكلة ضفت باحدثيات </strong>
+</p>
+
+<p>
+	<strong>-1 </strong>
+</p>
+
+<p>
+	<b>نسيت ان الزد تحكم بفوق وتحت</b>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong> </strong>
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">133874</guid><pubDate>Wed, 12 Jan 2022 02:05:48 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; &#x645;&#x633;&#x627;&#x639;&#x62F;&#x647;</title><link>https://forum.multitheftauto.com/topic/133847-%D8%B7%D9%84%D8%A8-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87/</link><description><![CDATA[<p>
+	<strong>ملف صوت playSound يتبعني و  Ped مسوي </strong>
+</p>
+
+<p>
+	<strong>ابي احط منطقة بحجم معين وقت اخرج منها يسوي destroyElement اخفاء للبيد</strong>
+</p>
+
+<p>
+	<strong>والصوت يوقف وقت اخرج من المنطقه المعينة</strong>
+</p>
+]]></description><guid isPermaLink="false">133847</guid><pubDate>Sun, 09 Jan 2022 23:53:22 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; &#x643;&#x648;&#x62F;&#x627;&#x62A;</title><link>https://forum.multitheftauto.com/topic/133840-%D8%B7%D9%84%D8%A8-%D9%83%D9%88%D8%AF%D8%A7%D8%AA/</link><description><![CDATA[<p>
+	<strong>يتبعني Ped كود يخلي الـ </strong>
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">133840</guid><pubDate>Sun, 09 Jan 2022 15:19:49 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; &#x643;&#x648;&#x62F;</title><link>https://forum.multitheftauto.com/topic/133767-%D8%B7%D9%84%D8%A8-%D9%83%D9%88%D8%AF/</link><description><![CDATA[<p>
+	كيف اخلي خانه الاديت للارقام فقط ماتقدر تكتب حروف
+</p>
+]]></description><guid isPermaLink="false">133767</guid><pubDate>Mon, 03 Jan 2022 21:20:14 +0000</pubDate></item><item><title>&#x645;&#x633;&#x627;&#x639;&#x62F;&#x647; &#x628;&#x645;&#x648;&#x62F; x</title><link>https://forum.multitheftauto.com/topic/133764-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D9%87-%D8%A8%D9%85%D9%88%D8%AF-x/</link><description><![CDATA[<p>
+	مسوي مود توزيع المال للجميع وقت اكتب رقم معين بالاديت بوكس طيب انا الحين لو ماكتبت رقم وكبست توزيع بيكتب رسالة التوزيع بدون مال لان طبعا مافي عدد بالاديت بوكس وبتظهر للكل طيب ابي الحين لو كبست علي الزر ومافي رقم مال بالاديت بوكس يقلي انه مافي عدد مال بالخانه والرسالة حقت المال ماتجي
+</p>
+
+<p>
+	 
+</p>
+]]></description><guid isPermaLink="false">133764</guid><pubDate>Mon, 03 Jan 2022 13:16:02 +0000</pubDate></item><item><title>&#x637;&#x644;&#x628; &#x643;&#x648;&#x62F; &#x628;&#x633;&#x64A;&#x637;</title><link>https://forum.multitheftauto.com/topic/133765-%D8%B7%D9%84%D8%A8-%D9%83%D9%88%D8%AF-%D8%A8%D8%B3%D9%8A%D8%B7/</link><description><![CDATA[<p>
+	<strong>اذا سويت مثلا tonumber(data) </strong>
+</p>
+
+<p>
+	<strong>ج</strong><strong>مب اعطاء السلاح ووقت عطيت السلاح وطلعت الرسالة والداتا طلعتلي الايدي حق السلاح بالشات طيب انا ابي وقت اعطي سلاح يكتبلي اسمه يعني كل سلاح اكتب الايدي تبعه في الاديت بوكس يكتبلي مثلا تم إعطائك ام فور تم اعطائك كوليت </strong>
+</p>
+]]></description><guid isPermaLink="false">133765</guid><pubDate>Mon, 03 Jan 2022 14:51:07 +0000</pubDate></item></channel></rss>
