@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel><title>Tutorials Latest Topics</title><link>https://forum.multitheftauto.com/forum/178-tutorials/</link><description>Tutorials Latest Topics</description><language>en</language><item><title>Graceful server starting (Linux)</title><link>https://forum.multitheftauto.com/topic/134111-graceful-server-starting-linux/</link><description><![CDATA[<p>
+	I often see how people are trying to start server using really strange solutions. So I thought "I need to make a good tutorial", let's get it!
+</p>
+
+<p>
+	You need a Linux server (I use Debian 10) and installed the server.
+</p>
+
+<p>
+	Usually I put the server in <strong>/opt</strong> <a href="https://www.baeldung.com/linux/opt-directory" rel="external nofollow">directory</a>, in this tutorial we do it same.
+</p>
+
+<p style="text-align:center;">
+	<strong>Part One: Installing the server</strong>
+</p>
+
+<p>
+	Let's start to install pure Multi Theft Auto linux server. <a href="http://www.bash.org/?464385" rel="external nofollow">As a joke from bashorg said: "it only takes three commands to install Gentoo"</a>, you have to put only two commands
+</p>
+
+<pre class="ipsCode">apt install unzip
+
+wget https://linux.multitheftauto.com/dl/multitheftauto_linux_x64.tar.gz &amp;&amp; \
+tar xvf multitheftauto_linux_x64.tar.gz &amp;&amp; \
+rm multitheftauto_linux_x64.tar.gz &amp;&amp;\
+cd multitheftauto_linux_x64/mods/deathmatch/ &amp;&amp; \
+wget https://linux.multitheftauto.com/dl/baseconfig.tar.gz &amp;&amp; \
+tar xvf baseconfig.tar.gz &amp;&amp; \
+mv baseconfig/* . &amp;&amp; \
+rm -rf ./baseconfig/ &amp;&amp; \
+mkdir resources &amp;&amp; cd resources &amp;&amp; \
+wget https://mirror.multitheftauto.com/mtasa/resources/mtasa-resources-latest.zip &amp;&amp; \
+unzip mtasa-resources-latest.zip &amp;&amp; \
+rm mtasa-resources-latest.zip &amp;&amp; \
+cd ../../../ &amp;&amp; chmod +x ./mta-server64</pre>
+
+<p>
+	</p><video class="ipsEmbeddedVideo" controls="" data-video-embed="">
+		<source type="video/mp4" data-video-src="https://forum.multitheftauto.com/uploads/monthly_2022_01/putty_xjovvhDRiG.mp4.8797aada1a3c3736bb494a60fc711fda.mp4"><a class="ipsAttachLink" data-fileext="mp4" data-fileid="189" href="https://forum.multitheftauto.com/applications/core/interface/file/attachment.php?id=189&amp;key=129a7e3d9fa3e66b632aaa2a1f0e7667" rel="">putty_xjovvhDRiG.mp4</a>
+	</source></video>
+
+
+<p>
+	What are about these commands?
+</p>
+
+<ol>
+	<li>
+		Downloading and unpacking <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">mta</abbr></abbr> server binaries
+	</li>
+	<li>
+		Downloading and unpacking default configs
+	</li>
+	<li>
+		Downloading and unpacking resources
+	</li>
+</ol>
+
+<p>
+	 
+</p>
+
+<p style="text-align:center;">
+	<strong>Part 2: <a href="https://en.wikipedia.org/wiki/Daemon_(computing)" rel="external nofollow">Daemonization</a></strong>
+</p>
+
+<p>
+	Many of tutorials was written when <a href="https://en.wikipedia.org/wiki/Systemd" rel="external nofollow">systemd</a> isn't exists. But not today.
+</p>
+
+<p>
+	Let's make a systemd unit.
+</p>
+
+<p>
+	Before we're starting to do it, we need to check one thing. Basically <abbr title="Multi Theft Auto"><abbr title="Multi Theft Auto">MTA</abbr></abbr> Server has ncurses UI, that's can be inconvenient for daemons, so we have to check flags.
+</p>
+
+<p>
+	<img alt="image.png.30ad6039fafe5b4158ad56bc392c0324.png" class="ipsImage ipsImage_thumbnailed" data-fileid="190" data-ratio="36.10" style="height:auto;" width="806" data-src="https://forum.multitheftauto.com/uploads/monthly_2022_01/image.png.30ad6039fafe5b4158ad56bc392c0324.png" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" />
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<strong>Okkay</strong>! We take them all!
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	There are a lot of guides how to make different systemd units, but I've made the config for you. You only need to put the file into <strong>/etc/systemd/system/multitheftauto.service</strong>
+</p>
+
+<pre class="ipsCode">[Unit]
+Description=Multi Theft Auto Dedicated server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/opt/multitheftauto_linux_x64
+ExecStart=/opt/multitheftauto_linux_x64/mta-server64 -t -n -u
+
+[Install]
+WantedBy=multi-user.target</pre>
+
+<p>
+	And make systemd reload the configs
+</p>
+
+<blockquote class="ipsQuote" data-ipsquote="">
+	<div class="ipsQuote_citation">
+		Quote
+	</div>
+
+	<div class="ipsQuote_contents">
+		<p>
+			<strong>systemd daemon-reload</strong>
+		</p>
+	</div>
+</blockquote>
+
+<p>
+	Need video?
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	</p><video class="ipsEmbeddedVideo" controls="" data-video-embed="">
+		<source type="video/mp4" data-video-src="https://forum.multitheftauto.com/uploads/monthly_2022_01/putty_QR8ebBKoVy.mp4.4e20c4120ef1131e8a9b5dde7b2d394c.mp4"><a class="ipsAttachLink" data-fileext="mp4" data-fileid="191" href="https://forum.multitheftauto.com/applications/core/interface/file/attachment.php?id=191&amp;key=1e22844b1a77a8a71df9055cbe58c19b" rel="">putty_QR8ebBKoVy.mp4</a>
+	</source></video>
+
+
+<p>
+	Seems like you're done all of my steps. What's next?
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	There are good commands for management the unit
+</p>
+
+<pre class="ipsCode prettyprint lang-html prettyprinted"><span class="pln">1. journalctl -u multitheftauto -n -f
+2. systemctl enable multitheftauto
+3. systemctl stop multitheftauto
+4. systemctl restart multitheftauto
+5. systemctl start multitheftauto
+6. systemctl status multitheftauto
+
+1. Reads logs in the stream
+2. Enable the unit (after rebooting the server the unit will start)
+3,4,5 Stop/restart/start the unit (the server)
+6. Status of the unit (is it running? Stopped? and last lines from the std out)</span></pre>
+
+<p>
+	More info you may read here: <a href="https://www.freedesktop.org/software/systemd/man/journalctl.html" rel="external nofollow">https://www.freedesktop.org/software/systemd/man/journalctl.html</a>
+</p>
+
+<p>
+	and here: <a href="https://www.freedesktop.org/software/systemd/man/systemctl.html" rel="external nofollow">https://www.freedesktop.org/software/systemd/man/systemctl.html</a>
+</p>
+]]></description><guid isPermaLink="false">134111</guid><pubDate>Sat, 29 Jan 2022 10:10:14 +0000</pubDate></item><item><title>Minimizing the lag in MTASA</title><link>https://forum.multitheftauto.com/topic/118551-minimizing-the-lag-in-mtasa/</link><description><![CDATA[<p>
+	<span style="font-size:24px;">Have you ever experienced some lag while gaming ? </span>
+</p>
+
+<p>
+	<span style="font-size:24px;">We have some common issues between us ... like someone else is using your internet <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">, or you might be downloading some files ( like games <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?️"> or movies <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"> ), or you might be streaming some music <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"> or videos <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"> while playing or using another device like PS4 <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"> or your mobile phone <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">.</span>
+</p>
+
+<p>
+	<span style="font-size:24px;">Well .. those issues can be resolved since that person can leave your network <img src="https://twemoji.maxcdn.com/2/72x72/274c.png" class="ipsEmoji" alt="❌">, or you can stop your downloading progress <img src="https://twemoji.maxcdn.com/2/72x72/274c.png" class="ipsEmoji" alt="❌">, or stop using your browser to get the best ping and loss in your gaming <img src="https://twemoji.maxcdn.com/2/72x72/3f-3f-200d-2642-fe0f.png" class="ipsEmoji" alt="??‍♂️">.</span>
+</p>
+
+<p>
+	<span style="font-size:24px;">However, your permanent ping and loss cannot change easily because it depends on how far your location is from the server <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">, and the speed of your internet connection <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">, yet ... i discovered a software which can <strong>MINIMIZE</strong> and not entirely stop this lagging and i think its kinda effective <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">.</span>
+</p>
+
+<p>
+	<span style="font-size:24px;">Its called WTFast , and i think it can somehow help in lowering your ping or at least disabling the effect of loss.</span>
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/RA0RBn4YDKw?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	<span style="font-size:28px;">You have to pay in order to have a subscription<img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"></span><span style="font-size:28px;">to this software, <span style="background-color:#f1c40f;">but there is a trial to see if this software is useful for you or not and its important to know how to use it because its different in every game ( according to the location of the server )</span>, and for MTASA you <strong>MUST </strong>follow this tutorial in order to know how to use it in the game.</span>
+</p>
+
+<p>
+	<span style="font-size:28px;">so if you're interested .. go on and download the trial of this software</span>
+</p>
+
+<p>
+	<span style="font-size:36px;"><a href="https://www.wtfast.com/" rel="external nofollow">https://www.wtfast.com/</a></span>
+</p>
+
+<p>
+	<strong><span style="font-size:24px;">How to use it in MTASA ?</span></strong>
+</p>
+
+<p>
+	<span style="font-size:28px;">For other games, you can search Google or YouTube <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?">for tutorials on how to use it on those games.</span>
+</p>
+
+<p>
+	<span style="font-size:28px;">For MTASA ( idk if it works for SAMP ) you just have to follow this tutorial and i hope it will help <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"></span>
+</p>
+
+<p>
+	<span style="font-size:28px;">1. You have to download it from </span><span style="font-size:36px;"><a href="https://www.wtfast.com/" rel="external nofollow">https://www.wtfast.com/</a></span>
+</p>
+
+<p>
+	<span style="font-size:28px;">2. install the software and then launch it</span>
+</p>
+
+<p>
+	<span style="font-size:28px;">3. login to your trial account ( might be already logged in ) </span>
+</p>
+
+<p>
+	<span style="font-size:28px;">4. In the picture below, when this screen appears for you ( my version is 4.12, you have to search for a way in order to reach custom games if you have a <strong>TOTALLY</strong> different version ) the box in red that i drew shows the listed games, this is direct as the popular games can be directly accessed from this box, but MTASA is not a listed game now, for this step you have to press <strong>Manage Settings</strong> in the green box i drew and go to step 5.</span>
+</p>
+
+<p>
+	<span style="font-size:28px;"> </span><img alt="p_1282mjhfj1.png" class="ipsImage" data-ratio="88.14" height="639" width="725" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://3.top4top.net/p_1282mjhfj1.png"></p>
+
+<p>
+	<span style="font-size:28px;">5. Now that you reached the settings, press the checkbox <strong>Enable custom games </strong>and then press save</span>
+</p>
+
+<p>
+	<span style="font-size:28px;"> </span><img alt="p_1282iwt8f1.png" class="ipsImage" data-ratio="88.04" height="633" width="719" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://3.top4top.net/p_1282iwt8f1.png"></p>
+
+<p>
+	<span style="font-size:28px;">6. Now you should be back to the main panel, press <strong>Custom games</strong> </span><img alt="p_128211g031.png" class="ipsImage" data-ratio="46.94" height="337" width="718" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://1.top4top.net/p_128211g031.png"></p>
+
+<p>
+	<span style="font-size:28px;">7. Press <strong>ADD</strong></span>
+</p>
+
+<p>
+	<img alt="p_1282fi2it1.png" class="ipsImage" data-ratio="38.66" height="278" width="719" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://3.top4top.net/p_1282fi2it1.png"></p>
+
+<p>
+	<span style="font-size:28px;">8. Now for the most important step i will just insert a photo to explain everything for it to be easier</span>
+</p>
+
+<p>
+	<img alt="p_1282rsg7o1.png" class="ipsImage" data-ratio="86.87" height="635" width="731" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://3.top4top.net/p_1282rsg7o1.png"></p>
+
+<p>
+	<span style="font-size:28px;">Only for those who don't know how to copy MTASA server address</span>
+</p>
+
+<p>
+	<img alt="p_1282vgeeh1.png" class="ipsImage" data-ratio="14.36" height="143" width="1000" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://4.top4top.net/p_1282vgeeh1.png"></p>
+
+<p>
+	<span style="font-size:28px;">9. After you clicked <strong>OKAY, </strong>follow this picture to know everything next</span>
+</p>
+
+<p>
+	<span style="font-size:28px;"><img alt="p_1282859xv1.png" class="ipsImage" data-ratio="60.88" height="442" width="726" src="https://forum.multitheftauto.com/applications/core/interface/js/spacer.png" data-src="https://4.top4top.net/p_1282859xv1.png"></span>
+</p>
+
+<p>
+	<span style="font-size:28px;">10. If you want to know the location of your MTA:SA server, just type the name of the server in </span><span style="font-size:36px;"><a href="https://www.game-state.com/" rel="external nofollow">https://www.game-state.com/</a> </span><span style="font-size:28px;">and you will find the location of the server, then choose the nearest location of the server to your MTASA server " and this if the auto detection does not work "</span>
+</p>
+
+<p>
+	<span style="font-size:28px;">At the end I wish this tutorial helped you guys and feel free to ask any question in the replies <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"></span>
+</p>
+
+<p>
+	<span style="font-size:28px;">Good Luck <img src="https://twemoji.maxcdn.com/2/72x72/3f.png" class="ipsEmoji" alt="?"></span>
+</p>
+]]></description><guid isPermaLink="false">118551</guid><pubDate>Sat, 06 Jul 2019 12:55:04 +0000</pubDate></item></channel></rss>
