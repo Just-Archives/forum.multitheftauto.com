@@ -1,0 +1,3376 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+        
+		<title>Working with 3D maps - User Guides - Multi Theft Auto: Forums</title>
+		
+		
+		
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	
+	
+
+
+	<meta name="twitter:card" content="summary" />
+
+
+	
+		<meta name="twitter:site" content="@mtaqa" />
+	
+
+
+	
+		
+			
+				<meta property="og:title" content="Working with 3D maps">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:type" content="website">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:url" content="index.html">
+			
+		
+	
+
+	
+		
+			
+				<meta name="description" content="Introduction This guide intends to teach 3ds Max users how maps are converted and imported/exported through 3D applications, to then be used in professional renders, visualizations, machinma&#039;s or to utilise 3ds Max as a precise map editor. The below video demonstrates some of the possibilities th...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:description" content="Introduction This guide intends to teach 3ds Max users how maps are converted and imported/exported through 3D applications, to then be used in professional renders, visualizations, machinma&#039;s or to utilise 3ds Max as a precise map editor. The below video demonstrates some of the possibilities th...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:updated_time" content="2020-02-17T05:51:44Z">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:site_name" content="Multi Theft Auto: Forums">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:locale" content="en_GB">
+			
+		
+	
+
+
+	
+		<link rel="canonical" href="index.html" />
+	
+
+
+
+
+<link rel="manifest" href="../../manifest.webmanifest/index.html">
+<meta name="msapplication-config" content="../../browserconfig.xml/index.html">
+<meta name="msapplication-starturl" content="/">
+<meta name="application-name" content="Multi Theft Auto: Forums">
+<meta name="apple-mobile-web-app-title" content="Multi Theft Auto: Forums">
+
+	<meta name="theme-color" content="#121319">
+
+
+
+
+
+
+	
+
+	
+		
+			<link rel="icon" sizes="36x36" href="../../uploads/monthly_2021_10/android-chrome-36x36.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="48x48" href="../../uploads/monthly_2021_10/android-chrome-48x48.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="72x72" href="../../uploads/monthly_2021_10/android-chrome-72x72.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="96x96" href="../../uploads/monthly_2021_10/android-chrome-96x96.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="144x144" href="../../uploads/monthly_2021_10/android-chrome-144x144.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="192x192" href="../../uploads/monthly_2021_10/android-chrome-192x192.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="256x256" href="../../uploads/monthly_2021_10/android-chrome-256x256.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="384x384" href="../../uploads/monthly_2021_10/android-chrome-384x384.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="512x512" href="../../uploads/monthly_2021_10/android-chrome-512x512.png">
+		
+	
+
+	
+		
+			<meta name="msapplication-square70x70logo" content="../../uploads/monthly_2021_10/msapplication-square70x70logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-TileImage" content="../../uploads/monthly_2021_10/msapplication-TileImage.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square150x150logo" content="../../uploads/monthly_2021_10/msapplication-square150x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-wide310x150logo" content="../../uploads/monthly_2021_10/msapplication-wide310x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square310x310logo" content="../../uploads/monthly_2021_10/msapplication-square310x310logo.png"/>
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" href="../../uploads/monthly_2021_10/apple-touch-icon-57x57.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="60x60" href="../../uploads/monthly_2021_10/apple-touch-icon-60x60.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="72x72" href="../../uploads/monthly_2021_10/apple-touch-icon-72x72.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="76x76" href="../../uploads/monthly_2021_10/apple-touch-icon-76x76.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="114x114" href="../../uploads/monthly_2021_10/apple-touch-icon-114x114.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="120x120" href="../../uploads/monthly_2021_10/apple-touch-icon-120x120.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="144x144" href="../../uploads/monthly_2021_10/apple-touch-icon-144x144.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="152x152" href="../../uploads/monthly_2021_10/apple-touch-icon-152x152.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="180x180" href="../../uploads/monthly_2021_10/apple-touch-icon-180x180.png">
+			
+		
+	
+
+
+
+
+
+<link rel="preload" href="../../applications/core/interface/font/fontawesome-webfont3e6e.woff2?v=4.7.0" as="font" crossorigin="anonymous">
+		
+
+
+	
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,700,700i" rel="stylesheet" referrerpolicy="origin">
+	
+
+
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/341e4a57816af3ba440d891ca87450ff_frameworka9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/05e81b71abe4f22d6eb8d1a929494829_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/20446cf2d164adcc029377cb04d43d17_flagsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/90eb5adf50a8c640f633d47fd7eb1778_corea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/5a0da001ccc2200dc5625c3f3934497d_core_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/62e269ced0fdab7e30e026f1d30ae516_forumsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/76e62c573090645fb99a15a363d8620e_forums_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/ebdea0c6a7dab6d37900b9190d3ac77b_topicsa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+
+<link rel='stylesheet' href='../../uploads/css_built_22/258adbb6e4f3e83cd3b355f84e3fa002_customa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+		
+		
+
+	
+	<link rel='shortcut icon' href='../../uploads/monthly_2016_09/favicon.ico.496d8d1cc696295f808f9f1153f0a1e0.ico' type="image/x-icon">
+
+	</head>
+	<body class='ipsApp ipsApp_front ipsJS_none ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='forums' data-pageLocation='front' data-pageModule='forums' data-pageController='topic' data-pageID='122502'  >
+		
+        
+
+        
+
+		  <a href='#ipsLayout_mainArea' class='ipsHide' title='Go to main content on this page' accesskey='m'>Jump to content</a>
+		<div id='ipsLayout_header' class='ipsClearfix'>
+			
+
+
+
+
+
+			<header>
+				
+<div id="mta_globalTopNavigation">
+  <div id="mta_globalTopNavigationLinks" class="ipsLayout_container">
+    <a href="https://multitheftauto.com/">Home</a>
+    <a href="https://discord.com/invite/mtasa" rel="noopener" target="_blank">Discord</a>
+    <a href="https://community.multitheftauto.com/">Community</a>
+    <a href="../../index.html">Forum</a>
+    <a href="https://wiki.multitheftauto.com/wiki/Main_Page">Wiki</a>
+    <a href="https://github.com/multitheftauto/mtasa-blue/issues" rel="noopener" target="_blank">Bugs</a>
+    <a href="https://multitheftauto.com/donate/">Heroes</a>
+    <a href="https://multitheftauto.com/hosters/">Hosting</a>
+    <a href="https://community.multitheftauto.com/index.php?p=servers">Servers</a>
+    <a href="https://multitheftauto.myspreadshop.net/all">Merch</a>
+    <span id="mta_onlinePlayers"></span>
+  </div>
+  <script>
+    (function () {
+      var onlinePlayersEl = document.getElementById('mta_onlinePlayers');
+
+      function updateOnlinePlayers() {
+        if (!onlinePlayersEl) return;
+
+        fetch('https://multitheftauto.com/count/')
+          .then(function (r) {
+            if (!r.ok) throw new Error();
+            return r.text();
+          })
+          .then(function (r) {
+            if (!onlinePlayersEl) return;
+            if (!r) throw new Error();
+
+            var info = r.split(',', 2);
+            if (!info || !info[0] || !info[1]) throw new Error();
+
+            function updateStats() {
+              onlinePlayersEl.innerText = new Intl.NumberFormat('en-US').format(info[0]) + ' players online on ' + new Intl.NumberFormat('en-US').format(info[1]) + ' public servers';
+              $(onlinePlayersEl).stop(true).fadeIn(500);
+            }
+
+            if (!onlinePlayersEl.innerText) {
+              $(onlinePlayersEl).hide();
+              updateStats();
+              return;
+            }
+
+            $(onlinePlayersEl).stop(true).fadeOut(500);
+            setTimeout(updateStats, 500);
+          })
+          .catch(function () {
+            setTimeout(updateOnlinePlayers, 10000);
+          });
+      }
+
+      window.addEventListener('load', updateOnlinePlayers);
+      setInterval(updateOnlinePlayers, 300000);
+    })();
+  </script>
+</div>
+
+				<div class='ipsLayout_container'>
+					
+
+
+<a href='../../index.html' id='elLogo' accesskey='1'><img src="../../uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png" alt='Multi Theft Auto: Forums'></a>
+
+					
+						
+
+	<ul id="elUserNav" class="ipsList_inline cSignedOut ipsResponsive_showDesktop">
+		
+		<li id="elSignInLink">
+			<a href="../../login/index.html" data-ipsmenu-closeonclick="false" data-ipsmenu id="elUserSignIn">
+				Existing user? Sign In  <i class="fa fa-caret-down"></i>
+			</a>
+			
+<div id='elUserSignIn_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+	<form accept-charset='utf-8' method='post' action='https://forum.multitheftauto.com/login/'>
+		<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366">
+		<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIyNTAyLXdvcmtpbmctd2l0aC0zZC1tYXBzLw==">
+		<div data-role="loginForm">
+			
+			
+			
+				
+<div class="ipsPad ipsForm ipsForm_vertical">
+	<h4 class="ipsType_sectionHead">Sign In</h4>
+	<br><br>
+	<ul class='ipsList_reset'>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			
+			
+				<input type="text" placeholder="Display Name or Email Address" name="auth" autocomplete="email">
+			
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			<input type="password" placeholder="Password" name="password" autocomplete="current-password">
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_checkbox ipsClearfix">
+			<span class="ipsCustomInput">
+				<input type="checkbox" name="remember_me" id="remember_me_checkbox" value="1" checked aria-checked="true">
+				<span></span>
+			</span>
+			<div class="ipsFieldRow_content">
+				<label class="ipsFieldRow_label" for="remember_me_checkbox">Remember me</label>
+				<span class="ipsFieldRow_desc">Not recommended on shared computers</span>
+			</div>
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_fullWidth">
+			<button type="submit" name="_processLogin" value="usernamepassword" class="ipsButton ipsButton_primary ipsButton_small" id="elSignIn_submit">Sign In</button>
+			
+				<p class="ipsType_right ipsType_small">
+					
+						<a href='../../lostpassword/index.html' data-ipsDialog data-ipsDialog-title='Forgot your password?'>
+					
+					Forgot your password?</a>
+				</p>
+			
+		</li>
+	</ul>
+</div>
+			
+		</div>
+	</form>
+</div>
+		</li>
+		
+			<li>
+				
+					<a href="../../register/index.html" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-title="Sign Up"  id="elRegisterButton" class="ipsButton ipsButton_normal ipsButton_primary">Sign Up</a>
+				
+			</li>
+		
+	</ul>
+
+						
+<ul class='ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop'>
+	<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileDrawer'>
+		<a href='#'>
+			
+			
+				
+			
+			
+			
+			<i class='fa fa-navicon'></i>
+		</a>
+	</li>
+</ul>
+					
+				</div>
+			</header>
+			
+
+	<nav data-controller='core.front.core.navBar' class=' ipsResponsive_showDesktop'>
+		<div class='ipsNavBar_primary ipsLayout_container '>
+			<ul data-role="primaryNavBar" class='ipsClearfix'>
+				
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_1' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../index.html"  data-navItem-id="1" data-navDefault>
+					Browse<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_8' data-role="navBarItem" data-navApp="forums" data-navExt="Forums">
+			
+			
+				<a href="../../index.html"  data-navItem-id="8" data-navDefault>
+					Forums<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_12' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../12275-forum-rules/index.html"  data-navItem-id="12" >
+					Forum Rules<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_10' data-role="navBarItem" data-navApp="core" data-navExt="StaffDirectory">
+			
+			
+				<a href="../../staff/index.html"  data-navItem-id="10" >
+					Staff<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_11' data-role="navBarItem" data-navApp="core" data-navExt="OnlineUsers">
+			
+			
+				<a href="../../online/index.html"  data-navItem-id="11" >
+					Online Users<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_24' data-role="navBarItem" data-navApp="core" data-navExt="Leaderboard">
+			
+			
+				<a href="../../leaderboard/index.html"  data-navItem-id="24" >
+					Leaderboard<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_1' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_1' id='elNavigationMore_1_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_1_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_2' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="2" >
+					Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_3' data-role="navBarItem" data-navApp="core" data-navExt="AllActivity">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="3" >
+					All Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_7' data-role="navBarItem" data-navApp="core" data-navExt="Search">
+			
+			
+				<a href="../../search/index.html"  data-navItem-id="7" >
+					Search<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_2' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_2' id='elNavigationMore_2_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_2_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_37' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_37" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_37' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="37" >
+					MTA Network <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_37_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_46' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="46" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_48' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://community.mtasa.com/" target='_blank' rel="noopener" data-navItem-id="48" >
+					Community<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_49' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://wiki.multitheftauto.com/wiki/Main_Page" target='_blank' rel="noopener" data-navItem-id="49" >
+					Wiki<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_50' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto/mtasa-blue/issues" target='_blank' rel="noopener" data-navItem-id="50" >
+					Bugs<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_51' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/donate/" target='_blank' rel="noopener" data-navItem-id="51" >
+					Heroes<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_52' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/hosters/" target='_blank' rel="noopener" data-navItem-id="52" >
+					Hosting<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_45' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.myspreadshop.net/all" target='_blank' rel="noopener" data-navItem-id="45" >
+					Merch Store<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_37' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_37' id='elNavigationMore_37_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_37_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_28' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_28" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_28' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="28" >
+					Social Media <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_28_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_36' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="36" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_35' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.twitch.tv/mtaqa" target='_blank' rel="noopener" data-navItem-id="35" >
+					Twitch<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_30' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://twitter.com/mtaqa" target='_blank' rel="noopener" data-navItem-id="30" >
+					Twitter<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_32' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.youtube.com/user/MTAQA" target='_blank' rel="noopener" data-navItem-id="32" >
+					YouTube<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_31' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="31" >
+					GitHub<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_29' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.facebook.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="29" >
+					Facebook<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_34' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.reddit.com/r/MultiTheftAuto/" target='_blank' rel="noopener" data-navItem-id="34" >
+					Reddit<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_33' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.linkedin.com/company/multitheftauto" target='_blank' rel="noopener" data-navItem-id="33" >
+					LinkedIn<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_28' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_28' id='elNavigationMore_28_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_28_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+				<li class='ipsHide' id='elNavigationMore' data-role='navMore'>
+					<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore' id='elNavigationMore_dropdown'>More</a>
+					<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+						<li class='ipsHide' id='elNavigationMore_more' data-role='navMore'>
+							<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_more' id='elNavigationMore_more_dropdown'>More <i class='fa fa-caret-down'></i></a>
+							<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_more_dropdown_menu' data-role='moreDropdown'></ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+
+	<div id="elSearchWrapper">
+		<div id='elSearch' class='' data-controller='core.front.core.quickSearch'>
+			<form accept-charset='utf-8' action='http://forum.multitheftauto.com/search/?do=quicksearch' method='post'>
+				<input type='search' id='elSearchField' placeholder='Search...' name='q' autocomplete='off' aria-label='Search'>
+				<button class='cSearchSubmit' type="submit" aria-label='Search'><i class="fa fa-search"></i></button>
+				<div id="elSearchExpanded">
+					<div class="ipsMenu_title">
+						Search In
+					</div>
+					<ul class="ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-role="searchContexts">
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="type" value="all" checked id="elQuickSearchRadio_type_all">
+								<label for='elQuickSearchRadio_type_all' id='elQuickSearchRadio_type_all_label'>Everywhere</label>
+							</span>
+						</li>
+						
+						
+							<li>
+								<span class='ipsSideMenu_item' data-ipsMenuValue='forums_topic'>
+									<input type="radio" name="type" value="forums_topic" id="elQuickSearchRadio_type_forums_topic">
+									<label for='elQuickSearchRadio_type_forums_topic' id='elQuickSearchRadio_type_forums_topic_label'>Topics</label>
+								</span>
+							</li>
+						
+						
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:185}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:185}' id='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1'>
+										<label for='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1' id='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1_label'>This Forum</label>
+									</span>
+								</li>
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:122502}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:122502}' id='elQuickSearchRadio_type_contextual_2c00aeec9263eac63ba0cde9bd4a8c5f'>
+										<label for='elQuickSearchRadio_type_contextual_2c00aeec9263eac63ba0cde9bd4a8c5f' id='elQuickSearchRadio_type_contextual_2c00aeec9263eac63ba0cde9bd4a8c5f_label'>This Topic</label>
+									</span>
+								</li>
+							
+						
+						<li data-role="showMoreSearchContexts">
+							<span class='ipsSideMenu_item' data-action="showMoreSearchContexts" data-exclude="forums_topic">
+								More options...
+							</span>
+						</li>
+					</ul>
+					<div class="ipsMenu_title">
+						Find results that contain...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='andOr'>
+						
+							<li>
+								<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='or'>
+									<input type="radio" name="search_and_or" value="or" checked id="elRadio_andOr_or">
+									<label for='elRadio_andOr_or' id='elField_andOr_label_or'><em>Any</em> of my search term words</label>
+								</span>
+							</li>
+						
+							<li>
+								<span class='ipsSideMenu_item ' data-ipsMenuValue='and'>
+									<input type="radio" name="search_and_or" value="and"  id="elRadio_andOr_and">
+									<label for='elRadio_andOr_and' id='elField_andOr_label_and'><em>All</em> of my search term words</label>
+								</span>
+							</li>
+						
+					</ul>
+					<div class="ipsMenu_title">
+						Find results in...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='searchIn'>
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="search_in" value="all" checked id="elRadio_searchIn_and">
+								<label for='elRadio_searchIn_and' id='elField_searchIn_label_all'>Content titles and body</label>
+							</span>
+						</li>
+						<li>
+							<span class='ipsSideMenu_item' data-ipsMenuValue='titles'>
+								<input type="radio" name="search_in" value="titles" id="elRadio_searchIn_titles">
+								<label for='elRadio_searchIn_titles' id='elField_searchIn_label_titles'>Content titles only</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		</div>
+	</nav>
+
+			
+<ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
+	
+		
+			
+			
+				
+				
+			
+				
+					<li id='elMobileBreadcrumb'>
+						<a href='../../forum/185-user-guides/index.html'>
+							<span>User Guides</span>
+						</a>
+					</li>
+				
+				
+			
+				
+				
+			
+		
+	
+	
+	
+	<li >
+		<a data-action="defaultStream" href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+	</li>
+
+	
+
+	
+		<li class='ipsJS_show'>
+			<a href='../../search/index.html'><i class='fa fa-search'></i></a>
+		</li>
+	
+</ul>
+		</div>
+		<main id='ipsLayout_body' class='ipsLayout_container'>
+			<div id='ipsLayout_contentArea'>
+				<div id='ipsLayout_contentWrapper'>
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/80-multi-theft-auto-san-andreas-1x/index.html'>
+						<span>Multi Theft Auto: San Andreas 1.x <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/185-user-guides/index.html'>
+						<span>User Guides <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					Working with 3D maps
+				
+			</li>
+		
+	</ul>
+</nav>
+					
+					<div id='ipsLayout_mainArea'>
+						
+						
+						
+						
+
+	
+
+
+
+
+						
+
+
+
+<div class='ipsPageHeader ipsResponsive_pull ipsBox ipsPadding sm:ipsPadding:half ipsMargin_bottom'>
+		
+	
+	<div class='ipsFlex ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:4'>
+		<div class='ipsFlex-flex:11'>
+			<h1 class='ipsType_pageTitle ipsContained_container'>
+				
+
+				
+				
+					<span class='ipsType_break ipsContained'>
+						<span>Working with 3D maps</span>
+					</span>
+				
+			</h1>
+			
+			
+		</div>
+		
+	</div>
+	<hr class='ipsHr'>
+	<div class='ipsPageHeader__meta ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:3'>
+		<div class='ipsFlex-flex:11'>
+			<div class='ipsPhotoPanel ipsPhotoPanel_mini ipsPhotoPanel_notPhone ipsClearfix'>
+				
+
+
+	<a href="../../profile/61779-tut/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Tut's profile">
+		<img src='../../uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif' alt='Tut' loading="lazy">
+	</a>
+
+				<div>
+					<p class='ipsType_reset ipsType_blendLinks'>
+						<span class='ipsType_normal'>
+						
+							<strong>By 
+
+
+<a href='../../profile/61779-tut/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F122502-working-with-3d-maps%252F' title="Go to Tut's profile" class="ipsType_break"><span style='color:#ff0000; font-weight: bold'>Tut</span></a>, </strong><br />
+							<span class='ipsType_light'><time datetime='2020-02-17T05:51:44Z' title='17/02/20 05:51 ' data-short='2 yr'>February 17, 2020</time> in <a href="../../forum/185-user-guides/index.html">User Guides</a></span>
+						
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class='ipsFlex-flex:01 ipsResponsive_hidePhone'>
+				<div class='ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsGap_row:0'>
+					
+						
+
+
+					
+					
+
+
+
+					
+
+<div data-followApp='forums' data-followArea='topic' data-followID='122502' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall " data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>1</span>
+	</a>
+
+</div>
+				</div>
+			</div>
+					
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+<div class='ipsClearfix'>
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+		
+		
+		
+	</ul>
+</div>
+
+<div id='comments' data-controller='core.front.core.commentFeed,forums.front.topic.view, core.front.core.ignoredComments' data-autoPoll data-baseURL='https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/' data-lastPage data-feedID='topic-122502' class='cTopic ipsClear ipsSpacer_top'>
+	
+			
+	
+
+	
+
+<div data-controller='core.front.core.recommendedComments' data-url='https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/?recommended=comments' class='ipsRecommendedComments ipsHide'>
+	<div data-role="recommendedComments">
+		<h2 class='ipsType_sectionHead ipsType_large ipsType_bold ipsMargin_bottom'>Recommended Posts</h2>
+		
+	</div>
+</div>
+	
+	<div id="elPostFeed" data-role='commentFeed' data-controller='core.front.core.moderation' >
+		<form action="https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/?csrfKey=714bb4c8fac35f8286ae64e012ef2366&amp;do=multimodComment" method="post" data-ipsPageAction data-role='moderationTools'>
+			
+			
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-972891'></a>
+<article data-memberGroup="4"  id='elComment_972891' class='cPost ipsBox ipsResponsive_pull  ipsComment ipsComment_popular ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone ipsComment_highlighted   '>
+	
+
+	
+		<div class='ipsResponsive_showPhone ipsComment_badges'>
+			<ul class='ipsList_reset ipsFlex ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1'>
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_highlightedGroup'>Administrators</strong></li>
+				
+				
+				
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_popular'>Popular Post</strong></li>
+				
+			</ul>
+		</div>
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/61779-tut/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to Tut's profile">
+		<img src='../../uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif' alt='Tut' loading="lazy">
+	</a>
+
+				
+                    
+                        <span class="cAuthorPane_badge cAuthorPane_badge--moderator cAuthorPane_badge--admin" data-ipsTooltip title="Tut is an administrator"></span>
+                	
+				
+				
+					<a href="../../profile/61779-tut/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Soldier" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Soldier (43/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/61779-tut/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F122502-working-with-3d-maps%252F' title="Go to Tut's profile" class="ipsType_break"><span style='color:#ff0000; font-weight: bold'>Tut</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexffbf.html?do=findComment&amp;comment=972891' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2020-02-17T05:51:44Z' title='17/02/20 05:51 ' data-short='2 yr'>February 17, 2020</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/61779-tut/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F122502-working-with-3d-maps%252F' title="Go to Tut's profile" class="ipsType_break">Tut</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Lead Global Moderator</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/61779-tut/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to Tut's profile">
+		<img src='../../uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif' alt='Tut' loading="lazy">
+	</a>
+
+					
+                        
+                        	<span class="cAuthorPane_badge cAuthorPane_badge--moderator cAuthorPane_badge--admin" data-ipsTooltip title="Tut is an administrator"></span>
+                        
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Soldier" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Soldier (43/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#ff0000; font-weight: bold'>Administrators</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 655
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/61779-tut/content/index.html" rel="nofollow" title="2,747 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 2.7k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-972891_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="972891" data-quotedata="{&quot;userid&quot;:61779,&quot;username&quot;:&quot;Tut&quot;,&quot;timestamp&quot;:1581918704,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:122502,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:972891}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_highlightedGroup">Administrators</strong></li>
+					
+					
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_popular">Popular Post</strong></li>
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_972891_menu" class="ipsComment_ellipsis" id="elControls_972891" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-972891_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_972891_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index.html" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_972891_menu" data-ipsdialog-title="Share this post" id="elSharePost_972891" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexffbf.html?do=findComment&amp;comment=972891" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2020-02-17T05:51:44Z' title='17/02/20 05:51 ' data-short='2 yr'>February 17, 2020</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>
+	<span style="font-size:20px;">Introduction</span>
+</p>
+
+<p>
+	This guide intends to teach 3ds Max users how maps are converted and imported/exported through 3D applications, to then be used in professional renders, visualizations, machinma's or to utilise 3ds Max as a precise map editor. The below video demonstrates some of the possibilities that are being taught through this guide. There is a download link in the video description to IPL's that I have decompiled and filtered.
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/0k_lpsjt3Cw?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	<span style="font-size:20px;">Table of contents</span>
+</p>
+
+<ul>
+	<li>
+		Prerequisites
+	</li>
+	<li>
+		Access to <abbr title="Grand Theft Auto">GTA</abbr> SA assets (read <a href="../119240-mta-modding-in-3d/index.html" rel="">https://forum.multitheftauto.com/topic/119240-<abbr title="Multi Theft Auto">mta</abbr>-modding-in-3d/</a> on how to extract, etcetera)
+		<ul>
+			<li>
+				Converting/decompiling <abbr title="Grand Theft Auto">GTA</abbr> SA assets for compatibility
+			</li>
+		</ul>
+	</li>
+	<li>
+		Caution for performance and processing
+	</li>
+	<li>
+		Importing IPL and IDE to 3D application
+	</li>
+	<li>
+		Model issues and solutions
+		<ul>
+			<li>
+				Solution: Alpha is severely broken or has the wrong material applied on faces
+			</li>
+			<li>
+				Solution: Random polygons appear black with flipped normals (.001 weld + reset/adjust smoothing groups)
+			</li>
+		</ul>
+	</li>
+	<li>
+		Common uses
+		<ul>
+			<li>
+				Converting to FBX
+			</li>
+			<li>
+				Mental Ray adaption
+			</li>
+			<li>
+				Designing and rendering a scene
+			</li>
+			<li>
+				Mapping using Max
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Prerequisites</span>
+</p>
+
+<ul>
+	<li>
+		Must have <a href="https://www.autodesk.com/products/3ds-max/overview" rel="external nofollow">Autodesk 3ds Max</a> of any desired version.
+	</li>
+	<li>
+		Must have <a href="https://www.gtagarage.com/mods/show.php?id=9172" rel="external nofollow">Kam's Maxscripts</a>.
+	</li>
+	<li>
+		Must have <a href="https://gtaforums.com/topic/838479-dff-importer-and-exporter-for-3ds-max/#comments" rel="external nofollow">The Hero's RW importer</a>.
+	</li>
+	<li>
+		Must have <a href="https://da.gta5-mods.com/tools/gims-evo-with-gta-v-support" rel="external nofollow">GIMS EVO (Max 2016 or below)</a>. The beauty of this tool is it can convert various types of materials containing diffuse texture, into standard or <abbr title="Grand Theft Auto">GTA</abbr> 5 material. It supports Kam's and RW material to be converted to standard. It is recommended to add the tool to a secondary copy of 3ds Max due to the heavy size of it. It is possible to have multiple copes of 3ds Max under 1 Student License.
+	</li>
+</ul>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Access to <abbr title="Grand Theft Auto">GTA</abbr> SA assets</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">This guide assumes you have already extracted the entirety of the .img archives found in \models directory of your <abbr title="Grand Theft Auto">GTA</abbr> SA installation. Extracting the interior and cutscene archives is ideal as well. I'm not going to cover the process in this guide, instead please read my <a href="../119240-mta-modding-in-3d/index.html" rel=""><abbr title="Multi Theft Auto">MTA</abbr> Modding in 3D</a> guide.<br />
+	The following files are needed and has a description for where they're stored.</span>
+</p>
+
+<p>
+	- DFF (gta3.img, cutscene.img, gta_int.img @ Grand Theft Auto San Andreas\models)<br />
+	- TXD (gta3.img, cutscene.img, gta_int.img @ Grand Theft Auto San Andreas\models)<br />
+	- IPL (gta3.img, gta_int.img @ Grand Theft Auto San Andreas\models)<br />
+	- IPL [binary] (Grand Theft Auto San Andreas\data\maps)<br />
+	- IDE (Grand Theft Auto San Andreas\data\maps - these are optional as they store 2dfx etc.)<br />
+	- IFP (Grand Theft Auto San Andreas\anim - these .img archives contain IFP archives which stores a good bunch of animations each. It's possible that gta3.img and cutscene.img contains IFP files too.)
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:18px;">Converting/decompiling <abbr title="Grand Theft Auto">GTA</abbr> SA assets for compatibility</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">Before certain data can be processed by 3ds Max, it needs to be decompiled and cleaned up. Fortunately there are modding tools available which can partially get it done, leaving only small bits of work to be done by hand. <abbr title="Grand Theft Auto">GTA</abbr> SA has a set of binary and non-binary IPL files. Every IPL found in gta3.img and gta_int.img are binary, meaning they're in a non-readable format and cannot be read by 3ds Max, as opposed to IPL files found in \maps\ which <em>can</em> be read.<br />
+	IPL files found in .img archives do not contain LOD models, whereas ones in \maps\ does. To help identify a LOD, you can look for lines that ends with -1, although not all of these are LOD's. If you want to load in LOD's separate from high detail's, you'll have to filter out LOD's by hand. </span>
+</p>
+
+<p>
+	In order to decompile binary IPL's you need the <a href="https://www.gtainside.com/en/sanandreas/tools/120305-binary-de-compiler/" rel="external nofollow">Binary decompiler</a> tool from gtainside and the <a href="https://gtaforums.com/topic/856344-sa-how-to-import-ipl-in-3ds-max/?do=findComment&amp;comment=1068818435" rel="external nofollow">IPL name restorer</a> from GTAforums. By simply decompiling the IPL files, they'll rename all of the model names to "unknown" but retain the ID's. The IPL name restorer tool will then restore the ID's by cross searching IDE files. There are cases where the tool fails to perform the rename, this namely happens for models which are animated such as burger shot, mills, signs etcetera. To correct this, simply use <a href="https://dev.prineside.com/gtasa_samp_model_id/" rel="external nofollow">Prineside</a>, look up the ID and get the model name associated with the ID.
+</p>
+
+<p>
+	For those who care to keep LOD's separate from high detail's, simply use a coding editor e.g Notepad++ and use the search function and disable "case dependant" and search "lod". You'll want to have 2 versions of every non-binary IPL, one for LODs and one for high details. For high detail IPLs, delete anything with "lod" in their lines, and opposite for LOD IPLs.<br />
+	The first video in the thread contains decompiled IPL's, sorted with LOD's and without LOD's, and has interior world decompiled as well.<br />
+	Several IPL's can be merged together if so desired, although it may be wise to keep them separate to avoid overloading your scene with thousands of objects. 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Caution for performance and processing</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">For anyone who doesn't have experience with game model conversion and import of game maps, it's crucial to know that a single part of the map, where that part of the map is not even half of a city, can have fatal consequences for your 3D application and cause shutdowns or hour long freezes if not optimised and dealt with. Your computer will not be very welcoming to thousands of objects and especially materials/textures. It can take 1 IPL district for your viewport to reduce to 5 FPS even without materials visible in viewport. Ways to go about this is using instances and xref/proxies. It seems that IPL imports instances, but at times they lose their instance status and become unique from eachother. If this issue is encountered, you'll want one model to be the parent of a lot of other instances. To do this, either check this <a href="https://forums.autodesk.com/t5/3ds-max-modeling/converting-separate-object-into-instanced-objects/m-p/4048824#M5204" rel="external nofollow">Autodesk forum post</a> or open Maxscript listener and add the following code. </span>
+</p>
+
+<pre class="ipsCode prettyprint prettyprinted"><span class="kwd">for</span><span class="pln"> obj </span><span class="kwd">in</span><span class="pln"> selection </span><span class="kwd">do</span><span class="pln"> instancereplace obj $foo</span></pre>
+
+<p>
+	Replace "foo" with the name of the model that you want to use as instance parent. For example you have 11 palm trees, 10 of which are named palm_tree and 1 is named palm_tree_parent. Select those 10 and then replace the word "foo" with "palm_tree_parent". Whenever you make geometry changes to "palm_tree_parent" the 10 others will be affected.
+</p>
+
+<p>
+	Instanced models is a good start on scene optimisation, but is far from great. Deleting objects not seen by the camera or shadows, reflections, etc. can do a great deal of change for your viewport and render speed. Do yourself a favor and google scene/render optimization. I learned a lot for my <a href="https://www.youtube.com/watch?v=otKVjK6jfvc" rel="external nofollow">demoreel</a> through the following articles:<br />
+	<a href="https://evermotion.org/tutorials/show/10105/optimizing-3d-scenes-for-faster-rendering" rel="external nofollow">https://evermotion.org/tutorials/show/10105/optimizing-3d-scenes-for-faster-rendering</a><br />
+	<a href="https://cgtricks.com/save-memory-when-working-with-big-scenes-3dsmax/" rel="external nofollow">https://cgtricks.com/save-memory-when-working-with-big-scenes-3dsmax/</a>
+</p>
+
+<p>
+	That being said, it's important to be aware of how big an impact these 16 year old maps can have on your $2000 workstation. Your computer won't take the maps lightly. If needed, consider splitting map parts into several max project scenes to avoid overload and rendering/work issues. Be extremely cautious with detail of reflection, refraction, shadows, lighting as these REALLY eat up rendering time from a solid 2 minute to 10 minutes+ if done by somebody without sufficient knowledge. Sometimes alpha materials may also slow down the renderer. There are also ways to enhance rendering speed (if using Mental Ray) by choosing IBL (Image based lighting), this can cut down rendering time by 2-6 times rather than using Final gather, however the quality can degrade so it's really a question about whether a shorter render time is desired at the expense of render quality.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Importing IPL and IDE to 3D application</span>
+</p>
+
+<p>
+	Certain <abbr title="Grand Theft Auto">GTA</abbr> scripts such as Kam's vanila and Kam's Goldfish editions comes with IPL import functions titled as "Map IO". These functions can handle not only IPL and IDE import with several settings, but also export. Exporting as .IPL can prove useful for mappers who then convert their IPL to <abbr title="Multi Theft Auto">MTA</abbr> map editor format. I have just found that Goldfish's Map IO allows to to import not only standard materials (negating the need to convert <abbr title="Grand Theft Auto">gta</abbr> material to standard scanline) but also allows to import binary IPL by specifying a local .dat file. This guide however focuses on the traditional way of importing and handling maps using vanilla scripts, not Goldfish's, so that those who want to know more in depth about the formats gets the option to do so. Nevertheless, below spoiler contains a quick overview of doing it using Goldfish's latest script.
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			GOLDFISH EDITION OF KAM'S SCRIPTS METHOD
+		</p>
+
+		<p>
+			What you're able to do in a split second is: <br />
+			- Importing <abbr title="Grand Theft Auto">GTA</abbr> map with standard material, which can then be converted to Mental Ray renderer materials with ease, avoiding having to convert materials using GIMS EVO.<br />
+			- Importing binary data (non-readable compiled text) without having to decompile anything... I spent 2 days filtering and decompiling IPL files for this guide and just saw this. <img alt=":o" data-emoticon="" data-src="https://forum.multitheftauto.com/uploads/emoticons/ohmy.png" height="20" src="../../applications/core/interface/js/spacer.png" srcset="https://forum.multitheftauto.com/uploads/emoticons/ohmy@2x.png 2x" style="height:auto;" title=":o" width="20" /><img alt="](*,)" data-emoticon="" data-src="https://forum.multitheftauto.com/uploads/emoticons/eusa_wall.gif.82fddea65d466b30dcfd4f556ee5763c.gif" height="15" src="../../applications/core/interface/js/spacer.png" style="height:auto;" title="](*,)" width="25" /><br />
+			 
+		</p>
+
+		<p>
+			This importer does the same as vanilla kam's though. Material ID's are :Oed on import.
+		</p>
+
+		<p>
+			<img alt="kams-rw-comparison.png" class="ipsImage" data-ratio="75.00" height="480" style="height:auto;" width="640" data-src="https://cdn.discordapp.com/attachments/308956559201796097/676452848703373335/kams-rw-comparison.png" src="../../applications/core/interface/js/spacer.png" />
+		</p>
+
+		<p>
+			Kam's and RW imported models above.
+		</p>
+
+		<p>
+			Simply select your DFF path (the place where you extracted all of gta3.img's contents), select your image format of choice, select your material of choice, then select your IPL of choice. If you select any from gta3.img or gta_int.img, you'll have to afterwards select a file in your <abbr title="Grand Theft Auto">GTA</abbr> SA installation\data\.dat for the IPL loader to cross search IDE and IPL files to load the binary data.
+		</p>
+
+		<p>
+			I guess you'll be able to export the imported binary IPL's to decompiled IPL's through same script. I haven't tried but just something that crossed my mind. This might be an easy workaround rather than having to use the decompiler and model name restorer method.
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<span style="font-size:20px;">Converting Kam's/Goldfish's imported maps to The Hero's</span>
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<strong>Why is this useful:</strong> Models imported by Kam's or Goldfish's I/O's may incorrectly import material ID's, smoothing groups, normals and vertex colors, whereas The Hero's I/O imports these correctly.
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<img alt="FXaCatw.png" data-ratio="75.08" height="620" style="height:auto;" width="1000" data-src="https://i.imgur.com/FXaCatw.png" src="../../applications/core/interface/js/spacer.png" />
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<ol>
+			<li>
+				Download Anubis' batch importer - this maxscript works with any file format supported by Max. <a href="http://www.scriptspot.com/3ds-max/scripts/batch-loader" rel="external nofollow">http://www.scriptspot.com/3ds-max/scripts/batch-loader</a>
+			</li>
+			<li>
+				Create a new project file and name it <u>The Hero master scene</u> (File -&gt; Save as). This will be a "library" containing all the "correct" models
+			</li>
+			<li>
+				Import a single model using The Hero's I/O. Choose your import settings which will be used when batch importing. Delete the object after import
+			</li>
+			<li>
+				In the top of 3ds Max, click Scripting -&gt; Run script -&gt; batchloader_20.ms. Configure your DFF path. Do not load all objects at once, or your system/application might crash
+			</li>
+			<li>
+				Save the project using CTRL S
+			</li>
+			<li>
+				Import your map or open your map project (if any)
+			</li>
+			<li>
+				Click File -&gt; Import -&gt; Replace -&gt; <u>The Hero master scene</u>. Select all or individual models -&gt; OK
+			</li>
+		</ol>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<b>Important</b>:
+		</p>
+
+		<p>
+			- Do not import every model from at once into Master scene as it can quickly become unstable. Consider creating several master files if this becomes a problem. You can also set viewport display to 'Performance', save scene and restart your app to clear out textures from memory
+		</p>
+
+		<p>
+			- Use Rob's script to set all of The Hero's model names to lowercase after batch import, or you will not be able to use Replace (which is case sensitive): <a href="http://www.scriptspot.com/3ds-max/scripts/object-rename-0" rel="external nofollow">http://www.scriptspot.com/3ds-max/scripts/object-rename-0</a>
+		</p>
+
+		<p>
+			- In the batch importer, leaving 'Auto' ticked will go through every model and import automatically with the last used import settings. Leaving it unticked will require you to select the import settings for each model
+		</p>
+
+		<p>
+			- Only import standard materials if you plan on using the models for another game, or for rendering/visualization. <abbr title="Grand Theft Auto">GTA</abbr> materials are incompatible with modern render engines
+		</p>
+
+		<p>
+			- When replacing models, it also replaces instances. Instances imported with Goldfish's Map I/O share the same model name by default
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<em>Default maxscript (.ms, .mse) file path is \Program Files\Autodesk\3ds Max xxxx\scripts\</em>
+		</p>
+
+		<p>
+			 
+		</p>
+	</div>
+</div>
+
+<p>
+	The below image shows how data files can be imported into 3ds Max along with models, by using Kam's orginal script "Map IO".
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="103.17" height="325" style="height:auto;" width="315" data-src="https://cdn.discordapp.com/attachments/308956559201796097/678465024175505438/unknown.png" src="../../applications/core/interface/js/spacer.png" />
+</p>
+
+<ol>
+	<li>
+		Path to your DFF files. Ideally, you've extracted all of the IMG archive's contents into 1 folder.
+	</li>
+	<li>
+		Version of the game models. Some DFF models are different depending on game to game (III, VC, SA)
+	</li>
+	<li>
+		Select desired image format. Choose the one that your TXD files were extracted as, in my case it's TGA.
+	</li>
+	<li>
+		Import IPL file.
+	</li>
+	<li>
+		Import IDE file.
+	</li>
+	<li>
+		Import ZON file.
+	</li>
+	<li>
+		Import 2dfx data (after IDE is imported).
+	</li>
+</ol>
+
+<p>
+	For the vast majority of binary IPL's, only props, buildings and roads are included. The regular IPL's found in <abbr title="Grand Theft Auto">GTA</abbr> SA installation\maps\ usually contain the land masses and such. The binary IPL's contain stream numbers, so they're split into several different IPL's presumably to put less strain on the <abbr title="Grand Theft Auto">GTA</abbr> streamer. These can be merged into one if desired, but not ideal.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Model issues and solutions</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">There aren't any perfect <abbr title="Grand Theft Auto">GTA</abbr> scripts and tools available to public to flawlessly import maps. For all of them there are either limitations or incorrections. Same applies to Blender. This guide contains some of the issues and possible solutions, but they're far from perfect. A minor issue which doesn't deserve any header is where IPL doesn't import anything, or an error message appears. This is usually the case when a different <abbr title="Grand Theft Auto">GTA</abbr> script has been opened in the current 3ds Max instance. Simply close 3ds Max and run again. If it still happens, repeat the step but try on a new project scene, then save as new project file and merge into the main project scene.</span>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:16px;">Solution: Alpha is severely broken or has the wrong material applied on faces</span>
+</p>
+
+<p>
+	All editions of Kam's scripts has issues with importing face or material index correctly. What this means for imported models is that they have randomly flipped faces (identified by black faces) or have the wrong material applied on the wrong place, e.g wall bricks on a house roof or tree bark on tree leaves.
+</p>
+
+<p>
+	To fix these issues, use either CJ2000's RW importer or The Hero's RW importer. These two import materials and normals nearly correctly, although by looking at the models in viewport there's still black (flipped) faces. This is not the case when rendering the model, however. It's important to note that RW does not always import the rockstar models perfectly. There are cases where faces must be manually flipped, or enable doublesided for particular models. Disabling backface culling (on render) solves it most of the times.
+</p>
+
+<p>
+	It's possible that neither of the above scripts imports 2dfx data unlike Kam's. In which case, it may be necessary to import map with Kam's, preserve the 2dfx positions and then replace corrupted models with RW imported ones.
+</p>
+
+<p>
+	If several models are corrupted, it may be a good idea to look into using some object replacement scripts or functions if they come with 3ds Max. This can speed up with auto-aligning correct models to the corrupted ones. These articles may help:<br />
+	<a href="https://jamiesjewels.typepad.com/jamies_jewels/2011/10/85-3ds-max-quicktip-substituting-objects.html" rel="external nofollow">https://jamiesjewels.typepad.com/jamies_jewels/2011/10/85-3ds-max-quicktip-substituting-objects.html</a><br />
+	<a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2017/ENU/3DSMax/files/GUID-2CABA3D7-ECFA-4D0D-A8C2-E86600BEFBE4-htm.html" rel="external nofollow">https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2017/ENU/3DSMax/files/GUID-2CABA3D7-ECFA-4D0D-A8C2-E86600BEFBE4-htm.html</a>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:16px;">Solution: Random polygons appear black with flipped normals (.001 weld + reset/adjust smoothing groups)</span>
+</p>
+
+<p>
+	The "Alpha is severely broken or has the wrong material applied on faces" section explains part of why this occurs.
+</p>
+
+<p>
+	A way to fix the viewport issue is welding all vertices at 0.001 threshold. This removes any overlapping vertex. The model's smoothing groups can then be reset or adjusted, provided the model is imported with 1 total group which makes for a very smooth and unrealistic appearence.
+</p>
+
+<p>
+	To correct the black polygons, use the "Flip normal" function. Simply flip any black polygons which are supposed to be white. This is not relevant to fix if your end goal is to render the map. Simply follow the method for "RW" scripts from the above section. It's only ideal to flip the faces if it annoys you to view the models corrupted in viewport.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Common uses</span>
+</p>
+
+<p>
+	A lot of things are possible by importing <abbr title="Grand Theft Auto">GTA</abbr> map into 3ds Max. For instance, film makers are able to integrate their own models with ease, customized animations and even physics, FX and much more. <abbr title="Multi Theft Auto">MTA</abbr> mappers can also use the program to create mappings in 3D with a lot of powerful tools to ease the workflow. This can prove exceptionally useful for race maps due to Max's array functions to instance an object a thousand times along a curve to generate roads, loops and what not. 
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:18px;">Converting to FBX</span>
+</p>
+
+<p>
+	Instead of being restricted to Renderware and DFF formats, modelers can now import <abbr title="Grand Theft Auto">GTA</abbr> map and then convert materials and the model components to be suitable with other programs and engines such as Cinema 4D, Unreal Engine and Unity. The conversion to FBX is in fact very simple.
+</p>
+
+<p>
+	In order for DFF models to be converted, their material and lights needs to be converted too. <abbr title="Grand Theft Auto">GTA</abbr>/RW material needs to be converted to standard scanline material. Normally it's only a matter of changing the material to standard and copying over the diffuse texture, and in rare cases, a specular and environment image as well. Lights may need to be adjusted to show the color that they're given in their IDE (if they import as dummies). Once that's done, the models may be exported as FBX (or any other model format). To correctly save as FBX format, follow the below steps.
+</p>
+
+<p>
+	Go to File -&gt; Export -&gt; Export selected. This ensures that only the selected assets are being added to the FBX file, and that none other e.g non-converted models interferes and breaks the file.
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="141.47" height="597" style="height:auto;" width="422" data-src="https://cdn.discordapp.com/attachments/308956559201796097/676903358191239188/unknown.png" src="../../applications/core/interface/js/spacer.png" />
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Next, find a location for the FBX file and name it to your liking. Below are the ideal settings for a <abbr title="Grand Theft Auto">GTA</abbr> map to be exported as FBX.<br />
+	<img src="https://twemoji.maxcdn.com/2/72x72/2611.png" class="ipsEmoji" alt="☑️"> Smoothing Groups - enable if your lighting won't rely on vertex colors. You'll instead want to use smoothing groups to define model's shading.<br />
+	<img src="https://twemoji.maxcdn.com/2/72x72/2611.png" class="ipsEmoji" alt="☑️"> Preserve instances - enable if your scene utilises instances, disable if your scene only contains unique models.<br />
+	<img src="https://twemoji.maxcdn.com/2/72x72/2611.png" class="ipsEmoji" alt="☑️"> Preserve edge orientation<br />
+	<img src="https://twemoji.maxcdn.com/2/72x72/2611.png" class="ipsEmoji" alt="☑️"> Embed Media - Max will reference the textures used in the models, search for them in your texture folder, then paste the ones used in the scene into the FBX file. Very useful to cut down on texture folder size as it'll only use the ones that are used by your map. Can save some computer disk space. This can be useful if your client or member doesn't have access to your global texture folder.<br />
+	<img src="https://twemoji.maxcdn.com/2/72x72/2611.png" class="ipsEmoji" alt="☑️"> Units - normally you'll want metric/meters as that's the system used by SA.<br />
+	<img src="https://twemoji.maxcdn.com/2/72x72/2611.png" class="ipsEmoji" alt="☑️"> Axis Conversion - SA is Z-up whereas VC is Y-up (wrong?), so keep as Z-up.<br />
+	It's optional whether you should export lights or not.
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="121.66" height="750" style="height:auto;" width="616" data-src="https://cdn.discordapp.com/attachments/308956559201796097/676904404846379049/unknown.png" src="../../applications/core/interface/js/spacer.png" />
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	Look through the settings just to ensure that everything adapts to your preferences. If it does, hit OK and it will export. If you get an error message, make sure you've only selected the models with standard material.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:18px;">Mental Ray adaption</span>
+</p>
+
+<p>
+	For those who own a 3ds Max copy of version 2017 or higher, has the ability to change standard scanline materials to Physical among other material types within a few clicks using the Scene Converter (through the Rendering menu). For simple materials with diffuse maps, there are also other tools and 3rd party plugins that can convert between Vray/Corona/Arnold/Mental Ray and so forth.
+</p>
+
+<p>
+	Having Standard Scanline materials in a Mental Ray scene can add to performance and render speed; it's always a good idea to keep materials corresponding to the active renderer. Arch &amp; Design material also has a lot more functionality than Scanline does. In order to convert Scanline to Arch &amp; Design, install the Material Converter from the following site. <a href="https://www.motivacg.com/downloads/scripts-3dsmax/" rel="external nofollow">https://www.motivacg.com/downloads/scripts-3dsmax/</a>. With this tool, simply choose the materials type according to their renderer. On conversion, all standard materials including multimaterials are converted into Arch &amp; Design for use with the Mental Ray renderer.
+</p>
+
+<p>
+	<span style="font-size:18px;">Designing and rendering a scene</span>
+</p>
+
+<p>
+	<img alt="render5ao.png" data-ratio="52.89" height="528" style="height:auto;" width="1000" data-src="https://cdn.discordapp.com/attachments/308956559201796097/678065049025380353/render5ao.png" src="../../applications/core/interface/js/spacer.png" />
+</p>
+
+<p>
+	3D rendering can be a beneficial way of visualizing a project or simply create art out of San Andreas. The above was shot on 3ds Max using Mental Ray as renderer in a scene lit by daylight system and parti volume shader as means of environment fog. A separate render pass was exported on the graphics card for Ambient Occlusion. The beauty and AO map were composited together and then color corrected. I tried to imitate "Welcome to the 80's" style of his <abbr title="Grand Theft Auto">GTA</abbr> SA remastered CG shots. Down below I'll have a video and few lines of text on what I did to achieve part of what you see. It will by no means be the perfect guide to produce this exact image, but it hopefully will help people get started and troubleshoot issues through the process of setting up a scene.
+</p>
+
+<p>
+	In the below video's description there are additional links and information. It's important to pause the video once a new subtitle appears, as they do not show for a very long duration.
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="344" width="459" data-embed-src="https://www.youtube.com/embed/Lfxjp6WkYyc?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	For those looking to add character animations to their project:
+</p>
+
+<ul>
+	<li>
+		Own <a href="https://gamebanana.com/tools/5979" rel="external nofollow"><abbr title="Grand Theft Auto">GTA</abbr> Anim Manager</a>. Minor program that allows you to dig into IFP archives and change/modify their contents. Useful for adding/removing IFP animations in IFP archives.
+	</li>
+	<li>
+		Own <a href="https://www.gtagarage.com/mods/show.php?id=9172" rel="external nofollow">Kam's IFP scripts</a> (comes with the DFF IO etc). Allows you to import animations onto skin rigs.
+	</li>
+</ul>
+
+<p>
+	It is a good idea to make necessary changes to rigs before applying animations. Necessary changes could be subdivision/smooth, material setup etcetera. 
+</p>
+
+<p>
+	After an animation is applied it's recommended to parent the Root bone to a dummy, so the new dummy can rotate the rig without the rig getting <a href="https://lh6.googleusercontent.com/-MvpIbmj9ROM/UR3dqJ3k30I/AAAAAAAAAF0/r3ZKos7wFMo/w800-h800/cU8tNVoyN3NnSUkx_o_gta-san-andreas-funny-bug-bugged-cj.jpg" rel="external nofollow">deformed</a> while posing it.
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/xNsUNm6m3s0?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:18px;">Mapping using Max</span>
+</p>
+
+<p>
+	Over the years a few community contributors have designed tools which export map files from Max, as well as internet converters which convert IPL to <abbr title="Multi Theft Auto">MTA</abbr>. Which one to use really boils down to user preference. The most common however would be Kam's Map IO. This has the functions to export position/rotation data through IPL and IDE file types. These can be parsed/converted through 3rd party tools not necessarily related to Max. Another Max method of generating <abbr title="Multi Theft Auto">MTA</abbr> maps is exporting using 50p's Map exporter.
+</p>
+
+<p>
+	The beauty of creating maps in Max versus <abbr title="Multi Theft Auto">MTA</abbr> map editor, is the ability to work in 3D and really isolate the mapping from everything else with a few clicks. It also offers great scene management, granting users options to import SA map for position reference, hide the SA map while creating their custom map etcetera. It also allows for visualizations of mappings using modern 3D graphics engines. 3ds Max has a lot of tools to create arrays or scatter objects around the surface of another object, those objects' pos and rot data can then be converted to <abbr title="Multi Theft Auto">MTA</abbr> map file format. Mapping in Max can prove exceptionally handy for race mappers, or for those looking to group objects and move them all together, map with attention to precision or instance thousands and thousands of objects.
+</p>
+
+<p>
+	 
+</p>
+
+
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Like">
+					
+							<span>
+								<img src='../../uploads/reactions/react_like.png' alt="Like" loading="lazy">
+							</span>
+							<span>
+								7
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_972891_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+			
+			
+<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366" />
+
+
+		</form>
+	</div>
+
+	
+	
+	
+	
+	
+
+	
+		<div class='ipsBox ipsPadding ipsResponsive_pull ipsResponsive_showPhone ipsMargin_top'>
+			
+				<div class='ipsResponsive_noFloat ipsResponsive_block ipsMargin_bottom:half'>
+					
+
+
+				</div>
+			
+			<div class='ipsResponsive_noFloat ipsResponsive_block'>
+				
+
+<div data-followApp='forums' data-followArea='topic' data-followID='122502' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall " data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>1</span>
+	</a>
+
+</div>
+			</div>
+			
+		</div>
+	
+</div>
+
+
+
+<div class='ipsPager ipsSpacer_top'>
+	<div class="ipsPager_prev">
+		
+			<a href="../../forum/185-user-guides/index.html" title="Go to User Guides" rel="parent">
+				<span class="ipsPager_type">Go to topic listing</span>
+			</a>
+		
+	</div>
+	
+</div>
+
+
+						
+
+
+	<div class='cWidgetContainer '  data-role='widgetReceiver' data-orientation='horizontal' data-widgetArea='footer'>
+		<ul class='ipsList_reset'>
+			
+				
+					
+					<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='app_core_activeUsers_6o9n9w8dl' data-blockConfig="true" data-blockTitle="Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page."  data-controller='core.front.widgets.block'>
+<div data-controller='core.front.core.onlineUsersWidget'>
+    <h3 class='ipsType_reset ipsWidget_title'>
+        
+            Recently Browsing
+        
+        
+        &nbsp;&nbsp;<span class='ipsType_light ipsType_unbold ipsType_medium' data-memberCount="0">0 members</span>
+        
+    </h3>
+    <div class='ipsWidget_inner ipsPad'>
+        <ul class='ipsList_inline ipsList_csv ipsList_noSpacing ipsType_normal'>
+            
+                <li class='ipsType_reset ipsType_medium ipsType_light' data-noneOnline>No registered users viewing this page.</li>
+            
+        </ul>
+        
+    </div>
+</div></li>
+				
+			
+		</ul>
+	</div>
+
+					</div>
+					
+
+
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
+	
+		
+
+
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/80-multi-theft-auto-san-andreas-1x/index.html'>
+						<span>Multi Theft Auto: San Andreas 1.x <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/185-user-guides/index.html'>
+						<span>User Guides <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					Working with 3D maps
+				
+			</li>
+		
+	</ul>
+</nav>
+				</div>
+			</div>
+			
+		</main>
+		<footer id='ipsLayout_footer' class='ipsClearfix'>
+			<div class='ipsLayout_container'>
+				
+				
+
+<div id="mta_betaMark">Beta. Subject to change.</div>
+
+
+
+<ul id='elFooterSocialLinks' class='ipsList_inline ipsType_center ipsSpacer_top'>
+	
+
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.facebook.com/multitheftauto' target='_blank' class='cShareLink cShareLink_facebook' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://twitter.com/mtaqa' target='_blank' class='cShareLink cShareLink_twitter' rel='noopener noreferrer'><i class='fa fa-twitter'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://github.com/multitheftauto' target='_blank' class='cShareLink cShareLink_github' rel='noopener noreferrer'><i class='fa fa-github'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.youtube.com/user/MTAQA' target='_blank' class='cShareLink cShareLink_youtube' rel='noopener noreferrer'><i class='fa fa-youtube'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.linkedin.com/company/multitheftauto/' target='_blank' class='cShareLink cShareLink_linkedin' rel='noopener noreferrer'><i class='fa fa-linkedin'></i></a>
+		</li>
+	
+
+	
+<li class="cUserNav_icon">
+  <a href="https://www.reddit.com/r/MultiTheftAuto/" target="_blank" class="cShareLink cShareLink_reddit" rel="noopener noreferrer">
+    <i class="fa fa-reddit"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://www.twitch.tv/mtaqa" target="_blank" class="cShareLink cShareLink_twitch" rel="noopener noreferrer">
+    <i class="fa fa-twitch"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://discord.gg/mtasa" target="_blank" class="cShareLink cShareLink_discord" rel="noopener">
+    <img src="../../uploads/set_resources_22/fcd8efae86176d70eedf4d57dcc4f985_icon-discord_287702449.png" alt="Discord" width="28" height="28">
+  </a>
+</li>
+
+</ul>
+
+
+<ul class='ipsList_inline ipsType_center ipsSpacer_top' id="elFooterLinks">
+	
+	
+	
+	
+		<li>
+			<a href='#elNavTheme_menu' id='elNavTheme' data-ipsMenu data-ipsMenu-above>Theme <i class='fa fa-caret-down'></i></a>
+			<ul id='elNavTheme_menu' class='ipsMenu ipsMenu_selectable ipsHide'>
+			
+				<li class='ipsMenu_item ipsMenu_itemChecked'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIyNTAyLXdvcmtpbmctd2l0aC0zZC1tYXBzLw==">
+					<button type='submit' name='id' value='22' class='ipsButton ipsButton_link ipsButton_link_secondary'>Beta (Default)</button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIyNTAyLXdvcmtpbmctd2l0aC0zZC1tYXBzLw==">
+					<button type='submit' name='id' value='20' class='ipsButton ipsButton_link ipsButton_link_secondary'>Dark </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIyNTAyLXdvcmtpbmctd2l0aC0zZC1tYXBzLw==">
+					<button type='submit' name='id' value='19' class='ipsButton ipsButton_link ipsButton_link_secondary'>Light </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIyNTAyLXdvcmtpbmctd2l0aC0zZC1tYXBzLw==">
+					<button type='submit' name='id' value='25' class='ipsButton ipsButton_link ipsButton_link_secondary'>Night </button>
+					</form>
+				</li>
+			
+			</ul>
+		</li>
+	
+	
+	
+		<li><a rel="nofollow" href='../../contact/index.html' >Contact Us</a></li>
+	
+</ul>	
+
+
+<p id='elCopyright'>
+	<span id='elCopyright_userLine'></span>
+	<a rel='nofollow' title='Invision Community' href='https://www.invisioncommunity.com/'>Powered by Invision Community</a>
+</p>
+			</div>
+		</footer>
+		
+<div id='elMobileDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsFlex ipsFlex-fd:column'>
+			
+				<div class='ipsPadding ipsBorder_bottom'>
+					<ul class='ipsToolList ipsToolList_vertical'>
+						<li>
+							<a href='../../login/index.html' id='elSigninButton_mobile' class='ipsButton ipsButton_light ipsButton_small ipsButton_fullWidth'>Existing user? Sign In</a>
+						</li>
+						
+							<li>
+								
+									<a href='../../register/index.html' data-ipsDialog data-ipsDialog-size='narrow' data-ipsDialog-title='Sign Up' data-ipsDialog-fixed='true' id='elRegisterButton_mobile' class='ipsButton ipsButton_small ipsButton_fullWidth ipsButton_important'>Sign Up</a>
+								
+							</li>
+						
+					</ul>
+				</div>
+			
+
+			
+
+			<ul class='ipsDrawer_list ipsFlex-flex:11'>
+				
+
+				
+				
+				
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Browse</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../index.html' >
+					Forums
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../12275-forum-rules/index.html' >
+					Forum Rules
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../staff/index.html' >
+					Staff
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../online/index.html' >
+					Online Users
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../leaderboard/index.html' >
+					Leaderboard
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Activity</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../discover/index.html' >
+					All Activity
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+
+	
+
+	
+		
+			<li>
+				<a href='../../search/index.html' >
+					Search
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>MTA Network</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>MTA Network</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Social Media</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>Social Media</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+				
+			</ul>
+
+			
+		</div>
+	</div>
+</div>
+
+<div id='elMobileCreateMenuDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsSpacer_bottom ipsPad'>
+			<ul class='ipsDrawer_list'>
+				<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+		
+		
+
+	
+	<script type='text/javascript'>
+		var ipsDebug = false;		
+	
+		var CKEDITOR_BASEPATH = '../../applications/core/interface/ckeditor/ckeditor/index.html';
+	
+		var ipsSettings = {
+			
+			
+			cookie_path: "/",
+			
+			cookie_prefix: "__Host-",
+			
+			
+			cookie_ssl: true,
+			
+			upload_imgURL: "",
+			message_imgURL: "",
+			notification_imgURL: "",
+			baseURL: "//forum.multitheftauto.com/",
+			jsURL: "//forum.multitheftauto.com/applications/core/interface/js/js.php",
+			csrfKey: "714bb4c8fac35f8286ae64e012ef2366",
+			antiCache: "977ee345841657049756",
+			jsAntiCache: "977ee345841658990715",
+			disableNotificationSounds: true,
+			useCompiledFiles: true,
+			links_external: true,
+			memberID: 0,
+			lazyLoadEnabled: true,
+			blankImg: "//forum.multitheftauto.com/applications/core/interface/js/spacer.png",
+			googleAnalyticsEnabled: false,
+			matomoEnabled: false,
+			viewProfiles: true,
+			mapProvider: 'none',
+			mapApiKey: '',
+			pushPublicKey: "BF0jugJbt4XMR7oOEkdDzhxlfUA_S_sdGhSwmgdA4QIkQLHVO4dNMUseahcsyX_G97J81ncc6GqHARuEBoLyWGI",
+			relativeDates: true
+		};
+		
+		
+		
+		
+			ipsSettings['maxImageDimensions'] = {
+				width: 1000,
+				height: 750
+			};
+		
+		
+	</script>
+
+
+
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_libraryef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_js_lang_1ef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frameworkef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/global_global_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frontef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/front_front_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_forums/front_front_topicef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_mapef65.js?v=977ee345841658990715' data-ips></script>
+
+
+
+	<script type='text/javascript'>
+		
+			ips.setSetting( 'date_format', jQuery.parseJSON('"dd\/mm\/yy"') );
+		
+			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
+		
+			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+		
+			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
+		
+			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1626352838') );
+		
+			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+		
+			ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
+		
+			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+		
+		
+	</script>
+
+
+
+<script type='application/ld+json'>
+{
+    "name": "Working with 3D maps",
+    "headline": "Working with 3D maps",
+    "text": "Introduction\n \n\n\n\tThis guide intends to teach 3ds Max users how maps are converted and imported/exported through 3D applications, to then be used in professional renders, visualizations, machinma\u0027s or to utilise 3ds Max as a precise\u00a0map editor. The below video demonstrates some of the possibilities that are being taught through this guide. There is a download link in the video description to IPL\u0027s that I have decompiled and filtered.\n \n\n\n\t\n\t\t\n\t\n\n\n\n\tTable of contents\n \n\n\n\t\n\t\tPrerequisites\n\t \n\t\n\t\tAccess to GTA SA assets (read\u00a0https://forum.multitheftauto.com/topic/119240-mta-modding-in-3d/\u00a0on how to extract, etcetera)\n\t\t\n\t\t\t\n\t\t\t\tConverting/decompiling GTA SA assets for compatibility\n\t\t\t \n\t\t\n\t \n\t\n\t\tCaution for performance and processing\n\t \n\t\n\t\tImporting IPL and IDE to 3D application\n\t \n\t\n\t\tModel issues and solutions\n\t\t\n\t\t\t\n\t\t\t\tSolution: Alpha is severely broken or has the wrong material applied on faces\n\t\t\t \n\t\t\t\n\t\t\t\tSolution: Random polygons appear black with flipped normals (.001 weld + reset/adjust smoothing groups)\n\t\t\t \n\t\t\n\t \n\t\n\t\tCommon uses\n\t\t\n\t\t\t\n\t\t\t\tConverting to FBX\n\t\t\t \n\t\t\t\n\t\t\t\tMental Ray adaption\n\t\t\t \n\t\t\t\n\t\t\t\tDesigning and rendering a scene\n\t\t\t \n\t\t\t\n\t\t\t\tMapping using Max\n\t\t\t \n\t\t\n\t \n\n\n\n\t\u00a0\n \n\n\n\tPrerequisites\n \n\n\n\t\n\t\tMust have\u00a0Autodesk 3ds Max\u00a0of any desired version.\n\t \n\t\n\t\tMust have\u00a0Kam\u0027s Maxscripts.\n\t \n\t\n\t\tMust have The Hero\u0027s RW importer.\n\t \n\t\n\t\tMust have GIMS EVO (Max 2016 or below). The beauty of this tool is it can convert various types of materials containing diffuse texture, into standard or GTA 5 material. It supports Kam\u0027s and RW material to be converted to standard. It is recommended to add the tool to a secondary copy of 3ds Max due to the heavy size of it. It is possible to have multiple copes of 3ds Max under 1 Student License.\n\t \n\n\n\n\t\u00a0\n \n\n\n\tAccess to GTA SA assets\n \n\n\n\tThis guide assumes you have already extracted the entirety of the .img archives found in \\models directory of your GTA SA installation. Extracting the interior and cutscene archives is ideal as well. I\u0027m not going to cover the process in this guide, instead please read my MTA Modding in 3D guide. \n\tThe following files are needed and has a description for where they\u0027re stored.\n \n\n\n\t- DFF (gta3.img, cutscene.img, gta_int.img @\u00a0Grand Theft Auto San Andreas\\models) \n\t- TXD\u00a0(gta3.img, cutscene.img, gta_int.img @\u00a0Grand Theft Auto San Andreas\\models) \n\t- IPL (gta3.img, gta_int.img @\u00a0Grand Theft Auto San Andreas\\models) \n\t- IPL [binary] (Grand Theft Auto San Andreas\\data\\maps) \n\t- IDE (Grand Theft Auto San Andreas\\data\\maps - these are optional as they store 2dfx etc.) \n\t- IFP (Grand Theft Auto San Andreas\\anim - these .img archives contain IFP archives which stores a good bunch of animations each. It\u0027s possible that gta3.img and cutscene.img contains IFP files too.)\n \n\n\n\t\u00a0\n \n\n\n\tConverting/decompiling GTA SA assets for compatibility\n \n\n\n\tBefore certain data can be processed by 3ds Max, it needs to be decompiled and cleaned up. Fortunately there are modding tools available which can partially get it done, leaving only small bits of work to be done by hand. GTA SA has a set of binary and non-binary IPL files. Every IPL found in gta3.img and gta_int.img are binary, meaning they\u0027re in a non-readable format and cannot be read by 3ds Max, as opposed to IPL files found in \\maps\\ which can be read. \n\tIPL files found in .img archives do not contain LOD models, whereas ones in \\maps\\ does. To help identify a LOD, you can look for lines that ends with -1, although not all of these are LOD\u0027s. If you want to load in LOD\u0027s separate from high detail\u0027s, you\u0027ll have to filter out LOD\u0027s by hand.\u00a0\n \n\n\n\tIn order to decompile binary IPL\u0027s you need the Binary decompiler tool from gtainside and the IPL name restorer from GTAforums. By simply decompiling the IPL files, they\u0027ll rename all of the model names to \"unknown\" but retain the ID\u0027s. The IPL name restorer tool will then restore the ID\u0027s by cross searching IDE files. There are cases where the tool fails to perform the rename, this namely happens for models which are animated such as burger shot, mills, signs etcetera. To correct this, simply use Prineside, look up the ID and get the model name associated with the ID.\n \n\n\n\tFor those who care to keep LOD\u0027s separate from high detail\u0027s, simply use a coding editor e.g Notepad++ and use the search function and disable \"case dependant\" and search \"lod\". You\u0027ll want to have 2 versions of every non-binary IPL, one for LODs and one for high details. For high detail IPLs, delete anything with \"lod\" in their lines, and opposite for LOD IPLs. \n\tThe first video in the thread\u00a0contains decompiled IPL\u0027s, sorted with LOD\u0027s and without LOD\u0027s, and has interior world decompiled as well. \n\tSeveral IPL\u0027s can be merged together if so desired, although it may be wise to keep them separate to avoid overloading your scene with thousands of objects.\u00a0\n \n\n\n\t\u00a0\n \n\n\n\tCaution for performance and processing\n \n\n\n\tFor anyone who doesn\u0027t have experience with game model conversion and import\u00a0of game maps, it\u0027s crucial to know that a single part of the map, where that part of the map is not even half of a city, can have fatal consequences for your 3D application and cause shutdowns or hour long freezes if not optimised and dealt with. Your computer will not be very welcoming to thousands of objects and especially materials/textures. It can take 1 IPL district for your viewport to reduce to 5 FPS even without materials visible in viewport. Ways to go about this is using instances and xref/proxies. It seems that IPL imports instances, but at times they lose their instance status and become unique from eachother. If this issue is encountered, you\u0027ll want one model to be the parent of a lot of other instances. To do this, either check this Autodesk forum post or open Maxscript listener and add the following code.\u00a0\n \n\nfor obj in selection do instancereplace obj $foo\n\n\n\tReplace \"foo\" with the name of the model that you want to use as instance parent. For example you have 11 palm trees, 10 of which are named palm_tree and 1 is named palm_tree_parent. Select those 10 and then replace the word \"foo\" with \"palm_tree_parent\". Whenever you make geometry changes to \"palm_tree_parent\" the 10 others will be affected.\n \n\n\n\tInstanced models is a good start on scene optimisation, but is far from great. Deleting objects not seen by the camera or shadows, reflections, etc. can do a great deal of change for your viewport and render speed. Do yourself a favor and google scene/render optimization. I learned a lot for my demoreel through the following articles: \n\thttps://evermotion.org/tutorials/show/10105/optimizing-3d-scenes-for-faster-rendering \n\thttps://cgtricks.com/save-memory-when-working-with-big-scenes-3dsmax/\n \n\n\n\tThat being said, it\u0027s important to be aware of how big an impact these 16 year old maps can have on your $2000 workstation. Your computer won\u0027t take the maps lightly. If needed, consider splitting map parts into several max project scenes to avoid overload and rendering/work issues. Be extremely cautious with detail of reflection, refraction, shadows, lighting as these REALLY eat up rendering time from a solid 2 minute to 10 minutes+ if done by somebody without sufficient knowledge. Sometimes alpha materials may also slow down the renderer.\u00a0There are also ways to enhance rendering speed (if using Mental Ray) by choosing IBL (Image based lighting), this can cut down rendering time by 2-6 times rather than using Final gather, however the quality can degrade so it\u0027s really a question about whether a shorter render time is desired at the expense of render quality.\n \n\n\n\t\u00a0\n \n\n\n\tImporting IPL and IDE to 3D application\n \n\n\n\tCertain GTA scripts such as Kam\u0027s vanila and Kam\u0027s Goldfish editions comes with IPL import functions titled as \"Map IO\". These functions can handle not only IPL and IDE import with several settings, but also export. Exporting as .IPL can prove useful for mappers who then convert their IPL to MTA map editor format.\u00a0I have just found that Goldfish\u0027s Map IO allows to to import not only standard materials (negating the need to convert gta material to standard scanline) but also allows to import binary IPL by specifying a local .dat file. This guide however focuses on the traditional way of importing and handling maps using vanilla scripts, not Goldfish\u0027s, so that those who want to know more in depth about the formats gets the option to do so. Nevertheless, below spoiler contains a quick overview of doing it using Goldfish\u0027s latest script.\n \n\n\n\n\n\tThe below image shows how data files can be imported into 3ds Max along with models, by using Kam\u0027s orginal script \"Map IO\".\n \n\n\n\t\n \n\n\n\t\n\t\tPath to your DFF files. Ideally, you\u0027ve extracted all of the IMG archive\u0027s contents into 1 folder.\n\t \n\t\n\t\tVersion of the game models. Some DFF models are different depending on game to game (III, VC, SA)\n\t \n\t\n\t\tSelect desired image format. Choose the one that your TXD files were extracted as, in my case it\u0027s TGA.\n\t \n\t\n\t\tImport IPL file.\n\t \n\t\n\t\tImport IDE file.\n\t \n\t\n\t\tImport ZON file.\n\t \n\t\n\t\tImport 2dfx data (after IDE is imported).\n\t \n\n\n\n\tFor the vast majority of binary IPL\u0027s, only props, buildings and roads\u00a0are included. The regular IPL\u0027s found in GTA SA installation\\maps\\ usually contain the land masses and such. The binary IPL\u0027s contain stream numbers, so they\u0027re split into several different IPL\u0027s presumably to put less strain on the GTA streamer. These can be merged into one if desired, but not ideal.\n \n\n\n\t\u00a0\n \n\n\n\tModel issues and solutions\n \n\n\n\tThere aren\u0027t any perfect GTA scripts and tools available to public to flawlessly import maps. For all of them there are either limitations or incorrections. Same applies to Blender.\u00a0This guide contains some of the issues and possible solutions, but they\u0027re far from perfect. A minor issue which doesn\u0027t deserve any header is where IPL doesn\u0027t import anything, or an error message appears. This is usually the case when a different GTA script has been opened in the current 3ds Max instance. Simply close 3ds Max and run again. If it still happens, repeat the step but try on a new project scene, then save as new project file and merge into the main project scene.\n \n\n\n\t\u00a0\n \n\n\n\tSolution: Alpha is severely broken or has the wrong material applied on faces\n \n\n\n\tAll editions of Kam\u0027s scripts has issues with importing face or material index correctly. What this means for imported models is that they have randomly flipped faces (identified by black faces) or have the wrong material applied on the wrong place, e.g wall bricks on a house roof or tree bark on tree leaves.\n \n\n\n\tTo fix these issues, use either CJ2000\u0027s RW importer or The Hero\u0027s RW importer. These two import materials and normals nearly correctly, although by looking at the models in viewport there\u0027s still black (flipped) faces. This is not the case when rendering the model, however. It\u0027s important to note that RW does not always import the rockstar models perfectly. There are cases where faces must be manually flipped, or enable doublesided for particular models. Disabling backface culling (on render)\u00a0solves it most of the times.\n \n\n\n\tIt\u0027s possible that neither of the above scripts imports 2dfx data unlike Kam\u0027s. In which case, it may be necessary to import map with Kam\u0027s, preserve the 2dfx positions and then replace corrupted models with RW imported ones.\n \n\n\n\tIf several models are corrupted, it may be a good idea to look into using some object replacement scripts or functions if they come with 3ds Max. This can speed up with auto-aligning correct models to the corrupted ones. These articles may help: \n\thttps://jamiesjewels.typepad.com/jamies_jewels/2011/10/85-3ds-max-quicktip-substituting-objects.html \n\thttps://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2017/ENU/3DSMax/files/GUID-2CABA3D7-ECFA-4D0D-A8C2-E86600BEFBE4-htm.html\n \n\n\n\t\u00a0\n \n\n\n\tSolution: Random polygons appear black with flipped normals (.001 weld + reset/adjust smoothing groups)\n \n\n\n\tThe \"Alpha is severely broken or has the wrong material applied on faces\" section explains part of why this occurs.\n \n\n\n\tA way to fix the viewport issue is welding all vertices at 0.001 threshold. This removes any overlapping vertex. The model\u0027s smoothing groups can then be reset or adjusted, provided the model is imported with 1 total group which\u00a0makes\u00a0for a very smooth and unrealistic appearence.\n \n\n\n\tTo correct the black polygons, use the \"Flip normal\" function. Simply flip any black polygons which are supposed to be white. This is not relevant to fix if your end goal is to render the map. Simply follow the method for \"RW\" scripts from the above section. It\u0027s only ideal to flip the faces if it annoys you to view the models corrupted in viewport.\n \n\n\n\t\u00a0\n \n\n\n\tCommon uses\n \n\n\n\tA lot of things are possible by importing GTA map into 3ds Max. For instance, film makers are able to integrate their own models with ease, customized animations and even physics, FX and much more. MTA mappers can also use the program to create mappings in 3D with a lot of powerful tools to ease the workflow. This can prove exceptionally useful for race maps due to Max\u0027s array functions to instance an object a thousand times along a curve to generate roads, loops and what not.\u00a0\n \n\n\n\t\u00a0\n \n\n\n\tConverting to FBX\n \n\n\n\tInstead of being restricted to Renderware and DFF formats, modelers can now import GTA map and then convert materials and the model components to be suitable with other programs and engines such as Cinema 4D, Unreal Engine and Unity. The conversion to FBX is in fact very simple.\n \n\n\n\tIn order for DFF models to be converted, their material and lights needs to be converted too. GTA/RW material needs to be converted to standard scanline material. Normally it\u0027s only a matter of changing the material to standard and copying over the diffuse texture, and in rare cases, a specular and environment image as well. Lights may need to be adjusted to show the color that they\u0027re given in their IDE (if they import as dummies). Once that\u0027s done, the models may be exported as FBX (or any other model format). To correctly save as FBX format, follow the below steps.\n \n\n\n\tGo to File -\u0026gt; Export -\u0026gt; Export selected. This ensures that only the selected assets are being added to the FBX file, and that none other e.g non-converted models interferes and breaks the file.\n \n\n\n\t\n \n\n\n\t\u00a0\n \n\n\n\tNext, find a location for the FBX file and name it to your liking. Below are the ideal settings for a GTA map to be exported as FBX. \n\t\u2611\ufe0f\u00a0Smoothing Groups - enable if your lighting won\u0027t rely on vertex colors. You\u0027ll instead want to use smoothing groups to define model\u0027s shading. \n\t\u2611\ufe0f\u00a0Preserve instances - enable if your scene utilises instances, disable if your scene only contains unique models. \n\t\u2611\ufe0f\u00a0Preserve edge orientation \n\t\u2611\ufe0f\u00a0Embed Media - Max will reference the textures used in the models, search for them in your texture folder, then paste the ones used in the scene into the FBX file. Very useful to cut down on texture folder size as it\u0027ll only use the ones that are used by your map. Can save some computer disk space. This can be useful if your client or member doesn\u0027t have access to your global texture folder. \n\t\u2611\ufe0f\u00a0Units - normally you\u0027ll want metric/meters as that\u0027s the system used by SA. \n\t\u2611\ufe0f\u00a0Axis Conversion - SA is Z-up whereas VC is Y-up (wrong?), so keep as Z-up. \n\tIt\u0027s optional whether you should export lights or not.\n \n\n\n\t\n \n\n\n\t\u00a0\n \n\n\n\tLook through the settings just to ensure that everything adapts to your preferences. If it does, hit OK and it will export. If you get an error message, make sure you\u0027ve only selected the models with standard material.\n \n\n\n\t\u00a0\n \n\n\n\tMental Ray adaption\n \n\n\n\tFor those who own a 3ds Max copy of version 2017 or higher, has the ability to change standard scanline materials to Physical among other material types\u00a0within a few clicks using the Scene Converter (through the Rendering menu). For simple materials with diffuse maps, there are also other tools and 3rd party plugins that can convert between Vray/Corona/Arnold/Mental Ray and so forth.\n \n\n\n\tHaving Standard Scanline materials in a Mental Ray scene can add to performance and render speed; it\u0027s always a good idea to keep materials corresponding to the active renderer. Arch \u0026amp; Design material also has a lot more functionality than Scanline does. In order to convert Scanline to Arch \u0026amp; Design, install the Material Converter from the following site.\u00a0https://www.motivacg.com/downloads/scripts-3dsmax/. With this tool, simply choose the materials type according to their renderer. On conversion, all standard materials including multimaterials are converted into Arch \u0026amp; Design for use with the Mental Ray renderer.\n \n\n\n\tDesigning and rendering a scene\n \n\n\n\t\n \n\n\n\t3D rendering can be a beneficial way of visualizing a project or simply create art out of San Andreas. The above was shot on 3ds Max using Mental Ray as renderer in a scene lit by daylight system and parti volume shader as means of environment fog. A separate render pass was exported on the graphics card for Ambient Occlusion. The beauty and AO map were composited together and then color corrected. I tried to imitate \"Welcome to the 80\u0027s\" style of his GTA SA remastered CG shots. Down below I\u0027ll have a video and few lines of text on what I did to achieve part of what you see. It will by no means be the perfect guide to produce this exact image, but it hopefully will help people get started and troubleshoot issues through the process of setting up a scene.\n \n\n\n\tIn the below video\u0027s description there are additional links and information. It\u0027s important to pause the video once a new subtitle appears, as they do not show for a very long duration.\n \n\n\n\t\n\t\t\n\t\n\n\n\n\t\u00a0\n \n\n\n\tFor those looking to add character animations to their project:\n \n\n\n\t\n\t\tOwn GTA Anim Manager. Minor program that allows you to dig into IFP archives and change/modify their contents. Useful for adding/removing IFP animations in IFP archives.\n\t \n\t\n\t\tOwn Kam\u0027s IFP scripts (comes with the DFF IO etc). Allows you to import animations onto skin rigs.\n\t \n\n\n\n\tIt is a good idea to make necessary changes to rigs before applying animations. Necessary changes could be subdivision/smooth, material setup etcetera.\u00a0\n \n\n\n\tAfter an animation is applied it\u0027s recommended to parent the Root bone to a dummy, so the new dummy can rotate the rig without the rig getting deformed while posing it.\n \n\n\n\t\n\t\t\n\t\n\n\n\n\t\u00a0\n \n\n\n\tMapping using Max\n \n\n\n\tOver the years a few community contributors have designed tools which export map files from Max, as well as internet converters which convert IPL to MTA. Which one to use really boils down to user preference. The most common however would be Kam\u0027s Map IO. This has the functions to export position/rotation data through IPL and IDE file types. These can be parsed/converted through 3rd party tools not necessarily related to Max. Another Max method of generating MTA maps is exporting using 50p\u0027s Map exporter.\n \n\n\n\tThe beauty of creating maps in Max versus MTA map editor, is the ability to work in 3D and really isolate the mapping from everything else with a few clicks. It also offers great scene management, granting users options to import SA map for position reference, hide the SA map while creating their custom map etcetera. It also allows for visualizations of mappings using modern 3D graphics engines. 3ds Max has a lot of tools to create arrays or scatter objects around the surface of another object, those objects\u0027 pos and rot data can then be converted to MTA map file format. Mapping in Max can prove exceptionally handy for race mappers, or for those looking to group objects and move them all together, map with attention to precision or instance thousands and thousands of objects.\n \n\n\n\t\u00a0\n \n",
+    "dateCreated": "2020-02-17T05:51:44+0000",
+    "datePublished": "2020-02-17T05:51:44+0000",
+    "dateModified": "2020-02-17T05:51:44+0000",
+    "image": "https://forum.multitheftauto.com/uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif",
+    "author": {
+        "@type": "Person",
+        "name": "Tut",
+        "image": "https://forum.multitheftauto.com/uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif",
+        "url": "https://forum.multitheftauto.com/profile/61779-tut/"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/ViewAction",
+            "userInteractionCount": 15226
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 0
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/FollowAction",
+            "userInteractionCount": 1
+        }
+    ],
+    "@context": "http://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/",
+    "isPartOf": {
+        "@id": "https://forum.multitheftauto.com/#website"
+    },
+    "publisher": {
+        "@id": "https://forum.multitheftauto.com/#organization",
+        "member": {
+            "@type": "Person",
+            "name": "Tut",
+            "image": "https://forum.multitheftauto.com/uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif",
+            "url": "https://forum.multitheftauto.com/profile/61779-tut/"
+        }
+    },
+    "url": "https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/",
+    "discussionUrl": "https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://forum.multitheftauto.com/topic/122502-working-with-3d-maps/"
+    },
+    "pageStart": 1,
+    "pageEnd": 1
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://forum.multitheftauto.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://forum.multitheftauto.com/#website",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://forum.multitheftauto.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (UK)",
+            "alternateName": "en-GB"
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://forum.multitheftauto.com/#organization",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "logo": {
+        "@type": "ImageObject",
+        "@id": "https://forum.multitheftauto.com/#logo",
+        "url": "https://forum.multitheftauto.com/uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png"
+    },
+    "sameAs": [
+        "https://www.facebook.com/multitheftauto",
+        "https://twitter.com/mtaqa",
+        "https://github.com/multitheftauto",
+        "https://www.youtube.com/user/MTAQA",
+        "https://www.linkedin.com/company/multitheftauto/"
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/80-multi-theft-auto-san-andreas-1x/",
+                "name": "Multi Theft Auto: San Andreas 1.x"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/185-user-guides/",
+                "name": "User Guides"
+            }
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "ContactPage",
+    "url": "https://forum.multitheftauto.com/contact/"
+}	
+</script>
+
+
+		
+		
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		
+		
+		
+        
+	</body>
+</html>

@@ -1,0 +1,4061 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+        
+		<title>Lua for absolute beginners - User Guides - Multi Theft Auto: Forums</title>
+		
+		
+		
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	
+	
+
+
+	<meta name="twitter:card" content="summary" />
+
+
+	
+		<meta name="twitter:site" content="@mtaqa" />
+	
+
+
+	
+		
+			
+				<meta property="og:title" content="Lua for absolute beginners">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:type" content="website">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:url" content="index.html">
+			
+		
+	
+
+	
+		
+			
+				<meta name="description" content="Lua tutorial for absolute beginners This tutorial can also be viewed on GitHub This tutorial aims to teach the Lua scripting language to those with 0 previous experience with programming / scripting. This guide will start with explaining some Lua concepts, and will later on move to explaining MTA...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:description" content="Lua tutorial for absolute beginners This tutorial can also be viewed on GitHub This tutorial aims to teach the Lua scripting language to those with 0 previous experience with programming / scripting. This guide will start with explaining some Lua concepts, and will later on move to explaining MTA...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:updated_time" content="2019-12-27T18:23:38Z">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:site_name" content="Multi Theft Auto: Forums">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:locale" content="en_GB">
+			
+		
+	
+
+
+	
+		<link rel="canonical" href="index.html" />
+	
+
+
+
+
+<link rel="manifest" href="../../manifest.webmanifest/index.html">
+<meta name="msapplication-config" content="../../browserconfig.xml/index.html">
+<meta name="msapplication-starturl" content="/">
+<meta name="application-name" content="Multi Theft Auto: Forums">
+<meta name="apple-mobile-web-app-title" content="Multi Theft Auto: Forums">
+
+	<meta name="theme-color" content="#121319">
+
+
+
+
+
+
+	
+
+	
+		
+			<link rel="icon" sizes="36x36" href="../../uploads/monthly_2021_10/android-chrome-36x36.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="48x48" href="../../uploads/monthly_2021_10/android-chrome-48x48.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="72x72" href="../../uploads/monthly_2021_10/android-chrome-72x72.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="96x96" href="../../uploads/monthly_2021_10/android-chrome-96x96.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="144x144" href="../../uploads/monthly_2021_10/android-chrome-144x144.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="192x192" href="../../uploads/monthly_2021_10/android-chrome-192x192.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="256x256" href="../../uploads/monthly_2021_10/android-chrome-256x256.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="384x384" href="../../uploads/monthly_2021_10/android-chrome-384x384.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="512x512" href="../../uploads/monthly_2021_10/android-chrome-512x512.png">
+		
+	
+
+	
+		
+			<meta name="msapplication-square70x70logo" content="../../uploads/monthly_2021_10/msapplication-square70x70logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-TileImage" content="../../uploads/monthly_2021_10/msapplication-TileImage.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square150x150logo" content="../../uploads/monthly_2021_10/msapplication-square150x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-wide310x150logo" content="../../uploads/monthly_2021_10/msapplication-wide310x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square310x310logo" content="../../uploads/monthly_2021_10/msapplication-square310x310logo.png"/>
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" href="../../uploads/monthly_2021_10/apple-touch-icon-57x57.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="60x60" href="../../uploads/monthly_2021_10/apple-touch-icon-60x60.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="72x72" href="../../uploads/monthly_2021_10/apple-touch-icon-72x72.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="76x76" href="../../uploads/monthly_2021_10/apple-touch-icon-76x76.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="114x114" href="../../uploads/monthly_2021_10/apple-touch-icon-114x114.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="120x120" href="../../uploads/monthly_2021_10/apple-touch-icon-120x120.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="144x144" href="../../uploads/monthly_2021_10/apple-touch-icon-144x144.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="152x152" href="../../uploads/monthly_2021_10/apple-touch-icon-152x152.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="180x180" href="../../uploads/monthly_2021_10/apple-touch-icon-180x180.png">
+			
+		
+	
+
+
+
+
+
+<link rel="preload" href="../../applications/core/interface/font/fontawesome-webfont3e6e.woff2?v=4.7.0" as="font" crossorigin="anonymous">
+		
+
+
+	
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,700,700i" rel="stylesheet" referrerpolicy="origin">
+	
+
+
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/341e4a57816af3ba440d891ca87450ff_frameworka9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/05e81b71abe4f22d6eb8d1a929494829_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/20446cf2d164adcc029377cb04d43d17_flagsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/90eb5adf50a8c640f633d47fd7eb1778_corea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/5a0da001ccc2200dc5625c3f3934497d_core_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/62e269ced0fdab7e30e026f1d30ae516_forumsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/76e62c573090645fb99a15a363d8620e_forums_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/ebdea0c6a7dab6d37900b9190d3ac77b_topicsa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+
+<link rel='stylesheet' href='../../uploads/css_built_22/258adbb6e4f3e83cd3b355f84e3fa002_customa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+		
+		
+
+	
+	<link rel='shortcut icon' href='../../uploads/monthly_2016_09/favicon.ico.496d8d1cc696295f808f9f1153f0a1e0.ico' type="image/x-icon">
+
+	</head>
+	<body class='ipsApp ipsApp_front ipsJS_none ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='forums' data-pageLocation='front' data-pageModule='forums' data-pageController='topic' data-pageID='121619'  >
+		
+        
+
+        
+
+		  <a href='#ipsLayout_mainArea' class='ipsHide' title='Go to main content on this page' accesskey='m'>Jump to content</a>
+		<div id='ipsLayout_header' class='ipsClearfix'>
+			
+
+
+
+
+
+			<header>
+				
+<div id="mta_globalTopNavigation">
+  <div id="mta_globalTopNavigationLinks" class="ipsLayout_container">
+    <a href="https://multitheftauto.com/">Home</a>
+    <a href="https://discord.com/invite/mtasa" rel="noopener" target="_blank">Discord</a>
+    <a href="https://community.multitheftauto.com/">Community</a>
+    <a href="../../index.html">Forum</a>
+    <a href="https://wiki.multitheftauto.com/wiki/Main_Page">Wiki</a>
+    <a href="https://github.com/multitheftauto/mtasa-blue/issues" rel="noopener" target="_blank">Bugs</a>
+    <a href="https://multitheftauto.com/donate/">Heroes</a>
+    <a href="https://multitheftauto.com/hosters/">Hosting</a>
+    <a href="https://community.multitheftauto.com/index.php?p=servers">Servers</a>
+    <a href="https://multitheftauto.myspreadshop.net/all">Merch</a>
+    <span id="mta_onlinePlayers"></span>
+  </div>
+  <script>
+    (function () {
+      var onlinePlayersEl = document.getElementById('mta_onlinePlayers');
+
+      function updateOnlinePlayers() {
+        if (!onlinePlayersEl) return;
+
+        fetch('https://multitheftauto.com/count/')
+          .then(function (r) {
+            if (!r.ok) throw new Error();
+            return r.text();
+          })
+          .then(function (r) {
+            if (!onlinePlayersEl) return;
+            if (!r) throw new Error();
+
+            var info = r.split(',', 2);
+            if (!info || !info[0] || !info[1]) throw new Error();
+
+            function updateStats() {
+              onlinePlayersEl.innerText = new Intl.NumberFormat('en-US').format(info[0]) + ' players online on ' + new Intl.NumberFormat('en-US').format(info[1]) + ' public servers';
+              $(onlinePlayersEl).stop(true).fadeIn(500);
+            }
+
+            if (!onlinePlayersEl.innerText) {
+              $(onlinePlayersEl).hide();
+              updateStats();
+              return;
+            }
+
+            $(onlinePlayersEl).stop(true).fadeOut(500);
+            setTimeout(updateStats, 500);
+          })
+          .catch(function () {
+            setTimeout(updateOnlinePlayers, 10000);
+          });
+      }
+
+      window.addEventListener('load', updateOnlinePlayers);
+      setInterval(updateOnlinePlayers, 300000);
+    })();
+  </script>
+</div>
+
+				<div class='ipsLayout_container'>
+					
+
+
+<a href='../../index.html' id='elLogo' accesskey='1'><img src="../../uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png" alt='Multi Theft Auto: Forums'></a>
+
+					
+						
+
+	<ul id="elUserNav" class="ipsList_inline cSignedOut ipsResponsive_showDesktop">
+		
+		<li id="elSignInLink">
+			<a href="../../login/index.html" data-ipsmenu-closeonclick="false" data-ipsmenu id="elUserSignIn">
+				Existing user? Sign In  <i class="fa fa-caret-down"></i>
+			</a>
+			
+<div id='elUserSignIn_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+	<form accept-charset='utf-8' method='post' action='https://forum.multitheftauto.com/login/'>
+		<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366">
+		<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjE5LWx1YS1mb3ItYWJzb2x1dGUtYmVnaW5uZXJzLw==">
+		<div data-role="loginForm">
+			
+			
+			
+				
+<div class="ipsPad ipsForm ipsForm_vertical">
+	<h4 class="ipsType_sectionHead">Sign In</h4>
+	<br><br>
+	<ul class='ipsList_reset'>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			
+			
+				<input type="text" placeholder="Display Name or Email Address" name="auth" autocomplete="email">
+			
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			<input type="password" placeholder="Password" name="password" autocomplete="current-password">
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_checkbox ipsClearfix">
+			<span class="ipsCustomInput">
+				<input type="checkbox" name="remember_me" id="remember_me_checkbox" value="1" checked aria-checked="true">
+				<span></span>
+			</span>
+			<div class="ipsFieldRow_content">
+				<label class="ipsFieldRow_label" for="remember_me_checkbox">Remember me</label>
+				<span class="ipsFieldRow_desc">Not recommended on shared computers</span>
+			</div>
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_fullWidth">
+			<button type="submit" name="_processLogin" value="usernamepassword" class="ipsButton ipsButton_primary ipsButton_small" id="elSignIn_submit">Sign In</button>
+			
+				<p class="ipsType_right ipsType_small">
+					
+						<a href='../../lostpassword/index.html' data-ipsDialog data-ipsDialog-title='Forgot your password?'>
+					
+					Forgot your password?</a>
+				</p>
+			
+		</li>
+	</ul>
+</div>
+			
+		</div>
+	</form>
+</div>
+		</li>
+		
+			<li>
+				
+					<a href="../../register/index.html" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-title="Sign Up"  id="elRegisterButton" class="ipsButton ipsButton_normal ipsButton_primary">Sign Up</a>
+				
+			</li>
+		
+	</ul>
+
+						
+<ul class='ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop'>
+	<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileDrawer'>
+		<a href='#'>
+			
+			
+				
+			
+			
+			
+			<i class='fa fa-navicon'></i>
+		</a>
+	</li>
+</ul>
+					
+				</div>
+			</header>
+			
+
+	<nav data-controller='core.front.core.navBar' class=' ipsResponsive_showDesktop'>
+		<div class='ipsNavBar_primary ipsLayout_container '>
+			<ul data-role="primaryNavBar" class='ipsClearfix'>
+				
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_1' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../index.html"  data-navItem-id="1" data-navDefault>
+					Browse<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_8' data-role="navBarItem" data-navApp="forums" data-navExt="Forums">
+			
+			
+				<a href="../../index.html"  data-navItem-id="8" data-navDefault>
+					Forums<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_12' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../12275-forum-rules/index.html"  data-navItem-id="12" >
+					Forum Rules<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_10' data-role="navBarItem" data-navApp="core" data-navExt="StaffDirectory">
+			
+			
+				<a href="../../staff/index.html"  data-navItem-id="10" >
+					Staff<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_11' data-role="navBarItem" data-navApp="core" data-navExt="OnlineUsers">
+			
+			
+				<a href="../../online/index.html"  data-navItem-id="11" >
+					Online Users<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_24' data-role="navBarItem" data-navApp="core" data-navExt="Leaderboard">
+			
+			
+				<a href="../../leaderboard/index.html"  data-navItem-id="24" >
+					Leaderboard<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_1' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_1' id='elNavigationMore_1_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_1_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_2' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="2" >
+					Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_3' data-role="navBarItem" data-navApp="core" data-navExt="AllActivity">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="3" >
+					All Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_7' data-role="navBarItem" data-navApp="core" data-navExt="Search">
+			
+			
+				<a href="../../search/index.html"  data-navItem-id="7" >
+					Search<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_2' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_2' id='elNavigationMore_2_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_2_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_37' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_37" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_37' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="37" >
+					MTA Network <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_37_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_46' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="46" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_48' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://community.mtasa.com/" target='_blank' rel="noopener" data-navItem-id="48" >
+					Community<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_49' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://wiki.multitheftauto.com/wiki/Main_Page" target='_blank' rel="noopener" data-navItem-id="49" >
+					Wiki<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_50' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto/mtasa-blue/issues" target='_blank' rel="noopener" data-navItem-id="50" >
+					Bugs<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_51' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/donate/" target='_blank' rel="noopener" data-navItem-id="51" >
+					Heroes<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_52' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/hosters/" target='_blank' rel="noopener" data-navItem-id="52" >
+					Hosting<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_45' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.myspreadshop.net/all" target='_blank' rel="noopener" data-navItem-id="45" >
+					Merch Store<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_37' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_37' id='elNavigationMore_37_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_37_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_28' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_28" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_28' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="28" >
+					Social Media <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_28_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_36' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="36" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_35' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.twitch.tv/mtaqa" target='_blank' rel="noopener" data-navItem-id="35" >
+					Twitch<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_30' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://twitter.com/mtaqa" target='_blank' rel="noopener" data-navItem-id="30" >
+					Twitter<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_32' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.youtube.com/user/MTAQA" target='_blank' rel="noopener" data-navItem-id="32" >
+					YouTube<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_31' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="31" >
+					GitHub<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_29' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.facebook.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="29" >
+					Facebook<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_34' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.reddit.com/r/MultiTheftAuto/" target='_blank' rel="noopener" data-navItem-id="34" >
+					Reddit<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_33' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.linkedin.com/company/multitheftauto" target='_blank' rel="noopener" data-navItem-id="33" >
+					LinkedIn<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_28' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_28' id='elNavigationMore_28_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_28_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+				<li class='ipsHide' id='elNavigationMore' data-role='navMore'>
+					<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore' id='elNavigationMore_dropdown'>More</a>
+					<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+						<li class='ipsHide' id='elNavigationMore_more' data-role='navMore'>
+							<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_more' id='elNavigationMore_more_dropdown'>More <i class='fa fa-caret-down'></i></a>
+							<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_more_dropdown_menu' data-role='moreDropdown'></ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+
+	<div id="elSearchWrapper">
+		<div id='elSearch' class='' data-controller='core.front.core.quickSearch'>
+			<form accept-charset='utf-8' action='http://forum.multitheftauto.com/search/?do=quicksearch' method='post'>
+				<input type='search' id='elSearchField' placeholder='Search...' name='q' autocomplete='off' aria-label='Search'>
+				<button class='cSearchSubmit' type="submit" aria-label='Search'><i class="fa fa-search"></i></button>
+				<div id="elSearchExpanded">
+					<div class="ipsMenu_title">
+						Search In
+					</div>
+					<ul class="ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-role="searchContexts">
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="type" value="all" checked id="elQuickSearchRadio_type_all">
+								<label for='elQuickSearchRadio_type_all' id='elQuickSearchRadio_type_all_label'>Everywhere</label>
+							</span>
+						</li>
+						
+						
+							<li>
+								<span class='ipsSideMenu_item' data-ipsMenuValue='forums_topic'>
+									<input type="radio" name="type" value="forums_topic" id="elQuickSearchRadio_type_forums_topic">
+									<label for='elQuickSearchRadio_type_forums_topic' id='elQuickSearchRadio_type_forums_topic_label'>Topics</label>
+								</span>
+							</li>
+						
+						
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:185}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:185}' id='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1'>
+										<label for='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1' id='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1_label'>This Forum</label>
+									</span>
+								</li>
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:121619}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:121619}' id='elQuickSearchRadio_type_contextual_75e1e6671f3574fed29677d50aaee46b'>
+										<label for='elQuickSearchRadio_type_contextual_75e1e6671f3574fed29677d50aaee46b' id='elQuickSearchRadio_type_contextual_75e1e6671f3574fed29677d50aaee46b_label'>This Topic</label>
+									</span>
+								</li>
+							
+						
+						<li data-role="showMoreSearchContexts">
+							<span class='ipsSideMenu_item' data-action="showMoreSearchContexts" data-exclude="forums_topic">
+								More options...
+							</span>
+						</li>
+					</ul>
+					<div class="ipsMenu_title">
+						Find results that contain...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='andOr'>
+						
+							<li>
+								<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='or'>
+									<input type="radio" name="search_and_or" value="or" checked id="elRadio_andOr_or">
+									<label for='elRadio_andOr_or' id='elField_andOr_label_or'><em>Any</em> of my search term words</label>
+								</span>
+							</li>
+						
+							<li>
+								<span class='ipsSideMenu_item ' data-ipsMenuValue='and'>
+									<input type="radio" name="search_and_or" value="and"  id="elRadio_andOr_and">
+									<label for='elRadio_andOr_and' id='elField_andOr_label_and'><em>All</em> of my search term words</label>
+								</span>
+							</li>
+						
+					</ul>
+					<div class="ipsMenu_title">
+						Find results in...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='searchIn'>
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="search_in" value="all" checked id="elRadio_searchIn_and">
+								<label for='elRadio_searchIn_and' id='elField_searchIn_label_all'>Content titles and body</label>
+							</span>
+						</li>
+						<li>
+							<span class='ipsSideMenu_item' data-ipsMenuValue='titles'>
+								<input type="radio" name="search_in" value="titles" id="elRadio_searchIn_titles">
+								<label for='elRadio_searchIn_titles' id='elField_searchIn_label_titles'>Content titles only</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		</div>
+	</nav>
+
+			
+<ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
+	
+		
+			
+			
+				
+				
+			
+				
+					<li id='elMobileBreadcrumb'>
+						<a href='../../forum/185-user-guides/index.html'>
+							<span>User Guides</span>
+						</a>
+					</li>
+				
+				
+			
+				
+				
+			
+		
+	
+	
+	
+	<li >
+		<a data-action="defaultStream" href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+	</li>
+
+	
+
+	
+		<li class='ipsJS_show'>
+			<a href='../../search/index.html'><i class='fa fa-search'></i></a>
+		</li>
+	
+</ul>
+		</div>
+		<main id='ipsLayout_body' class='ipsLayout_container'>
+			<div id='ipsLayout_contentArea'>
+				<div id='ipsLayout_contentWrapper'>
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/80-multi-theft-auto-san-andreas-1x/index.html'>
+						<span>Multi Theft Auto: San Andreas 1.x <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/185-user-guides/index.html'>
+						<span>User Guides <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					Lua for absolute beginners
+				
+			</li>
+		
+	</ul>
+</nav>
+					
+					<div id='ipsLayout_mainArea'>
+						
+						
+						
+						
+
+	
+
+
+
+
+						
+
+
+
+<div class='ipsPageHeader ipsResponsive_pull ipsBox ipsPadding sm:ipsPadding:half ipsMargin_bottom'>
+		
+	
+	<div class='ipsFlex ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:4'>
+		<div class='ipsFlex-flex:11'>
+			<h1 class='ipsType_pageTitle ipsContained_container'>
+				
+
+				
+				
+					<span class='ipsType_break ipsContained'>
+						<span>Lua for absolute beginners</span>
+					</span>
+				
+			</h1>
+			
+			
+		</div>
+		
+	</div>
+	<hr class='ipsHr'>
+	<div class='ipsPageHeader__meta ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:3'>
+		<div class='ipsFlex-flex:11'>
+			<div class='ipsPhotoPanel ipsPhotoPanel_mini ipsPhotoPanel_notPhone ipsClearfix'>
+				
+
+
+	<a href="../../profile/51280-nanobob/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/51280-nanobob/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to NanoBob's profile">
+		<img src='../../uploads/monthly_2017_04/avatar.thumb.png.56de13fb0fa3fede34c276e0a8298832.png' alt='NanoBob' loading="lazy">
+	</a>
+
+				<div>
+					<p class='ipsType_reset ipsType_blendLinks'>
+						<span class='ipsType_normal'>
+						
+							<strong>By 
+
+
+<a href='../../profile/51280-nanobob/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/51280-nanobob/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F121619-lua-for-absolute-beginners%252F' title="Go to NanoBob's profile" class="ipsType_break"><span style='color:#968a5b'>NanoBob</span></a>, </strong><br />
+							<span class='ipsType_light'><time datetime='2019-12-27T18:23:38Z' title='27/12/19 18:23 ' data-short='2 yr'>December 27, 2019</time> in <a href="../../forum/185-user-guides/index.html">User Guides</a></span>
+						
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class='ipsFlex-flex:01 ipsResponsive_hidePhone'>
+				<div class='ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsGap_row:0'>
+					
+						
+
+
+					
+					
+
+
+
+					
+
+<div data-followApp='forums' data-followArea='topic' data-followID='121619' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall ipsButton_disabled" data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>0</span>
+	</a>
+
+</div>
+				</div>
+			</div>
+					
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+<div class='ipsClearfix'>
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+		
+		
+		
+	</ul>
+</div>
+
+<div id='comments' data-controller='core.front.core.commentFeed,forums.front.topic.view, core.front.core.ignoredComments' data-autoPoll data-baseURL='https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/' data-lastPage data-feedID='topic-121619' class='cTopic ipsClear ipsSpacer_top'>
+	
+			
+	
+
+	
+
+<div data-controller='core.front.core.recommendedComments' data-url='https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/?recommended=comments' class='ipsRecommendedComments ipsHide'>
+	<div data-role="recommendedComments">
+		<h2 class='ipsType_sectionHead ipsType_large ipsType_bold ipsMargin_bottom'>Recommended Posts</h2>
+		
+	</div>
+</div>
+	
+	<div id="elPostFeed" data-role='commentFeed' data-controller='core.front.core.moderation' >
+		<form action="https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/?csrfKey=714bb4c8fac35f8286ae64e012ef2366&amp;do=multimodComment" method="post" data-ipsPageAction data-role='moderationTools'>
+			
+			
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-970006'></a>
+<article  id='elComment_970006' class='cPost ipsBox ipsResponsive_pull  ipsComment ipsComment_popular ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
+	
+
+	
+		<div class='ipsResponsive_showPhone ipsComment_badges'>
+			<ul class='ipsList_reset ipsFlex ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1'>
+				
+				
+				
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_popular'>Popular Post</strong></li>
+				
+			</ul>
+		</div>
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/51280-nanobob/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/51280-nanobob/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to NanoBob's profile">
+		<img src='../../uploads/monthly_2017_04/avatar.thumb.png.56de13fb0fa3fede34c276e0a8298832.png' alt='NanoBob' loading="lazy">
+	</a>
+
+				
+				
+					<a href="../../profile/51280-nanobob/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Rat" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Rat (9/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/51280-nanobob/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/51280-nanobob/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F121619-lua-for-absolute-beginners%252F' title="Go to NanoBob's profile" class="ipsType_break"><span style='color:#968a5b'>NanoBob</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexb073.html?do=findComment&amp;comment=970006' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2019-12-27T18:23:38Z' title='27/12/19 18:23 ' data-short='2 yr'>December 27, 2019</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/51280-nanobob/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/51280-nanobob/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F121619-lua-for-absolute-beginners%252F' title="Go to NanoBob's profile" class="ipsType_break">NanoBob</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Distinguished Member</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/51280-nanobob/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/51280-nanobob/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to NanoBob's profile">
+		<img src='../../uploads/monthly_2017_04/avatar.thumb.png.56de13fb0fa3fede34c276e0a8298832.png' alt='NanoBob' loading="lazy">
+	</a>
+
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Rat" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Rat (9/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#968a5b'>Distinguished Members</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 100
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/51280-nanobob/content/index.html" rel="nofollow" title="49 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 49
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-970006_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="970006" data-quotedata="{&quot;userid&quot;:51280,&quot;username&quot;:&quot;NanoBob&quot;,&quot;timestamp&quot;:1577471018,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:121619,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:970006}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_popular">Popular Post</strong></li>
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_970006_menu" class="ipsComment_ellipsis" id="elControls_970006" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-970006_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_970006_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index.html" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_970006_menu" data-ipsdialog-title="Share this post" id="elSharePost_970006" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexb073.html?do=findComment&amp;comment=970006" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2019-12-27T18:23:38Z' title='27/12/19 18:23 ' data-short='2 yr'>December 27, 2019</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+					(edited)
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<h1 style="background-color:#ffffff;border-bottom:1px solid #eaecef;color:#24292e;font-size:2em;">
+	Lua tutorial for absolute beginners
+</h1>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This tutorial can also be viewed <a href="https://gist.github.com/NanoBob/3e50549ce48b435b9b6272738936b6ff" rel="external nofollow">on GitHub</a>
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This tutorial aims to teach the Lua scripting language to those with 0 previous experience with programming / scripting.<br />
+	This guide will start with explaining some Lua concepts, and will later on move to explaining MTA:SA specific concepts.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Table of contents:
+</h3>
+
+<ul style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<li>
+		Lua
+		<ul>
+			<li>
+				Scripts
+			</li>
+			<li>
+				Variables
+			</li>
+			<li>
+				Data types
+			</li>
+			<li>
+				Operators
+			</li>
+			<li>
+				If statements
+			</li>
+			<li>
+				Functions
+			</li>
+			<li>
+				Return values
+			</li>
+			<li>
+				scopes &amp; locals
+			</li>
+			<li>
+				For loops
+			</li>
+			<li>
+				Tables
+			</li>
+			<li>
+				Iterators (pairs/ipairs)
+			</li>
+			<li>
+				Callbacks
+			</li>
+			<li>
+				Anonymous functions
+			</li>
+		</ul>
+	</li>
+	<li>
+		MTA
+		<ul>
+			<li>
+				Server &amp; Resources
+			</li>
+			<li>
+				Server vs client
+			</li>
+			<li>
+				MTA functions &amp; wiki
+			</li>
+			<li>
+				Elements (userdata)
+			</li>
+			<li>
+				Command handlers
+			</li>
+			<li>
+				Event handlers
+			</li>
+			<li>
+				predefined globals
+			</li>
+			<li>
+				server &lt;-&gt; client communication
+			</li>
+		</ul>
+	</li>
+	<li>
+		Now what?
+	</li>
+</ul>
+
+<h2 style="background-color:#ffffff;border-bottom:1px solid #eaecef;color:#24292e;font-size:1.5em;">
+	Lua
+</h2>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This part of the tutorial discusses Lua itself. No MTA-specific concepts will be discussed here.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Scripts
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The Lua scripting language is a language which is interpreted by a "Lua interpreter". MTA:SA's resources use such an interpreter to run Lua code. For the beginning of this tutorial you can use the online Lua interpreter available on<span> </span><a href="https://www.lua.org/demo.html" rel="external nofollow" style="color:#0366d6;">https://www.Lua.org/demo.html</a>. Any code in the Lua part of the tutorial can be run on this website.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Lua is written in "plain text". This means it exists of regular characters like any other text you are writing. To edit Lua files you will require a text editor. You<span> </span><em>could</em><span> </span>use Notepad, but there are many far better alternatives. My personal favourite is<span> </span><a href="https://code.visualstudio.com/download" rel="external nofollow" style="color:#0366d6;">Visual Studio Code</a>, but there are many other good options, to name a few: Atom, sublime text, notepad++<br />
+	Lua files are usually saved with the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">.Lua</code><span> </span>file extension
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Variables
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The first concept we're going to discuss is variables. Variables allow you to store a value in your code.<br />
+	For example:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+
+<span style="color:#005cc5;">print</span>(x)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">print(x)</code><span> </span>will output the value of the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">x</code><span> </span>variable. We will get into what exactly<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">print</code><span> </span>is later in the tutorial.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Variables can have any name you want, as long as you follow some specific rules.
+</p>
+
+<ul style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<li>
+		variable names must start with a letter (lower or upper case), or an underscore (_)
+	</li>
+	<li>
+		variable names may contain letters (lower and upper case), numbers and underscores.
+	</li>
+</ul>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">20</span>
+z <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">30</span>
+
+<span style="color:#005cc5;">print</span>(x)
+<span style="color:#005cc5;">print</span>(y)
+<span style="color:#005cc5;">print</span>(z)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The convention in Lua is to name your variables in "camelCase". This means if a variable exists of multiple words you start every word with a capital letter, except for the first one.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">camelCaseVariable <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">5</span></pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Data types
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	So far we've seen variables used to store numeric values, but there are many different types of data Lua can handle. These are:
+</p>
+
+<ul style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<li>
+		number<br />
+		Any numeric value
+	</li>
+	<li>
+		string<br />
+		A piece of text, a string is surrounded by<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"</code><span> </span>or<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">'</code>. For example<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"Hello world"</code><span> </span>or 'Hello world'
+	</li>
+	<li>
+		boolean<br />
+		A boolean is a data type that has only 2 options,<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>.
+	</li>
+	<li>
+		nil<br />
+		<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">nil</code><span> </span>is a value indicating nothing. It's the absence of a value. (Not the be confused with 0)
+	</li>
+	<li>
+		table<br />
+		Tables will be discussed later in the tutorial
+	</li>
+	<li>
+		userdata<br />
+		Userdata will be discussed later in the tutorial
+	</li>
+	<li>
+		function<br />
+		Functions will be discussed later in the tutorial
+	</li>
+	<li>
+		thread<br />
+		Threads are out of scope for this tutorial and won't be discussed
+	</li>
+</ul>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	So we can use these different data types, and store them in variables:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">numberVariable <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+stringVariable <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello world<span style="color:#032f62;">"</span></span>
+booleanVariable <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">true</span>
+nilVariable <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">nil</span></pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Operators
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Operators are symbols in Lua which can be used to do "things" with variables. Here's a list of operators and an example for each:
+</p>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	+ operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Adds two values together
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">+</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">20</span>
+<span style="color:#005cc5;">print</span>(y)
+
+z <span style="color:#d73a49;">=</span> x <span style="color:#d73a49;">+</span> y
+<span style="color:#005cc5;">print</span>(z)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	- operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Subtracts a value from another value
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">-</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(x)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	* operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Multiplies two values
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">*</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(x)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	/ operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Divides a value by another value
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">/</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(x)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	% operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This is the "modulo" operator. This will divide a value by another, and return the leftover.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">%</span> <span style="color:#005cc5;">4</span>
+<span style="color:#005cc5;">print</span>(x)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The result of this is<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">2</code>
+</p>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	and operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">and</code><span> </span>operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if both variables are "truthy". Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code><br />
+	(A "truthy" value is anything except for<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">nil</code>)
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">true</span> <span style="color:#d73a49;">and</span> <span style="color:#005cc5;">false</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">true</span> <span style="color:#d73a49;">and</span> <span style="color:#005cc5;">true</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	or operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">and</code><span> </span>operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if one of the variables are "truthy". Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">true</span> <span style="color:#d73a49;">or</span> <span style="color:#005cc5;">false</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">false</span> <span style="color:#d73a49;">or</span> <span style="color:#005cc5;">false</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	== operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">==</code><span> </span>(equals) operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if both of the variables are the same. Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>hey there<span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">==</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>hello there<span style="color:#032f62;">"</span></span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">150</span> <span style="color:#d73a49;">==</span> <span style="color:#005cc5;">150</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	~= operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">~=</code><span> </span>(does not equal) operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if both variables are<span> </span><strong>not</strong><span> </span>the same. Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>hey there<span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">~=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>hello there<span style="color:#032f62;">"</span></span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">150</span> <span style="color:#d73a49;">~=</span> <span style="color:#005cc5;">150</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	&gt; operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">&gt;</code><span> </span>(greater than) operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if the first value is greater than the second value. Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">15</span>
+<span style="color:#005cc5;">print</span>(y)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	&gt;= operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">&gt;=</code><span> </span>(greater than or equals) operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if the first value is greater than, or equal to, the second value. Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">15</span>
+<span style="color:#005cc5;">print</span>(y)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	&lt; operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">&lt;</code><span> </span>(less than) operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if the first value is less than the second value. Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&lt;</span> <span style="color:#005cc5;">5</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&lt;</span> <span style="color:#005cc5;">15</span>
+<span style="color:#005cc5;">print</span>(y)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&lt;</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	&lt;= operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">&lt;=</code><span> </span>(less than or equals) operator will return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>if the first value is less than, or equal to, the second value. Otherwise it returns<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&lt;</span> <span style="color:#005cc5;">5</span>
+<span style="color:#005cc5;">print</span>(x)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&lt;</span> <span style="color:#005cc5;">15</span>
+<span style="color:#005cc5;">print</span>(y)
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">&lt;</span> <span style="color:#005cc5;">10</span>
+<span style="color:#005cc5;">print</span>(y)</pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	.. operator
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">..</code><span> </span>(string concatanation) operator allows you to add two strings together.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello<span style="color:#032f62;">"</span></span>
+z <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>World!<span style="color:#032f62;">"</span></span>
+
+combined <span style="color:#d73a49;">=</span> x <span style="color:#d73a49;">..</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span> <span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">..</span> z
+<span style="color:#005cc5;">print</span>(combined)</pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	If statements
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	An<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>statement allows your code to decide to do something, or not. Depending on a value. Often times<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>statements are used in combination with some of the above operators.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	An if statement is written as :<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if &lt;expression&gt; then &lt;code&gt; end</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+<span style="color:#d73a49;">if</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 5<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Any code between<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">then</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">end</code><span> </span>will only be executed when the expression is true. You might also have noticed that the code between the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">then</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">end</code><span> </span>is moved over a bit to the right. This is called "indentation". Whenever we open a new scope (scopes will be discussed later in the tutorial) we move our code to the right. This is usually done by either a<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">tab</code><span> </span>or several spaces<span> </span>. Many code editors will convert a<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">tab</code><span> </span>to spaces.
+</p>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Else
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Within an<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>statement, you can also add an<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">else</code><span> </span>block. The code in such a block will be executed when the code in the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>block is not executed.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+<span style="color:#d73a49;">if</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 5<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">else</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is not higher than 5<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<h4 style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Elseif
+</h4>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	If you want to do multiple<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>statements, you can use an<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">elseif</code>:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">15</span>
+<span style="color:#d73a49;">if</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 10<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span>
+<span style="color:#d73a49;">if</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 5<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">15</span>
+<span style="color:#d73a49;">if</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 10<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">elseif</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 5<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The difference between the first example and the second is that if<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">x</code><span> </span>is higher than 10 in the first example both lines "X is higher than 10" and "X is higher than 5" will be output. Whilst in the second example only "X is higher than 10" will be output.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	And if statement must always start with an<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code>, can contain multiple<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">elseif</code>s, and may only have one<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">else</code>.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">name <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>NanoBob<span style="color:#032f62;">"</span></span>
+<span style="color:#d73a49;">if</span> name <span style="color:#d73a49;">==</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>NanoBob<span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello world!<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">elseif</span> name <span style="color:#d73a49;">==</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>Brophy<span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Black 123<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">elseif</span> name <span style="color:#d73a49;">==</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>Tombaa<span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">then</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Stupid<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">else</span>
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>I have no idea<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Functions
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Functions allow you to write less code, by reusing pieces of code.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The syntax to create a function is<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">function &lt;name&gt;(&lt;parameters&gt;) &lt;code&gt; end</code>
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">foo</span>()
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello world #1<span style="color:#032f62;">"</span></span>)
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello world #2<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	In order to execute code in the function, you "call" the function. You do this by writing the function name followed by<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">()</code>.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">foo</span>()
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello world #1<span style="color:#032f62;">"</span></span>)
+    <span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Hello world #2<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span>
+
+<span style="color:#005cc5;">foo</span>()
+<span style="color:#005cc5;">foo</span>()
+<span style="color:#005cc5;">foo</span>()</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Functions also allow you to send a variable to the function, for it to do something with. This is what's called a function parameter. Function parameters are defined in the brackets<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">()</code><span> </span>after the function name.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">foo</span>(<span style="color:#24292e;">x</span>)
+    <span style="color:#005cc5;">print</span>(x)
+<span style="color:#d73a49;">end</span>
+
+<span style="color:#005cc5;">foo</span>(<span style="color:#005cc5;">10</span>)
+<span style="color:#005cc5;">foo</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>50<span style="color:#032f62;">"</span></span>)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	You may notice that this looks a lot like the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">print()</code><span> </span>we have been using. This is because<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">print</code><span> </span>is a built-in Lua function.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Return values
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	A function not only can execute code, it can also give something back to where it was called. This is called a<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">return value</code>. In order to return something from a function you use the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">return</code><span> </span>keyword.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">foo</span>()
+    <span style="color:#d73a49;">return</span> <span style="color:#005cc5;">10</span>
+<span style="color:#d73a49;">end</span>
+
+x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">foo</span>()
+<span style="color:#005cc5;">print</span>(x)
+
+<span style="color:#005cc5;">print</span>(<span style="color:#005cc5;">foo</span>())</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Just like in an<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>statement, all code within a function is indented.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Now let's combine everything we have learnt so far:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">foo</span>(<span style="color:#24292e;">x</span>)
+    <span style="color:#d73a49;">if</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">then</span>
+        <span style="color:#d73a49;">return</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 10<span style="color:#032f62;">"</span></span>
+    <span style="color:#d73a49;">elseif</span> x <span style="color:#d73a49;">&gt;</span> <span style="color:#005cc5;">5</span> <span style="color:#d73a49;">then</span>
+        <span style="color:#d73a49;">return</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>X is higher than 5<span style="color:#032f62;">"</span></span>
+    <span style="color:#d73a49;">else</span>
+        <span style="color:#d73a49;">return</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>X is not higher than 5<span style="color:#032f62;">"</span></span>
+    <span style="color:#d73a49;">end</span>
+<span style="color:#d73a49;">end</span>
+
+y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">foo</span>(<span style="color:#005cc5;">15</span>)
+<span style="color:#005cc5;">print</span>(y)
+
+<span style="color:#005cc5;">print</span>(<span style="color:#005cc5;">foo</span>(<span style="color:#005cc5;">10</span>))
+<span style="color:#005cc5;">print</span>(<span style="color:#005cc5;">foo</span>(<span style="color:#005cc5;">0</span>))</pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Scopes &amp; locals
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	We quickly encountered scopes before, and said we indent our code whenever we enter a new scope. But scopes allow you to do more than that. Most importantly, "local" variables.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	A local variable is only available in the scope it was defined in (or scopes that were created from within that scope)
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	You can create a new scope using a<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">do</code><span> </span>block (<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">function</code>s and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">if</code><span> </span>statements also have their own scope).
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">do</span>
+    <span style="color:#d73a49;">local</span> x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">5</span>
+    <span style="color:#005cc5;">print</span>(x)
+<span style="color:#d73a49;">end</span>
+<span style="color:#005cc5;">print</span>(x)</pre>
+</div>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">do</span> 
+    <span style="color:#d73a49;">local</span> x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">5</span>
+    <span style="color:#d73a49;">do</span> 
+        <span style="color:#d73a49;">local</span> y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+        <span style="color:#005cc5;">print</span>(x)
+        <span style="color:#005cc5;">print</span>(y)
+    <span style="color:#d73a49;">end</span>
+    <span style="color:#005cc5;">print</span>(y)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	For loops
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	(For) loops are ways in scripting / programming to have code executed multiple times, without having to write the same thing multiple times.<br />
+	An example of such a loop:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">for</span> i <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">1</span>, <span style="color:#005cc5;">10</span> <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(i)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The first part :<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">i = 1, 10</code><span> </span>defines a variable called<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">i</code>. Which start at<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">1</code>. This will be incremented by 1, until it reaches<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">10</code>. The code within the loop then can use this variable.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	You can also increment with a different number than<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">1</code><span> </span>(including negative numbers) using this construct.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">for</span> i <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">20</span>, <span style="color:#005cc5;">0</span>, <span style="color:#d73a49;">-</span><span style="color:#005cc5;">2</span> <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(i)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This code sample will start with<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">i</code><span> </span>at 20, and keep adding<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">-2</code><span> </span>(thus subtracting<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">2</code>), until it reaches<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">0</code>
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Tables
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Tables are a datatype in Lua which allows for lists of things.<br />
+	Here's an example:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> {
+    [<span style="color:#005cc5;">1</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">100</span>,
+    [<span style="color:#005cc5;">2</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">200</span>,
+    [<span style="color:#005cc5;">3</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">300</span>
+}
+
+<span style="color:#005cc5;">print</span>(x[<span style="color:#005cc5;">1</span>])
+<span style="color:#005cc5;">print</span>(x[<span style="color:#005cc5;">2</span>])
+<span style="color:#005cc5;">print</span>(x[<span style="color:#005cc5;">3</span>])</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Tables consist of key/value pairs. In the example above the key<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">1</code>, has the value<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">100</code>,<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">2</code><span> </span>has the value<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">200</code>, and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">3</code><span> </span>has the value<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">300</code>.<br />
+	You can get the value in a table, by putting the key in between square brackets<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">[]</code>. Like in<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">print(x[1])</code>.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">x <span style="color:#d73a49;">=</span> {
+    <span style="color:#005cc5;">100</span>,
+    <span style="color:#005cc5;">200</span>,
+    <span style="color:#005cc5;">300</span>
+}
+
+<span style="color:#005cc5;">print</span>(x[<span style="color:#005cc5;">1</span>])
+<span style="color:#005cc5;">print</span>(x[<span style="color:#005cc5;">2</span>])
+<span style="color:#005cc5;">print</span>(x[<span style="color:#005cc5;">3</span>])</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	You can choose to not include the keys in a table. Doing so will automatically add numbers as keys, starting at 1. So the above example would be the exact same as the first example.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Table keys and values can be of any data type, including other tables. This allows you to create (very) complex table structures.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {
+    [<span style="color:#005cc5;">1</span>] <span style="color:#d73a49;">=</span> {
+        <span style="color:#005cc5;">100</span>,
+        <span style="color:#005cc5;">200</span>,
+        <span style="color:#005cc5;">300</span>
+    },
+    [<span style="color:#032f62;"><span style="color:#032f62;">"</span>x<span style="color:#032f62;">"</span></span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">100</span>,
+    [<span style="color:#005cc5;">true</span>] <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>something<span style="color:#032f62;">"</span></span>
+}
+<span style="color:#005cc5;">print</span>(t[<span style="color:#032f62;"><span style="color:#032f62;">"</span>x<span style="color:#032f62;">"</span></span>])
+<span style="color:#005cc5;">print</span>(t[<span style="color:#005cc5;">true</span>])
+
+<span style="color:#005cc5;">print</span>(t[<span style="color:#005cc5;">1</span>][<span style="color:#005cc5;">1</span>])
+<span style="color:#005cc5;">print</span>(t[<span style="color:#005cc5;">1</span>][<span style="color:#005cc5;">2</span>])
+<span style="color:#005cc5;">print</span>(t[<span style="color:#005cc5;">1</span>][<span style="color:#005cc5;">3</span>])</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	When using a string as the key in a table, you can leave out the square brackets and the quotes. This goes for both when defining the table, and for indexing it (getting a value from it). For example
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {
+    x <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">100</span>,
+    y <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">200</span>,
+    z <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">300</span>
+}
+
+<span style="color:#005cc5;">print</span>(t.<span style="color:#24292e;">x</span>)
+<span style="color:#005cc5;">print</span>(t.<span style="color:#24292e;">y</span>)
+<span style="color:#005cc5;">print</span>(t.<span style="color:#24292e;">z</span>)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	A table's values can be modified / set after creating the table as well.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {}
+
+t[<span style="color:#005cc5;">1</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>
+t[<span style="color:#005cc5;">2</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">20</span>
+t[<span style="color:#005cc5;">3</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">30</span>
+
+t[<span style="color:#032f62;"><span style="color:#032f62;">"</span>x<span style="color:#032f62;">"</span></span>] <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>banana<span style="color:#032f62;">"</span></span>
+t[<span style="color:#005cc5;">true</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">false</span>
+t.<span style="color:#24292e;">x</span> <span style="color:#d73a49;">=</span> <span style="color:#032f62;"><span style="color:#032f62;">"</span>banana<span style="color:#032f62;">"</span></span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	When using tables you will often want to add something to the "end" of a table. This is most common when you are using tables with numeric keys.<br />
+	In order to do this you can use a<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">#</code><span> </span>to get the amount of items currently in the table.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {
+    <span style="color:#005cc5;">10</span>,
+    <span style="color:#005cc5;">20</span>,
+    <span style="color:#005cc5;">30</span>
+}
+
+t[<span style="color:#d73a49;">#</span>t <span style="color:#d73a49;">+</span> <span style="color:#005cc5;">1</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">40</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This will store the value<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">40</code><span> </span>on the key<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">4</code><span> </span>, because<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">#t</code><span> </span>is 3.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Iterators (pairs/ipairs)
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Iterators are a mechanism that allow you to make a loop, which goes over a set of values. Writing your own iterators won't be discussed in this tutorial. But there are two functions which are often used to create an iterator to iterate over a table. These are<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">pairs</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">ipairs</code>.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {
+    <span style="color:#005cc5;">10</span>, <span style="color:#005cc5;">20</span>, <span style="color:#005cc5;">30</span>, <span style="color:#005cc5;">40</span>, <span style="color:#005cc5;">50</span>
+}
+
+<span style="color:#d73a49;">for</span> key, value <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">ipairs</span>(t) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(key, value)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The difference between<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">pairs</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">ipairs</code><span> </span>is the order in which the key/value pairs are iterated over, and which of the key/value pairs are iterated over.<br />
+	Where<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">ipairs</code><span> </span>will always use numeric keys, starting at<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">1</code>, and going up by<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">1</code><span> </span>every time, until there is no entry in the table. This also means it won't iterate over anything key that is not numeric.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {
+    [<span style="color:#032f62;"><span style="color:#032f62;">"</span>x<span style="color:#032f62;">"</span></span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">5</span>,
+    [<span style="color:#005cc5;">1</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>,
+    [<span style="color:#005cc5;">2</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">20</span>,
+    [<span style="color:#005cc5;">3</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">30</span>,
+    [<span style="color:#005cc5;">5</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">50</span>,
+}
+
+<span style="color:#d73a49;">for</span> key, value <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">ipairs</span>(t) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(key, value)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	A<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">pairs</code><span> </span>loop will iterate over any value in a table, but the order is not guaranteed. Meaning that between different runs of the script the order could be different.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">t <span style="color:#d73a49;">=</span> {
+    [<span style="color:#032f62;"><span style="color:#032f62;">"</span>x<span style="color:#032f62;">"</span></span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">5</span>,
+    [<span style="color:#005cc5;">1</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">10</span>,
+    [<span style="color:#005cc5;">2</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">20</span>,
+    [<span style="color:#005cc5;">3</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">30</span>,
+    [<span style="color:#005cc5;">5</span>] <span style="color:#d73a49;">=</span> <span style="color:#005cc5;">50</span>,
+}
+
+<span style="color:#d73a49;">for</span> key, value <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">pairs</span>(t) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(key, value)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Callbacks
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Callbacks are when you pass a function as an argument to another function. To have the function you passed be called later on. This is used often within MTA.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	An example of a Lua function which uses a callback is<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">table.sort</code>.<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">table.sort</code><span> </span>will sort a tables values, by default these values are sorted numerically. But you can use a callback to change this behaviour.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">values <span style="color:#d73a49;">=</span> {
+    <span style="color:#005cc5;">5</span>, <span style="color:#005cc5;">4</span>, <span style="color:#005cc5;">3</span>, <span style="color:#005cc5;">6</span>, <span style="color:#005cc5;">8</span>, <span style="color:#005cc5;">1</span>, <span style="color:#005cc5;">2</span>, <span style="color:#005cc5;">9</span>, <span style="color:#005cc5;">7</span>
+}
+
+<span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">sortFunction</span>(<span style="color:#24292e;">a</span>, <span style="color:#24292e;">b</span>)
+    <span style="color:#d73a49;">return</span> b <span style="color:#d73a49;">&gt;</span> a
+<span style="color:#d73a49;">end</span>
+
+<span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">reverseSortFunction</span>(<span style="color:#24292e;">a</span>, <span style="color:#24292e;">b</span>)
+    <span style="color:#d73a49;">return</span> a <span style="color:#d73a49;">&gt;</span> b
+<span style="color:#d73a49;">end</span>
+
+<span style="color:#005cc5;">table.sort</span>(values, sortFunction)
+<span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Sorted: <span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">for</span> _, v <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">ipairs</span>(values) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(v)
+<span style="color:#d73a49;">end</span>
+
+
+<span style="color:#005cc5;">table.sort</span>(values, reverseSortFunction)
+<span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span><span>\n</span>Reverse sorted: <span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">for</span> _, v <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">ipairs</span>(values) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(v)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	In the first call to<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">table.sort</code><span> </span>(<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">table.sort(values, sortFunction)</code>) you can see the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">sortFunction</code><span> </span>function is passed as second argument to the function. Note that we don't write<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">sortFunction()</code><span> </span>here (notice the brackets difference) because that would call the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">sortFunction</code><span> </span>function, and pass its return value to<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">table.sort</code>.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">table.sort</code><span> </span>will then call this function when it compares two different values, this function should return<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>or<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">false</code><span> </span>depending on whether its second argument (<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">b</code><span> </span>in this case) is larger than it's first argument (<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">a</code>), in the context of sorting.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Anonymous functions
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	It is also possible to use an "anonymous function" when passing a callback to a function.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">values <span style="color:#d73a49;">=</span> {
+    <span style="color:#005cc5;">5</span>, <span style="color:#005cc5;">4</span>, <span style="color:#005cc5;">3</span>, <span style="color:#005cc5;">6</span>, <span style="color:#005cc5;">8</span>, <span style="color:#005cc5;">1</span>, <span style="color:#005cc5;">2</span>, <span style="color:#005cc5;">9</span>, <span style="color:#005cc5;">7</span>
+}
+
+<span style="color:#005cc5;">table.sort</span>(values, <span style="color:#d73a49;">function</span>(<span style="color:#24292e;">a</span>, <span style="color:#24292e;">b</span>)
+    <span style="color:#d73a49;">return</span> b <span style="color:#d73a49;">&gt;</span> a
+<span style="color:#d73a49;">end</span>)
+
+<span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>Sorted: <span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">for</span> _, v <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">ipairs</span>(values) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(v)
+<span style="color:#d73a49;">end</span>
+
+
+<span style="color:#005cc5;">table.sort</span>(values, <span style="color:#d73a49;">function</span>(<span style="color:#24292e;">a</span>, <span style="color:#24292e;">b</span>)
+    <span style="color:#d73a49;">return</span> a <span style="color:#d73a49;">&gt;</span> b
+<span style="color:#d73a49;">end</span>)
+
+<span style="color:#005cc5;">print</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span><span>\n</span>Reverse sorted: <span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">for</span> _, v <span style="color:#d73a49;">in</span> <span style="color:#005cc5;">ipairs</span>(values) <span style="color:#d73a49;">do</span>
+    <span style="color:#005cc5;">print</span>(v)
+<span style="color:#d73a49;">end</span></pre>
+</div>
+
+<h2 style="background-color:#ffffff;border-bottom:1px solid #eaecef;color:#24292e;font-size:1.5em;">
+	MTA
+</h2>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This part of the tutorial discusses MTA specific constructs. Code in this part of the tutorial won't run in the online Lua interpreter. You will need to set up a (local) server for this.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Server &amp; Resources
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	By default when installing MTA:SA a server is installed as well. This server is located in the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"server"</code><span> </span>directory of your MTA directory. This is usually at<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">C:\Program Files (x86)\MTA San Andreas 1.5\server</code>. This directory contains an<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">MTA server.exe</code><span> </span>file, running this file will start a server.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Scripts on a server are grouped by resources, a single resource can consist of multiple script files and other assets such as images, sounds, fonts, mods and more.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Resources are placed in your<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">mods\deathmatch\resources</code><span> </span>folder in your server folder. A resource is always in its own directory. A resource must always have a single<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">meta.xml</code><span> </span>file. This file tells the server (among others) what script files to load. A typical meta.xml file looks like this:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;">&lt;<span style="color:#22863a;">meta</span>&gt;
+    &lt;<span style="color:#22863a;">script</span> <span style="color:#6f42c1;">src</span>=<span style="color:#032f62;"><span style="color:#032f62;">"</span>vehicleSystem.Lua<span style="color:#032f62;">"</span></span> <span style="color:#6f42c1;">type</span>=<span style="color:#032f62;"><span style="color:#032f62;">"</span>server<span style="color:#032f62;">"</span></span>/&gt;
+    &lt;<span style="color:#22863a;">script</span> <span style="color:#6f42c1;">src</span>=<span style="color:#032f62;"><span style="color:#032f62;">"</span>vehicleMods.Lua<span style="color:#032f62;">"</span></span> <span style="color:#6f42c1;">type</span>=<span style="color:#032f62;"><span style="color:#032f62;">"</span>client<span style="color:#032f62;">"</span></span>/&gt;
+&lt;/<span style="color:#22863a;">meta</span>&gt;</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	You will need an entry for every .Lua file you want to have executed on the server.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	You can start a resource by typing<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">start &lt;resource name&gt;</code><span> </span>in the server console (the window that opened when you started<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">MTA Server.exe</code>). The resource name is the name of the directory your<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">meta.xml</code><span> </span>is in. (This may not have spaces).<br />
+	Starting a resource will start running the Lua scripts, if you've changed your scripts you will need to restart the resource for the changes to take effect. (<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">restart &lt;resource name&gt;</code>).
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Server vs client
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Lua code can be executed in one of two places. The server, or the client.<br />
+	Server sided scripts are executed on the actual machine that is running the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">MTA server.exe</code><span> </span>process.<br />
+	Client sided scripts are executed on the computer of every player that connects to your server.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Server sided and client sided scripts have a distinct difference in responsibility and possibility. Some functions for example are only available on the client, whilst others are available only on the server (and many on both).
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Note: Some of these functions which are available both server sided and client sided<span> </span><strong>are different</strong><span> </span>on server and client
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	MTA functions &amp; wiki
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	In plain Lua there's not much you can do to affect a game engine like MTA:SA. This is why MTA:SA offers a (large) list of functions available for you to use in your scripts which interact with the actual GTA world.<br />
+	You can find a list of all of these, what they do and how to use them on the MTA wiki.
+</p>
+
+<ul style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<li>
+		<a href="https://wiki.multitheftauto.com/wiki/Server_Scripting_Functions" rel="external nofollow" style="color:#0366d6;">Server sided functions</a>
+	</li>
+	<li>
+		<a href="https://wiki.multitheftauto.com/wiki/Server_Scripting_Functions" rel="external nofollow" style="color:#0366d6;">Client sided functions</a>
+	</li>
+	<li>
+		<a href="https://wiki.multitheftauto.com/wiki/Shared_Scripting_Functions" rel="external nofollow" style="color:#0366d6;">shared functions</a>
+	</li>
+</ul>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	An example of such a function is<span> </span><a href="https://wiki.multitheftauto.com/wiki/CreateObject" rel="external nofollow" style="color:#0366d6;">createObject()</a>. This function will create a physical object in the game. The wiki page contains information on how to use it (what arguments it expects, and in what order). And often shows an example of how to use it.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#005cc5;">createObject</span>(<span style="color:#005cc5;">1337</span>, <span style="color:#005cc5;">0</span>, <span style="color:#005cc5;">0</span>, <span style="color:#005cc5;">3</span>)</pre>
+</div>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Elements (userdata)
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	At the start of this tutorial we quickly mentioned<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">userdata</code><span> </span>data types. These are data types configurable by the implementation of Lua. In this case, MTA.<br />
+	MTA uses userdata to represent "elements". Many things in MTA are elements, like objects, markers, peds, players, user interfaces, vehicles, etc.<br />
+	On the MTA wiki you will notice many functions either return elements, or require an element as arguments.<br />
+	A list of different types of elements can be found<span> </span><a href="https://wiki.multitheftauto.com/wiki/Element" rel="external nofollow" style="color:#0366d6;">on the MTA wiki</a>.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Elements also have a hierarchical structure to them. Elements can have a "parent", and multiple "children". This will result in a tree of elements, the element at the top of this tree (and thus the grandparent of all elements) is called the root element.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Command handlers
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Often times in MTA you want certain things to happen when a player enters a command. This is done using command handlers, command handlers use a callback, which we previously discussed.<br />
+	The wiki contains a page for the<span> </span><a href="https://wiki.multitheftauto.com/wiki/AddCommandHandler" rel="external nofollow" style="color:#0366d6;">addCommandHandler()</a><span> </span>function. For this example we will be using the server side version.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">handler</span>(<span style="color:#24292e;">player</span>, <span style="color:#24292e;">command</span>, <span style="color:#24292e;">argument</span>)
+    <span style="color:#005cc5;">outputChatBox</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>You entered <span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">..</span> command)
+    <span style="color:#d73a49;">if</span> argument <span style="color:#d73a49;">~=</span> <span style="color:#005cc5;">nil</span> <span style="color:#d73a49;">then</span>
+        <span style="color:#005cc5;">outputChatBox</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>You used the argument <span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">..</span> argument, player)
+    <span style="color:#d73a49;">end</span>
+<span style="color:#d73a49;">end</span>
+
+<span style="color:#005cc5;">addCommandHandler</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>banana<span style="color:#032f62;">"</span></span>, handler)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This example also uses the<span> </span><a href="https://wiki.multitheftauto.com/wiki/OutputChatBox" rel="external nofollow" style="color:#0366d6;">outputChatBox()</a><span> </span>function, this will output a piece of text to the chat.(in this case, only for the player who executed the command)
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The callback function passed to<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">addCommandHandler</code><span> </span>will be called every time a player uses the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">/banana</code><span> </span>command ingame.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	Event handlers
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Besides having your script do things when a user executes a command you likely want the game to respond to many different types of things that happen in the game. Like players taking damage, coming close to something, etc.<br />
+	These things are called events. Whenever an event is triggered you can run a piece of Lua code. You do this using event handlers. Event handlers are created using the<span> </span><a href="https://wiki.multitheftauto.com/wiki/AddEventHandler" rel="external nofollow" style="color:#0366d6;">addEventHandler()</a>.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The first argument to the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">addEventHandler()</code><span> </span>function is the string name of the event. These can be found on the MTA wiki as well.
+</p>
+
+<ul style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<li>
+		<a href="https://wiki.multitheftauto.com/wiki/Server_Scripting_Events" rel="external nofollow" style="color:#0366d6;">Server sided events</a>
+	</li>
+	<li>
+		<a href="https://wiki.multitheftauto.com/wiki/Client_Scripting_Events" rel="external nofollow" style="color:#0366d6;">Client sided events</a>
+	</li>
+</ul>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	An event is always triggered for a specific element, for example<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"onPlayerWasted"</code><span> </span>is triggered on the player that was wasted (killed).<br />
+	You can attach an event handler to a single element to only have your callback function be called when the event is triggered on that specific element. But you could also use the root element here and your function will be called for every element the event is triggered on.
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">handlePlayerDeath</span>()
+    <span style="color:#005cc5;">outputChatBox</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>You died!!<span style="color:#032f62;">"</span></span>, source)
+<span style="color:#d73a49;">end</span>
+<span style="color:#005cc5;">addEventHandler</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>onPlayerWasted<span style="color:#032f62;">"</span></span>, <span style="color:#005cc5;">getRootElement</span>(), handlePlayerDeath)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	The<span> </span><a href="https://wiki.multitheftauto.com/wiki/GetRootElement" rel="external nofollow" style="color:#0366d6;">getRootElement()</a><span> </span>function used in this example returns the root element discussed earlier.<br />
+	You can also see<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">source</code><span> </span>is used in this code snippet, we'll talk about that some more in the next section.
+</p>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	predefined globals
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	MTA has some predifined global variables for you to use in your script.<br />
+	A list of them can be found on<span> </span><a href="https://wiki.multitheftauto.com/wiki/Predefined_variables_list" rel="external nofollow" style="color:#0366d6;">the wiki</a>.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Here's a couple notable ones and what they're used for
+</p>
+
+<ul style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<li>
+		<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">root</code><span> </span>The root element, same as the return value of<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">getRootElement()</code>)
+	</li>
+	<li>
+		<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">source</code><br />
+		The element an event handler was called on. An event's wiki page always describes what the event source will be for the event.
+	</li>
+	<li>
+		<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">localPlayer</code><span> </span>The player element for the player whose client the script is running on. (Thus only available client sided)
+	</li>
+	<li>
+		<code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">client</code><span> </span>Will be discussed in the next section
+	</li>
+</ul>
+
+<h3 style="background-color:#ffffff;color:#24292e;font-size:1.25em;">
+	server &lt;-&gt; client communication
+</h3>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	As stated earlier in this tutorial scripts can run either on the server, or one of the connected clients. However often times you would want to trigger something on the server from a client, or the other way around.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	An example of this would be when the user clicks the login button on a GUI (Graphical user interface) the server should try to log that person in, and send him back whether or not this was successful.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This can be done using events. MTA allows you to create and trigger your own events, and these events can be triggered from server to client (and the other way around). You can do this using the<span> </span><a href="https://wiki.multitheftauto.com/wiki/AddEvent" rel="external nofollow" style="color:#0366d6;">addEvent()</a><span> </span>function.<br />
+	Once an event has been added (and marked as remotely triggerable by passing<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">true</code><span> </span>as second argument to<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">addEvent()</code>) you can call it from server/client. You do this using [triggerClientEvent()]<a href="https://wiki.multitheftauto.com/wiki/TriggerClientEvent()" rel="external nofollow" style="color:#0366d6;">https://wiki.multitheftauto.com/wiki/TriggerClientEvent()</a><span> </span>and<span> </span><a href="https://wiki.multitheftauto.com/wiki/TriggerServerEvent" rel="external nofollow" style="color:#0366d6;">triggerServerEvent()</a><span> </span>respectively.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Server sided:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">handlePlayerLogin</span>(<span style="color:#24292e;">username</span>, <span style="color:#24292e;">password</span>)
+    <span style="color:#005cc5;">outputChatBox</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>You tried to log in with the username <span style="color:#032f62;">"</span></span> <span style="color:#d73a49;">..</span> username, client)
+<span style="color:#d73a49;">end</span>
+<span style="color:#005cc5;">addEvent</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>LuaTutorial.Login<span style="color:#032f62;">"</span></span>, <span style="color:#005cc5;">true</span>)
+<span style="color:#005cc5;">addEventHandler</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>LuaTutorial.Login<span style="color:#032f62;">"</span></span>, root, handlePlayerLogin)</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	Client sided:
+</p>
+
+<div style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	<pre style="background-color:#f6f8fa;font-size:13.6px;padding:16px;"><span style="color:#d73a49;">function</span> <span style="color:#6f42c1;">pretendLogin</span>()
+    <span style="color:#005cc5;">triggerServerEvent</span>(<span style="color:#032f62;"><span style="color:#032f62;">"</span>LuaTutorial.Login<span style="color:#032f62;">"</span></span>, localPlayer, <span style="color:#032f62;"><span style="color:#032f62;">"</span>username<span style="color:#032f62;">"</span></span>, <span style="color:#032f62;"><span style="color:#032f62;">"</span>password<span style="color:#032f62;">"</span></span>)
+<span style="color:#d73a49;">end</span>
+
+<span style="color:#005cc5;">pretendLogin</span>()</pre>
+</div>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	This example will trigger the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"LuaTutorial.Login"</code><span> </span>event from the client sided script. And passes the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"username"</code><span> </span>and<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">"password"</code><span> </span>arguments to the event.<br />
+	The server then handles this event in the<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">handlePlayerLogin()</code><span> </span>function, which in our case just outputs something to the chatbox.
+</p>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	In this example you can see the previously mentioned<span> </span><code style="background-color:rgba(27,31,35,.05);font-size:13.6px;padding:.2em .4em;">client</code><span> </span>global variable.<br />
+	This variable is set to the player element corresponding to the client the event was triggered from. (And is thus only usable when used in an event handler which has been triggered from a client).
+</p>
+
+<h2 style="background-color:#ffffff;border-bottom:1px solid #eaecef;color:#24292e;font-size:1.5em;">
+	Now what?
+</h2>
+
+<p style="background-color:#ffffff;color:#24292e;font-size:16px;">
+	With this information you should be able to start scripting, and making things in MTA! If you didn't understand it all in one go, or you have any more questions there is no shame in that!<br />
+	You can find myself and many others willing to help you with your scripting questions in the<span> </span><a href="https://discordapp.com/invite/RygaCSD" rel="external nofollow" style="color:#0366d6;">#scripting channel on the MTA discord</a>.<br />
+	Another good source for programming / scripting related questions is<span> </span><a href="https://stackoverflow.com/" rel="external nofollow" style="color:#0366d6;">stack overflow</a>.
+</p>
+
+
+			
+				
+
+<span class='ipsType_reset ipsType_medium ipsType_light' data-excludequote>
+	<strong>Edited <time datetime='2021-05-21T14:47:43Z' title='21/05/21 14:47 ' data-short='1 yr'>May 21, 2021</time> by NanoBob</strong>
+	
+	
+</span>
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Like">
+					
+							<span>
+								<img src='../../uploads/reactions/react_like.png' alt="Like" loading="lazy">
+							</span>
+							<span>
+								10
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Thanks">
+					
+							<span>
+								<img src='../../uploads/reactions/react_thanks.png' alt="Thanks" loading="lazy">
+							</span>
+							<span>
+								8
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_970006_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+			
+			
+<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366" />
+
+
+		</form>
+	</div>
+
+	
+	
+	
+	
+	
+
+	
+		<div class='ipsBox ipsPadding ipsResponsive_pull ipsResponsive_showPhone ipsMargin_top'>
+			
+				<div class='ipsResponsive_noFloat ipsResponsive_block ipsMargin_bottom:half'>
+					
+
+
+				</div>
+			
+			<div class='ipsResponsive_noFloat ipsResponsive_block'>
+				
+
+<div data-followApp='forums' data-followArea='topic' data-followID='121619' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall ipsButton_disabled" data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>0</span>
+	</a>
+
+</div>
+			</div>
+			
+		</div>
+	
+</div>
+
+
+
+<div class='ipsPager ipsSpacer_top'>
+	<div class="ipsPager_prev">
+		
+			<a href="../../forum/185-user-guides/index.html" title="Go to User Guides" rel="parent">
+				<span class="ipsPager_type">Go to topic listing</span>
+			</a>
+		
+	</div>
+	
+</div>
+
+
+						
+
+
+	<div class='cWidgetContainer '  data-role='widgetReceiver' data-orientation='horizontal' data-widgetArea='footer'>
+		<ul class='ipsList_reset'>
+			
+				
+					
+					<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='app_core_activeUsers_6o9n9w8dl' data-blockConfig="true" data-blockTitle="Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page."  data-controller='core.front.widgets.block'>
+<div data-controller='core.front.core.onlineUsersWidget'>
+    <h3 class='ipsType_reset ipsWidget_title'>
+        
+            Recently Browsing
+        
+        
+        &nbsp;&nbsp;<span class='ipsType_light ipsType_unbold ipsType_medium' data-memberCount="0">0 members</span>
+        
+    </h3>
+    <div class='ipsWidget_inner ipsPad'>
+        <ul class='ipsList_inline ipsList_csv ipsList_noSpacing ipsType_normal'>
+            
+                <li class='ipsType_reset ipsType_medium ipsType_light' data-noneOnline>No registered users viewing this page.</li>
+            
+        </ul>
+        
+    </div>
+</div></li>
+				
+			
+		</ul>
+	</div>
+
+					</div>
+					
+
+
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
+	
+		
+
+
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/80-multi-theft-auto-san-andreas-1x/index.html'>
+						<span>Multi Theft Auto: San Andreas 1.x <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/185-user-guides/index.html'>
+						<span>User Guides <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					Lua for absolute beginners
+				
+			</li>
+		
+	</ul>
+</nav>
+				</div>
+			</div>
+			
+		</main>
+		<footer id='ipsLayout_footer' class='ipsClearfix'>
+			<div class='ipsLayout_container'>
+				
+				
+
+<div id="mta_betaMark">Beta. Subject to change.</div>
+
+
+
+<ul id='elFooterSocialLinks' class='ipsList_inline ipsType_center ipsSpacer_top'>
+	
+
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.facebook.com/multitheftauto' target='_blank' class='cShareLink cShareLink_facebook' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://twitter.com/mtaqa' target='_blank' class='cShareLink cShareLink_twitter' rel='noopener noreferrer'><i class='fa fa-twitter'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://github.com/multitheftauto' target='_blank' class='cShareLink cShareLink_github' rel='noopener noreferrer'><i class='fa fa-github'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.youtube.com/user/MTAQA' target='_blank' class='cShareLink cShareLink_youtube' rel='noopener noreferrer'><i class='fa fa-youtube'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.linkedin.com/company/multitheftauto/' target='_blank' class='cShareLink cShareLink_linkedin' rel='noopener noreferrer'><i class='fa fa-linkedin'></i></a>
+		</li>
+	
+
+	
+<li class="cUserNav_icon">
+  <a href="https://www.reddit.com/r/MultiTheftAuto/" target="_blank" class="cShareLink cShareLink_reddit" rel="noopener noreferrer">
+    <i class="fa fa-reddit"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://www.twitch.tv/mtaqa" target="_blank" class="cShareLink cShareLink_twitch" rel="noopener noreferrer">
+    <i class="fa fa-twitch"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://discord.gg/mtasa" target="_blank" class="cShareLink cShareLink_discord" rel="noopener">
+    <img src="../../uploads/set_resources_22/fcd8efae86176d70eedf4d57dcc4f985_icon-discord_287702449.png" alt="Discord" width="28" height="28">
+  </a>
+</li>
+
+</ul>
+
+
+<ul class='ipsList_inline ipsType_center ipsSpacer_top' id="elFooterLinks">
+	
+	
+	
+	
+		<li>
+			<a href='#elNavTheme_menu' id='elNavTheme' data-ipsMenu data-ipsMenu-above>Theme <i class='fa fa-caret-down'></i></a>
+			<ul id='elNavTheme_menu' class='ipsMenu ipsMenu_selectable ipsHide'>
+			
+				<li class='ipsMenu_item ipsMenu_itemChecked'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjE5LWx1YS1mb3ItYWJzb2x1dGUtYmVnaW5uZXJzLw==">
+					<button type='submit' name='id' value='22' class='ipsButton ipsButton_link ipsButton_link_secondary'>Beta (Default)</button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjE5LWx1YS1mb3ItYWJzb2x1dGUtYmVnaW5uZXJzLw==">
+					<button type='submit' name='id' value='20' class='ipsButton ipsButton_link ipsButton_link_secondary'>Dark </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjE5LWx1YS1mb3ItYWJzb2x1dGUtYmVnaW5uZXJzLw==">
+					<button type='submit' name='id' value='19' class='ipsButton ipsButton_link ipsButton_link_secondary'>Light </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjE5LWx1YS1mb3ItYWJzb2x1dGUtYmVnaW5uZXJzLw==">
+					<button type='submit' name='id' value='25' class='ipsButton ipsButton_link ipsButton_link_secondary'>Night </button>
+					</form>
+				</li>
+			
+			</ul>
+		</li>
+	
+	
+	
+		<li><a rel="nofollow" href='../../contact/index.html' >Contact Us</a></li>
+	
+</ul>	
+
+
+<p id='elCopyright'>
+	<span id='elCopyright_userLine'></span>
+	<a rel='nofollow' title='Invision Community' href='https://www.invisioncommunity.com/'>Powered by Invision Community</a>
+</p>
+			</div>
+		</footer>
+		
+<div id='elMobileDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsFlex ipsFlex-fd:column'>
+			
+				<div class='ipsPadding ipsBorder_bottom'>
+					<ul class='ipsToolList ipsToolList_vertical'>
+						<li>
+							<a href='../../login/index.html' id='elSigninButton_mobile' class='ipsButton ipsButton_light ipsButton_small ipsButton_fullWidth'>Existing user? Sign In</a>
+						</li>
+						
+							<li>
+								
+									<a href='../../register/index.html' data-ipsDialog data-ipsDialog-size='narrow' data-ipsDialog-title='Sign Up' data-ipsDialog-fixed='true' id='elRegisterButton_mobile' class='ipsButton ipsButton_small ipsButton_fullWidth ipsButton_important'>Sign Up</a>
+								
+							</li>
+						
+					</ul>
+				</div>
+			
+
+			
+
+			<ul class='ipsDrawer_list ipsFlex-flex:11'>
+				
+
+				
+				
+				
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Browse</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../index.html' >
+					Forums
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../12275-forum-rules/index.html' >
+					Forum Rules
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../staff/index.html' >
+					Staff
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../online/index.html' >
+					Online Users
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../leaderboard/index.html' >
+					Leaderboard
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Activity</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../discover/index.html' >
+					All Activity
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+
+	
+
+	
+		
+			<li>
+				<a href='../../search/index.html' >
+					Search
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>MTA Network</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>MTA Network</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Social Media</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>Social Media</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+				
+			</ul>
+
+			
+		</div>
+	</div>
+</div>
+
+<div id='elMobileCreateMenuDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsSpacer_bottom ipsPad'>
+			<ul class='ipsDrawer_list'>
+				<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+		
+		
+
+	
+	<script type='text/javascript'>
+		var ipsDebug = false;		
+	
+		var CKEDITOR_BASEPATH = '../../applications/core/interface/ckeditor/ckeditor/index.html';
+	
+		var ipsSettings = {
+			
+			
+			cookie_path: "/",
+			
+			cookie_prefix: "__Host-",
+			
+			
+			cookie_ssl: true,
+			
+			upload_imgURL: "",
+			message_imgURL: "",
+			notification_imgURL: "",
+			baseURL: "//forum.multitheftauto.com/",
+			jsURL: "//forum.multitheftauto.com/applications/core/interface/js/js.php",
+			csrfKey: "714bb4c8fac35f8286ae64e012ef2366",
+			antiCache: "977ee345841657049756",
+			jsAntiCache: "977ee345841658990715",
+			disableNotificationSounds: true,
+			useCompiledFiles: true,
+			links_external: true,
+			memberID: 0,
+			lazyLoadEnabled: true,
+			blankImg: "//forum.multitheftauto.com/applications/core/interface/js/spacer.png",
+			googleAnalyticsEnabled: false,
+			matomoEnabled: false,
+			viewProfiles: true,
+			mapProvider: 'none',
+			mapApiKey: '',
+			pushPublicKey: "BF0jugJbt4XMR7oOEkdDzhxlfUA_S_sdGhSwmgdA4QIkQLHVO4dNMUseahcsyX_G97J81ncc6GqHARuEBoLyWGI",
+			relativeDates: true
+		};
+		
+		
+		
+		
+			ipsSettings['maxImageDimensions'] = {
+				width: 1000,
+				height: 750
+			};
+		
+		
+	</script>
+
+
+
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_libraryef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_js_lang_1ef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frameworkef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/global_global_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frontef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/front_front_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_forums/front_front_topicef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_mapef65.js?v=977ee345841658990715' data-ips></script>
+
+
+
+	<script type='text/javascript'>
+		
+			ips.setSetting( 'date_format', jQuery.parseJSON('"dd\/mm\/yy"') );
+		
+			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
+		
+			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+		
+			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
+		
+			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1626352838') );
+		
+			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+		
+			ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
+		
+			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+		
+		
+	</script>
+
+
+
+<script type='application/ld+json'>
+{
+    "name": "Lua for absolute beginners",
+    "headline": "Lua for absolute beginners",
+    "text": "Lua tutorial for absolute beginners\n \n\n\n\tThis tutorial can also be viewed on GitHub\n \n\n\n\tThis tutorial aims to teach the Lua scripting language to those with 0 previous experience with programming / scripting. \n\tThis guide will start with explaining some Lua concepts, and will later on move to explaining MTA:SA specific concepts.\n \n\n\n\tTable of contents:\n \n\n\n\t\n\t\tLua\n\t\t\n\t\t\t\n\t\t\t\tScripts\n\t\t\t \n\t\t\t\n\t\t\t\tVariables\n\t\t\t \n\t\t\t\n\t\t\t\tData types\n\t\t\t \n\t\t\t\n\t\t\t\tOperators\n\t\t\t \n\t\t\t\n\t\t\t\tIf statements\n\t\t\t \n\t\t\t\n\t\t\t\tFunctions\n\t\t\t \n\t\t\t\n\t\t\t\tReturn values\n\t\t\t \n\t\t\t\n\t\t\t\tscopes \u0026amp; locals\n\t\t\t \n\t\t\t\n\t\t\t\tFor loops\n\t\t\t \n\t\t\t\n\t\t\t\tTables\n\t\t\t \n\t\t\t\n\t\t\t\tIterators (pairs/ipairs)\n\t\t\t \n\t\t\t\n\t\t\t\tCallbacks\n\t\t\t \n\t\t\t\n\t\t\t\tAnonymous functions\n\t\t\t \n\t\t\n\t \n\t\n\t\tMTA\n\t\t\n\t\t\t\n\t\t\t\tServer \u0026amp; Resources\n\t\t\t \n\t\t\t\n\t\t\t\tServer vs client\n\t\t\t \n\t\t\t\n\t\t\t\tMTA functions \u0026amp; wiki\n\t\t\t \n\t\t\t\n\t\t\t\tElements (userdata)\n\t\t\t \n\t\t\t\n\t\t\t\tCommand handlers\n\t\t\t \n\t\t\t\n\t\t\t\tEvent handlers\n\t\t\t \n\t\t\t\n\t\t\t\tpredefined globals\n\t\t\t \n\t\t\t\n\t\t\t\tserver \u0026lt;-\u0026gt; client communication\n\t\t\t \n\t\t\n\t \n\t\n\t\tNow what?\n\t \n\n\n\n\tLua\n \n\n\n\tThis part of the tutorial discusses Lua itself. No MTA-specific concepts will be discussed here.\n \n\n\n\tScripts\n \n\n\n\tThe Lua scripting language is a language which is interpreted by a \"Lua interpreter\". MTA:SA\u0027s resources use such an interpreter to run Lua code. For the beginning of this tutorial you can use the online Lua interpreter available on\u00a0https://www.Lua.org/demo.html. Any code in the Lua part of the tutorial can be run on this website.\n \n\n\n\tLua is written in \"plain text\". This means it exists of regular characters like any other text you are writing. To edit Lua files you will require a text editor. You\u00a0could\u00a0use Notepad, but there are many far better alternatives. My personal favourite is\u00a0Visual Studio Code, but there are many other good options, to name a few: Atom, sublime text, notepad++ \n\tLua files are usually saved with the\u00a0.Lua\u00a0file extension\n \n\n\n\tVariables\n \n\n\n\tThe first concept we\u0027re going to discuss is variables. Variables allow you to store a value in your code. \n\tFor example:\n \n\n\n\t\nx = 10\n\nprint(x)\n\n\n\n\tprint(x)\u00a0will output the value of the\u00a0x\u00a0variable. We will get into what exactly\u00a0print\u00a0is later in the tutorial.\n \n\n\n\tVariables can have any name you want, as long as you follow some specific rules.\n \n\n\n\t\n\t\tvariable names must start with a letter (lower or upper case), or an underscore (_)\n\t \n\t\n\t\tvariable names may contain letters (lower and upper case), numbers and underscores.\n\t \n\n\n\n\t\nx = 10\ny = 20\nz = 30\n\nprint(x)\nprint(y)\nprint(z)\n\n\n\n\tThe convention in Lua is to name your variables in \"camelCase\". This means if a variable exists of multiple words you start every word with a capital letter, except for\u00a0the first one.\n \n\n\n\t\ncamelCaseVariable = 5\n\n\n\n\tData types\n \n\n\n\tSo far we\u0027ve seen variables used to store numeric values, but there are many different types of data Lua can handle. These are:\n \n\n\n\t\n\t\tnumber \n\t\tAny numeric value\n\t \n\t\n\t\tstring \n\t\tA piece of text, a string is surrounded by\u00a0\"\u00a0or\u00a0\u0027. For example\u00a0\"Hello world\"\u00a0or \u0027Hello world\u0027\n\t \n\t\n\t\tboolean \n\t\tA boolean is a data type that has only 2 options,\u00a0true\u00a0and\u00a0false.\n\t \n\t\n\t\tnil \n\t\tnil\u00a0is a value indicating nothing. It\u0027s the absence of a value. (Not the be confused with 0)\n\t \n\t\n\t\ttable \n\t\tTables will be discussed later in the tutorial\n\t \n\t\n\t\tuserdata \n\t\tUserdata will be discussed later in the tutorial\n\t \n\t\n\t\tfunction \n\t\tFunctions will be discussed later in the tutorial\n\t \n\t\n\t\tthread \n\t\tThreads are out of scope for this tutorial and won\u0027t be discussed\n\t \n\n\n\n\tSo we can use these different data types, and store them in variables:\n \n\n\n\t\nnumberVariable = 10\nstringVariable = \"Hello world\"\nbooleanVariable = true\nnilVariable = nil\n\n\n\n\tOperators\n \n\n\n\tOperators are symbols in Lua which can be used to do \"things\" with variables. Here\u0027s a list of operators and an example for each:\n \n\n\n\t+ operator\n \n\n\n\tAdds two values together\n \n\n\n\t\nx = 10 + 10\nprint(x)\n\ny = 20\nprint(y)\n\nz = x + y\nprint(z)\n\n\n\n\t- operator\n \n\n\n\tSubtracts a value from another value\n \n\n\n\t\nx = 10 - 10\nprint(x)\n\n\n\n\t* operator\n \n\n\n\tMultiplies two values\n \n\n\n\t\nx = 10 * 10\nprint(x)\n\n\n\n\t/ operator\n \n\n\n\tDivides a value by another value\n \n\n\n\t\nx = 10 / 10\nprint(x)\n\n\n\n\t% operator\n \n\n\n\tThis is the \"modulo\" operator. This will divide a value by another, and return the leftover.\n \n\n\n\t\nx = 10 % 4\nprint(x)\n\n\n\n\tThe result of this is\u00a02\n \n\n\n\tand operator\n \n\n\n\tThe\u00a0and\u00a0operator will return\u00a0true\u00a0if both variables are \"truthy\". Otherwise it returns\u00a0false \n\t(A \"truthy\" value is anything except for\u00a0false\u00a0and\u00a0nil)\n \n\n\n\t\nx = true and false\nprint(x)\n\ny = true and true\nprint(y)\n\n\n\n\tor operator\n \n\n\n\tThe\u00a0and\u00a0operator will return\u00a0true\u00a0if one of the variables are \"truthy\". Otherwise it returns\u00a0false\n \n\n\n\t\nx = true or false\nprint(x)\n\ny = false or false\nprint(y)\n\n\n\n\t== operator\n \n\n\n\tThe\u00a0==\u00a0(equals) operator will return\u00a0true\u00a0if both of the variables are the same. Otherwise it returns\u00a0false\n \n\n\n\t\nx = \"hey there\" == \"hello there\"\nprint(x)\n\ny = 150 == 150\nprint(y)\n\n\n\n\t~= operator\n \n\n\n\tThe\u00a0~=\u00a0(does not equal) operator will return\u00a0true\u00a0if both variables are\u00a0not\u00a0the same. Otherwise it returns\u00a0false\n \n\n\n\t\nx = \"hey there\" ~= \"hello there\"\nprint(x)\n\ny = 150 ~= 150\nprint(y)\n\n\n\n\t\u0026gt; operator\n \n\n\n\tThe\u00a0\u0026gt;\u00a0(greater than) operator will return\u00a0true\u00a0if the first value is greater than the second value. Otherwise it returns\u00a0false\n \n\n\n\t\nx = 10 \u0026gt; 5\nprint(x)\n\ny = 10 \u0026gt; 15\nprint(y)\n\ny = 10 \u0026gt; 10\nprint(y)\n\n\n\n\t\u0026gt;= operator\n \n\n\n\tThe\u00a0\u0026gt;=\u00a0(greater than or equals) operator will return\u00a0true\u00a0if the first value is greater than, or equal to, the second value. Otherwise it returns\u00a0false\n \n\n\n\t\nx = 10 \u0026gt; 5\nprint(x)\n\ny = 10 \u0026gt; 15\nprint(y)\n\ny = 10 \u0026gt; 10\nprint(y)\n\n\n\n\t\u0026lt; operator\n \n\n\n\tThe\u00a0\u0026lt;\u00a0(less than) operator will return\u00a0true\u00a0if the first value is less than the second value. Otherwise it returns\u00a0false\n \n\n\n\t\nx = 10 \u0026lt; 5\nprint(x)\n\ny = 10 \u0026lt; 15\nprint(y)\n\ny = 10 \u0026lt; 10\nprint(y)\n\n\n\n\t\u0026lt;= operator\n \n\n\n\tThe\u00a0\u0026lt;=\u00a0(less than or equals) operator will return\u00a0true\u00a0if the first value is less than, or equal to, the second value. Otherwise it returns\u00a0false\n \n\n\n\t\nx = 10 \u0026lt; 5\nprint(x)\n\ny = 10 \u0026lt; 15\nprint(y)\n\ny = 10 \u0026lt; 10\nprint(y)\n\n\n\n\t.. operator\n \n\n\n\tThe\u00a0..\u00a0(string concatanation) operator allows you to add two strings together.\n \n\n\n\t\nx = \"Hello\"\nz = \"World!\"\n\ncombined = x .. \" \" .. z\nprint(combined)\n\n\n\n\tIf statements\n \n\n\n\tAn\u00a0if\u00a0statement allows your code to decide to do something, or not. Depending on a value. Often times\u00a0if\u00a0statements are used in combination with some of the above operators.\n \n\n\n\tAn if statement is written as :\u00a0if \u0026lt;expression\u0026gt; then \u0026lt;code\u0026gt; end\n \n\n\n\t\nx = 10\nif x \u0026gt; 5 then\n    print(\"X is higher than 5\")\nend\n\n\n\n\tAny code between\u00a0then\u00a0and\u00a0end\u00a0will only be executed when the expression is true. You might also have noticed that the code between the\u00a0then\u00a0and\u00a0end\u00a0is moved over a bit to the right. This is called \"indentation\". Whenever we open a new scope (scopes will be discussed later in the tutorial) we move our code to the right. This is usually done by either a\u00a0tab\u00a0or several spaces\u00a0. Many code editors will convert a\u00a0tab\u00a0to spaces.\n \n\n\n\tElse\n \n\n\n\tWithin an\u00a0if\u00a0statement, you can also add an\u00a0else\u00a0block. The code in such a block will be executed when the code in the\u00a0if\u00a0block is not executed.\n \n\n\n\t\nx = 10\nif x \u0026gt; 5 then\n    print(\"X is higher than 5\")\nelse\n    print(\"X is not higher than 5\")\nend\n\n\n\n\tElseif\n \n\n\n\tIf you want to do multiple\u00a0if\u00a0statements, you can use an\u00a0elseif:\n \n\n\n\t\nx = 15\nif x \u0026gt; 10 then\n    print(\"X is higher than 10\")\nend\nif x \u0026gt; 5 then\n    print(\"X is higher than 5\")\nend\n\n\n\n\t\nx = 15\nif x \u0026gt; 10 then\n    print(\"X is higher than 10\")\nelseif x \u0026gt; 5 then\n    print(\"X is higher than 5\")\nend\n\n\n\n\tThe difference between the first example and the second is that if\u00a0x\u00a0is higher than 10 in the first example both lines \"X is higher than 10\" and \"X is higher than 5\" will be output. Whilst in the second example only \"X is higher than 10\" will be output.\n \n\n\n\tAnd if statement must always start with an\u00a0if, can contain multiple\u00a0elseifs, and may only have one\u00a0else.\n \n\n\n\t\nname = \"NanoBob\"\nif name == \"NanoBob\" then\n    print(\"Hello world!\")\nelseif name == \"Brophy\" then\n    print(\"Black 123\")\nelseif name == \"Tombaa\" then\n    print(\"Stupid\")\nelse\n    print(\"I have no idea\")\nend\n\n\n\n\tFunctions\n \n\n\n\tFunctions allow you to write less code, by reusing pieces of code.\n \n\n\n\tThe syntax to create a function is\u00a0function \u0026lt;name\u0026gt;(\u0026lt;parameters\u0026gt;) \u0026lt;code\u0026gt; end\n \n\n\n\t\nfunction foo()\n    print(\"Hello world #1\")\n    print(\"Hello world #2\")\nend\n\n\n\n\tIn order to execute code in the function, you \"call\" the function. You do this by writing the function name followed by\u00a0().\n \n\n\n\t\nfunction foo()\n    print(\"Hello world #1\")\n    print(\"Hello world #2\")\nend\n\nfoo()\nfoo()\nfoo()\n\n\n\n\tFunctions also allow you to send a variable to the function, for it to do something with. This is what\u0027s called a function parameter. Function parameters are defined in the brackets\u00a0()\u00a0after the function name.\n \n\n\n\t\nfunction foo(x)\n    print(x)\nend\n\nfoo(10)\nfoo(\"50\")\n\n\n\n\tYou may notice that this looks a lot like the\u00a0print()\u00a0we have been using. This is because\u00a0print\u00a0is a built-in Lua function.\n \n\n\n\tReturn values\n \n\n\n\tA function not only can execute code, it can also give something back to where it was called. This is called a\u00a0return value. In order to return something from a function you use the\u00a0return\u00a0keyword.\n \n\n\n\t\nfunction foo()\n    return 10\nend\n\nx = foo()\nprint(x)\n\nprint(foo())\n\n\n\n\tJust like in an\u00a0if\u00a0statement, all code within a function is indented.\n \n\n\n\tNow let\u0027s combine everything we have learnt so far:\n \n\n\n\t\nfunction foo(x)\n    if x \u0026gt; 10 then\n        return \"X is higher than 10\"\n    elseif x \u0026gt; 5 then\n        return \"X is higher than 5\"\n    else\n        return \"X is not higher than 5\"\n    end\nend\n\ny = foo(15)\nprint(y)\n\nprint(foo(10))\nprint(foo(0))\n\n\n\n\tScopes \u0026amp; locals\n \n\n\n\tWe quickly encountered scopes before, and said we indent our code whenever we enter a new scope. But scopes allow you to do more than that. Most importantly, \"local\" variables.\n \n\n\n\tA local variable is only available in the scope it was defined in (or scopes that were created from within that scope)\n \n\n\n\tYou can create a new scope using a\u00a0do\u00a0block (functions and\u00a0if\u00a0statements also have their own scope).\n \n\n\n\t\ndo\n    local x = 5\n    print(x)\nend\nprint(x)\n\n\n\n\t\ndo \n    local x = 5\n    do \n        local y = 10\n        print(x)\n        print(y)\n    end\n    print(y)\nend\n\n\n\n\tFor loops\n \n\n\n\t(For) loops are ways in scripting / programming to have code executed multiple times, without having to write the same thing multiple times. \n\tAn example of such a loop:\n \n\n\n\t\nfor i = 1, 10 do\n    print(i)\nend\n\n\n\n\tThe first part :\u00a0i = 1, 10\u00a0defines a variable called\u00a0i. Which start at\u00a01. This will be incremented by 1, until it reaches\u00a010. The code within the loop then can use this variable.\n \n\n\n\tYou can also increment with a different number than\u00a01\u00a0(including negative numbers) using this construct.\n \n\n\n\t\nfor i = 20, 0, -2 do\n    print(i)\nend\n\n\n\n\tThis code sample will start with\u00a0i\u00a0at 20, and keep adding\u00a0-2\u00a0(thus subtracting\u00a02), until it reaches\u00a00\n \n\n\n\tTables\n \n\n\n\tTables are a datatype in Lua which allows for lists of things. \n\tHere\u0027s an example:\n \n\n\n\t\nx = {\n    [1] = 100,\n    [2] = 200,\n    [3] = 300\n}\n\nprint(x[1])\nprint(x[2])\nprint(x[3])\n\n\n\n\tTables consist of key/value pairs. In the example above the key\u00a01, has the value\u00a0100,\u00a02\u00a0has the value\u00a0200, and\u00a03\u00a0has the value\u00a0300. \n\tYou can get the value in a table, by putting the key in between square brackets\u00a0[]. Like in\u00a0print(x[1]).\n \n\n\n\t\nx = {\n    100,\n    200,\n    300\n}\n\nprint(x[1])\nprint(x[2])\nprint(x[3])\n\n\n\n\tYou can choose to not include the keys in a table. Doing so will automatically add numbers as keys, starting at 1. So the above example would be the exact same as the first example.\n \n\n\n\tTable keys and values can be of any data type, including other tables. This allows you to create (very) complex table structures.\n \n\n\n\t\nt = {\n    [1] = {\n        100,\n        200,\n        300\n    },\n    [\"x\"] = 100,\n    [true] = \"something\"\n}\nprint(t[\"x\"])\nprint(t[true])\n\nprint(t[1][1])\nprint(t[1][2])\nprint(t[1][3])\n\n\n\n\tWhen using a string as the key in a table, you can leave out the square brackets and the quotes. This goes for both when defining the table, and for indexing it (getting a value from it). For example\n \n\n\n\t\nt = {\n    x = 100,\n    y = 200,\n    z = 300\n}\n\nprint(t.x)\nprint(t.y)\nprint(t.z)\n\n\n\n\tA table\u0027s values can be modified / set after creating the table as well.\n \n\n\n\t\nt = {}\n\nt[1] = 10\nt[2] = 20\nt[3] = 30\n\nt[\"x\"] = \"banana\"\nt[true] = false\nt.x = \"banana\"\n\n\n\n\tWhen using tables you will often want to add something to the \"end\" of a table. This is most common when you are using tables with numeric keys. \n\tIn order to do this you can use a\u00a0#\u00a0to get the amount of items currently in the table.\n \n\n\n\t\nt = {\n    10,\n    20,\n    30\n}\n\nt[#t + 1] = 40\n\n\n\n\tThis will store the value\u00a040\u00a0on the key\u00a04\u00a0, because\u00a0#t\u00a0is 3.\n \n\n\n\tIterators (pairs/ipairs)\n \n\n\n\tIterators are a mechanism that allow you to make a loop, which goes over a set of values. Writing your own iterators won\u0027t be discussed in this tutorial. But there are two functions which are often used to create an iterator to iterate over a table. These are\u00a0pairs\u00a0and\u00a0ipairs.\n \n\n\n\t\nt = {\n    10, 20, 30, 40, 50\n}\n\nfor key, value in ipairs(t) do\n    print(key, value)\nend\n\n\n\n\tThe difference between\u00a0pairs\u00a0and\u00a0ipairs\u00a0is the order in which the key/value pairs are iterated over, and which of the key/value pairs are iterated over. \n\tWhere\u00a0ipairs\u00a0will always use numeric keys, starting at\u00a01, and going up by\u00a01\u00a0every time, until there is no entry in the table. This also means it won\u0027t iterate over anything key that is not numeric.\n \n\n\n\t\nt = {\n    [\"x\"] = 5,\n    [1] = 10,\n    [2] = 20,\n    [3] = 30,\n    [5] = 50,\n}\n\nfor key, value in ipairs(t) do\n    print(key, value)\nend\n\n\n\n\tA\u00a0pairs\u00a0loop will iterate over any value in a table, but the order is not guaranteed. Meaning that between different runs of the script the order could be different.\n \n\n\n\t\nt = {\n    [\"x\"] = 5,\n    [1] = 10,\n    [2] = 20,\n    [3] = 30,\n    [5] = 50,\n}\n\nfor key, value in pairs(t) do\n    print(key, value)\nend\n\n\n\n\tCallbacks\n \n\n\n\tCallbacks are when you pass a function as an argument to another function. To have the function you passed be called later on. This is used often within MTA.\n \n\n\n\tAn example of a Lua function which uses a callback is\u00a0table.sort.\u00a0table.sort\u00a0will sort a tables values, by default these values are sorted numerically. But you can use a callback to change this behaviour.\n \n\n\n\t\nvalues = {\n    5, 4, 3, 6, 8, 1, 2, 9, 7\n}\n\nfunction sortFunction(a, b)\n    return b \u0026gt; a\nend\n\nfunction reverseSortFunction(a, b)\n    return a \u0026gt; b\nend\n\ntable.sort(values, sortFunction)\nprint(\"Sorted: \")\nfor _, v in ipairs(values) do\n    print(v)\nend\n\n\ntable.sort(values, reverseSortFunction)\nprint(\"\\nReverse sorted: \")\nfor _, v in ipairs(values) do\n    print(v)\nend\n\n\n\n\tIn the first call to\u00a0table.sort\u00a0(table.sort(values, sortFunction)) you can see the\u00a0sortFunction\u00a0function is passed as second argument to the function. Note that we don\u0027t write\u00a0sortFunction()\u00a0here (notice the brackets difference) because that would call the\u00a0sortFunction\u00a0function, and pass its return value to\u00a0table.sort.\n \n\n\n\ttable.sort\u00a0will then call this function when it compares two different values, this function should return\u00a0true\u00a0or\u00a0false\u00a0depending on whether its second argument (b\u00a0in this case) is larger than it\u0027s first argument (a), in the context of sorting.\n \n\n\n\tAnonymous functions\n \n\n\n\tIt is also possible to use an \"anonymous function\" when passing a callback to a function.\n \n\n\n\t\nvalues = {\n    5, 4, 3, 6, 8, 1, 2, 9, 7\n}\n\ntable.sort(values, function(a, b)\n    return b \u0026gt; a\nend)\n\nprint(\"Sorted: \")\nfor _, v in ipairs(values) do\n    print(v)\nend\n\n\ntable.sort(values, function(a, b)\n    return a \u0026gt; b\nend)\n\nprint(\"\\nReverse sorted: \")\nfor _, v in ipairs(values) do\n    print(v)\nend\n\n\n\n\tMTA\n \n\n\n\tThis part of the tutorial discusses MTA specific constructs. Code in this part of the tutorial won\u0027t run in the online Lua interpreter. You will need to set up a (local) server for this.\n \n\n\n\tServer \u0026amp; Resources\n \n\n\n\tBy default when installing MTA:SA a server is installed as well. This server is located in the\u00a0\"server\"\u00a0directory of your MTA directory. This is usually at\u00a0C:\\Program Files (x86)\\MTA San Andreas 1.5\\server. This directory contains an\u00a0MTA server.exe\u00a0file, running this file will start a server.\n \n\n\n\tScripts on a server are grouped by resources, a single resource can consist of multiple script files and other assets such as images, sounds, fonts, mods and more.\n \n\n\n\tResources are placed in your\u00a0mods\\deathmatch\\resources\u00a0folder in your server folder. A resource is always in its own directory. A resource must always have a single\u00a0meta.xml\u00a0file. This file tells the server (among others) what script files to load. A typical meta.xml file looks like this:\n \n\n\n\t\n\u0026lt;meta\u0026gt;\n    \u0026lt;script src=\"vehicleSystem.Lua\" type=\"server\"/\u0026gt;\n    \u0026lt;script src=\"vehicleMods.Lua\" type=\"client\"/\u0026gt;\n\u0026lt;/meta\u0026gt;\n\n\n\n\tYou will need an entry for every .Lua file you want to have executed on the server.\n \n\n\n\tYou can start a resource by typing\u00a0start \u0026lt;resource name\u0026gt;\u00a0in the server console (the window that opened when you started\u00a0MTA Server.exe). The resource name is the name of the directory your\u00a0meta.xml\u00a0is in. (This may not have spaces). \n\tStarting a resource will start running the Lua scripts, if you\u0027ve changed your scripts you will need to restart the resource for the changes to take effect. (restart \u0026lt;resource name\u0026gt;).\n \n\n\n\tServer vs client\n \n\n\n\tLua code can be executed in one of two places. The server, or the client. \n\tServer sided scripts are executed on the actual machine that is running the\u00a0MTA server.exe\u00a0process. \n\tClient sided scripts are executed on the computer of every player that connects to your server.\n \n\n\n\tServer sided and client sided scripts have a distinct difference in responsibility and possibility. Some functions for example are only available on the client, whilst others are available only on the server (and many on both).\n \n\n\n\tNote: Some of these functions which are available both server sided and client sided\u00a0are different\u00a0on server and client\n \n\n\n\tMTA functions \u0026amp; wiki\n \n\n\n\tIn plain Lua there\u0027s not much you can do to affect a game engine like MTA:SA. This is why MTA:SA offers a (large) list of functions available for you to use in your scripts which interact with the actual GTA world. \n\tYou can find a list of all of these, what they do and how to use them on the MTA wiki.\n \n\n\n\t\n\t\tServer sided functions\n\t \n\t\n\t\tClient sided functions\n\t \n\t\n\t\tshared functions\n\t \n\n\n\n\tAn example of such a function is\u00a0createObject(). This function will create a physical object in the game. The wiki page contains information on how to use it (what arguments it expects, and in what order). And often shows an example of how to use it.\n \n\n\n\t\ncreateObject(1337, 0, 0, 3)\n\n\n\n\tElements (userdata)\n \n\n\n\tAt the start of this tutorial we quickly mentioned\u00a0userdata\u00a0data types. These are data types configurable by the implementation of Lua. In this case, MTA. \n\tMTA uses userdata to represent \"elements\". Many things in MTA are elements, like objects, markers, peds, players, user interfaces, vehicles, etc. \n\tOn the MTA wiki you will notice many functions either return elements, or require an element as arguments. \n\tA list of different types of elements can be found\u00a0on the MTA wiki.\n \n\n\n\tElements also have a hierarchical structure to them. Elements can have a \"parent\", and multiple \"children\". This will result in a tree of elements, the element at the top of this tree (and thus the grandparent of all elements) is called the root element.\n \n\n\n\tCommand handlers\n \n\n\n\tOften times in MTA you want certain things to happen when a player enters a command. This is done using command handlers, command handlers use a callback, which we previously discussed. \n\tThe wiki contains a page for the\u00a0addCommandHandler()\u00a0function. For this example we will be using the server side version.\n \n\n\n\t\nfunction handler(player, command, argument)\n    outputChatBox(\"You entered \" .. command)\n    if argument ~= nil then\n        outputChatBox(\"You used the argument \" .. argument, player)\n    end\nend\n\naddCommandHandler(\"banana\", handler)\n\n\n\n\tThis example also uses the\u00a0outputChatBox()\u00a0function, this will output a piece of text to the chat.(in this case, only for the player who executed the command)\n \n\n\n\tThe callback function passed to\u00a0addCommandHandler\u00a0will be called every time a player uses the\u00a0/banana\u00a0command ingame.\n \n\n\n\tEvent handlers\n \n\n\n\tBesides having your script do things when a user executes a command you likely want the game to respond to many different types of things that happen in the game. Like players taking damage, coming close to something, etc. \n\tThese things are called events. Whenever an event is triggered you can run a piece of Lua code. You do this using event handlers. Event handlers are created using the\u00a0addEventHandler().\n \n\n\n\tThe first argument to the\u00a0addEventHandler()\u00a0function is the string name of the event. These can be found on the MTA wiki as well.\n \n\n\n\t\n\t\tServer sided events\n\t \n\t\n\t\tClient sided events\n\t \n\n\n\n\tAn event is always triggered for a specific element, for example\u00a0\"onPlayerWasted\"\u00a0is triggered on the player that was wasted (killed). \n\tYou can attach an event handler to a single element to only have your callback function be called when the event is triggered on that specific element. But you could also use the root element here and your function will be called for every element the event is triggered on.\n \n\n\n\t\nfunction handlePlayerDeath()\n    outputChatBox(\"You died!!\", source)\nend\naddEventHandler(\"onPlayerWasted\", getRootElement(), handlePlayerDeath)\n\n\n\n\tThe\u00a0getRootElement()\u00a0function used in this example returns the root element discussed earlier. \n\tYou can also see\u00a0source\u00a0is used in this code snippet, we\u0027ll talk about that some more in the next section.\n \n\n\n\tpredefined globals\n \n\n\n\tMTA has some predifined global variables for you to use in your script. \n\tA list of them can be found on\u00a0the wiki.\n \n\n\n\tHere\u0027s a couple notable ones and what they\u0027re used for\n \n\n\n\t\n\t\troot\u00a0The root element, same as the return value of\u00a0getRootElement())\n\t \n\t\n\t\tsource \n\t\tThe element an event handler was called on. An event\u0027s wiki page always describes what the event source will be for the event.\n\t \n\t\n\t\tlocalPlayer\u00a0The player element for the player whose client the script is running on. (Thus only available client sided)\n\t \n\t\n\t\tclient\u00a0Will be discussed in the next section\n\t \n\n\n\n\tserver \u0026lt;-\u0026gt; client communication\n \n\n\n\tAs stated earlier in this tutorial scripts can run either on the server, or one of the connected clients. However often times you would want to trigger something on the server from a client, or the other way around.\n \n\n\n\tAn example of this would be when the user clicks the login button on a GUI (Graphical user interface) the server should try to log that person in, and send him back whether or not this was successful.\n \n\n\n\tThis can be done using events. MTA allows you to create and trigger your own events, and these events can be triggered from server to client (and the other way around). You can do this using the\u00a0addEvent()\u00a0function. \n\tOnce an event has been added (and marked as remotely triggerable by passing\u00a0true\u00a0as second argument to\u00a0addEvent()) you can call it from server/client. You do this using [triggerClientEvent()]https://wiki.multitheftauto.com/wiki/TriggerClientEvent()\u00a0and\u00a0triggerServerEvent()\u00a0respectively.\n \n\n\n\tServer sided:\n \n\n\n\t\nfunction handlePlayerLogin(username, password)\n    outputChatBox(\"You tried to log in with the username \" .. username, client)\nend\naddEvent(\"LuaTutorial.Login\", true)\naddEventHandler(\"LuaTutorial.Login\", root, handlePlayerLogin)\n\n\n\n\tClient sided:\n \n\n\n\t\nfunction pretendLogin()\n    triggerServerEvent(\"LuaTutorial.Login\", localPlayer, \"username\", \"password\")\nend\n\npretendLogin()\n\n\n\n\tThis example will trigger the\u00a0\"LuaTutorial.Login\"\u00a0event from the client sided script. And passes the\u00a0\"username\"\u00a0and\u00a0\"password\"\u00a0arguments to the event. \n\tThe server then handles this event in the\u00a0handlePlayerLogin()\u00a0function, which in our case just outputs something to the chatbox.\n \n\n\n\tIn this example you can see the previously mentioned\u00a0client\u00a0global variable. \n\tThis variable is set to the player element corresponding to the client the event was triggered from. (And is thus only usable when used in an event handler which has been triggered from a client).\n \n\n\n\tNow what?\n \n\n\n\tWith this information you should be able to start scripting, and making things in MTA! If you didn\u0027t understand it all in one go, or you have any more questions there is no shame in that! \n\tYou can find myself and many others willing to help you with your scripting questions in the\u00a0#scripting channel on the MTA discord. \n\tAnother good source for programming / scripting related questions is\u00a0stack overflow.\n \n",
+    "dateCreated": "2019-12-27T18:23:38+0000",
+    "datePublished": "2019-12-27T18:23:38+0000",
+    "dateModified": "2019-12-27T18:23:38+0000",
+    "image": "https://forum.multitheftauto.com/uploads/monthly_2017_04/avatar.thumb.png.56de13fb0fa3fede34c276e0a8298832.png",
+    "author": {
+        "@type": "Person",
+        "name": "NanoBob",
+        "image": "https://forum.multitheftauto.com/uploads/monthly_2017_04/avatar.thumb.png.56de13fb0fa3fede34c276e0a8298832.png",
+        "url": "https://forum.multitheftauto.com/profile/51280-nanobob/"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/ViewAction",
+            "userInteractionCount": 14387
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 0
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/FollowAction",
+            "userInteractionCount": 0
+        }
+    ],
+    "@context": "http://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/",
+    "isPartOf": {
+        "@id": "https://forum.multitheftauto.com/#website"
+    },
+    "publisher": {
+        "@id": "https://forum.multitheftauto.com/#organization",
+        "member": {
+            "@type": "Person",
+            "name": "NanoBob",
+            "image": "https://forum.multitheftauto.com/uploads/monthly_2017_04/avatar.thumb.png.56de13fb0fa3fede34c276e0a8298832.png",
+            "url": "https://forum.multitheftauto.com/profile/51280-nanobob/"
+        }
+    },
+    "url": "https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/",
+    "discussionUrl": "https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://forum.multitheftauto.com/topic/121619-lua-for-absolute-beginners/"
+    },
+    "pageStart": 1,
+    "pageEnd": 1
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://forum.multitheftauto.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://forum.multitheftauto.com/#website",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://forum.multitheftauto.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (UK)",
+            "alternateName": "en-GB"
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://forum.multitheftauto.com/#organization",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "logo": {
+        "@type": "ImageObject",
+        "@id": "https://forum.multitheftauto.com/#logo",
+        "url": "https://forum.multitheftauto.com/uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png"
+    },
+    "sameAs": [
+        "https://www.facebook.com/multitheftauto",
+        "https://twitter.com/mtaqa",
+        "https://github.com/multitheftauto",
+        "https://www.youtube.com/user/MTAQA",
+        "https://www.linkedin.com/company/multitheftauto/"
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/80-multi-theft-auto-san-andreas-1x/",
+                "name": "Multi Theft Auto: San Andreas 1.x"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/185-user-guides/",
+                "name": "User Guides"
+            }
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "ContactPage",
+    "url": "https://forum.multitheftauto.com/contact/"
+}	
+</script>
+
+
+		
+		
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		
+		
+		
+        
+	</body>
+</html>

@@ -1,0 +1,3580 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8">
+        
+		<title>Basics of Vertex Color and Alpha - User Guides - Multi Theft Auto: Forums</title>
+		
+		
+		
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	
+	
+
+
+	<meta name="twitter:card" content="summary" />
+
+
+	
+		<meta name="twitter:site" content="@mtaqa" />
+	
+
+
+	
+		
+			
+				<meta property="og:title" content="Basics of Vertex Color and Alpha">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:type" content="website">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:url" content="index.html">
+			
+		
+	
+
+	
+		
+			
+				<meta name="description" content="Introduction This guide intends to teach 3ds Max users the basics and more advanced ways of working with Vertex Colors, in order to achieve lighting solutions for enhanced quality of game models, or blend several textures together using Vertex alpha. A lot of games utilises vertex colors to accom...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:description" content="Introduction This guide intends to teach 3ds Max users the basics and more advanced ways of working with Vertex Colors, in order to achieve lighting solutions for enhanced quality of game models, or blend several textures together using Vertex alpha. A lot of games utilises vertex colors to accom...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:updated_time" content="2019-12-31T00:21:39Z">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:site_name" content="Multi Theft Auto: Forums">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:locale" content="en_GB">
+			
+		
+	
+
+
+	
+		<link rel="canonical" href="index.html" />
+	
+
+
+
+
+<link rel="manifest" href="../../manifest.webmanifest/index.html">
+<meta name="msapplication-config" content="../../browserconfig.xml/index.html">
+<meta name="msapplication-starturl" content="/">
+<meta name="application-name" content="Multi Theft Auto: Forums">
+<meta name="apple-mobile-web-app-title" content="Multi Theft Auto: Forums">
+
+	<meta name="theme-color" content="#121319">
+
+
+
+
+
+
+	
+
+	
+		
+			<link rel="icon" sizes="36x36" href="../../uploads/monthly_2021_10/android-chrome-36x36.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="48x48" href="../../uploads/monthly_2021_10/android-chrome-48x48.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="72x72" href="../../uploads/monthly_2021_10/android-chrome-72x72.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="96x96" href="../../uploads/monthly_2021_10/android-chrome-96x96.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="144x144" href="../../uploads/monthly_2021_10/android-chrome-144x144.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="192x192" href="../../uploads/monthly_2021_10/android-chrome-192x192.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="256x256" href="../../uploads/monthly_2021_10/android-chrome-256x256.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="384x384" href="../../uploads/monthly_2021_10/android-chrome-384x384.png">
+		
+	
+
+	
+		
+			<link rel="icon" sizes="512x512" href="../../uploads/monthly_2021_10/android-chrome-512x512.png">
+		
+	
+
+	
+		
+			<meta name="msapplication-square70x70logo" content="../../uploads/monthly_2021_10/msapplication-square70x70logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-TileImage" content="../../uploads/monthly_2021_10/msapplication-TileImage.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square150x150logo" content="../../uploads/monthly_2021_10/msapplication-square150x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-wide310x150logo" content="../../uploads/monthly_2021_10/msapplication-wide310x150logo.png"/>
+		
+	
+
+	
+		
+			<meta name="msapplication-square310x310logo" content="../../uploads/monthly_2021_10/msapplication-square310x310logo.png"/>
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" href="../../uploads/monthly_2021_10/apple-touch-icon-57x57.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="60x60" href="../../uploads/monthly_2021_10/apple-touch-icon-60x60.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="72x72" href="../../uploads/monthly_2021_10/apple-touch-icon-72x72.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="76x76" href="../../uploads/monthly_2021_10/apple-touch-icon-76x76.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="114x114" href="../../uploads/monthly_2021_10/apple-touch-icon-114x114.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="120x120" href="../../uploads/monthly_2021_10/apple-touch-icon-120x120.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="144x144" href="../../uploads/monthly_2021_10/apple-touch-icon-144x144.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="152x152" href="../../uploads/monthly_2021_10/apple-touch-icon-152x152.png">
+			
+		
+	
+
+	
+		
+			
+				<link rel="apple-touch-icon" sizes="180x180" href="../../uploads/monthly_2021_10/apple-touch-icon-180x180.png">
+			
+		
+	
+
+
+
+
+
+<link rel="preload" href="../../applications/core/interface/font/fontawesome-webfont3e6e.woff2?v=4.7.0" as="font" crossorigin="anonymous">
+		
+
+
+	
+		<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,700,700i" rel="stylesheet" referrerpolicy="origin">
+	
+
+
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/341e4a57816af3ba440d891ca87450ff_frameworka9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/05e81b71abe4f22d6eb8d1a929494829_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/20446cf2d164adcc029377cb04d43d17_flagsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/90eb5adf50a8c640f633d47fd7eb1778_corea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/5a0da001ccc2200dc5625c3f3934497d_core_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/62e269ced0fdab7e30e026f1d30ae516_forumsa9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/76e62c573090645fb99a15a363d8620e_forums_responsivea9db.css?v=977ee345841657049756' media='all'>
+
+	<link rel='stylesheet' href='../../uploads/css_built_22/ebdea0c6a7dab6d37900b9190d3ac77b_topicsa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+
+<link rel='stylesheet' href='../../uploads/css_built_22/258adbb6e4f3e83cd3b355f84e3fa002_customa9db.css?v=977ee345841657049756' media='all'>
+
+
+
+
+		
+		
+
+	
+	<link rel='shortcut icon' href='../../uploads/monthly_2016_09/favicon.ico.496d8d1cc696295f808f9f1153f0a1e0.ico' type="image/x-icon">
+
+	</head>
+	<body class='ipsApp ipsApp_front ipsJS_none ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='forums' data-pageLocation='front' data-pageModule='forums' data-pageController='topic' data-pageID='121674'  >
+		
+        
+
+        
+
+		  <a href='#ipsLayout_mainArea' class='ipsHide' title='Go to main content on this page' accesskey='m'>Jump to content</a>
+		<div id='ipsLayout_header' class='ipsClearfix'>
+			
+
+
+
+
+
+			<header>
+				
+<div id="mta_globalTopNavigation">
+  <div id="mta_globalTopNavigationLinks" class="ipsLayout_container">
+    <a href="https://multitheftauto.com/">Home</a>
+    <a href="https://discord.com/invite/mtasa" rel="noopener" target="_blank">Discord</a>
+    <a href="https://community.multitheftauto.com/">Community</a>
+    <a href="../../index.html">Forum</a>
+    <a href="https://wiki.multitheftauto.com/wiki/Main_Page">Wiki</a>
+    <a href="https://github.com/multitheftauto/mtasa-blue/issues" rel="noopener" target="_blank">Bugs</a>
+    <a href="https://multitheftauto.com/donate/">Heroes</a>
+    <a href="https://multitheftauto.com/hosters/">Hosting</a>
+    <a href="https://community.multitheftauto.com/index.php?p=servers">Servers</a>
+    <a href="https://multitheftauto.myspreadshop.net/all">Merch</a>
+    <span id="mta_onlinePlayers"></span>
+  </div>
+  <script>
+    (function () {
+      var onlinePlayersEl = document.getElementById('mta_onlinePlayers');
+
+      function updateOnlinePlayers() {
+        if (!onlinePlayersEl) return;
+
+        fetch('https://multitheftauto.com/count/')
+          .then(function (r) {
+            if (!r.ok) throw new Error();
+            return r.text();
+          })
+          .then(function (r) {
+            if (!onlinePlayersEl) return;
+            if (!r) throw new Error();
+
+            var info = r.split(',', 2);
+            if (!info || !info[0] || !info[1]) throw new Error();
+
+            function updateStats() {
+              onlinePlayersEl.innerText = new Intl.NumberFormat('en-US').format(info[0]) + ' players online on ' + new Intl.NumberFormat('en-US').format(info[1]) + ' public servers';
+              $(onlinePlayersEl).stop(true).fadeIn(500);
+            }
+
+            if (!onlinePlayersEl.innerText) {
+              $(onlinePlayersEl).hide();
+              updateStats();
+              return;
+            }
+
+            $(onlinePlayersEl).stop(true).fadeOut(500);
+            setTimeout(updateStats, 500);
+          })
+          .catch(function () {
+            setTimeout(updateOnlinePlayers, 10000);
+          });
+      }
+
+      window.addEventListener('load', updateOnlinePlayers);
+      setInterval(updateOnlinePlayers, 300000);
+    })();
+  </script>
+</div>
+
+				<div class='ipsLayout_container'>
+					
+
+
+<a href='../../index.html' id='elLogo' accesskey='1'><img src="../../uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png" alt='Multi Theft Auto: Forums'></a>
+
+					
+						
+
+	<ul id="elUserNav" class="ipsList_inline cSignedOut ipsResponsive_showDesktop">
+		
+		<li id="elSignInLink">
+			<a href="../../login/index.html" data-ipsmenu-closeonclick="false" data-ipsmenu id="elUserSignIn">
+				Existing user? Sign In  <i class="fa fa-caret-down"></i>
+			</a>
+			
+<div id='elUserSignIn_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+	<form accept-charset='utf-8' method='post' action='https://forum.multitheftauto.com/login/'>
+		<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366">
+		<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjc0LWJhc2ljcy1vZi12ZXJ0ZXgtY29sb3ItYW5kLWFscGhhLw==">
+		<div data-role="loginForm">
+			
+			
+			
+				
+<div class="ipsPad ipsForm ipsForm_vertical">
+	<h4 class="ipsType_sectionHead">Sign In</h4>
+	<br><br>
+	<ul class='ipsList_reset'>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			
+			
+				<input type="text" placeholder="Display Name or Email Address" name="auth" autocomplete="email">
+			
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			<input type="password" placeholder="Password" name="password" autocomplete="current-password">
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_checkbox ipsClearfix">
+			<span class="ipsCustomInput">
+				<input type="checkbox" name="remember_me" id="remember_me_checkbox" value="1" checked aria-checked="true">
+				<span></span>
+			</span>
+			<div class="ipsFieldRow_content">
+				<label class="ipsFieldRow_label" for="remember_me_checkbox">Remember me</label>
+				<span class="ipsFieldRow_desc">Not recommended on shared computers</span>
+			</div>
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_fullWidth">
+			<button type="submit" name="_processLogin" value="usernamepassword" class="ipsButton ipsButton_primary ipsButton_small" id="elSignIn_submit">Sign In</button>
+			
+				<p class="ipsType_right ipsType_small">
+					
+						<a href='../../lostpassword/index.html' data-ipsDialog data-ipsDialog-title='Forgot your password?'>
+					
+					Forgot your password?</a>
+				</p>
+			
+		</li>
+	</ul>
+</div>
+			
+		</div>
+	</form>
+</div>
+		</li>
+		
+			<li>
+				
+					<a href="../../register/index.html" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-title="Sign Up"  id="elRegisterButton" class="ipsButton ipsButton_normal ipsButton_primary">Sign Up</a>
+				
+			</li>
+		
+	</ul>
+
+						
+<ul class='ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop'>
+	<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileDrawer'>
+		<a href='#'>
+			
+			
+				
+			
+			
+			
+			<i class='fa fa-navicon'></i>
+		</a>
+	</li>
+</ul>
+					
+				</div>
+			</header>
+			
+
+	<nav data-controller='core.front.core.navBar' class=' ipsResponsive_showDesktop'>
+		<div class='ipsNavBar_primary ipsLayout_container '>
+			<ul data-role="primaryNavBar" class='ipsClearfix'>
+				
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_1' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../index.html"  data-navItem-id="1" data-navDefault>
+					Browse<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+			
+		
+		<li class='ipsNavBar_active' data-active id='elNavSecondary_8' data-role="navBarItem" data-navApp="forums" data-navExt="Forums">
+			
+			
+				<a href="../../index.html"  data-navItem-id="8" data-navDefault>
+					Forums<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_12' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../12275-forum-rules/index.html"  data-navItem-id="12" >
+					Forum Rules<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_10' data-role="navBarItem" data-navApp="core" data-navExt="StaffDirectory">
+			
+			
+				<a href="../../staff/index.html"  data-navItem-id="10" >
+					Staff<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_11' data-role="navBarItem" data-navApp="core" data-navExt="OnlineUsers">
+			
+			
+				<a href="../../online/index.html"  data-navItem-id="11" >
+					Online Users<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_24' data-role="navBarItem" data-navApp="core" data-navExt="Leaderboard">
+			
+			
+				<a href="../../leaderboard/index.html"  data-navItem-id="24" >
+					Leaderboard<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_1' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_1' id='elNavigationMore_1_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_1_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_2' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="2" >
+					Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_3' data-role="navBarItem" data-navApp="core" data-navExt="AllActivity">
+			
+			
+				<a href="../../discover/index.html"  data-navItem-id="3" >
+					All Activity<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_7' data-role="navBarItem" data-navApp="core" data-navExt="Search">
+			
+			
+				<a href="../../search/index.html"  data-navItem-id="7" >
+					Search<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_2' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_2' id='elNavigationMore_2_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_2_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_37' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_37" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_37' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="37" >
+					MTA Network <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_37_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_46' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="46" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_48' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://community.mtasa.com/" target='_blank' rel="noopener" data-navItem-id="48" >
+					Community<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_49' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://wiki.multitheftauto.com/wiki/Main_Page" target='_blank' rel="noopener" data-navItem-id="49" >
+					Wiki<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_50' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto/mtasa-blue/issues" target='_blank' rel="noopener" data-navItem-id="50" >
+					Bugs<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_51' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/donate/" target='_blank' rel="noopener" data-navItem-id="51" >
+					Heroes<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_52' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.com/hosters/" target='_blank' rel="noopener" data-navItem-id="52" >
+					Hosting<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_45' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://multitheftauto.myspreadshop.net/all" target='_blank' rel="noopener" data-navItem-id="45" >
+					Merch Store<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_37' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_37' id='elNavigationMore_37_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_37_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_28' data-role="navBarItem" data-navApp="core" data-navExt="Menu">
+			
+			
+				<a href="#" id="elNavigation_28" data-ipsMenu data-ipsMenu-appendTo='#elNavSecondary_28' data-ipsMenu-activeClass='ipsNavActive_menu' data-navItem-id="28" >
+					Social Media <i class="fa fa-caret-down"></i><span class='ipsNavBar_active__identifier'></span>
+				</a>
+				<ul id="elNavigation_28_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class='ipsMenu_item' >
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+				<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+					
+
+
+	
+		
+		
+		<li  id='elNavSecondary_36' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://discord.com/invite/mtasa" target='_blank' rel="noopener" data-navItem-id="36" >
+					Discord<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_35' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.twitch.tv/mtaqa" target='_blank' rel="noopener" data-navItem-id="35" >
+					Twitch<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_30' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://twitter.com/mtaqa" target='_blank' rel="noopener" data-navItem-id="30" >
+					Twitter<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_32' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.youtube.com/user/MTAQA" target='_blank' rel="noopener" data-navItem-id="32" >
+					YouTube<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_31' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://github.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="31" >
+					GitHub<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_29' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.facebook.com/multitheftauto" target='_blank' rel="noopener" data-navItem-id="29" >
+					Facebook<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_34' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.reddit.com/r/MultiTheftAuto/" target='_blank' rel="noopener" data-navItem-id="34" >
+					Reddit<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li  id='elNavSecondary_33' data-role="navBarItem" data-navApp="core" data-navExt="CustomItem">
+			
+			
+				<a href="https://www.linkedin.com/company/multitheftauto" target='_blank' rel="noopener" data-navItem-id="33" >
+					LinkedIn<span class='ipsNavBar_active__identifier'></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+					<li class='ipsHide' id='elNavigationMore_28' data-role='navMore'>
+						<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_28' id='elNavigationMore_28_dropdown'>More <i class='fa fa-caret-down'></i></a>
+						<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_28_dropdown_menu' data-role='moreDropdown'></ul>
+					</li>
+				</ul>
+			
+		</li>
+	
+	
+
+				<li class='ipsHide' id='elNavigationMore' data-role='navMore'>
+					<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore' id='elNavigationMore_dropdown'>More</a>
+					<ul class='ipsNavBar_secondary ipsHide' data-role='secondaryNavBar'>
+						<li class='ipsHide' id='elNavigationMore_more' data-role='navMore'>
+							<a href='#' data-ipsMenu data-ipsMenu-appendTo='#elNavigationMore_more' id='elNavigationMore_more_dropdown'>More <i class='fa fa-caret-down'></i></a>
+							<ul class='ipsHide ipsMenu ipsMenu_auto' id='elNavigationMore_more_dropdown_menu' data-role='moreDropdown'></ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+
+	<div id="elSearchWrapper">
+		<div id='elSearch' class='' data-controller='core.front.core.quickSearch'>
+			<form accept-charset='utf-8' action='http://forum.multitheftauto.com/search/?do=quicksearch' method='post'>
+				<input type='search' id='elSearchField' placeholder='Search...' name='q' autocomplete='off' aria-label='Search'>
+				<button class='cSearchSubmit' type="submit" aria-label='Search'><i class="fa fa-search"></i></button>
+				<div id="elSearchExpanded">
+					<div class="ipsMenu_title">
+						Search In
+					</div>
+					<ul class="ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-role="searchContexts">
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="type" value="all" checked id="elQuickSearchRadio_type_all">
+								<label for='elQuickSearchRadio_type_all' id='elQuickSearchRadio_type_all_label'>Everywhere</label>
+							</span>
+						</li>
+						
+						
+							<li>
+								<span class='ipsSideMenu_item' data-ipsMenuValue='forums_topic'>
+									<input type="radio" name="type" value="forums_topic" id="elQuickSearchRadio_type_forums_topic">
+									<label for='elQuickSearchRadio_type_forums_topic' id='elQuickSearchRadio_type_forums_topic_label'>Topics</label>
+								</span>
+							</li>
+						
+						
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:185}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:185}' id='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1'>
+										<label for='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1' id='elQuickSearchRadio_type_contextual_2926fc569a089cb588251ed8a3ec89c1_label'>This Forum</label>
+									</span>
+								</li>
+							
+								<li>
+									<span class='ipsSideMenu_item' data-ipsMenuValue='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:121674}'>
+										<input type="radio" name="type" value='contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:121674}' id='elQuickSearchRadio_type_contextual_9f98d936970672dde90ea2bd094ce17d'>
+										<label for='elQuickSearchRadio_type_contextual_9f98d936970672dde90ea2bd094ce17d' id='elQuickSearchRadio_type_contextual_9f98d936970672dde90ea2bd094ce17d_label'>This Topic</label>
+									</span>
+								</li>
+							
+						
+						<li data-role="showMoreSearchContexts">
+							<span class='ipsSideMenu_item' data-action="showMoreSearchContexts" data-exclude="forums_topic">
+								More options...
+							</span>
+						</li>
+					</ul>
+					<div class="ipsMenu_title">
+						Find results that contain...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='andOr'>
+						
+							<li>
+								<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='or'>
+									<input type="radio" name="search_and_or" value="or" checked id="elRadio_andOr_or">
+									<label for='elRadio_andOr_or' id='elField_andOr_label_or'><em>Any</em> of my search term words</label>
+								</span>
+							</li>
+						
+							<li>
+								<span class='ipsSideMenu_item ' data-ipsMenuValue='and'>
+									<input type="radio" name="search_and_or" value="and"  id="elRadio_andOr_and">
+									<label for='elRadio_andOr_and' id='elField_andOr_label_and'><em>All</em> of my search term words</label>
+								</span>
+							</li>
+						
+					</ul>
+					<div class="ipsMenu_title">
+						Find results in...
+					</div>
+					<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='searchIn'>
+						<li>
+							<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+								<input type="radio" name="search_in" value="all" checked id="elRadio_searchIn_and">
+								<label for='elRadio_searchIn_and' id='elField_searchIn_label_all'>Content titles and body</label>
+							</span>
+						</li>
+						<li>
+							<span class='ipsSideMenu_item' data-ipsMenuValue='titles'>
+								<input type="radio" name="search_in" value="titles" id="elRadio_searchIn_titles">
+								<label for='elRadio_searchIn_titles' id='elField_searchIn_label_titles'>Content titles only</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		</div>
+	</nav>
+
+			
+<ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
+	
+		
+			
+			
+				
+				
+			
+				
+					<li id='elMobileBreadcrumb'>
+						<a href='../../forum/185-user-guides/index.html'>
+							<span>User Guides</span>
+						</a>
+					</li>
+				
+				
+			
+				
+				
+			
+		
+	
+	
+	
+	<li >
+		<a data-action="defaultStream" href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+	</li>
+
+	
+
+	
+		<li class='ipsJS_show'>
+			<a href='../../search/index.html'><i class='fa fa-search'></i></a>
+		</li>
+	
+</ul>
+		</div>
+		<main id='ipsLayout_body' class='ipsLayout_container'>
+			<div id='ipsLayout_contentArea'>
+				<div id='ipsLayout_contentWrapper'>
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/80-multi-theft-auto-san-andreas-1x/index.html'>
+						<span>Multi Theft Auto: San Andreas 1.x <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/185-user-guides/index.html'>
+						<span>User Guides <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					Basics of Vertex Color and Alpha
+				
+			</li>
+		
+	</ul>
+</nav>
+					
+					<div id='ipsLayout_mainArea'>
+						
+						
+						
+						
+
+	
+
+
+
+
+						
+
+
+
+<div class='ipsPageHeader ipsResponsive_pull ipsBox ipsPadding sm:ipsPadding:half ipsMargin_bottom'>
+		
+	
+	<div class='ipsFlex ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:4'>
+		<div class='ipsFlex-flex:11'>
+			<h1 class='ipsType_pageTitle ipsContained_container'>
+				
+
+				
+				
+					<span class='ipsType_break ipsContained'>
+						<span>Basics of Vertex Color and Alpha</span>
+					</span>
+				
+			</h1>
+			
+			
+		</div>
+		
+	</div>
+	<hr class='ipsHr'>
+	<div class='ipsPageHeader__meta ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:3'>
+		<div class='ipsFlex-flex:11'>
+			<div class='ipsPhotoPanel ipsPhotoPanel_mini ipsPhotoPanel_notPhone ipsClearfix'>
+				
+
+
+	<a href="../../profile/61779-tut/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Tut's profile">
+		<img src='../../uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif' alt='Tut' loading="lazy">
+	</a>
+
+				<div>
+					<p class='ipsType_reset ipsType_blendLinks'>
+						<span class='ipsType_normal'>
+						
+							<strong>By 
+
+
+<a href='../../profile/61779-tut/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F121674-basics-of-vertex-color-and-alpha%252F' title="Go to Tut's profile" class="ipsType_break"><span style='color:#ff0000; font-weight: bold'>Tut</span></a>, </strong><br />
+							<span class='ipsType_light'><time datetime='2019-12-31T00:21:39Z' title='31/12/19 00:21 ' data-short='2 yr'>December 31, 2019</time> in <a href="../../forum/185-user-guides/index.html">User Guides</a></span>
+						
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class='ipsFlex-flex:01 ipsResponsive_hidePhone'>
+				<div class='ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsGap_row:0'>
+					
+						
+
+
+					
+					
+
+
+
+					
+
+<div data-followApp='forums' data-followArea='topic' data-followID='121674' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall ipsButton_disabled" data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>0</span>
+	</a>
+
+</div>
+				</div>
+			</div>
+					
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+<div class='ipsClearfix'>
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+		
+		
+		
+	</ul>
+</div>
+
+<div id='comments' data-controller='core.front.core.commentFeed,forums.front.topic.view, core.front.core.ignoredComments' data-autoPoll data-baseURL='https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/' data-lastPage data-feedID='topic-121674' class='cTopic ipsClear ipsSpacer_top'>
+	
+			
+	
+
+	
+
+<div data-controller='core.front.core.recommendedComments' data-url='https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/?recommended=comments' class='ipsRecommendedComments ipsHide'>
+	<div data-role="recommendedComments">
+		<h2 class='ipsType_sectionHead ipsType_large ipsType_bold ipsMargin_bottom'>Recommended Posts</h2>
+		
+	</div>
+</div>
+	
+	<div id="elPostFeed" data-role='commentFeed' data-controller='core.front.core.moderation' >
+		<form action="https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/?csrfKey=714bb4c8fac35f8286ae64e012ef2366&amp;do=multimodComment" method="post" data-ipsPageAction data-role='moderationTools'>
+			
+			
+				
+
+					
+
+					
+					
+
+
+
+<a id='comment-970160'></a>
+<article data-memberGroup="4"  id='elComment_970160' class='cPost ipsBox ipsResponsive_pull  ipsComment ipsComment_popular ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone ipsComment_highlighted   '>
+	
+
+	
+		<div class='ipsResponsive_showPhone ipsComment_badges'>
+			<ul class='ipsList_reset ipsFlex ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1'>
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_highlightedGroup'>Administrators</strong></li>
+				
+				
+				
+				
+					<li><strong class='ipsBadge ipsBadge_large ipsBadge_popular'>Popular Post</strong></li>
+				
+			</ul>
+		</div>
+	
+
+	<div class='cAuthorPane_mobile ipsResponsive_showPhone'>
+		<div class='cAuthorPane_photo'>
+			<div class='cAuthorPane_photoWrap'>
+				
+
+
+	<a href="../../profile/61779-tut/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to Tut's profile">
+		<img src='../../uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif' alt='Tut' loading="lazy">
+	</a>
+
+				
+                    
+                        <span class="cAuthorPane_badge cAuthorPane_badge--moderator cAuthorPane_badge--admin" data-ipsTooltip title="Tut is an administrator"></span>
+                	
+				
+				
+					<a href="../../profile/61779-tut/badges/index.html" rel="nofollow">
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Soldier" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Soldier (43/54)">
+					</a>
+				
+			</div>
+		</div>
+		<div class='cAuthorPane_content'>
+			<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+				
+
+
+<a href='../../profile/61779-tut/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F121674-basics-of-vertex-color-and-alpha%252F' title="Go to Tut's profile" class="ipsType_break"><span style='color:#ff0000; font-weight: bold'>Tut</span></a>
+			</h3>
+			<div class='ipsType_light ipsType_reset'>
+				<a href='indexf711.html?do=findComment&amp;comment=970160' rel="nofollow" class='ipsType_blendLinks'>Posted <time datetime='2019-12-31T00:21:39Z' title='31/12/19 00:21 ' data-short='2 yr'>December 31, 2019</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class='ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone'>
+		<h3 class='ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break'><strong>
+
+
+<a href='../../profile/61779-tut/index.html' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.multitheftauto.com%252Ftopic%252F121674-basics-of-vertex-color-and-alpha%252F' title="Go to Tut's profile" class="ipsType_break">Tut</a></strong>
+			
+		</h3>
+		<ul class='cAuthorPane_info ipsList_reset'>
+            
+                
+                    
+                        <li data-role='member-title' class='cAuthorPane_title'>
+Lead Global Moderator</li>
+                    
+                
+            
+			<li data-role='photo' class='cAuthorPane_photo'>
+				<div class='cAuthorPane_photoWrap'>
+					
+
+
+	<a href="../../profile/61779-tut/index.html" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://forum.multitheftauto.com/profile/61779-tut/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to Tut's profile">
+		<img src='../../uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif' alt='Tut' loading="lazy">
+	</a>
+
+					
+                        
+                        	<span class="cAuthorPane_badge cAuthorPane_badge--moderator cAuthorPane_badge--admin" data-ipsTooltip title="Tut is an administrator"></span>
+                        
+					
+					
+						
+<img src='../../uploads/set_resources_22/84c1e40ea0e759e3f1505eb1788ddf3c_default_rank.png' loading="lazy" alt="Soldier" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipsTooltip title="Rank: Soldier (43/54)">
+					
+				</div>
+			</li>
+			
+				<li data-role='group'><span style='color:#ff0000; font-weight: bold'>Administrators</span></li>
+				
+			
+			
+				<li data-role='reputation-badge'>
+					
+
+	
+		<span title="Member's total reputation" data-ipsTooltip class='ipsRepBadge ipsRepBadge_positive'>
+	
+			<i class='fa fa-plus-circle'></i> 655
+	
+		</span>
+	
+
+				</li>
+				<li data-role='stats'>
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="../../profile/61779-tut/content/index.html" rel="nofollow" title="2,747 posts" data-ipsTooltip class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 2.7k
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+
+	
+		
+	
+
+			
+		</ul>
+	</aside>
+	<div class='ipsColumn ipsColumn_fluid ipsMargin:none'>
+		
+
+<div id="comment-970160_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="970160" data-quotedata="{&quot;userid&quot;:61779,&quot;username&quot;:&quot;Tut&quot;,&quot;timestamp&quot;:1577751699,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:121674,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:970160}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_highlightedGroup">Administrators</strong></li>
+					
+					
+					
+					
+						<li><strong class="ipsBadge ipsBadge_large ipsBadge_popular">Popular Post</strong></li>
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_970160_menu" class="ipsComment_ellipsis" id="elControls_970160" title="More options..." data-ipsmenu data-ipsmenu-appendto="#comment-970160_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_970160_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="index.html" title="Share this post" data-ipsdialog data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_970160_menu" data-ipsdialog-title="Share this post" id="elSharePost_970160" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="indexf711.html?do=findComment&amp;comment=970160" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime='2019-12-31T00:21:39Z' title='31/12/19 00:21 ' data-short='2 yr'>December 31, 2019</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+					(edited)
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>
+	<span style="font-size:18px;">Introduction</span>
+</p>
+
+<p>
+	This guide intends to teach 3ds Max users the basics and more advanced ways of working with Vertex Colors, in order to achieve lighting solutions for enhanced quality of game models, or blend several textures together using Vertex alpha.
+</p>
+
+<p>
+	A lot of games utilises vertex colors to accomplish lighting or blending effects, which usually impacts the performance less than model shaders. Types of shaders such as Texture Splatting are pixel based techniques for rendering multiple textures onto a model, where each texture e.g earth, grass, gravel, has their own color on the splat map. This however may use up significantly more resources than its alternatives in some cases. As result, game developers may move their aim towards Vertex Alpha and Color rather than geometry shaders. Vertex Color works almost the same way, however it renders per vertex and not per pixel unlike shaders do. This may result in very poor results if the geometry is not subdivided at the places it is painted at.
+</p>
+
+<p>
+	Besides texture blending, vertex colors are also widely used in games for fake lighting baked into models. This is due to some game engines not supporting Ray Tracing or other rendering, or they simply prefer using vertex colors over per-pixel lighting. In GTA:SA the only light rendering is done by vertex colors and <a href="../119253-model-integrated-lights-and-particles/index.html" rel="">2DFX</a>. In the days that the game was developed, vertex colors was a more sustainable rendering method over other options.
+</p>
+
+<p>
+	Table of contents
+</p>
+
+<ul>
+	<li>
+		Different model lighting depending on game time
+		<ul>
+			<li>
+				Importance of vertex colors
+			</li>
+			<li>
+				Importance of vertex illumination
+			</li>
+		</ul>
+	</li>
+	<li>
+		Basics of per-vertex
+	</li>
+	<li>
+		Radiosity workflow
+		<ul>
+			<li>
+				Hard surface prelighting
+			</li>
+			<li>
+				Faking ambient occlusion
+			</li>
+		</ul>
+	</li>
+	<li>
+		Texture blending with Vertex Alpha
+	</li>
+	<li>
+		The vertexPaint modifier
+	</li>
+	<li>
+		Extracting channel info
+	</li>
+	<li>
+		Working with several VertexPaint modifiers
+	</li>
+</ul>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Different model lighting depending on game time</span>
+</p>
+
+<p>
+	Game models use two vertex channels for lighting. Vertex color is displayed around 06:00 - 20:00. Vertex illumination is displayed outside that timeframe, that is, between 20:00 and 06:00. Between these timeframes, the two channels blends into eachother, creating a realistic daytime and nighttime visualization of the map. Remembering which channel is used for what can be a little troubling, on top of the many other things. Artists could consider Vertex Color = daytime, Vertex Illumination = nighttime.<br>
+	Below are various demonstrations of vertex color and illumination channels.
+</p>
+
+<p>
+	<span style="font-size:16px;">Importance of vertex colors</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">Below video demonstrates the effects of not prelighting game models for GTA:SA. The results are very easy to differ from prelit models, as the only depth seen on the models is made by the diffuse maps, which usually does not add sufficient shadows. That is where the artist may consider prelighting his model. As seen on the video, first footage is of San Fierro chunk without diffuse maps (textures) nor vertex colors. This results in completely white meshes. If however, the artist decides to utilise vertex colors, the model will have a lot greater depth added, without the need to bake light into textures at the expense of computer memory.</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">The video's contents are 1:1 to how San Fierro would be rendered in-game around 12:00. No post processing or edits made to the models. Compression methods, post processing, sky and fog done by the Renderware engine will make it a tad different though.</span>
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/Z9hAzYbzTiE?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	Below screenshot is taken from a Dust2 model ripped from Counter Strike. It shows how the vertex channel brings shadows and ambient occlusion into the model. If it did not have the vertex channel changes made, it would be completely flat, corridors would have no depth whatsoever, only some by the difference between the textures.
+</p>
+
+<p>
+	<img alt="demo4.png" data-ratio="51.51" width="1200" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/631950388677050368/demo4.png">
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:16px;">Importance of vertex illumination</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">Not all models use fancy colors like the pirate assets by Las Venturas strip. A lot of models use the same, though slightly darkened, version of vertex colors for the vertex illumination channel. The result of this is a darker object during night and brighter during day. Perhaps some has some highlights that are cast from streetlights and other light sources that appear during nighttime.</span>
+</p>
+
+<p>
+	<img alt="demo2.gif" data-ratio="48.18" height="251" width="521" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/631944241639194635/demo2.gif">
+</p>
+
+<p>
+	Some models, notably light objects use vertex colors in conjunction with 2DFX in order to create realistic light with a real light source. Below example is a runway light. The white version is during day time, where the inner light mesh (the extruded part) is grey to represent an deactivated light. The red version is during night time, where the top surface has light reflected onto it, together with a corona image, more commonly known as 2D billboard or sprites. The corona acts as the light source and creates a bloom alike effect. (Not seen in image)
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			<img alt="demo3.gif" class="ipsImage" data-ratio="87.10" height="108" width="124" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/631948541107109909/demo3.gif">
+		</p>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Basics of per-vertex</span>
+</p>
+
+<p>
+	To get a somewhat understanding of how vertex colors work, below demonstration should be helpful.
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="38.69" height="183" width="473" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/631598475045240842/unknown.png">
+</p>
+
+<p>
+	The triangle's top left vertex is painted blue, top right painted green and bottom painted red. This creates an RGB blend display of the triangle. The planar model has its bottom vertices painted black while the top ones are white. This creates more of a gradient across the entire model.To put the difference between per-vertex lighting and per-pixel lighting short,<br>
+	Vertex based lighting creates a gradient from one vertex towards the nearest one(s), and stops there. If a model has only 4 vertices, it is not possible to have circular or very detailed IES-like lighting, as the model would have only 4 points that can have light data.<br>
+	Pixel based lighting can have as many abstract details as artist wishes. It works as if there is a grayscale image on top of the model with a different blend mode, or dynamic lighting based on world models, hence the two are called per-vertex and per-pixel.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Radiosity workflow</span>
+</p>
+
+<p>
+	Tired of painting vertex colors onto models with silly brushes all day? 3ds Max has an amazing light renderer, which can produce stunning renders and best of all, stunning prelights. As if it was made for GTA:SA era games! Not to forget, a 3rd party Max script was made to make the workflow a lot less difficult - can be found on: <a href="http://www.scriptspot.com/3ds-max/scripts/vertex-color-tools-1" rel="external nofollow">http://www.scriptspot.com/3ds-max/scripts/vertex-color-tools-1</a>. With this script, artists can with a few clicks create a skylight, ground plane (for AO), then render a radiosity solution in less than a minute total. No more setting up radiosity settings, only a few adjustments to your likings if needed. I use it all the time myself, and in fact, I learned to create beautiful prelights by using this tool with radiosity rendering. Before moving on, <a href="https://gtaforums.com/topic/273217-3dsmax-radiosity-advanced-lighting/" rel="external nofollow">ParoXum's Radiosity tutorial</a> and the <a href="https://en.wikipedia.org/wiki/Radiosity_(computer_graphics)" rel="external nofollow">Radiosity wikipedia page</a> contains extra information that is not covered in this thread, for instance particular use of point lights. For that reason they may be benefitable to read through.
+</p>
+
+<div style="background-color:#000000;border:1px solid #000000;">
+	<p>
+		<span style="color:#bdc3c7;"><b>WARNING!</b> Pressing the <em>AO</em> button on the Vertex Color Tool script, <em>ALL</em> materials will be reset to standard. This can not be reversed!</span>
+	</p>
+</div>
+
+<p>
+	Adding to the above. Make sure to create a backup Max project file prior to working with Radiosity.<br>
+	Use the backup Max project file for vertex colors, leave original file for modeling! This process is covered in the guide.
+</p>
+
+<p>
+	<span style="font-size:16px;">Hard surface prelighting</span>
+</p>
+
+<p>
+	Most artists starting out with vertex colors have probably grown tired of selecting faces of a model, then painting a different value onto each to replicate a hard surface look. As it turns out, this is not an efficient way. The model will look odd if the artist has not put enough time (hours with sweat) into it. That is where automating it with Radiosity rendering is a fantastic solution. <br>
+	To get started, download the following FBX scene <a href="https://cdn.discordapp.com/attachments/308956559201796097/632340906170908673/demo.zip" rel="external nofollow">https://cdn.discordapp.com/attachments/308956559201796097/632340906170908673/demo.zip</a>. Each point contains a spoiler with a video clip.<br>
+	For those who would like to mess around with the final result of mine, download FBX here: <br>
+	<a href="https://cdn.discordapp.com/attachments/308956559201796097/632559814387695626/demo_result.zip" rel="external nofollow">https://cdn.discordapp.com/attachments/308956559201796097/632559814387695626/demo_result.zip</a> (video below)
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/Qe3twOAnhZk?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	<em>Important thing to note, when using Radiosity for prelights, the shading/lighting which is baked into the model entirely depends on the smoothing of the model. If it's set to Auto Smooth value 2 the shading will resemble 3ds Max's shading 'facets', while if the model has only one smoothing group, the shading will be incredibly smooth and generally won't have any facet shading.<br>
+	San Andreas models generally had very low smoothing value for its models at their creation, judging by their hard surface appearence. If a modeler were to create models that blend in with the game environment, they should strongly consider the above.</em>
+</p>
+
+<p>
+	Video tutorial:
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="344" width="459" data-embed-src="https://www.youtube.com/embed/gvoGFEK1aVc?feature=oembed"></iframe>
+	</div>
+</div>
+
+<p>
+	Text tutorial:
+</p>
+
+<ol>
+	<li>
+		<strong>Import the file</strong>
+
+		<ol>
+			<li>
+				Click the 3ds max upper left corner, at Import hover over the arrow for a drop down menu to appear. Click <u>Import</u>. Click the demo.FBX.
+			</li>
+			<li>
+				Ensure to include Smoothing Groups on import, and units setup in Meters.
+			</li>
+			<li>
+				Reset X, Y, Z positions to 0, 0, 0. At import the model is not centered.
+				<p>
+					 
+				</p>
+			</li>
+		</ol>
+	</li>
+	<li>
+		<strong>Create light</strong>
+		<ol>
+			<li>
+				Navigate to <u>Create tab</u>, click the gears icon, finally select the Daylight button.
+			</li>
+			<li>
+				Max will ask if it can set an exposure control flag (not a country flag bleh), click <u>Yes</u>.
+			</li>
+			<li>
+				Click anywhere, this sets the compass. Then, drag the mouse up into the sky, press LMB to spawn the daylight system. The compass position is not important.
+				<p>
+					 
+				</p>
+			</li>
+		</ol>
+	</li>
+	<li>
+		<strong>Alter light</strong>
+		<ol>
+			<li>
+				Navigate to <u>Modify tab</u>, change <u>Sunlight</u> from Standard to IES Sun. Likewise for sky, make it IES Sky.
+			</li>
+			<li>
+				On <u>Sun Parameters</u> uncheck Shadows. Ensure the sun's state is <u>On</u>.
+			</li>
+			<li>
+				On <u>IES Sky Parameters</u> it is possible to modify the intensity of the sky, as well as the sun. Some of the settings that affect the sun is whether the weather is clear or clouded. Leave default.
+			</li>
+			<li>
+				On hierarchy list, select the <u>Daylight001</u> item. While on <u>Modify tab</u>, click the <u>Setup</u> button for setting the scene weather.
+			</li>
+			<li>
+				As the light system works like real daylight, the lower the number of hours, the darker the scene. 
+			</li>
+			<li>
+				Set hours at 9, month at 9, orbital scale at 320-360.
+				<p>
+					 
+				</p>
+			</li>
+		</ol>
+	</li>
+	<li>
+		<strong>Initiate the radiosity solution by running <u>Vertex Color Tools Ver1.0</u>. </strong>
+		<ol>
+			<li>
+				Press the <u>AO</u> button. <u>Keep in mind, that this will remove all materials and cannot be reversed with undo</u>.
+			</li>
+			<li>
+				The render setup window opens. Another window from Rendering &gt; Exposure Control is needed.
+			</li>
+			<li>
+				On Exposure Control, change from none to Logarithmic.
+			</li>
+			<li>
+				Tick on the <u>Exterior daylight</u> checkbox, which is required due to scene using a daylight system.
+			</li>
+			<li>
+				Optionally, start rendering previews via the Exposure Control window. These previews are very low resolution and may help visualise the lighting. Or, real renders by SHIFT Q, although this may take significantly more time and processing power.
+			</li>
+			<li>
+				On Render Setup window, reset value of Indirect Lighting Filtering.
+			</li>
+			<li>
+				Increase the Direct Lighting Filtering to a value of 8.
+			</li>
+			<li>
+				Under <u>Radiosity Meshing Parameters</u> tick the Include Skylight checkbox.
+			</li>
+			<li>
+				Under <u>Rendering Parameters</u> select Re-Use Direct Illumination from Radiosity Solution.
+			</li>
+			<li>
+				On Render Setup window, make sure to press Reset, to then start a clean rendering with the updated settings.
+			</li>
+			<li>
+				Click Start. This may be an incredibly slow process, even on high end computers. If it gets stuck, set quality to less. It does not really have much of an impact for GTA:SA light anyway.
+			</li>
+			<li>
+				Voila, done. The final result will be displayed in viewport. The result is equal to what is seen in-game during day hours. If something looks off, go back and tweak settings.
+				<p>
+					 
+				</p>
+			</li>
+		</ol>
+	</li>
+	<li>
+		<strong>Bake Radiosity lighting solution into vertex channel.</strong>
+		<ol>
+			<li>
+				Navigate to <u>Utility tab</u>, click <u>More...</u>, select <u>Assign Vertex Colors</u>.
+			</li>
+			<li>
+				Upon scrolling down the utility tab, the Vertex Colors settings appear.
+			</li>
+			<li>
+				Vertex Color is for day time, Vertex Illumination is for night time. Choose Vertex Color.
+			</li>
+			<li>
+				Set light model as Lighting + Diffuse.
+			</li>
+			<li>
+				Set Color Assignment as whichever seen fit.
+			</li>
+			<li>
+				On <u>Rendering options</u>, enable Mapping and Radiosity, Reuse Direct Illum. from solution.
+			</li>
+			<li>
+				Finally, click Assign to Selected<br>
+				<br>
+				 
+			</li>
+		</ol>
+	</li>
+	<li>
+		<strong>View vertex color result in viewport.</strong>
+		<ol>
+			<li>
+				On the VertexPaint modifier, select the channel that was just modified.
+			</li>
+			<li>
+				On the VertexPaint GUI, click the shaded box to the left. This displays the model with only vertex channel rendering, no other 3D shading will be used.
+				<p>
+					 
+				</p>
+			</li>
+		</ol>
+	</li>
+	<li>
+		<strong>Further tweaking</strong>
+		<ol>
+			<li>
+				If one wishes night time lighting, the best to do is render a new radiosity solution with less sun and daylight intensity, in order to darken the scene. Eventually change to clouded or mess with weather settings. The new radiosity solution will be equally the same as the one for daytime, although a tad darker. When rendered, assign to illumination channel.
+			</li>
+			<li>
+				The letters can be painted for night time to look extra cool. This is where painting by buckets onto face selections of the mesh can come in handy, using the VertexPaint modifier.
+			</li>
+			<li>
+				Odd looking shadows can be fixed up with the blur brush (VertexPaint modifier).
+				<p>
+					 
+				</p>
+			</li>
+		</ol>
+	</li>
+</ol>
+
+<p>
+	Those who are able to get results with the above Radiosity workflow, may utilise their knowledge and take prelighting a next step with other types of lights, in order to create environment lights such as shadows for light poles, torches, buildings etc. Point lights, more specifically Free Light, were used a lot in the ship model further down the topic.<br>
+	Scene lighting is generally hit and miss. There are many settings which may need to be changed e.g scale of daylight and smoothing groups of models, in order to get the right look.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:16px;">Faking ambient occlusion</span>
+</p>
+
+<p>
+	Vertices can easily store ambient occlusion details, negating the need for geometry shaders. Some models may require additional geometry through subdividing the mesh, in order to achieve proper ambient occlusion details with vertex colors. The type of light used is usually skylight or daylight, this creates subtle shadows around corners and creaks, as well as maintaining global lighting. The below model has vertex AO baked by using a Skylight with the following settings.
+</p>
+
+<p>
+	<span style="background-color:#ffffff;color:#353c41;text-align:left;"><span style="font-size:14px;"><img alt="Skrmbillede_5555.png" data-ratio="50.00" height="500" width="1000" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/632920804148903977/Skrmbillede_5555.png"></span></span>
+</p>
+
+<p>
+	*you can eventually utilise a plane as ground for the ambient occlusion to calculate a lot better.
+</p>
+
+<p>
+	The above practise can be used for GTA:SA assets as well, some settings may require to be tweaked first though. Prelighting in general is trial and error unless the artist has a solid background with lighting and rendering. Generally though, ambient occlusion should not be the only layer for lighting a model. Hard surface lighting as well as adding point lights is highly recommended. Without these, models with AO will still look rather flat in most cases, as there is not much definition between corners, other than soft shadows. Adding point lights to radiosity render will also give the lighting a more natural feeling, this can be done by adjusting the temporature of the light or its color. Combining point lights (free light, omni light, etcetera) with <a href="../119253-model-integrated-lights-and-particles/index.html" rel="">2DFX</a> can give stunning results.
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Texture blending with Vertex Alpha</span>
+</p>
+
+<p>
+	Texture blending on MTA was thought to only be possible by shaders, e.g texture splatmap. Instead, we can now blend textures using Vertex Alpha channel.<br>
+	On December 27 2019 we discovered that Vertex Alpha works <u>without need for additional scripting</u> (MTA Discord #modelling). We also need to thank Deniska for writing <a href="http://gtamaps.net/forum/index.php?showtopic=13998" rel="external nofollow">this guide (gtamaps)</a> on vertex alpha plus creating a maxscript that exports vAlpha channel!
+</p>
+
+<p>
+	Vertex Alpha works based on grayscale values just like alpha masks. Any vertex that's black <u>will not</u> be rendered - any vertex that's not black <u>will</u> be rendered. White is fully opaque, while the greyer it gets, the more transparency is made. Vertex Alpha will not render water behind its faces, so it's important to place an opaque object behind the vertex alpha mesh. This must be a separate model, not part of the mesh that uses vertex alpha. As with vertex prelights, vertex alpha needs geometry to work with. It's highly recommended to turbosmooth/subdivide the mesh so that you can paint in more detail.
+</p>
+
+<p>
+	In the video below, I show how quickly the vertex alpha can be added to your models, and once that's done, you can export the model <a href="http://gtamaps.net/forum/index.php?showtopic=13998" rel="external nofollow">using the script from this page</a>.
+</p>
+
+<div class="ipsEmbeddedVideo">
+	<div>
+		<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/cyCYaVaUfxA?feature=oembed"></iframe>
+	</div>
+</div>
+
+<ol>
+	<li>
+		<em>Create a plane primitive. Give it 16x16 segments. Convert it to editable mesh. Give it the material that needs to blend using alpha. Set opacity of material to 98.</em>
+	</li>
+	<li>
+		<em>Add a VertexPaint modifier. Select the vertex alpha channel. Use paint bucket with black color, 100 intensity, to paint entire mesh black.</em>
+	</li>
+	<li>
+		<em>Add a secondary vertexpaint modifier. Grab your brush, adjust its size and strength. Begin painting a path from one end to another.</em>
+	</li>
+	<li>
+		<em>Use the blur brush to finetune the semi-transparent edges of your path. Sharp edges ain't good.</em>
+	</li>
+	<li>
+		<em>Looks OK? Start the export-script. You don't need to collapse your modifiers when exporting. Keep them in stack for later adjustments. Export with MMC.</em>
+	</li>
+	<li>
+		<em>Remember to <u>always</u> set alphaTransparency enabled <a href="https://wiki.multitheftauto.com/wiki/EngineReplaceModel" rel="external nofollow">when replacing the model</a>, or else only part of alpha will show. </em>
+	</li>
+	<li>
+		<em>If you want to use another DFF script (for a higher quality dff), simply copy paste the sections e.g "Extra Vertex Colors" via RWanalyze.</em><br>
+		(Script will break (in which case, close script and run again) if you try to export vertex colors without having first assigned vertex colors/illumination to the model via its respective channels)
+	</li>
+</ol>
+
+<p>
+	<span> </span><strong>List of model ID's that use the flag 68 (</strong><span style="background-color:#f8f9fa;color:#222222;font-size:14px;"><strong>NO_ZBUFFER_WRITE(64) + DRAW_LAST(4)), which is required for Vertex Alpha</strong>:</span>
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="lit">2728</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3872</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3910</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4227</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4636</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4637</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7892</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9831</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9896</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9897</span><span class="pun">,</span><span class="pln"> </span><span class="lit">11678</span><span class="pun">,</span><span class="pln"> </span><span class="lit">11679</span><span class="pun">,</span><span class="pln"> </span><span class="lit">11680</span><span class="pun">,</span><span class="pln"> </span><span class="lit">11681</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13494</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13495</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13496</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">13497</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13498</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13499</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13500</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13501</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13502</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13503</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13504</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13505</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13506</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13507</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13508</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13509</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13510</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13511</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">13512</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13513</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13514</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13515</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13516</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13517</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13518</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13519</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13520</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13521</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13522</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13523</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13524</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13525</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13526</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">13527</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13528</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13529</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13530</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13531</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13532</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13533</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13534</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13535</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13536</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13537</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13538</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13539</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13540</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13541</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">13542</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13543</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13544</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13545</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13546</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13547</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13548</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13549</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13550</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13551</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13552</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13553</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13554</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13555</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13556</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">13557</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13558</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13559</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13560</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13561</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13563</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16375</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16445</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16498</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16623</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16676</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16677</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16733</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16734</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16753</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">16754</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16756</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16757</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16758</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16783</span><span class="pun">,</span><span class="pln"> </span><span class="lit">16784</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17436</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17437</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17438</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17439</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17440</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17441</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17442</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17443</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17444</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">17448</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17450</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17451</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17451</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17452</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17458</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17459</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17460</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17461</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17462</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17463</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17464</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17465</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17466</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17467</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">17468</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17469</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17470</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17474</span><span class="pun">,</span><span class="pln"> </span><span class="lit">17524</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18073</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18112</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18610</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18611</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18612</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18613</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18614</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18615</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18616</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18617</span><span class="pun">,</span><span class="pln"> 
+</span><span class="lit">18618</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18619</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18620</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18621</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18622</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18623</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18624</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18625</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18626</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18627</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18628</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18629</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18630</span><span class="pun">,</span><span class="pln"> </span></pre>
+
+<p>
+	<strong>List of model ID's that use the flag 64 (NO_ZBUFFER_WRITE(64)) which are not tested, but might work for Vertex Alpha</strong>:
+</p>
+
+<pre class="ipsCode prettyprint lang-lua prettyprinted"><span class="lit">1315</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2981</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4712</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4724</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4554</span><span class="pun">,</span><span class="pln"> </span><span class="lit">8004</span><span class="pun">,</span><span class="pln"> </span><span class="lit">8044</span><span class="pun">,</span><span class="pln"> </span><span class="lit">11306</span><span class="pun">,</span><span class="pln"> </span><span class="lit">14765</span><span class="pun">,</span><span class="pln"> </span></pre>
+
+<p>
+	 
+</p>
+
+<p>
+	Below are a few examples of how vertex alpha can be used to blend several textures together.
+</p>
+
+<p>
+	<img alt="Ji1UmQI.jpg" data-ratio="53.60" width="709" src="../../applications/core/interface/js/spacer.png" data-src="http://i.imgur.com/Ji1UmQI.jpg">
+</p>
+
+<p>
+	Above image courtesy: <a href="https://www.project-tamriel.com/viewtopic.php?t=1039" rel="external nofollow">worsas @ project tamriel</a> (see link for more)
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="42.12" height="342" width="812" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308955445568077824/660214353387192400/unknown.png">
+</p>
+
+<p>
+	<img alt="unknown.png" data-ratio="56.25" height="562" width="1000" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308955445568077824/660305226254778368/unknown.png">
+</p>
+
+<p>
+	128x128 textures, 8192 polygons (can be a lot less!)
+</p>
+
+<p>
+	You can probably create something a lot better than this. Time to get creative!
+</p>
+
+<p>
+	If you're looking for additional inspiration, see the videos in spoiler.
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<div class="ipsEmbeddedVideo">
+			<div>
+				<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/qaQsfMrheZI?feature=oembed"></iframe>
+			</div>
+		</div>
+
+		<div class="ipsEmbeddedVideo">
+			<div>
+				<iframe allowfullscreen="" frameborder="0" height="344" width="459" data-embed-src="https://www.youtube.com/embed/xZl8dF2HGus?feature=oembed"></iframe>
+			</div>
+		</div>
+
+		<div class="ipsEmbeddedVideo">
+			<div>
+				<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/0p6S6pgx4Aw?feature=oembed"></iframe>
+			</div>
+		</div>
+
+		<div class="ipsEmbeddedVideo">
+			<div>
+				<iframe allowfullscreen="" frameborder="0" height="270" width="480" data-embed-src="https://www.youtube.com/embed/h9ZlSY6qCbc?feature=oembed"></iframe>
+			</div>
+		</div>
+
+		<p>
+			 
+		</p>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	Note: The below spoiler contains information that does not apply to vertex alpha method, but instead to vertex colors. This requires shaders, since SA uses the colors for lighting, but is a decent alternative if the model use lighting shaders.
+</p>
+
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Spoiler</span>
+	</div>
+
+	<div class="ipsSpoiler_contents">
+		<p>
+			Painting texture blending with vertex colors requires shaders or 3ds Max materials which unfortunately are not recognised by GTA as a game material. Below example (1:1 gif) shows a brick wall painted with grunge.
+		</p>
+
+		<p>
+			<img alt="col3.png" data-ratio="47.87" width="938" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/634069205356118046/col3.png">
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			<span style="background-color:rgb(255,255,255);color:rgb(53,60,65);text-align:left;"><span style="font-size:14px;"><img alt="ezgif-2-6c67c47f403d.gif" class="ipsImage" data-ratio="95.74" height="449" width="469" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/634066778271514635/ezgif-2-6c67c47f403d.gif">            </span></span> 
+		</p>
+
+		<p>
+			(the gray stair-squares on bottom are compressed by the GIF, it is not how the vertex color looks)
+		</p>
+
+		<p>
+			 
+		</p>
+
+		<p>
+			In above example, white represents grunge and black represents brick. 4k verts is far from necessary to achieve results like these, more experienced modelers can use &lt;1k and still get stunning blending. Steps for working with vertex color channel for blending are below.
+		</p>
+
+		<ol>
+			<li>
+				Making the blend material
+				<ol>
+					<li>
+						Make a standard material.
+					</li>
+					<li>
+						For its diffuse slot, add a Mix map.
+					</li>
+					<li>
+						In Color #1 insert bitmap #1.
+					</li>
+					<li>
+						In Color #2 insert bitmap #2.
+					</li>
+					<li>
+						In #3 insert Vertex Color map.
+					</li>
+				</ol>
+			</li>
+			<li>
+				Result
+				<ol>
+					<li>
+						Apply material on the model.
+					</li>
+					<li>
+						Apply VertexPaint modifier on model.
+					</li>
+					<li>
+						Pick the brush, paint a few vertices either black or white.
+					</li>
+					<li>
+						Press Shift+Q to render scene.
+					</li>
+				</ol>
+			</li>
+		</ol>
+
+		<p>
+			It is worth noting that it is not possible to view vertex color blending result in viewport; it must be rendered.
+		</p>
+
+		<p>
+			If you're capable of painting with vertex colors, you'll have no problems painting with vertex alpha. Same process except alpha use grayscale values.
+		</p>
+	</div>
+</div>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">The vertexPaint modifier</span>
+</p>
+
+<p>
+	VertexPaint is the modifier that houses the WIP vertex colors, illumination and alpha modifications. It may be accessed on Modifiers tab. While it is open, it allows the artist to do various changes to the vertex channels. Ranging from painting with the use of brushes, to refining vertex colors by blurring, adjusting hue, saturation, lightness etcetera. This is a very powerful tool, despite not having been updated for years. To get started, the modifier works with a float GUI with all of its necessary functions in it. It is worth noting that the modifier can not change existing vertex channel data, only the data that is stored in the modifier. That means it is not possible to import a GTA:SA asset and modify the hue of the vertex color channel.
+</p>
+
+<p>
+	For an exhaustive list of what the modifier offers, check <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/3DSMax/files/GUID-EADD121F-482F-4387-8D6C-0548533E4F56-htm.html" rel="external nofollow">Autodesk's page on the VertexPaint Modifier</a>. Brief explanation of what the modifier has to offer, from top to bottom:
+</p>
+
+<p>
+	<img alt="demo9.png" data-ratio="88.03" height="743" width="844" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/632926693857951764/demo9.png">
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Extracting channel info</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">For whatever reason, an artist may want to copy the vertex channel data, that is, the custom vertex information, and paste that onto their latest version of the mesh. This could be due to an irreversible action that would prevent the artist from undoing the lighting changes on present model, resulting in work lost and having to redo it all over again. Although this may seem like a promising solution to regain old channel data, it can generate problems if the two models contain different geometry counts. Below steps explains how to copy/paste data.</span>
+</p>
+
+<p>
+	<span style="font-size:14px;">Navigate to Utilities tab, click the <em>More</em> button, after which, click <em>Channel info</em>. At last, press the button that appeared on the bottom of the utilities tab.</span>
+</p>
+
+<p>
+	<span style="font-size:14px;"><img alt="unknown.png" data-ratio="49.23" height="288" width="585" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/631590457327091724/unknown.png"></span>
+</p>
+
+<p>
+	<span style="font-size:14px;">At first, the Channel Info GUI may seem complicated; but it really is not. The only information to look out for is the ID column and Channel Name column. The Num Verts, Faces etc. are only important to verify that the two model contains the same model geometry count.<br>
+	In the above example, the model has no custom channel data. The <em>-2:Alpha</em>, <em>-1:Illum</em> and <em>0:vc</em> are the types of channel info's that are relevant for GTA:SA, although the Alpha data currently isn not compatible with MTA. To copy data, simply select either of the rows and press the <em>Copy</em> button. Then, highlight the present model, select the corresponding channel and paste.</span>
+</p>
+
+<p>
+	 
+</p>
+
+<p>
+	<span style="font-size:20px;">Working with several VertexPaint modifiers</span>
+</p>
+
+<p>
+	On more advanced tasks it may be necessary to use multiple VertexPaint modifiers stacked onto the model. Artist may find it helpful if they are doing several versions of prelighting for their model and wants to go through each result, picking the one that suits them the most. This means that each type of radiosity lighting solution will be stored in its own modifier, allowing artists to go through all of them and delete the poor ones. 
+</p>
+
+<p>
+	Having multiple modifiers on stack can also improve workflow by utilising each modifiers for each element of the model, such as Modifier1 for bonfire logs, Modifier2 for bonfire shadows, Modifier3 for ambient occlusion, Modifier4 for moonlight etc. Modifiers can also be renamed to quickly tell the artist what they are representing. The model can have as many modifiers in its stack as the artist wishes (or until the software times out), and they do not require to be collapsed when exporting the model to MTA. This means that the modeler simply needs to select the model, export it and load into MTA. Modifiers can then be collapsed to stack when job's done, however, it is strongly recommended to keep them in stack for future, in case of parts requiring rework.
+</p>
+
+<p>
+	Below model may give a good look into just how much it helps to utilise multiple modifiers.
+</p>
+
+<p>
+	<img alt="ezgif-2-1e38f741eddf.gif" data-ratio="55.75" height="557" width="1000" src="../../applications/core/interface/js/spacer.png" data-src="https://cdn.discordapp.com/attachments/308956559201796097/631782968670814208/ezgif-2-1e38f741eddf.gif">
+</p>
+
+<p>
+	The ship has its own modifier for virtually any type of light emmitting source. The rectangular screens to the right are symmetrical on the other side, so there is one modifier that represents those 6 rectangular emmissive screens. Same goes for the cyan U-shaped engravement, which uses its own independant modifier, and so on. This allowed to change the engravement prelight from initially dark blue to cyan, by not affecting other lights when modifying the hue, as the modifier was only used by that particular area. <br>
+	The stack works like so: By clicking the bottom modifier, only that one's layer will show. If clicking the one above it, assuming it is same channel, it will show both of them. Now, if clicking the top modifier, it will show all layers e.g the rest 4 that are associated with Vertex Illum channel. It will only display the channel that is selected on the right most panel. (This depends on version of Max)
+</p>
+
+
+			
+				
+
+<span class='ipsType_reset ipsType_medium ipsType_light' data-excludequote>
+	<strong>Edited <time datetime='2020-01-17T05:57:55Z' title='17/01/20 05:57 ' data-short='2 yr'>January 17, 2020</time> by Tut</strong>
+	
+	
+</span>
+			
+		</div>
+
+		
+			<div class="ipsItemControls">
+				
+					
+						
+
+	<div data-controller='core.front.core.reaction' class='ipsItemControls_right ipsClearfix '>	
+		<div class='ipsReact ipsPos_right'>
+			
+				
+				<div class='ipsReact_blurb ' data-role='reactionBlurb'>
+					
+						
+
+	
+	<ul class='ipsReact_reactions'>
+		
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Like">
+					
+							<span>
+								<img src='../../uploads/reactions/react_like.png' alt="Like" loading="lazy">
+							</span>
+							<span>
+								4
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+			
+				
+				<li class='ipsReact_reactCount'>
+					
+						<span data-ipsTooltip title="Thanks">
+					
+							<span>
+								<img src='../../uploads/reactions/react_thanks.png' alt="Thanks" loading="lazy">
+							</span>
+							<span>
+								5
+							</span>
+					
+						</span>
+					
+				</li>
+			
+		
+	</ul>
+
+					
+				</div>
+			
+			
+			
+		</div>
+	</div>
+
+					
+				
+				<ul class="ipsComment_controls ipsClearfix ipsItemControls_left" data-role="commentControls">
+					
+						
+						
+						
+					
+					
+<li class="ipsHide" data-role="commentLoading">
+						<span class="ipsLoading ipsLoading_tiny ipsLoading_noAnim"></span>
+					</li>
+				</ul>
+			</div>
+		
+
+		
+			
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class='ipsPadding ipsHide cPostShareMenu' id='elShareComment_970160_menu'>
+	<h5 class='ipsType_normal ipsType_reset'>Link to comment</h5>
+	
+		
+	
+	
+	<input type='text' value='https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/' class='ipsField_fullWidth'>
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+			
+			
+<input type="hidden" name="csrfKey" value="714bb4c8fac35f8286ae64e012ef2366" />
+
+
+		</form>
+	</div>
+
+	
+	
+	
+	
+	
+
+	
+		<div class='ipsBox ipsPadding ipsResponsive_pull ipsResponsive_showPhone ipsMargin_top'>
+			
+				<div class='ipsResponsive_noFloat ipsResponsive_block ipsMargin_bottom:half'>
+					
+
+
+				</div>
+			
+			<div class='ipsResponsive_noFloat ipsResponsive_block'>
+				
+
+<div data-followApp='forums' data-followArea='topic' data-followID='121674' data-controller='core.front.core.followButton'>
+	
+
+	<a href='../../login/index.html' rel="nofollow" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall ipsButton_disabled" data-role="followButton" data-ipsTooltip title='Sign in to follow this'>
+		<span>Followers</span>
+		<span class='ipsCommentCount'>0</span>
+	</a>
+
+</div>
+			</div>
+			
+		</div>
+	
+</div>
+
+
+
+<div class='ipsPager ipsSpacer_top'>
+	<div class="ipsPager_prev">
+		
+			<a href="../../forum/185-user-guides/index.html" title="Go to User Guides" rel="parent">
+				<span class="ipsPager_type">Go to topic listing</span>
+			</a>
+		
+	</div>
+	
+</div>
+
+
+						
+
+
+	<div class='cWidgetContainer '  data-role='widgetReceiver' data-orientation='horizontal' data-widgetArea='footer'>
+		<ul class='ipsList_reset'>
+			
+				
+					
+					<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='app_core_activeUsers_6o9n9w8dl' data-blockConfig="true" data-blockTitle="Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page."  data-controller='core.front.widgets.block'>
+<div data-controller='core.front.core.onlineUsersWidget'>
+    <h3 class='ipsType_reset ipsWidget_title'>
+        
+            Recently Browsing
+        
+        
+        &nbsp;&nbsp;<span class='ipsType_light ipsType_unbold ipsType_medium' data-memberCount="0">0 members</span>
+        
+    </h3>
+    <div class='ipsWidget_inner ipsPad'>
+        <ul class='ipsList_inline ipsList_csv ipsList_noSpacing ipsType_normal'>
+            
+                <li class='ipsType_reset ipsType_medium ipsType_light' data-noneOnline>No registered users viewing this page.</li>
+            
+        </ul>
+        
+    </div>
+</div></li>
+				
+			
+		</ul>
+	</div>
+
+					</div>
+					
+
+
+					
+<nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
+	
+		
+
+
+	
+
+	<ul class='ipsList_inline ipsPos_right'>
+		
+		<li >
+			<a data-action="defaultStream" class='ipsType_light '  href='../../discover/index.html'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+		</li>
+		
+	</ul>
+
+	<ul data-role="breadcrumbList">
+		<li>
+			<a title="Home" href='../../index.html'>
+				<span>Home <i class='fa fa-angle-right'></i></span>
+			</a>
+		</li>
+		
+		
+			<li>
+				
+					<a href='../../forum/80-multi-theft-auto-san-andreas-1x/index.html'>
+						<span>Multi Theft Auto: San Andreas 1.x <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					<a href='../../forum/185-user-guides/index.html'>
+						<span>User Guides <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+					</a>
+				
+			</li>
+		
+			<li>
+				
+					Basics of Vertex Color and Alpha
+				
+			</li>
+		
+	</ul>
+</nav>
+				</div>
+			</div>
+			
+		</main>
+		<footer id='ipsLayout_footer' class='ipsClearfix'>
+			<div class='ipsLayout_container'>
+				
+				
+
+<div id="mta_betaMark">Beta. Subject to change.</div>
+
+
+
+<ul id='elFooterSocialLinks' class='ipsList_inline ipsType_center ipsSpacer_top'>
+	
+
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.facebook.com/multitheftauto' target='_blank' class='cShareLink cShareLink_facebook' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://twitter.com/mtaqa' target='_blank' class='cShareLink cShareLink_twitter' rel='noopener noreferrer'><i class='fa fa-twitter'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://github.com/multitheftauto' target='_blank' class='cShareLink cShareLink_github' rel='noopener noreferrer'><i class='fa fa-github'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.youtube.com/user/MTAQA' target='_blank' class='cShareLink cShareLink_youtube' rel='noopener noreferrer'><i class='fa fa-youtube'></i></a>
+		</li>
+	
+		<li class='cUserNav_icon'>
+			<a href='https://www.linkedin.com/company/multitheftauto/' target='_blank' class='cShareLink cShareLink_linkedin' rel='noopener noreferrer'><i class='fa fa-linkedin'></i></a>
+		</li>
+	
+
+	
+<li class="cUserNav_icon">
+  <a href="https://www.reddit.com/r/MultiTheftAuto/" target="_blank" class="cShareLink cShareLink_reddit" rel="noopener noreferrer">
+    <i class="fa fa-reddit"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://www.twitch.tv/mtaqa" target="_blank" class="cShareLink cShareLink_twitch" rel="noopener noreferrer">
+    <i class="fa fa-twitch"></i>
+  </a>
+</li>
+
+<li class="cUserNav_icon">
+  <a href="https://discord.gg/mtasa" target="_blank" class="cShareLink cShareLink_discord" rel="noopener">
+    <img src="../../uploads/set_resources_22/fcd8efae86176d70eedf4d57dcc4f985_icon-discord_287702449.png" alt="Discord" width="28" height="28">
+  </a>
+</li>
+
+</ul>
+
+
+<ul class='ipsList_inline ipsType_center ipsSpacer_top' id="elFooterLinks">
+	
+	
+	
+	
+		<li>
+			<a href='#elNavTheme_menu' id='elNavTheme' data-ipsMenu data-ipsMenu-above>Theme <i class='fa fa-caret-down'></i></a>
+			<ul id='elNavTheme_menu' class='ipsMenu ipsMenu_selectable ipsHide'>
+			
+				<li class='ipsMenu_item ipsMenu_itemChecked'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjc0LWJhc2ljcy1vZi12ZXJ0ZXgtY29sb3ItYW5kLWFscGhhLw==">
+					<button type='submit' name='id' value='22' class='ipsButton ipsButton_link ipsButton_link_secondary'>Beta (Default)</button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjc0LWJhc2ljcy1vZi12ZXJ0ZXgtY29sb3ItYW5kLWFscGhhLw==">
+					<button type='submit' name='id' value='20' class='ipsButton ipsButton_link ipsButton_link_secondary'>Dark </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjc0LWJhc2ljcy1vZi12ZXJ0ZXgtY29sb3ItYW5kLWFscGhhLw==">
+					<button type='submit' name='id' value='19' class='ipsButton ipsButton_link ipsButton_link_secondary'>Light </button>
+					</form>
+				</li>
+			
+				<li class='ipsMenu_item'>
+					<form action="http://forum.multitheftauto.com/theme/?csrfKey=714bb4c8fac35f8286ae64e012ef2366" method="post">
+					<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5tdWx0aXRoZWZ0YXV0by5jb20vdG9waWMvMTIxNjc0LWJhc2ljcy1vZi12ZXJ0ZXgtY29sb3ItYW5kLWFscGhhLw==">
+					<button type='submit' name='id' value='25' class='ipsButton ipsButton_link ipsButton_link_secondary'>Night </button>
+					</form>
+				</li>
+			
+			</ul>
+		</li>
+	
+	
+	
+		<li><a rel="nofollow" href='../../contact/index.html' >Contact Us</a></li>
+	
+</ul>	
+
+
+<p id='elCopyright'>
+	<span id='elCopyright_userLine'></span>
+	<a rel='nofollow' title='Invision Community' href='https://www.invisioncommunity.com/'>Powered by Invision Community</a>
+</p>
+			</div>
+		</footer>
+		
+<div id='elMobileDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsFlex ipsFlex-fd:column'>
+			
+				<div class='ipsPadding ipsBorder_bottom'>
+					<ul class='ipsToolList ipsToolList_vertical'>
+						<li>
+							<a href='../../login/index.html' id='elSigninButton_mobile' class='ipsButton ipsButton_light ipsButton_small ipsButton_fullWidth'>Existing user? Sign In</a>
+						</li>
+						
+							<li>
+								
+									<a href='../../register/index.html' data-ipsDialog data-ipsDialog-size='narrow' data-ipsDialog-title='Sign Up' data-ipsDialog-fixed='true' id='elRegisterButton_mobile' class='ipsButton ipsButton_small ipsButton_fullWidth ipsButton_important'>Sign Up</a>
+								
+							</li>
+						
+					</ul>
+				</div>
+			
+
+			
+
+			<ul class='ipsDrawer_list ipsFlex-flex:11'>
+				
+
+				
+				
+				
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Browse</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../index.html' >
+					Forums
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../12275-forum-rules/index.html' >
+					Forum Rules
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../staff/index.html' >
+					Staff
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../online/index.html' >
+					Online Users
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='../../leaderboard/index.html' >
+					Leaderboard
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Activity</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+													
+													
+									
+													
+									
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='../../discover/index.html' >
+					All Activity
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+
+	
+
+	
+		
+			<li>
+				<a href='../../search/index.html' >
+					Search
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>MTA Network</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>MTA Network</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://community.mtasa.com/' target='_blank' rel="noopener">
+					Community
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://wiki.multitheftauto.com/wiki/Main_Page' target='_blank' rel="noopener">
+					Wiki
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto/mtasa-blue/issues' target='_blank' rel="noopener">
+					Bugs
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/donate/' target='_blank' rel="noopener">
+					Heroes
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.com/hosters/' target='_blank' rel="noopener">
+					Hosting
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://multitheftauto.myspreadshop.net/all' target='_blank' rel="noopener">
+					Merch Store
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class='ipsDrawer_itemParent'>
+								<h4 class='ipsDrawer_title'><a href='#'>Social Media</a></h4>
+								<ul class='ipsDrawer_list'>
+									<li data-action="back"><a href='#'>Back</a></li>
+									
+									
+										
+										
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+											
+												
+											
+										
+									
+													
+									
+										<li><a href='#'>Social Media</a></li>
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href='https://discord.com/invite/mtasa' target='_blank' rel="noopener">
+					Discord
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.twitch.tv/mtaqa' target='_blank' rel="noopener">
+					Twitch
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://twitter.com/mtaqa' target='_blank' rel="noopener">
+					Twitter
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.youtube.com/user/MTAQA' target='_blank' rel="noopener">
+					YouTube
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://github.com/multitheftauto' target='_blank' rel="noopener">
+					GitHub
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.facebook.com/multitheftauto' target='_blank' rel="noopener">
+					Facebook
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.reddit.com/r/MultiTheftAuto/' target='_blank' rel="noopener">
+					Reddit
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href='https://www.linkedin.com/company/multitheftauto' target='_blank' rel="noopener">
+					LinkedIn
+				</a>
+			</li>
+		
+	
+
+										
+								</ul>
+							</li>
+						
+					
+				
+				
+			</ul>
+
+			
+		</div>
+	</div>
+</div>
+
+<div id='elMobileCreateMenuDrawer' class='ipsDrawer ipsHide'>
+	<div class='ipsDrawer_menu'>
+		<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+		<div class='ipsDrawer_content ipsSpacer_bottom ipsPad'>
+			<ul class='ipsDrawer_list'>
+				<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+		
+		
+
+	
+	<script type='text/javascript'>
+		var ipsDebug = false;		
+	
+		var CKEDITOR_BASEPATH = '../../applications/core/interface/ckeditor/ckeditor/index.html';
+	
+		var ipsSettings = {
+			
+			
+			cookie_path: "/",
+			
+			cookie_prefix: "__Host-",
+			
+			
+			cookie_ssl: true,
+			
+			upload_imgURL: "",
+			message_imgURL: "",
+			notification_imgURL: "",
+			baseURL: "//forum.multitheftauto.com/",
+			jsURL: "//forum.multitheftauto.com/applications/core/interface/js/js.php",
+			csrfKey: "714bb4c8fac35f8286ae64e012ef2366",
+			antiCache: "977ee345841657049756",
+			jsAntiCache: "977ee345841658990715",
+			disableNotificationSounds: true,
+			useCompiledFiles: true,
+			links_external: true,
+			memberID: 0,
+			lazyLoadEnabled: true,
+			blankImg: "//forum.multitheftauto.com/applications/core/interface/js/spacer.png",
+			googleAnalyticsEnabled: false,
+			matomoEnabled: false,
+			viewProfiles: true,
+			mapProvider: 'none',
+			mapApiKey: '',
+			pushPublicKey: "BF0jugJbt4XMR7oOEkdDzhxlfUA_S_sdGhSwmgdA4QIkQLHVO4dNMUseahcsyX_G97J81ncc6GqHARuEBoLyWGI",
+			relativeDates: true
+		};
+		
+		
+		
+		
+			ipsSettings['maxImageDimensions'] = {
+				width: 1000,
+				height: 750
+			};
+		
+		
+	</script>
+
+
+
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_libraryef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_js_lang_1ef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frameworkef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/global_global_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_frontef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_core/front_front_coreef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_forums/front_front_topicef65.js?v=977ee345841658990715' data-ips></script>
+
+
+<script type='text/javascript' src='../../uploads/javascript_global/root_mapef65.js?v=977ee345841658990715' data-ips></script>
+
+
+
+	<script type='text/javascript'>
+		
+			ips.setSetting( 'date_format', jQuery.parseJSON('"dd\/mm\/yy"') );
+		
+			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
+		
+			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+		
+			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
+		
+			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1626352838') );
+		
+			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+		
+			ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
+		
+			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+		
+		
+	</script>
+
+
+
+<script type='application/ld+json'>
+{
+    "name": "Basics of Vertex Color and Alpha",
+    "headline": "Basics of Vertex Color and Alpha",
+    "text": "Introduction\n \n\n\n\tThis guide intends to teach 3ds Max users the basics and more advanced ways of working with Vertex Colors, in order to achieve lighting solutions for enhanced\u00a0quality of game models, or blend several textures together using Vertex alpha.\n \n\n\n\tA lot of games utilises vertex colors to accomplish lighting or blending effects, which usually\u00a0impacts the performance less than model shaders.\u00a0Types of shaders\u00a0such as Texture Splatting are pixel based techniques for rendering multiple textures onto a model, where each texture e.g earth, grass, gravel, has their own color on the splat map. This however may use up significantly more resources\u00a0than its alternatives in some cases. As result, game developers may move their aim towards Vertex Alpha and Color rather than geometry shaders. Vertex Color works almost the same way, however it renders per vertex and not per pixel unlike shaders do. This may result in very poor results if the geometry is not subdivided at the places it is painted at.\n \n\n\n\tBesides texture blending, vertex colors are also widely used in games for fake lighting baked into models. This is due to some game engines not supporting Ray Tracing or other rendering, or they simply prefer using vertex colors over per-pixel lighting. In GTA:SA the only light rendering is done by vertex colors and 2DFX. In the days that the game was developed, vertex colors was a more sustainable rendering method over other options.\n \n\n\n\tTable of contents\n \n\n\n\t\n\t\tDifferent model lighting depending on game time\n\t\t\n\t\t\t\n\t\t\t\tImportance of vertex colors\n\t\t\t \n\t\t\t\n\t\t\t\tImportance of vertex illumination\n\t\t\t \n\t\t\n\t \n\t\n\t\tBasics of per-vertex\n\t \n\t\n\t\tRadiosity workflow\n\t\t\n\t\t\t\n\t\t\t\tHard surface prelighting\n\t\t\t \n\t\t\t\n\t\t\t\tFaking ambient occlusion\n\t\t\t \n\t\t\n\t \n\t\n\t\tTexture blending with Vertex Alpha\n\t \n\t\n\t\tThe vertexPaint modifier\n\t \n\t\n\t\tExtracting channel info\n\t \n\t\n\t\tWorking with several VertexPaint modifiers\n\t \n\n\n\n\t\u00a0\n \n\n\n\tDifferent model lighting depending on game time\n \n\n\n\tGame models use\u00a0two vertex channels for lighting. Vertex color is\u00a0displayed around 06:00 - 20:00. Vertex illumination is displayed outside that timeframe, that is, between 20:00 and 06:00. Between these timeframes, the two channels blends into eachother, creating a realistic daytime and nighttime visualization of the map.\u00a0Remembering which channel is used for what can be a little troubling, on top of the many other things. Artists could consider Vertex Color = daytime, Vertex Illumination = nighttime. \n\tBelow are various demonstrations of\u00a0vertex color\u00a0and illumination channels.\n \n\n\n\tImportance of vertex colors\n \n\n\n\tBelow video demonstrates the effects of not prelighting game models for GTA:SA. The results are very easy to differ from prelit models, as the only depth seen on the models is made by the diffuse maps, which usually does not add sufficient shadows. That is where the artist may consider prelighting his model. As seen on the video, first footage is of San Fierro chunk without diffuse maps (textures) nor vertex colors. This results in completely white meshes. If however, the artist decides to utilise vertex colors, the model will have a lot greater depth added, without the need to bake light into textures at the expense of computer memory.\n \n\n\n\tThe video\u0027s contents are 1:1 to how San Fierro would be rendered in-game around 12:00. No post processing or edits made to the models. Compression methods, post processing, sky and fog done by the Renderware engine will make it a tad different though.\n \n\n\n\t\n\t\t\n\t\n\n\n\n\tBelow screenshot is taken from a Dust2 model ripped from Counter Strike. It shows how the vertex channel brings shadows and ambient occlusion into the model. If it did not have the vertex channel changes made, it would be completely flat, corridors would have no depth whatsoever, only some by the difference between the textures.\n \n\n\n\t\n \n\n\n\t\u00a0\n \n\n\n\tImportance of vertex illumination\n \n\n\n\tNot all models use fancy colors like the pirate assets by Las Venturas strip. A lot of models use the same, though slightly darkened, version of vertex colors for the vertex illumination channel. The result of this is a darker object during night and brighter during day. Perhaps some has some highlights that are cast from streetlights and other light sources that appear during nighttime.\n \n\n\n\t\n \n\n\n\tSome models, notably light objects use vertex colors in conjunction with 2DFX in order to create realistic light with a real light source. Below example is a runway light. The white version is during day time, where the inner light mesh (the extruded part) is grey to represent an deactivated light. The red version is during night time, where the top surface has light reflected onto it, together with a corona image, more commonly known as 2D billboard\u00a0or sprites. The corona acts as the light source and creates a bloom alike effect. (Not seen in image)\n \n\n\n\n\n\t\u00a0\n \n\n\n\tBasics of per-vertex\n \n\n\n\tTo get a somewhat understanding of how vertex colors work, below demonstration should be helpful.\n \n\n\n\t\n \n\n\n\tThe triangle\u0027s top left vertex is painted blue, top right\u00a0painted green and bottom painted red. This creates an RGB blend display of the triangle. The planar model has its bottom vertices painted black while the top ones are white. This creates more of a gradient across the entire model.To put the difference between per-vertex lighting and per-pixel lighting short, \n\tVertex based lighting creates a gradient from one vertex towards the nearest one(s), and stops there. If a model has only 4 vertices, it is not possible to have circular or very detailed IES-like lighting, as the model would have only 4 points that can have light data. \n\tPixel based lighting can have as many abstract details as artist wishes. It works as if there is a\u00a0grayscale image on top of the model with a different blend mode, or dynamic lighting based on world models,\u00a0hence the two are called per-vertex and per-pixel.\n \n\n\n\t\u00a0\n \n\n\n\tRadiosity workflow\n \n\n\n\tTired of painting vertex colors onto models with silly brushes all day? 3ds Max has an amazing\u00a0light renderer, which can produce stunning renders and best of all, stunning prelights. As if it was made for GTA:SA era games! Not to forget, a 3rd party Max script was made to make the workflow a lot less difficult - can be found on:\u00a0http://www.scriptspot.com/3ds-max/scripts/vertex-color-tools-1. With this script, artists can with a few clicks create a skylight, ground plane (for AO), then render a radiosity solution in less than a minute total. No more setting up radiosity settings, only a few adjustments to your likings if needed. I use it all the time myself, and in fact, I learned to create beautiful prelights by using this tool with radiosity rendering. Before moving on, ParoXum\u0027s Radiosity tutorial\u00a0and the Radiosity wikipedia page\u00a0contains extra information that is not covered in this thread, for instance\u00a0particular use of point lights. For that reason they\u00a0may be benefitable to read\u00a0through.\n \n\n\n\t\n\t\tWARNING! Pressing the\u00a0AO\u00a0button on the\u00a0Vertex Color Tool script, ALL materials will be reset to standard. This can not be reversed!\n\t \n\n\n\n\tAdding to the above. Make sure to create a backup Max project file prior to working with Radiosity. \n\tUse the backup Max project file for vertex colors, leave original file for modeling! This process is covered in the guide.\n \n\n\n\tHard surface prelighting\n \n\n\n\tMost artists starting out with vertex colors have probably grown tired of selecting faces of a model, then painting a different value onto each to replicate a hard surface look. As it turns out, this is not an efficient way. The model will look odd if the artist has not put enough time (hours with sweat) into it. That is where automating it with Radiosity rendering is a fantastic solution.\u00a0 \n\tTo get started, download the following FBX scene\u00a0https://cdn.discordapp.com/attachments/308956559201796097/632340906170908673/demo.zip. Each point contains a spoiler with a video clip. \n\tFor those who would like to mess around with the final result of mine, download FBX here:\u00a0 \n\thttps://cdn.discordapp.com/attachments/308956559201796097/632559814387695626/demo_result.zip\u00a0(video below)\n \n\n\n\t\n\t\t\n\t\n\n\n\n\tImportant thing to note, when using Radiosity for prelights, the shading/lighting which is baked into the model entirely depends on the smoothing of the model. If it\u0027s set to\u00a0Auto Smooth value 2\u00a0the shading will resemble 3ds Max\u0027s shading\u00a0\u0027facets\u0027, while if the model has only one smoothing group, the shading will be incredibly smooth and generally won\u0027t have any facet shading. \n\tSan Andreas models generally had\u00a0very low smoothing value for its models at their creation, judging by their hard surface appearence. If a modeler were\u00a0to create models that blend in with the game environment, they should strongly consider the above.\n \n\n\n\tVideo tutorial:\n \n\n\n\t\n\t\t\n\t\n\n\n\n\tText tutorial:\n \n\n\n\t\n\t\tImport\u00a0the file\n\n\t\t\n\t\t\t\n\t\t\t\tClick the 3ds max upper left corner, at\u00a0Import\u00a0hover over the arrow for a drop down menu to appear. Click Import. Click the demo.FBX.\n\t\t\t \n\t\t\t\n\t\t\t\tEnsure to include Smoothing Groups on import, and units setup in Meters.\n\t\t\t \n\t\t\t\n\t\t\t\tReset X, Y, Z positions to 0, 0, 0. At import the model is not centered.\n\t\t\t\t\n\t\t\t\t\t\u00a0\n\t\t\t\t \n\t\t\t \n\t\t\n\t \n\t\n\t\tCreate light\n\t\t\n\t\t\t\n\t\t\t\tNavigate to\u00a0Create tab, click the gears icon, finally select the\u00a0Daylight\u00a0button.\n\t\t\t \n\t\t\t\n\t\t\t\tMax will ask if it can set an exposure control flag (not a country flag bleh), click\u00a0Yes.\n\t\t\t \n\t\t\t\n\t\t\t\tClick anywhere, this sets the compass. Then, drag the mouse up into the sky, press LMB to spawn the daylight system. The compass position is not important.\n\t\t\t\t\n\t\t\t\t\t\u00a0\n\t\t\t\t \n\t\t\t \n\t\t\n\t \n\t\n\t\tAlter light\n\t\t\n\t\t\t\n\t\t\t\tNavigate to\u00a0Modify tab, change\u00a0Sunlight\u00a0from\u00a0Standard\u00a0to IES Sun. Likewise for sky, make it IES Sky.\n\t\t\t \n\t\t\t\n\t\t\t\tOn\u00a0Sun Parameters\u00a0uncheck Shadows. Ensure the sun\u0027s state is\u00a0On.\n\t\t\t \n\t\t\t\n\t\t\t\tOn\u00a0IES Sky Parameters\u00a0it is possible to modify the intensity of the sky, as well as the sun. Some of the\u00a0settings that affect the sun is whether the weather is clear or clouded. Leave default.\n\t\t\t \n\t\t\t\n\t\t\t\tOn hierarchy list, select the Daylight001\u00a0item. While on\u00a0Modify tab, click the\u00a0Setup\u00a0button for setting the scene weather.\n\t\t\t \n\t\t\t\n\t\t\t\tAs the light system works like real daylight, the lower the number of hours, the darker the scene.\u00a0\n\t\t\t \n\t\t\t\n\t\t\t\tSet\u00a0hours at 9, month at 9, orbital scale at 320-360.\n\t\t\t\t\n\t\t\t\t\t\u00a0\n\t\t\t\t \n\t\t\t \n\t\t\n\t \n\t\n\t\tInitiate the radiosity solution by running Vertex Color Tools Ver1.0.\u00a0\n\t\t\n\t\t\t\n\t\t\t\tPress the\u00a0AO\u00a0button. Keep in mind, that this will remove all materials and cannot be reversed with undo.\n\t\t\t \n\t\t\t\n\t\t\t\tThe render setup window opens. Another window from Rendering \u0026gt; Exposure Control is needed.\n\t\t\t \n\t\t\t\n\t\t\t\tOn Exposure Control, change from none to Logarithmic.\n\t\t\t \n\t\t\t\n\t\t\t\tTick on the\u00a0Exterior daylight\u00a0checkbox, which is required due to scene using a daylight system.\n\t\t\t \n\t\t\t\n\t\t\t\tOptionally, start rendering previews via the Exposure Control window. These previews are very low resolution and may help visualise the lighting. Or, real renders by SHIFT Q, although this may take significantly more time and processing power.\n\t\t\t \n\t\t\t\n\t\t\t\tOn Render Setup window, reset value of Indirect Lighting Filtering.\n\t\t\t \n\t\t\t\n\t\t\t\tIncrease the Direct Lighting Filtering to a value of 8.\n\t\t\t \n\t\t\t\n\t\t\t\tUnder\u00a0Radiosity Meshing Parameters\u00a0tick the Include Skylight checkbox.\n\t\t\t \n\t\t\t\n\t\t\t\tUnder\u00a0Rendering Parameters\u00a0select Re-Use Direct Illumination from Radiosity Solution.\n\t\t\t \n\t\t\t\n\t\t\t\tOn Render Setup window, make sure to press Reset, to then start a clean rendering with the updated settings.\n\t\t\t \n\t\t\t\n\t\t\t\tClick Start. This may be an incredibly slow process, even on high end computers. If it gets stuck, set quality to less. It does not really have much of an impact for GTA:SA light anyway.\n\t\t\t \n\t\t\t\n\t\t\t\tVoila, done. The final result will be displayed in viewport. The result is equal to what is seen in-game during day hours. If something looks off, go back and tweak settings.\n\t\t\t\t\n\t\t\t\t\t\u00a0\n\t\t\t\t \n\t\t\t \n\t\t\n\t \n\t\n\t\tBake Radiosity lighting solution into vertex channel.\n\t\t\n\t\t\t\n\t\t\t\tNavigate to\u00a0Utility tab, click\u00a0More..., select\u00a0Assign Vertex Colors.\n\t\t\t \n\t\t\t\n\t\t\t\tUpon scrolling down the utility tab, the Vertex Colors settings appear.\n\t\t\t \n\t\t\t\n\t\t\t\tVertex Color is for day time, Vertex Illumination is for night time. Choose Vertex Color.\n\t\t\t \n\t\t\t\n\t\t\t\tSet light model as Lighting + Diffuse.\n\t\t\t \n\t\t\t\n\t\t\t\tSet Color Assignment as whichever seen fit.\n\t\t\t \n\t\t\t\n\t\t\t\tOn\u00a0Rendering options, enable Mapping and Radiosity, Reuse Direct Illum. from solution.\n\t\t\t \n\t\t\t\n\t\t\t\tFinally, click Assign to Selected \n\t\t\t\t \n\t\t\t\t\u00a0\n\t\t\t \n\t\t\n\t \n\t\n\t\tView vertex color result\u00a0in viewport.\n\t\t\n\t\t\t\n\t\t\t\tOn the VertexPaint modifier, select the channel that was just modified.\n\t\t\t \n\t\t\t\n\t\t\t\tOn the VertexPaint GUI, click the shaded box to the left. This displays the model with only vertex channel rendering, no other 3D shading will be used.\n\t\t\t\t\n\t\t\t\t\t\u00a0\n\t\t\t\t \n\t\t\t \n\t\t\n\t \n\t\n\t\tFurther tweaking\n\t\t\n\t\t\t\n\t\t\t\tIf one wishes night time lighting, the best to do is render a new radiosity solution with less sun and daylight intensity, in order to darken the scene. Eventually change to clouded or mess with weather settings. The new radiosity solution will be equally the same as the one for daytime, although a tad darker. When rendered, assign to illumination channel.\n\t\t\t \n\t\t\t\n\t\t\t\tThe letters can be painted for night time to look extra cool. This is where painting by buckets onto face selections of the mesh can come in handy, using the VertexPaint modifier.\n\t\t\t \n\t\t\t\n\t\t\t\tOdd looking shadows can be fixed up with the blur brush (VertexPaint modifier).\n\t\t\t\t\n\t\t\t\t\t\u00a0\n\t\t\t\t \n\t\t\t \n\t\t\n\t \n\n\n\n\tThose who are able to get results with the above Radiosity workflow, may utilise their knowledge and take prelighting a next step with other types of lights, in order to create environment lights such as shadows for light poles, torches, buildings etc. Point lights, more specifically Free Light, were used a lot in the ship model further down the topic. \n\tScene lighting is generally hit and miss. There are many settings which may need to be changed e.g scale of daylight and smoothing groups of models, in order to get the right look.\n \n\n\n\t\u00a0\n \n\n\n\tFaking ambient occlusion\n \n\n\n\tVertices\u00a0can easily store ambient occlusion details, negating the need for geometry shaders. Some models may require additional geometry through subdividing the mesh, in order to achieve\u00a0proper ambient occlusion details with vertex colors. The type of light used is usually skylight or daylight, this creates subtle shadows around corners and creaks, as well as maintaining global lighting. The below model has vertex AO baked by using a Skylight with the following settings.\n \n\n\n\t\n \n\n\n\t*you can eventually utilise a plane as ground for the ambient occlusion to calculate a lot better.\n \n\n\n\tThe above practise can be used for GTA:SA assets as well, some settings may require to be tweaked first though. Prelighting in general is trial and error unless the artist has a solid background with lighting and rendering. Generally though, ambient occlusion should not be the only layer for lighting a model. Hard surface lighting\u00a0as well as adding point lights is highly recommended. Without these, models with AO will still look rather flat in most cases, as there is not much definition between corners, other than soft shadows. Adding point lights to radiosity render will also give the lighting a more natural feeling, this can be done by adjusting the temporature of the light or its color.\u00a0Combining point lights (free light, omni light, etcetera) with 2DFX can give stunning results.\n \n\n\n\t\u00a0\n \n\n\n\tTexture blending with Vertex Alpha\n \n\n\n\tTexture blending on MTA was thought to only be possible by shaders, e.g texture splatmap. Instead, we can now blend textures using Vertex Alpha channel. \n\tOn December 27 2019 we discovered that Vertex Alpha works without need for additional scripting\u00a0(MTA Discord #modelling). We also need to thank Deniska for writing this guide (gtamaps) on vertex alpha plus creating a maxscript that exports vAlpha channel!\n \n\n\n\tVertex Alpha works based on grayscale values just like alpha masks. Any vertex that\u0027s black will not be rendered - any vertex\u00a0that\u0027s not black will be rendered. White is fully opaque, while the greyer it gets, the more transparency is made. Vertex Alpha will not render water behind its faces, so it\u0027s important to place an opaque object behind the vertex alpha mesh. This must be a separate model, not part of the mesh that uses vertex alpha. As with vertex prelights, vertex alpha needs geometry to work with. It\u0027s highly recommended to turbosmooth/subdivide the mesh so that you can paint in more detail.\n \n\n\n\tIn the video below, I show how\u00a0quickly the vertex alpha can be added to your models, and once that\u0027s done, you can export the model using the script from this page.\n \n\n\n\t\n\t\t\n\t\n\n\n\n\t\n\t\tCreate a plane primitive. Give it 16x16 segments. Convert it to editable mesh. Give it the material that needs to blend using alpha. Set opacity of material to 98.\n\t \n\t\n\t\tAdd a VertexPaint modifier. Select the vertex alpha channel. Use paint bucket with black color, 100 intensity, to paint entire mesh black.\n\t \n\t\n\t\tAdd a secondary vertexpaint modifier. Grab your brush, adjust its size and strength. Begin painting a path from one end to another.\n\t \n\t\n\t\tUse the blur brush to finetune the semi-transparent edges of your path. Sharp edges ain\u0027t good.\n\t \n\t\n\t\tLooks OK? Start the export-script.\u00a0You don\u0027t need to collapse your modifiers when exporting. Keep them in stack for later adjustments.\u00a0Export with MMC.\n\t \n\t\n\t\tRemember to\u00a0always\u00a0set alphaTransparency enabled when replacing the model, or else only part of alpha will show.\u00a0\n\t \n\t\n\t\tIf you want to use another DFF script (for a higher quality dff), simply copy paste the sections e.g \"Extra Vertex Colors\"\u00a0via RWanalyze. \n\t\t(Script will break (in which case, close script and run again)\u00a0if you try to export vertex colors without having first assigned vertex colors/illumination to the model via its respective channels)\n\t \n\n\n\n\t\u00a0List of model ID\u0027s that use the flag 68 (NO_ZBUFFER_WRITE(64) +\u00a0DRAW_LAST(4)), which is required for Vertex Alpha:\n \n\n\n2728, 3872, 3910, 4227, 4636, 4637, 7892, 9831, 9896, 9897, 11678, 11679, 11680, 11681, 13494, 13495, 13496, \n13497, 13498, 13499, 13500, 13501, 13502, 13503, 13504, 13505, 13506, 13507, 13508, 13509, 13510, 13511, \n13512, 13513, 13514, 13515, 13516, 13517, 13518, 13519, 13520, 13521, 13522, 13523, 13524, 13525, 13526, \n13527, 13528, 13529, 13530, 13531, 13532, 13533, 13534, 13535, 13536, 13537, 13538, 13539, 13540, 13541, \n13542, 13543, 13544, 13545, 13546, 13547, 13548, 13549, 13550, 13551, 13552, 13553, 13554, 13555, 13556, \n13557, 13558, 13559, 13560, 13561, 13563, 16375, 16445, 16498, 16623, 16676, 16677, 16733, 16734, 16753, \n16754, 16756, 16757, 16758, 16783, 16784, 17436, 17437, 17438, 17439, 17440, 17441, 17442, 17443, 17444, \n17448, 17450, 17451, 17451, 17452, 17458, 17459, 17460, 17461, 17462, 17463, 17464, 17465, 17466, 17467, \n17468, 17469, 17470, 17474, 17524, 18073, 18112, 18610, 18611, 18612, 18613, 18614, 18615, 18616, 18617, \n18618, 18619, 18620, 18621, 18622, 18623, 18624, 18625, 18626, 18627, 18628, 18629, 18630, \n\n\n\tList of model ID\u0027s that use the flag 64 (NO_ZBUFFER_WRITE(64)) which are not tested, but might work for Vertex Alpha:\n \n\n\n1315, 2981, 4712, 4724, 4554, 8004, 8044, 11306, 14765, \n\n\n\t\u00a0\n \n\n\n\tBelow are a few examples of how vertex alpha can be used to blend several textures together.\n \n\n\n\t\n \n\n\n\tAbove image courtesy: worsas @ project tamriel\u00a0(see link for more)\n \n\n\n\t\n \n\n\n\t\n \n\n\n\t128x128 textures, 8192 polygons (can be a lot less!)\n \n\n\n\tYou can probably create something a lot better than this. Time to get creative!\n \n\n\n\tIf you\u0027re looking for\u00a0additional inspiration, see the\u00a0videos in spoiler.\n \n\n\n\n\n\t\u00a0\n \n\n\n\tNote: The below spoiler contains information that does not apply to vertex alpha method, but instead to vertex colors. This requires shaders, since SA uses the colors for lighting, but is a decent alternative if the model use lighting shaders.\n \n\n\n\n\n\t\u00a0\n \n\n\n\tThe vertexPaint modifier\n \n\n\n\tVertexPaint is the modifier that houses the WIP vertex colors, illumination and alpha modifications. It may be accessed on Modifiers tab. While it is open, it allows the artist to do various changes to the vertex channels. Ranging from painting with the use of brushes, to refining vertex colors by blurring,\u00a0adjusting hue, saturation, lightness etcetera. This is a very powerful tool, despite not having been updated for years. To get started, the modifier works with a float\u00a0GUI with all of its necessary functions in it. It is worth noting that the modifier can not change existing vertex channel data, only the data that is stored in the modifier. That means it is not possible to import a GTA:SA asset and modify the hue of the vertex color channel.\n \n\n\n\tFor an exhaustive list of what the modifier offers, check Autodesk\u0027s page on the VertexPaint Modifier. Brief explanation of what the modifier has to offer, from top to bottom:\n \n\n\n\t\n \n\n\n\t\u00a0\n \n\n\n\tExtracting channel info\n \n\n\n\tFor whatever reason, an artist may want to copy the vertex channel data, that is, the custom vertex information, and paste that onto their latest version of the mesh. This could be due to an irreversible action that would prevent the artist from undoing the lighting changes on present model, resulting in work lost and having to redo it all over again. Although this may seem like a promising solution to regain old channel data, it can generate\u00a0problems\u00a0if the two models contain different geometry counts. Below steps explains how to copy/paste data.\n \n\n\n\tNavigate to Utilities tab, click the\u00a0More\u00a0button, after which, click\u00a0Channel info. At last, press the button that appeared on the bottom of the utilities tab.\n \n\n\n\t\n \n\n\n\tAt first, the Channel Info GUI may seem complicated; but it really is not. The only information to look out for is the ID column and Channel Name column. The Num Verts, Faces etc. are only important to verify that the two model contains the same model geometry count. \n\tIn the above example, the model has no custom channel data. The\u00a0-2:Alpha,\u00a0-1:Illum\u00a0and\u00a00:vc\u00a0are the types of channel info\u0027s that are relevant for GTA:SA, although the Alpha data currently isn not compatible with MTA. To copy data, simply select either of the rows and press the\u00a0Copy\u00a0button. Then, highlight the present model, select the corresponding channel and paste.\n \n\n\n\t\u00a0\n \n\n\n\tWorking with several VertexPaint modifiers\n \n\n\n\tOn more advanced tasks it may be necessary to use multiple VertexPaint modifiers stacked onto the model. Artist may find it helpful if they are doing several versions of prelighting for their model and wants to go through each result, picking the one that suits them the most. This means that each type of radiosity lighting solution will be stored in its own modifier, allowing artists to go through all of them and delete the poor ones.\u00a0\n \n\n\n\tHaving multiple modifiers on stack can also improve workflow by utilising each modifiers for each element of the model, such as Modifier1 for bonfire logs, Modifier2 for bonfire shadows, Modifier3 for ambient occlusion, Modifier4 for moonlight etc. Modifiers can also be renamed to quickly tell the artist what they are representing. The model can have as many modifiers in its stack as the artist wishes (or until the software times out), and they do not require to be collapsed when exporting the model\u00a0to MTA. This means that the modeler simply needs to select the model, export it and load into MTA. Modifiers can then be collapsed to stack when job\u0027s done, however, it is strongly recommended to keep them in stack for future, in case of parts requiring rework.\n \n\n\n\tBelow model may give a good look into just how much it helps to utilise multiple modifiers.\n \n\n\n\t\n \n\n\n\tThe ship has its own modifier for virtually any type of light emmitting source. The rectangular screens to the right are symmetrical on the other side, so there is one modifier that represents those 6 rectangular emmissive screens. Same goes for the cyan U-shaped engravement, which uses its own independant modifier, and so on. This allowed\u00a0to change the engravement prelight from initially dark blue to cyan, by not affecting other lights when modifying the hue, as the modifier was only used by that particular area.\u00a0 \n\tThe stack works like so: By clicking the bottom modifier, only that one\u0027s layer will show. If clicking the one above it, assuming it is same channel, it will show both of them. Now, if clicking the top modifier, it will show all layers e.g the rest 4 that are associated with Vertex Illum channel. It will only display the channel that is selected on the right most panel. (This depends on version of Max)\n \n",
+    "dateCreated": "2019-12-31T00:21:39+0000",
+    "datePublished": "2019-12-31T00:21:39+0000",
+    "dateModified": "2019-12-31T00:21:39+0000",
+    "image": "https://forum.multitheftauto.com/uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif",
+    "author": {
+        "@type": "Person",
+        "name": "Tut",
+        "image": "https://forum.multitheftauto.com/uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif",
+        "url": "https://forum.multitheftauto.com/profile/61779-tut/"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/ViewAction",
+            "userInteractionCount": 16429
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 0
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/FollowAction",
+            "userInteractionCount": 0
+        }
+    ],
+    "@context": "http://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/",
+    "isPartOf": {
+        "@id": "https://forum.multitheftauto.com/#website"
+    },
+    "publisher": {
+        "@id": "https://forum.multitheftauto.com/#organization",
+        "member": {
+            "@type": "Person",
+            "name": "Tut",
+            "image": "https://forum.multitheftauto.com/uploads/monthly_2022_05/simpsons.thumb.gif.96ea9d93b3375dd4fbb568827345c9a3.gif",
+            "url": "https://forum.multitheftauto.com/profile/61779-tut/"
+        }
+    },
+    "url": "https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/",
+    "discussionUrl": "https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://forum.multitheftauto.com/topic/121674-basics-of-vertex-color-and-alpha/"
+    },
+    "pageStart": 1,
+    "pageEnd": 1
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://forum.multitheftauto.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://forum.multitheftauto.com/#website",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://forum.multitheftauto.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (UK)",
+            "alternateName": "en-GB"
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://forum.multitheftauto.com/#organization",
+    "mainEntityOfPage": "https://forum.multitheftauto.com/",
+    "name": "Multi Theft Auto: Forums",
+    "url": "https://forum.multitheftauto.com/",
+    "logo": {
+        "@type": "ImageObject",
+        "@id": "https://forum.multitheftauto.com/#logo",
+        "url": "https://forum.multitheftauto.com/uploads/monthly_2021_09/logo-v2.png.f8c8fa62527075983bc8c7b93a3229aa.png"
+    },
+    "sameAs": [
+        "https://www.facebook.com/multitheftauto",
+        "https://twitter.com/mtaqa",
+        "https://github.com/multitheftauto",
+        "https://www.youtube.com/user/MTAQA",
+        "https://www.linkedin.com/company/multitheftauto/"
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/80-multi-theft-auto-san-andreas-1x/",
+                "name": "Multi Theft Auto: San Andreas 1.x"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://forum.multitheftauto.com/forum/185-user-guides/",
+                "name": "User Guides"
+            }
+        }
+    ]
+}	
+</script>
+
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "ContactPage",
+    "url": "https://forum.multitheftauto.com/contact/"
+}	
+</script>
+
+
+		
+		
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		
+		
+		
+        
+	</body>
+</html>
